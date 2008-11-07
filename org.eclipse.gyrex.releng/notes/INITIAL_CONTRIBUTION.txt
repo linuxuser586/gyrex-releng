@@ -1,0 +1,8 @@
+CloudFree Initial Code Contribution & Dependencies
+--------------------------------------------------
+
+* Platform
+
+* Toolkit
+
+* Services

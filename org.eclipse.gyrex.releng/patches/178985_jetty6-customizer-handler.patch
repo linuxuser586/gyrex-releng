@@ -1,0 +1,208 @@
+### Eclipse Workspace Patch 1.0
+#P org.eclipse.equinox.http.jetty6
+Index: src/org/eclipse/equinox/http/jetty/internal/HttpServerManager.java
+===================================================================
+RCS file: /cvsroot/rt/org.eclipse.equinox/compendium/bundles/org.eclipse.equinox.http.jetty6/src/org/eclipse/equinox/http/jetty/internal/HttpServerManager.java,v
+retrieving revision 1.14
+diff -u -r1.14 HttpServerManager.java
+--- src/org/eclipse/equinox/http/jetty/internal/HttpServerManager.java	25 Apr 2008 14:22:55 -0000	1.14
++++ src/org/eclipse/equinox/http/jetty/internal/HttpServerManager.java	15 Sep 2008 11:25:07 -0000
+@@ -11,14 +11,13 @@
+ 
+ package org.eclipse.equinox.http.jetty.internal;
+ 
+-import java.io.File;
+-import java.io.IOException;
++import java.io.*;
+ import java.util.*;
+ import javax.servlet.*;
+ import org.eclipse.equinox.http.jetty.JettyConstants;
++import org.eclipse.equinox.http.jetty.JettyCustomizer;
+ import org.eclipse.equinox.http.servlet.HttpServiceServlet;
+-import org.mortbay.jetty.Connector;
+-import org.mortbay.jetty.Server;
++import org.mortbay.jetty.*;
+ import org.mortbay.jetty.nio.SelectChannelConnector;
+ import org.mortbay.jetty.security.SslSocketConnector;
+ import org.mortbay.jetty.servlet.*;
+@@ -197,7 +196,7 @@
+ 		Context httpContext = new Context();
+ 		httpContext.setAttribute(INTERNAL_CONTEXT_CLASSLOADER, Thread.currentThread().getContextClassLoader());
+ 		httpContext.setClassLoader(this.getClass().getClassLoader());
+-
++		
+ 		String contextPathProperty = (String) dictionary.get(JettyConstants.CONTEXT_PATH);
+ 		if (contextPathProperty == null)
+ 			contextPathProperty = "/"; //$NON-NLS-1$
+@@ -213,9 +212,29 @@
+ 			sessionManager.setMaxInactiveInterval(sessionInactiveInterval.intValue());
+ 
+ 		httpContext.setSessionHandler(new SessionHandler(sessionManager));
++
++		// allow further customization through fragment extensions
++		JettyCustomizer customizer = createJettyCustomizer(dictionary);
++		if(null != customizer)
++			customizer.customizeContext(httpContext, dictionary);
++		
+ 		return httpContext;
+ 	}
+ 
++	private JettyCustomizer createJettyCustomizer(Dictionary dictionary) {
++		String customizerClass = (String) dictionary.get(JettyConstants.CUSTOMIZER_CLASS);
++		if(null == customizerClass)
++			return null;
++		
++		try {
++			return (JettyCustomizer) Activator.getBundle().loadClass(customizerClass).newInstance();
++		} catch (Exception e) {
++			// TODO: consider logging this, but we should still continue 
++			e.printStackTrace();
++			return null;
++		}
++	}
++
+ 	public static class InternalHttpServiceServlet implements Servlet {
+ 		private static final long serialVersionUID = 7477982882399972088L;
+ 		private Servlet httpServiceServlet = new HttpServiceServlet();
+Index: src/org/eclipse/equinox/http/jetty/internal/Activator.java
+===================================================================
+RCS file: /cvsroot/rt/org.eclipse.equinox/compendium/bundles/org.eclipse.equinox.http.jetty6/src/org/eclipse/equinox/http/jetty/internal/Activator.java,v
+retrieving revision 1.11
+diff -u -r1.11 Activator.java
+--- src/org/eclipse/equinox/http/jetty/internal/Activator.java	26 Jul 2007 02:39:09 -0000	1.11
++++ src/org/eclipse/equinox/http/jetty/internal/Activator.java	15 Sep 2008 11:25:07 -0000
+@@ -39,16 +39,20 @@
+ 	// to ensure it is correctly handled in terms of the bundle life-cycle.
+ 	private static HttpServerManager staticServerManager;
+ 
++	// the bundle
++	private static Bundle bundle;
++
+ 	private HttpServerManager httpServerManager;
+ 	private ServiceRegistration registration;
+ 
+ 	public void start(BundleContext context) throws Exception {
++		bundle = context.getBundle();
+ 		File jettyWorkDir = new File(context.getDataFile(""), JETTY_WORK_DIR); //$NON-NLS-1$ 
+ 		jettyWorkDir.mkdir();
+ 		httpServerManager = new HttpServerManager(jettyWorkDir);
+ 
+ 		String autostart = context.getProperty(AUTOSTART);
+-		if ((autostart == null || Boolean.valueOf(autostart).booleanValue()) && ! isBundleActivationPolicyUsed(context)) {
++		if ((autostart == null || Boolean.valueOf(autostart).booleanValue()) && !isBundleActivationPolicyUsed(context)) {
+ 			Dictionary defaultSettings = createDefaultSettings(context);
+ 			httpServerManager.updated(DEFAULT_PID, defaultSettings);
+ 		}
+@@ -62,7 +66,7 @@
+ 
+ 	private boolean isBundleActivationPolicyUsed(BundleContext context) {
+ 		ServiceReference reference = context.getServiceReference(StartLevel.class.getName());
+-		StartLevel sl =  ((reference != null) ? (StartLevel) context.getService(reference) : null);
++		StartLevel sl = ((reference != null) ? (StartLevel) context.getService(reference) : null);
+ 		if (sl != null) {
+ 			try {
+ 				Bundle bundle = context.getBundle();
+@@ -86,6 +90,8 @@
+ 
+ 		httpServerManager.shutdown();
+ 		httpServerManager = null;
++
++		bundle = null;
+ 	}
+ 
+ 	private Dictionary createDefaultSettings(BundleContext context) {
+@@ -199,6 +205,11 @@
+ 		if (otherInfo != null)
+ 			defaultSettings.put(JettyConstants.OTHER_INFO, otherInfo);
+ 
++		// customizer
++		String customizerClass = context.getProperty(PROPERTY_PREFIX + JettyConstants.CUSTOMIZER_CLASS);
++		if (customizerClass != null)
++			defaultSettings.put(JettyConstants.CUSTOMIZER_CLASS, customizerClass);
++
+ 		return defaultSettings;
+ 	}
+ 
+@@ -218,4 +229,12 @@
+ 		staticServerManager = httpServerManager;
+ 	}
+ 
++	static Bundle getBundle() {
++		Bundle bundle = Activator.bundle;
++		if (bundle == null)
++			throw new IllegalStateException("Inactive"); //$NON-NLS-1$
++
++		return bundle;
++	}
++
+ }
+Index: src/org/eclipse/equinox/http/jetty/JettyConstants.java
+===================================================================
+RCS file: /cvsroot/rt/org.eclipse.equinox/compendium/bundles/org.eclipse.equinox.http.jetty6/src/org/eclipse/equinox/http/jetty/JettyConstants.java,v
+retrieving revision 1.3
+diff -u -r1.3 JettyConstants.java
+--- src/org/eclipse/equinox/http/jetty/JettyConstants.java	24 Apr 2008 17:55:49 -0000	1.3
++++ src/org/eclipse/equinox/http/jetty/JettyConstants.java	15 Sep 2008 11:25:07 -0000
+@@ -101,6 +101,14 @@
+ 	public static final String CONTEXT_SESSIONINACTIVEINTERVAL = "context.sessioninactiveinterval"; //$NON-NLS-1$
+ 
+ 	/**
++	 * name="customizer.class" type="String" <br />
++	 * (full qualified name of the class that implements
++	 * <code>org.eclipse.equinox.http.jetty.JettyCustomizer</code> and has a public no-arg constructor;
++	 * the class must be supplied via a fragment to this bundle's classpath)</li>
++	 */
++	public static final String CUSTOMIZER_CLASS = "customizer.class"; //$NON-NLS-1$
++
++	/**
+ 	 * name="other.info" type="String"
+ 	 */
+ 	public static final String OTHER_INFO = "other.info"; //$NON-NLS-1$
+Index: src/org/eclipse/equinox/http/jetty/JettyCustomizer.java
+===================================================================
+RCS file: src/org/eclipse/equinox/http/jetty/JettyCustomizer.java
+diff -N src/org/eclipse/equinox/http/jetty/JettyCustomizer.java
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ src/org/eclipse/equinox/http/jetty/JettyCustomizer.java	1 Jan 1970 00:00:00 -0000
+@@ -0,0 +1,41 @@
++/**
++ * Copyright (c) 2008 Gunnar Wagenknecht and others.
++ * All rights reserved. 
++ * 
++ * This program and the accompanying materials are made available under the terms of the 
++ * Eclipse Public License v1.0 which accompanies this distribution, and is available at
++ * http://www.eclipse.org/legal/epl-v10.html
++ * 
++ * Contributors:
++ *     Gunnar Wagenknecht - initial API and implementation
++ */
++package org.eclipse.equinox.http.jetty;
++
++import java.util.Dictionary;
++
++/**
++ * A Jetty context customizer.
++ * <p>
++ * This interface must be implemented by clients which wish to customize
++ * the created Jetty context further.
++ * </p>
++ */
++public interface JettyCustomizer {
++
++	/**
++	 * Called by the framework when the Jetty context has been created
++	 * and initialized.
++	 * <p>
++	 * Implementors may perform additional configuration of the Jetty context.
++	 * However, they must be aware that changing certain central functionalities
++	 * of the context such as class loading are already configured by the 
++	 * framework. Changing those may cause breakage and thus must be avoided.
++	 * </p>
++	 * @param contex 
++	 *             	the Jetty context; in case of Jetty 6 the context is of 
++	 *             	type <code>org.mortbay.jetty.servlet.Context</code>
++	 * @param settings
++	 * 				the settings as passed to {@link JettyConfigurator#startServer(String, Dictionary)}
++	 */
++	void customizeContext(Object contex, Dictionary settings);
++}
