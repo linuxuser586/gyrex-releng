@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psf version="2.0">
+<provider id="org.eclipse.team.cvs.core.cvsnature">
+
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/releng/org.eclipse.cloudfree.releng,org.eclipse.cloudfree.releng"/>
+
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.common,org.eclipse.cloudfree.common"/>
+
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.configuration,org.eclipse.cloudfree.configuration"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.configuration.impl,org.eclipse.cloudfree.configuration.impl"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.configuration.test,org.eclipse.cloudfree.configuration.test"/>
+
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.boot,org.eclipse.cloudfree.boot"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.boot.defaultroles,org.eclipse.cloudfree.boot.defaultroles"/>
+
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.monitoring,org.eclipse.cloudfree.monitoring"/>
+
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.admin,org.eclipse.cloudfree.admin"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.admin.web.gwt,org.eclipse.cloudfree.admin.web.gwt"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.admin.web.gwt.client,org.eclipse.cloudfree.admin.web.gwt.client"/>
+
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/toolkit/bundles/org.eclipse.cloudfree.gwt.common,org.eclipse.cloudfree.gwt.common"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/toolkit/bundles/org.eclipse.cloudfree.gwt.service,org.eclipse.cloudfree.gwt.service"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/toolkit/bundles/org.eclipse.cloudfree.gwt.service.tests,org.eclipse.cloudfree.gwt.service.tests"/>
+
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.http,org.eclipse.cloudfree.http"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.http.registry,org.eclipse.cloudfree.http.registry"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.http.tests,org.eclipse.cloudfree.http.tests"/>
+
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.http.errorpagehandler,org.eclipse.cloudfree.http.errorpagehandler"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.http.errorpagehandler.resources,org.eclipse.cloudfree.http.errorpagehandler.resources"/>
+
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/services/bundles/org.eclipse.cloudfree.model.common,org.eclipse.cloudfree.model.common"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.persistence,org.eclipse.cloudfree.persistence"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.persistence.derby,org.eclipse.cloudfree.persistence.derby"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.persistence.derby.tests,org.eclipse.cloudfree.persistence.derby.tests"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.persistence.jdbc,org.eclipse.cloudfree.persistence.jdbc"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.persistence.nondurable.map,org.eclipse.cloudfree.persistence.nondurable.map"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.persistence.solr,org.eclipse.cloudfree.persistence.solr"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/platform/bundles/org.eclipse.cloudfree.persistence.tests,org.eclipse.cloudfree.persistence.tests"/>
+
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/services/bundles/org.eclipse.cloudfree.product.model,org.eclipse.cloudfree.product.model"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/services/bundles/org.eclipse.cloudfree.product.model.jdbc,org.eclipse.cloudfree.product.model.jdbc"/>
+
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/services/bundles/org.eclipse.cloudfree.services.common,org.eclipse.cloudfree.services.common"/>
+
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/toolkit/bundles/org.eclipse.cloudfree.toolkit,org.eclipse.cloudfree.toolkit"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/toolkit/bundles/org.eclipse.cloudfree.toolkit.runtime,org.eclipse.cloudfree.toolkit.runtime"/>
+
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/toolkit/bundles/org.eclipse.cloudfree.toolkit.gwt.client,org.eclipse.cloudfree.toolkit.gwt.client"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/toolkit/bundles/org.eclipse.cloudfree.toolkit.gwt.client.tests,org.eclipse.cloudfree.toolkit.gwt.client.tests"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/toolkit/bundles/org.eclipse.cloudfree.toolkit.gwt.server,org.eclipse.cloudfree.toolkit.gwt.server"/>
+
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/examples/bundles/org.eclipse.cloudfree.examples.fanshop,org.eclipse.cloudfree.examples.fanshop"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/examples/bundles/org.eclipse.cloudfree.toolkit.examples.simple,org.eclipse.cloudfree.toolkit.examples.simple"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/technology,org.eclipse.cloudfree/examples/bundles/org.eclipse.cloudfree.toolkit.gwt.examples,org.eclipse.cloudfree.toolkit.gwt.examples"/>
+
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/rt,org.eclipse.equinox/compendium/bundles/org.eclipse.equinox.http.jetty6,org.eclipse.equinox.http.jetty6"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/rt,org.eclipse.equinox/server-side/bundles/org.eclipse.equinox.http.registry,org.eclipse.equinox.http.registry"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/rt,org.eclipse.equinox/compendium/bundles/org.eclipse.equinox.http.servlet,org.eclipse.equinox.http.servlet"/>
+
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/tools,org.eclipse.orbit/org.apache.lucene.analysis,org.apache.lucene.analysis_v2.4.0,v2_4_0"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/tools,org.eclipse.orbit/org.apache.lucene.core,org.apache.lucene.core_v2.4.0,v2_4_0"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/tools,org.eclipse.orbit/org.apache.lucene.highlighter,org.apache.lucene.highlighter_v2.4.0,v2_4_0"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/tools,org.eclipse.orbit/org.apache.lucene.memory,org.apache.lucene.memory_v2.4.0,v2_4_0"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/tools,org.eclipse.orbit/org.apache.lucene.queries,org.apache.lucene.queries_v2.4.0,v2_4_0"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/tools,org.eclipse.orbit/org.apache.lucene.snowball,org.apache.lucene.snowball_v2.4.0,v2_4_0"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/tools,org.eclipse.orbit/org.apache.lucene.spellchecker,org.apache.lucene.spellchecker_v2.4.0,v2_4_0"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/tools,org.eclipse.orbit/org.apache.lucene,org.apache.lucene_v2.4.0,v2_4_0"/>
+
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/tools,org.eclipse.orbit/org.apache.solr.common,org.apache.solr.common_v1.3.0,v1_3_0"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/tools,org.eclipse.orbit/org.apache.solr.core,org.apache.solr.core_v1.3.0,v1_3_0"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/tools,org.eclipse.orbit/org.apache.solr.servlet,org.apache.solr.servlet_v1.3.0,v1_3_0"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/tools,org.eclipse.orbit/org.apache.solr.client.solrj,org.apache.solr.client.solrj_v1.3.0,v1_3_0"/>
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/tools,org.eclipse.orbit/org.apache.solr.client.solrj.embedded,org.apache.solr.client.solrj.embedded_v1.3.0,v1_3_0"/>
+
+</provider>
+<workingSets editPageId="org.eclipse.ui.resourceWorkingSetPage" label="CloudFree" name="CloudFree">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.monitoring" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.configuration.test" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.examples.fanshop" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.services.common" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.cds.service" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.persistence" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.http.tests" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.http" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.toolkit.gwt.server" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.persistence.nondurable.map" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.cds.model.solr" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.persistence.derby.tests" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.toolkit" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.configuration" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.toolkit.gwt.client" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.releng" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.boot.defaultroles" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.admin.web.gwt.client" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.product.model" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.persistence.jdbc" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.admin.web.gwt" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.common" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.toolkit.gwt.client.tests" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.http.errorpagehandler.resources" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.product.model.jdbc" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.persistence.derby" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.cds.service.solr" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.admin.web.rap" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.persistence.tests" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.configuration.impl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.http.registry" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.persistence.carbonado" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.toolkit.examples.simple" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.boot" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.admin" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.toolkit.rap.example" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.cds.model" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.toolkit.runtime" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.persistence.solr" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.toolkit.rap" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.toolkit.gwt.examples" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.gwt.common" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.gwt.service.tests" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.model.common.tests" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.gwt.service" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.model.common" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.http.errorpagehandler" type="4"/>
+</workingSets>
+<workingSets editPageId="org.eclipse.ui.resourceWorkingSetPage" label="CloudFree HTTP" name="CloudFree HTTP">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.http.errorpagehandler.resources" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.equinox.http.registry" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.http.registry" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.http.errorpagehandler" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.http.tests" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.equinox.http.servlet" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.cloudfree.http" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.equinox.http.jetty6" type="4"/>
+</workingSets>
+</psf>
