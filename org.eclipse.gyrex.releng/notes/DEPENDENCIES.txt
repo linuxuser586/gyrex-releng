@@ -1,11 +1,11 @@
-CloudFree Dependencies
+Gyrex Dependencies
 ----------------------
 
-This is a list of all library dependencies in CloudFree. We consume all 
-dependencies in Orbit. No library will be hosted in CloudFree CVS.
+This is a list of all library dependencies in Gyrex. We consume all 
+dependencies in Orbit. No library will be hosted in Gyrex CVS.
 
 Note, before adding a dependency please talk to the project leads on
-cloudfree-dev@eclipse.org.
+gyrex-dev@eclipse.org.
 
 For every dependency a CQ must be filled and referenced here.
 
