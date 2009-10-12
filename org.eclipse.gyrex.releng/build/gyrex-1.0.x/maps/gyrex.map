@@ -17,6 +17,7 @@ feature@org.eclipse.gyrex.features.techpreview=HEAD,:pserver:anonymous@dev.eclip
 #plugin@org.eclipse.gyrex.=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/
 plugin@org.eclipse.gyrex.boot=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.boot
 plugin@org.eclipse.gyrex.boot.defaultroles=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.boot.defaultroles
+plugin@org.eclipse.gyrex.common=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.common
 plugin@org.eclipse.gyrex.configuration=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.configuration
 plugin@org.eclipse.gyrex.configuration.impl=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.configuration.impl
 plugin@org.eclipse.gyrex.context=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.context
@@ -33,7 +34,7 @@ plugin@org.eclipse.gyrex.admin.web.gwt.client=HEAD,:pserver:anonymous@dev.eclips
 
 ### Gyrex HTTP Component
 plugin@org.eclipse.gyrex.http=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http
-plugin@org.eclipse.gyrex.http.errorpagehandler=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.errorpagehandler
+fragment@org.eclipse.gyrex.http.errorpagehandler=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.errorpagehandler
 plugin@org.eclipse.gyrex.http.errorpagehandler.resources=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.errorpagehandler.resources
 plugin@org.eclipse.gyrex.http.registry=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.registry
 
@@ -57,3 +58,8 @@ plugin@org.eclipse.gyrex.persistence.jdbc=HEAD,:pserver:anonymous@dev.eclipse.or
 plugin@org.eclipse.gyrex.persistence.nondurable.map=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.nondurable.map
 plugin@org.eclipse.gyrex.persistence.solr=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.solr
 
+!*************** Jackson
+plugin@org.codehaus.jackson=v0_9_3,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/3rdparty/bundles/org.codehaus.jackson
+
+# Equinox HTTP Helpers
+plugin@org.eclipse.equinox.http.helper=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/rt,,org.eclipse.equinox/incubator/server-side/bundles/org.eclipse.equinox.http.helper
