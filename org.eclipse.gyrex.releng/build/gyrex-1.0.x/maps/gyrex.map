@@ -41,10 +41,14 @@ bundle@org.eclipse.gyrex.http.registry=HEAD,:pserver:anonymous@dev.eclipse.org:/
 bundle@org.eclipse.gyrex.http.jetty=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.jetty
 
 ### Gyrex Toolkit
-bundle@org.eclipse.gyrex.toolkit=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.toolkit
-bundle@org.eclipse.gyrex.toolkit.runtime=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.toolkit.runtime
-bundle@org.eclipse.gyrex.toolkit.gwt.client=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.toolkit.gwt.client
-bundle@org.eclipse.gyrex.toolkit.gwt.server=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.toolkit.gwt.server
+bundle@org.eclipse.gyrex.toolkit=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.toolkit
+bundle@org.eclipse.gyrex.toolkit.runtime=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.toolkit.runtime
+bundle@org.eclipse.gyrex.toolkit.gwt.client=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.toolkit.gwt.client
+bundle@org.eclipse.gyrex.toolkit.gwt.server=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.toolkit.gwt.server
+
+### Gyrex GWT AddOns
+bundle@org.eclipse.gyrex.gwt.common=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.gwt.common
+bundle@org.eclipse.gyrex.gwt.service=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.gwt.service
 
 ### Gyrex Persistence Component
 bundle@org.eclipse.gyrex.persistence=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence
