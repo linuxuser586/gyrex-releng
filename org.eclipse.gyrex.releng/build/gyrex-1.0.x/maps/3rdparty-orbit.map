@@ -1,0 +1,118 @@
+###############################################################################
+# Copyright (c) 2009 AGETO Service GmbH and others.
+# All rights reserved.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Eclipse Public License v1.0 which accompanies this distribution,
+# and is available at http://www.eclipse.org/legal/epl-v10.html.
+#
+# Contributors:
+#     Gunnar Wagenknecht - initial API and implementation
+###############################################################################
+
+#####################################
+# 3rd party dependencies from Orbit #
+#####################################
+
+!*************** SLF4J
+plugin@org.slf4j.api,1.5.6=p2IU,id=org.slf4j.api,version=1.5.6.v20090930-0800,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.slf4j.api.source,1.5.6=p2IU,id=org.slf4j.api.source,version=1.5.6.v20090930-0800,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+
+!*************** Google Web Toolkit
+plugin@com.google.gwt.servlet,1.7.0=p2IU,id=com.google.gwt.servlet,version=1.7.0.v20090930-0900,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@com.google.gwt.servlet.source,1.7.0=p2IU,id=com.google.gwt.servlet.source,version=1.7.0.v20090930-0900,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@com.google.gwt.user,1.7.0=p2IU,id=com.google.gwt.user,version=1.7.0.v20090930-0900,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@com.google.gwt.user.source,1.7.0=p2IU,id=com.google.gwt.user.source,version=1.7.0.v20090930-0900,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+
+!*************** ICU
+plugin@com.ibm.icu.base,4.0.1=p2IU,id=com.ibm.icu.base,version=4.0.1.v20090822,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@com.ibm.icu.base.source,4.0.1=p2IU,id=com.ibm.icu.base.source,version=4.0.1.v20090822,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+
+!*************** Servlet + JSP
+plugin@javax.servlet,2.5.0=p2IU,id=javax.servlet,version=2.5.0.v200806031605,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@javax.servlet.source,2.5.0=p2IU,id=javax.servlet.source,version=2.5.0.v200806031605,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@javax.servlet.jsp,2.0.0=p2IU,id=javax.servlet.jsp,version=2.0.0.v200806031607,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@javax.servlet.jsp.source,2.0.0=p2IU,id=javax.servlet.jsp.source,version=2.0.0.v200806031607,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+
+!*************** Apache Commons
+plugin@org.apache.commons.beanutils,1.7.0=p2IU,id=org.apache.commons.beanutils,version=1.7.0.v200902170505,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.beanutils.source,1.7.0=p2IU,id=org.apache.commons.beanutils.source,version=1.7.0.v200803061811,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.cli,1.0.0=p2IU,id=org.apache.commons.cli,version=1.0.0.v20080604-1500,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.cli.source,1.0.0=p2IU,id=org.apache.commons.cli.source,version=1.0.0.v20080604-1500,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.codec,1.3.0=p2IU,id=org.apache.commons.codec,version=1.3.0.v20080530-1600,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.codec.source,1.3.0=p2IU,id=org.apache.commons.codec.source,version=1.3.0.v20080530-1600,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.collections,3.2.0=p2IU,id=org.apache.commons.collections,version=3.2.0.v200803061811,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.collections.source,3.2.0=p2IU,id=org.apache.commons.collections.source,version=3.2.0.v200803061811,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.el,1.0.0=p2IU,id=org.apache.commons.el,version=1.0.0.v200806031608,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.el.source,1.0.0=p2IU,id=org.apache.commons.el.source,version=1.0.0.v200806031608,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.fileupload,1.2.0=p2IU,id=org.apache.commons.fileupload,version=1.2.0.v20080604-1500,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.fileupload.source,1.2.0=p2IU,id=org.apache.commons.fileupload.source,version=1.2.0.v20080604-1500,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.io,1.4.0=p2IU,id=org.apache.commons.io,version=1.4.0.v20081110-1000,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.io.source,1.4.0=p2IU,id=org.apache.commons.io.source,version=1.4.0.v20081110-1000,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.lang,2.4.0=p2IU,id=org.apache.commons.lang,version=2.4.0.v20081016-1030,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.lang.source,2.4.0=p2IU,id=org.apache.commons.lang.source,version=2.4.0.v20081016-1030,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.logging,1.0.4=p2IU,id=org.apache.commons.logging,version=1.0.4.v200904062259,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.logging,1.1.1=p2IU,id=org.apache.commons.logging,version=1.1.1.v200904062255,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.logging.source,1.0.4=p2IU,id=org.apache.commons.logging.source,version=1.0.4.v200904062259,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.logging.source,1.1.1=p2IU,id=org.apache.commons.logging.source,version=1.1.1.v200904062255,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.net,2.0.0=p2IU,id=org.apache.commons.net,version=2.0.0.v200905272248,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.net.source,2.0.0=p2IU,id=org.apache.commons.net.source,version=2.0.0.v200905272248,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.pool,1.4.0=p2IU,id=org.apache.commons.pool,version=1.4.0.v20081016-1000,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.commons.pool.source,1.4.0=p2IU,id=org.apache.commons.pool.source,version=1.4.0.v20081016-1000,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+
+!*************** Apache Derby
+plugin@org.apache.derby.client,10.5.1=p2IU,id=org.apache.derby.client,version=10.5.1.1_200910031551,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.derby.client.source,10.5.1=p2IU,id=org.apache.derby.client.source,version=10.5.1.1_200910031552,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.derby.engine,10.5.1=p2IU,id=org.apache.derby.engine,version=10.5.1.1_200910031551,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.derby.engine.source,10.5.1=p2IU,id=org.apache.derby.engine.source,version=10.5.1.1_200910031552,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.derby.net,10.5.1=p2IU,id=org.apache.derby.net,version=10.5.1.1_200910031551,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.derby.net.source,10.5.1=p2IU,id=org.apache.derby.net.source,version=10.5.1.1_200910031552,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.derby.tools,10.5.1=p2IU,id=org.apache.derby.tools,version=10.5.1.1_200910031551,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.derby.tools.source,10.5.1=p2IU,id=org.apache.derby.tools.source,version=10.5.1.1_200910031552,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+
+!*************** Apache HTTP Client
+plugin@org.apache.httpcomponents.httpcore,4.0.0=p2IU,id=org.apache.httpcomponents.httpcore,version=4.0.0.v200905121600,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.httpcomponents.httpcore.nio,4.0.0=p2IU,id=org.apache.httpcomponents.httpcore.nio,version=4.0.0.v200905121600,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.httpcomponents.httpcore.nio.source,4.0.0=p2IU,id=org.apache.httpcomponents.httpcore.nio.source,version=4.0.0.v200905121600,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.httpcomponents.httpcore.source,4.0.0=p2IU,id=org.apache.httpcomponents.httpcore.source,version=4.0.0.v200905121600,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+
+!*************** Apache Jasper
+plugin@org.apache.jasper,5.5.17=p2IU,id=org.apache.jasper,version=5.5.17.v200903231320,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.jasper.source,5.5.17=p2IU,id=org.apache.jasper.source,version=5.5.17.v200903231320,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+
+!*************** Apache Lucene
+plugin@org.apache.lucene,2.4.0=p2IU,id=org.apache.lucene,version=2.4.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.lucene.source,2.4.0=p2IU,id=org.apache.lucene.source,version=2.4.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.lucene.analysis,2.4.0=p2IU,id=org.apache.lucene.analysis,version=2.4.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.lucene.analysis.source,2.4.0=p2IU,id=org.apache.lucene.analysis.source,version=2.4.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.lucene.core,2.4.0=p2IU,id=org.apache.lucene.core,version=2.4.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.lucene.core.source,2.4.0=p2IU,id=org.apache.lucene.core.source,version=2.4.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.lucene.highlighter,2.4.0=p2IU,id=org.apache.lucene.highlighter,version=2.4.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.lucene.highlighter.source,2.4.0=p2IU,id=org.apache.lucene.highlighter.source,version=2.4.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.lucene.memory,2.4.0=p2IU,id=org.apache.lucene.memory,version=2.4.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.lucene.memory.source,2.4.0=p2IU,id=org.apache.lucene.memory.source,version=2.4.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.lucene.queries,2.4.0=p2IU,id=org.apache.lucene.queries,version=2.4.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.lucene.queries.source,2.4.0=p2IU,id=org.apache.lucene.queries.source,version=2.4.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.lucene.snowball,2.4.0=p2IU,id=org.apache.lucene.snowball,version=2.4.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.lucene.snowball.source,2.4.0=p2IU,id=org.apache.lucene.snowball.source,version=2.4.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.lucene.spellchecker,2.4.0=p2IU,id=org.apache.lucene.spellchecker,version=2.4.0.v20090122-0940,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.lucene.spellchecker.source,2.4.0=p2IU,id=org.apache.lucene.spellchecker.source,version=2.4.0.v20090122-0940,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+
+!*************** Apache Solr
+plugin@org.apache.solr.client.solrj,1.3.0=p2IU,id=org.apache.solr.client.solrj,version=1.3.0.v20090306-0522,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.solr.client.solrj.source,1.3.0=p2IU,id=org.apache.solr.client.solrj.source,version=1.3.0.v200901230446,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.solr.client.solrj.embedded,1.3.0=p2IU,id=org.apache.solr.client.solrj.embedded,version=1.3.0.v200901230454,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.solr.client.solrj.embedded.source,1.3.0=p2IU,id=org.apache.solr.client.solrj.embedded.source,version=1.3.0.v200901230454,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.solr.common,1.3.0=p2IU,id=org.apache.solr.common,version=1.3.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.solr.common.source,1.3.0=p2IU,id=org.apache.solr.common.source,version=1.3.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.solr.core,1.3.0=p2IU,id=org.apache.solr.core,version=1.3.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.solr.core.source,1.3.0=p2IU,id=org.apache.solr.core.source,version=1.3.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.solr.servlet,1.3.0=p2IU,id=org.apache.solr.servlet,version=1.3.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.apache.solr.servlet.source,1.3.0=p2IU,id=org.apache.solr.servlet.source,version=1.3.0.v20090121-2110,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+
+!*************** Jetty
+plugin@org.mortbay.jetty.server,6.1.15=p2IU,id=org.mortbay.jetty.server,version=6.1.15.v200905151201,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.mortbay.jetty.server.source,6.1.15=p2IU,id=org.mortbay.jetty.server.source,version=6.1.15.v200905151201,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.mortbay.jetty.util,6.1.15=p2IU,id=org.mortbay.jetty.util,version=6.1.15.v200905182336,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+plugin@org.mortbay.jetty.util.source,6.1.15=p2IU,id=org.mortbay.jetty.util.source,version=6.1.15.v200905182336,repository=http://download.eclipse.org/tools/orbit/committers/drops/I20091003152945/updateSite
+
