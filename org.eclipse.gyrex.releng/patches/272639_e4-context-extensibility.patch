@@ -1,0 +1,195 @@
+### Eclipse Workspace Patch 1.0
+#P org.eclipse.e4.core.services
+Index: src/org/eclipse/e4/core/services/context/EclipseContextFactory.java
+===================================================================
+RCS file: /cvsroot/eclipse/e4/org.eclipse.e4.ui/bundles/org.eclipse.e4.core.services/src/org/eclipse/e4/core/services/context/EclipseContextFactory.java,v
+retrieving revision 1.4
+diff -u -r1.4 EclipseContextFactory.java
+--- src/org/eclipse/e4/core/services/context/EclipseContextFactory.java	2 Apr 2009 15:50:13 -0000	1.4
++++ src/org/eclipse/e4/core/services/context/EclipseContextFactory.java	17 Apr 2009 06:45:04 -0000
+@@ -8,7 +8,6 @@
+  * Contributors:
+  *     IBM Corporation - initial API and implementation
+  *******************************************************************************/
+-
+ package org.eclipse.e4.core.services.context;
+ 
+ import org.eclipse.e4.core.services.context.spi.IContextConstants;
+@@ -19,16 +18,15 @@
+ 
+ /**
+  * A factory for creating a simple context instance. Simple contexts must be
+- * filled in programmatically by calling {@link IEclipseContext#set(String, Object)}
+- * to provide context values.
++ * filled in programmatically by calling
++ * {@link IEclipseContext#set(String, Object)} to provide context values.
+  */
+ public final class EclipseContextFactory {
+ 
+ 	/**
+-	 * Creates and returns a new empty context with no parent, using
+-	 * the default context strategy.
++	 * Creates and returns a new empty context with no parent, using the default
++	 * context strategy. TODO do we need a name?
+ 	 * 
+-	 * TODO do we need a name?
+ 	 * @return A new empty context with no parent context.
+ 	 */
+ 	static public IEclipseContext create() {
+@@ -41,9 +39,13 @@
+ 
+ 	/**
+ 	 * Returns a context that can be used to lookup OSGi services.
+-	 * @param bundleContext The  bundle context to use for service lookup
++	 * 
++	 * @param bundleContext
++	 *            The bundle context to use for service lookup
+ 	 * @return A context containing all OSGi services
+ 	 */
++	// TODO should this be moved out of this class to stay OSGi independent?
++	// TODO it should be possible to specify a parent
+ 	public static IEclipseContext createServiceContext(BundleContext bundleContext) {
+ 		IEclipseContext result = new EclipseContext(null, new OSGiContextStrategy(bundleContext));
+ 		result.set(IContextConstants.DEBUG_STRING, "OSGi context for bundle: " + bundleContext.getBundle().getSymbolicName()); //$NON-NLS-1$
+Index: src/org/eclipse/e4/core/services/context/IEclipseContextAware.java
+===================================================================
+RCS file: /cvsroot/eclipse/e4/org.eclipse.e4.ui/bundles/org.eclipse.e4.core.services/src/org/eclipse/e4/core/services/context/IEclipseContextAware.java,v
+retrieving revision 1.1
+diff -u -r1.1 IEclipseContextAware.java
+--- src/org/eclipse/e4/core/services/context/IEclipseContextAware.java	4 Feb 2009 03:02:57 -0000	1.1
++++ src/org/eclipse/e4/core/services/context/IEclipseContextAware.java	17 Apr 2009 06:45:04 -0000
+@@ -4,37 +4,40 @@
+  * are made available under the terms of the Eclipse Public License v1.0
+  * which accompanies this distribution, and is available at
+  * http://www.eclipse.org/legal/epl-v10.html
+- * 
++ *
+  * Contributors:
+  *     IBM Corporation - initial API and implementation
+  *******************************************************************************/
+ package org.eclipse.e4.core.services.context;
+ 
+ /**
+- * Objects used in the context injection might choose to implement this 
+- * interface to perform post-processing of injected values, perform 
+- * custom processing of the context, and be notified if the context was disposed.
++ * Objects used in the context injection might choose to implement this
++ * interface to perform post-processing of injected values, perform custom
++ * processing of the context, and be notified if the context was disposed.
+  * <p>
+  * If objects don't want to introduce dependency on the context injection
+  * mechanism, they can add methods from this interface directly to their class
+- * implementations. As long as method signatures match exactly, they will be called
+- * (even if the object does not implement this interface).
+- * </p> 
+- * @noextend This interface is not intended to be extended by clients.
++ * implementations. As long as method signatures match exactly, they will be
++ * called (even if the object does not implement this interface).
++ * </p>
+  */
+ public interface IEclipseContextAware {
+ 
+ 	/**
+ 	 * The last method called during the context injection process.
+-	 * @param context the injected context 
++	 * 
++	 * @param context
++	 *            the injected context
+ 	 */
+ 	public void contextSet(IEclipseContext context);
+ 
+ 	/**
+-	 * The method called to notify an object previously injected with the context
+-	 * that the context has been disposed. 
+-	 * @param context the context being disposed
++	 * The method called to notify an object previously injected with the
++	 * context that the context has been disposed.
++	 * 
++	 * @param context
++	 *            the context being disposed
+ 	 */
+ 	public void contextDisposed(IEclipseContext context);
+-	
++
+ }
+\ No newline at end of file
+Index: src/org/eclipse/e4/core/services/context/spi/ContextInjectionFactory.java
+===================================================================
+RCS file: /cvsroot/eclipse/e4/org.eclipse.e4.ui/bundles/org.eclipse.e4.core.services/src/org/eclipse/e4/core/services/context/spi/ContextInjectionFactory.java,v
+retrieving revision 1.6
+diff -u -r1.6 ContextInjectionFactory.java
+--- src/org/eclipse/e4/core/services/context/spi/ContextInjectionFactory.java	9 Apr 2009 19:20:46 -0000	1.6
++++ src/org/eclipse/e4/core/services/context/spi/ContextInjectionFactory.java	17 Apr 2009 06:45:04 -0000
+@@ -16,38 +16,43 @@
+ import org.eclipse.e4.core.services.internal.context.ContextInjectionImpl;
+ 
+ /**
+- * An Eclipse context can be injected into an object using 
+- * {@link ContextInjectionFactory#inject(Object, IEclipseContext)}.
+- * The Java injection will try to find fields and methods in the user objects that correspond 
+- * to the names of the services present in the context.
+- * <p> 
+- * The matching is done using {@link IContextConstants#INJECTION_FIELD_PREFIX} for fields, {@link IContextConstants#INJECTION_SET_METHOD_PREFIX}
+- * for methods. For the "log" example, injection will attempt to find field "equinoxLog" or method
+- * "setLog()" that could accept associated service. (The field's prefix can be overridden
+- * by the context.)
+- * </p><p>
+- * Generally speaking, name matching is case-sensitive. However, for convenience, when matching 
+- * service names to fields or methods:
++ * An Eclipse context can be injected into an object using
++ * {@link ContextInjectionFactory#inject(Object, IEclipseContext)}. The Java
++ * injection will try to find fields and methods in the user objects that
++ * correspond to the names of the services present in the context.
++ * <p>
++ * The matching is done using {@link IContextConstants#INJECTION_FIELD_PREFIX}
++ * for fields, {@link IContextConstants#INJECTION_SET_METHOD_PREFIX} for
++ * methods. For the "log" example, injection will attempt to find field
++ * "equinoxLog" or method "setLog()" that could accept associated service. (The
++ * field's prefix can be overridden by the context.)
++ * </p>
++ * <p>
++ * Generally speaking, name matching is case-sensitive. However, for
++ * convenience, when matching service names to fields or methods:
+  * <ul>
+- * <li>Capitalization of the first character of the service name is ignored. For instance, the "log" name 
+- * will match both "diLog" and "dilog" fields.</li>
+- * <li>Dashes in the names ("-") are removed, and the next character is capitalized. 
+- * For instance, "log-general" will match "equinoxLogGeneral"</li> 
+- * </ul>   
+- * </p><p>
+- * The injection of values is generally done as a number of calls. User objects that want to have 
+- * an ability to finalize the injected data (for instance, to perform calculations based on multiple
+- * injected values) might want to place such calculations into a method 
++ * <li>Capitalization of the first character of the service name is ignored. For
++ * instance, the "log" name will match both "diLog" and "dilog" fields.</li>
++ * <li>Dashes in the names ("-") are removed, and the next character is
++ * capitalized. For instance, "log-general" will match "equinoxLogGeneral"</li>
++ * </ul>
++ * </p>
++ * <p>
++ * The injection of values is generally done as a number of calls. User objects
++ * that want to have an ability to finalize the injected data (for instance, to
++ * perform calculations based on multiple injected values) might want to place
++ * such calculations into a method
+  * <code>public void contextSet(IEquinoxContext context) {...}</code>.
+- * </p><p>
+- * This method will be called as a last step in the injection process. For convenience, the signature
+- * of this method can be found in the {@link IEclipseContextAware} interface. (User objects don't have to 
+- * implement this interface for the method to be called, but might find it convenient to have
+- * the method's signature.)
+  * </p>
+- * @noextend This interface is not intended to be extended by clients.
+- * @noimplement This interface is not intended to be implemented by clients.
+- * @since 3.5
++ * <p>
++ * This method will be called as a last step in the injection process. For
++ * convenience, the signature of this method can be found in the
++ * {@link IEclipseContextAware} interface. (User objects don't have to implement
++ * this interface for the method to be called, but might find it convenient to
++ * have the method's signature.)
++ * </p>
++ * 
++ * @noinstantiate This class is not intended to be instantiated by clients.
+  */
+ final public class ContextInjectionFactory {
+ 
