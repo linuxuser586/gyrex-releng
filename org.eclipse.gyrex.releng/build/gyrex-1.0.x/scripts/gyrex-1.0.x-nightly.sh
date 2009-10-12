@@ -33,7 +33,7 @@ if [[ ! -d $thirdPartyJarsDir ]]; then mkdir $thirdPartyJarsDir; fi
 
 # define where to do all the work; start with a fresh folder each time
 writableBuildRoot="${WORKSPACE}/build"
-if [[ ! -d $writableBuildRoot ]]; then writableBuildRoot=~/buildworkspace; fi # local build? 
+if [[ ! -d $writableBuildRoot ]]; then writableBuildRoot=/tmp/build.gyrex; fi # local build? 
 if [[ -d ${writableBuildRoot} ]]; then rm -fr ${writableBuildRoot}; fi
 
 # DONE CONFIGURATION
