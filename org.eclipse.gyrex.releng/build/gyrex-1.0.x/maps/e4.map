@@ -1,0 +1,11 @@
+# Equinox dependencies
+# copied from http://download.eclipse.org/e4/downloads/drops/I20091009-1415/directory.txt
+
+!**** e4 core
+
+plugin@org.eclipse.e4.core.services=v20091009-1415,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,,e4/org.eclipse.e4.ui/bundles/org.eclipse.e4.core.services
+plugin@org.eclipse.e4.core.services.annotations=v20090714-1930,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,,e4/org.eclipse.e4.ui/bundles/org.eclipse.e4.core.services.annotations
+
+plugin@org.eclipse.e4.core.javascript=v20090714-1930,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,,e4/org.eclipse.e4.ui/bundles/org.eclipse.e4.core.javascript
+
+
