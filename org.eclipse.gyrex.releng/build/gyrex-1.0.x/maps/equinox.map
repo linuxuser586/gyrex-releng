@@ -2,7 +2,7 @@
 # http://download.eclipse.org/equinox/drops/R-3.5.1-200909170800/equinox-SDK-3.5.1.zip
 
 ### Equinox OSGi Core
-plugin@org.eclipse.osgi,3.5.1=p2IU,id=org.eclipse.osgi,version=3.5.1.R35x_v20090827,repository=http://download.eclipse.org/releases/galileo
-plugin@org.eclipse.osgi.services,3.2.0=p2IU,id=org.eclipse.osgi.services,version=3.2.0.v20090520-1800,repository=http://download.eclipse.org/releases/galileo
-plugin@org.eclipse.osgi.util,3.2.0=p2IU,id=org.eclipse.osgi.util,version=3.2.0.v20090520-1800,repository=http://download.eclipse.org/releases/galileo
+#plugin@org.eclipse.osgi,3.5.1=p2IU,id=org.eclipse.osgi,version=3.5.1.R35x_v20090827,repository=http://download.eclipse.org/releases/galileo
+#plugin@org.eclipse.osgi.services,3.2.0=p2IU,id=org.eclipse.osgi.services,version=3.2.0.v20090520-1800,repository=http://download.eclipse.org/releases/galileo
+#plugin@org.eclipse.osgi.util,3.2.0=p2IU,id=org.eclipse.osgi.util,version=3.2.0.v20090520-1800,repository=http://download.eclipse.org/releases/galileo
 
