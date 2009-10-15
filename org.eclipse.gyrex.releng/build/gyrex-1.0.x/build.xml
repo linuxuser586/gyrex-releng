@@ -91,9 +91,6 @@ Project 'org.eclipse.dash.common.releng' not found in '${workspaceDir}'.
 
 		</fail>
 
-		<!-- set property to fix p2 transform repository location -->
-		<property name="transformedRepoLocation" location="${buildDir}/transformedRepos"/>
-
 		<!-- invoke a new Eclipse process and launch the build from the common.releng folder -->
 		<ant antfile="${relengCommonBuilderDir}/buildAll.xml" target="runEclipse" dir="${relengCommonBuilderDir}" />
 	</target>
