@@ -1,11 +1,11 @@
 <!--
     Copyright (c) 2009 AGETO Service GmbH and others.
     All rights reserved.
-     
-    This program and the accompanying materials are made available under the 
+
+    This program and the accompanying materials are made available under the
     terms of the Eclipse Public License v1.0 which accompanies this distribution,
     and is available at http://www.eclipse.org/legal/epl-v10.html.
-   
+
     Contributors:
         Gunnar Wagenknecht - initial API and implementation
  -->
@@ -90,6 +90,9 @@ Project 'org.eclipse.dash.common.releng' not found in '${workspaceDir}'.
 -&gt; Did you forget to check it out from CVS/SVN?
 
 		</fail>
+
+		<!-- set property to fix p2 transform repository location -->
+		<property name="transformedRepoLocation" location="${buildDir}/transformedRepos"/>
 
 		<!-- invoke a new Eclipse process and launch the build from the common.releng folder -->
 		<ant antfile="${relengCommonBuilderDir}/buildAll.xml" target="runEclipse" dir="${relengCommonBuilderDir}" />
