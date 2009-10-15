@@ -8,7 +8,10 @@
 # and insert the following line:
 #
 # # get version of script to use
-# wget http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/build/gyrex-1.0.x/scripts/run.sh?root=Technology_Project
+# wget -nvr -O ${WORKSPACE}/run.sh http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/build/gyrex-1.0.x/scripts/run.sh?revision=1.3&root=Technology_Project&view=co
+#
+# # execute script
+# sh ${WORKSPACE}/run.sh
 
 echo "[`date +%Y/%m/%d\ %H:%M`] Hudson job ${JOBNAME} build #${BUILD_NUMBER} (${BUILD_ID}) started." 
 
@@ -20,7 +23,7 @@ buildTimestamp="`date +%Y%m%d%H%M`"
 
 # where should we look for pre-checked out project sources for org.eclipse.dash.common.releng and org.eclipse.releng.basebuilder ?
 cvsProjectBaseDir=/opt/public/cbi/build # build.eclipse.org
-if [[ ! -d $cvsProjectBaseDir ]]; then cvsProjectBaseDir=/home/builduser/workspace; fi # local build? 
+if [[ ! -d $cvsProjectBaseDir ]]; then cvsProjectBaseDir=${WORKSPACE}; fi # local build? 
 if [[ ! -d $cvsProjectBaseDir ]]; then 
 	echo "ERROR: cannot find where org.eclipse.dash.common.releng and org.eclipse.releng.basebuilder are on disk. Must exit!"
 	exit 1;
@@ -30,6 +33,9 @@ fi
 thirdPartyJarsDir=/opt/public/cbi/build/3rdPartyJars # build.eclipse.org
 if [[ ! -d $thirdPartyJarsDir ]]; then thirdPartyJarsDir=/tmp/build/3rdPartyJars; fi # local build 
 if [[ ! -d $thirdPartyJarsDir ]]; then mkdir $thirdPartyJarsDir; fi 
+
+# the branch of the basebuilder to use
+basebuilderBranch=R36_M2
 
 # DONE CONFIGURATION
 
@@ -122,9 +128,13 @@ touch ${writableBuildRoot}/.cvspass
 #define symlinked required folders
 relengBaseBuilderDir="${writableBuildRoot}/org.eclipse.releng.basebuilder"
 relengCommonBuilderDir="${writableBuildRoot}/org.eclipse.dash.common.releng"
-# symlink basebuilder and common.releng; alternatively, if you omit this, they'll be checked out in start.sh
-#ln -s ${cvsProjectBaseDir}/org.eclipse.releng.basebuilder ${writableBuildRoot}/
+# symlink common.releng
 ln -s ${cvsProjectBaseDir}/org.eclipse.dash.common.releng ${writableBuildRoot}/
+
+# checkout basebuilder
+
+if [[ ! $basebuilderBranch ]]; then basebuilderBranch=HEAD; fi; # use a newer base builder branch
+#ln -s ${cvsProjectBaseDir}/org.eclipse.releng.basebuilder ${writableBuildRoot}/
 
 # symlink 3rdPartyJars (reuse existing content on build.eclipse.org for ant-contrib.jar, etc.)
 ln -s ${thirdPartyJarsDir} ${writableBuildRoot}/

@@ -47,18 +47,6 @@
 					JAVA_HOME=${JAVA14_HOME}
 		-->
 
-		<!-- load properties and set timestamp for the build -->
-		<property file="build.properties" />
-		<tstamp>
-			<format property="buildTimestamp" pattern="yyyyMMddHHmm" />
-		</tstamp>
-
-		<!--
-		to build from HEAD, uncomment these lines
-		<property name="forceContextQualifier" value="v${buildTimestamp}" />
-		<property name="fetchTag" value="HEAD" />
-		-->
-
 		<!-- set the project's .releng folder (relengBuilderDir) to folder of this Ant script -->
 		<property name="relengBuilderDir" location="${basedir}" />
 
@@ -70,6 +58,18 @@
 			${relengBuilderDir}/build
 		-->
 		<property name="writableBuildRoot" value="/tmp/build" />
+
+		<!-- load properties and set timestamp for the build -->
+		<property file="build.properties" />
+		<tstamp>
+			<format property="buildTimestamp" pattern="yyyyMMddHHmm" />
+		</tstamp>
+
+		<!--
+		to build from HEAD, uncomment these lines
+		<property name="forceContextQualifier" value="v${buildTimestamp}" />
+		<property name="fetchTag" value="HEAD" />
+		-->
 
 		<!--
 			can be simple path, eg.,
