@@ -58,8 +58,8 @@ plugin@org.eclipse.equinox.util.source,1.0.100=p2IU,id=org.eclipse.equinox.util.
 plugin@org.eclipse.core.boot,3.1.100=p2IU,id=org.eclipse.core.boot,version=3.1.100.v20080218,repository=http://download.eclipse.org/releases/galileo
 plugin@org.eclipse.core.jobs,3.4.100=p2IU,id=org.eclipse.core.jobs,version=3.4.100.v20090429-1800,repository=http://download.eclipse.org/releases/galileo
 plugin@org.eclipse.core.jobs.source,3.4.100=p2IU,id=org.eclipse.core.jobs.source,version=3.4.100.v20090429-1800,repository=http://download.eclipse.org/releases/galileo
-plugin@org.eclipse.core.net,=1.2.1=p2IU,id=org.eclipse.core.net,version=1.2.1.r35x_20090812-1200,repository=http://download.eclipse.org/releases/galileo
-plugin@org.eclipse.core.net.source,=1.2.1=p2IU,id=org.eclipse.core.net.source,version=1.2.1.r35x_20090812-1200,repository=http://download.eclipse.org/releases/galileo
+plugin@org.eclipse.core.net,1.2.1=p2IU,id=org.eclipse.core.net,version=1.2.1.r35x_20090812-1200,repository=http://download.eclipse.org/releases/galileo
+plugin@org.eclipse.core.net.source,1.2.1=p2IU,id=org.eclipse.core.net.source,version=1.2.1.r35x_20090812-1200,repository=http://download.eclipse.org/releases/galileo
 #fragment@org.eclipse.core.net.linux.x86,=p2IU,id=org.eclipse.core.net.linux.x86,version=,repository=http://download.eclipse.org/releases/galileo
 #fragment@org.eclipse.core.net.win32.x86,=p2IU,id=org.eclipse.core.net.win32.x86,version=,repository=http://download.eclipse.org/releases/galileo
 #fragment@org.eclipse.core.net.win32.x86_64,=p2IU,id=org.eclipse.core.net.win32.x86_64,version=,repository=http://download.eclipse.org/releases/galileo
