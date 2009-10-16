@@ -1,5 +1,11 @@
-# Equinox dependencies
-# http://download.eclipse.org/equinox/drops/R-3.5.1-200909170800/equinox-SDK-3.5.1.zip
+##############################
+# Gyrex Equinox dependencies #
+##############################
+#
+# This map files lists dependencies on Equinox bundles. All bundles are
+# fetched from an Equinox update site. Therefore, entries need to use the
+# p2IU fetch factory.
+#
 
 ### Equinox OSGi Core
 plugin@org.eclipse.osgi,3.5.1=p2IU,id=org.eclipse.osgi,version=3.5.1.R35x_v20090827,repository=http://download.eclipse.org/releases/galileo
