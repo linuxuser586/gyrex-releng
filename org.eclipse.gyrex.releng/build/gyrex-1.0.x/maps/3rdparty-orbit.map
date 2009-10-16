@@ -175,3 +175,12 @@ plugin@com.google.gwt.servlet.source,1.7.0=v20090930-0900,:pserver:anonymous@dev
 # CQ 3575 [https://dev.eclipse.org/ipzilla/show_bug.cgi?id=3575]
 plugin@com.ibm.icu.base,4.0.1=p2IU,id=com.ibm.icu.base,version=4.0.1.v20090822,repository=http://download.eclipse.org/tools/orbit/downloads/drops/S20090911225403/updateSite
 plugin@com.ibm.icu.base.source,4.0.1=p2IU,id=com.ibm.icu.base.source,version=4.0.1.v20090822,repository=http://download.eclipse.org/tools/orbit/downloads/drops/S20090911225403/updateSite
+
+
+#
+#********************* SLF4J ***********************
+#
+
+# CQ 3200 [https://dev.eclipse.org/ipzilla/show_bug.cgi?id=3200]
+plugin@org.slf4j.api,1.5.6=p2IU,id=org.slf4j.api,version=1.5.6.v200903200722,repository=http://download.eclipse.org/tools/orbit/downloads/drops/S20090911225403/updateSite
+plugin@org.slf4j.api.source,1.5.6=p2IU,id=org.slf4j.api.source,version=1.5.6.v200903200722,repository=http://download.eclipse.org/tools/orbit/downloads/drops/S20090911225403/updateSite
