@@ -149,11 +149,11 @@ plugin@org.apache.solr.servlet.source,1.3.0=p2IU,id=org.apache.solr.servlet.sour
 #
 
 # CQ 2828 [https://dev.eclipse.org/ipzilla/show_bug.cgi?id=2828]
-plugin@com.google.gwt.user,1.7.0=v20090930-0900,:pserver:anonymous@dev.eclipse.org:/cvsroot/tools,,org.eclipse.orbit/com.google.gwt.user
-plugin@com.google.gwt.user.source,1.7.0=v20090930-0900,:pserver:anonymous@dev.eclipse.org:/cvsroot/tools,,org.eclipse.orbit/com.google.gwt.user/source-bundle
+plugin@com.google.gwt.user,1.7.0=v20091019-0813,:pserver:anonymous@dev.eclipse.org:/cvsroot/tools,,org.eclipse.orbit/com.google.gwt.user
+plugin@com.google.gwt.user.source,1.7.0=v20091019-0813,:pserver:anonymous@dev.eclipse.org:/cvsroot/tools,,org.eclipse.orbit/com.google.gwt.user/source-bundle
 # CQ 2829 [https://dev.eclipse.org/ipzilla/show_bug.cgi?id=2829]
-plugin@com.google.gwt.servlet,1.7.0=v20090930-0900,:pserver:anonymous@dev.eclipse.org:/cvsroot/tools,,org.eclipse.orbit/com.google.gwt.servlet
-plugin@com.google.gwt.servlet.source,1.7.0=v20090930-0900,:pserver:anonymous@dev.eclipse.org:/cvsroot/tools,,org.eclipse.orbit/com.google.gwt.servlet/source-bundle
+plugin@com.google.gwt.servlet,1.7.0=v20091019-0813,:pserver:anonymous@dev.eclipse.org:/cvsroot/tools,,org.eclipse.orbit/com.google.gwt.servlet
+plugin@com.google.gwt.servlet.source,1.7.0=v20091019-0813,:pserver:anonymous@dev.eclipse.org:/cvsroot/tools,,org.eclipse.orbit/com.google.gwt.servlet/source-bundle
 
 
 #
