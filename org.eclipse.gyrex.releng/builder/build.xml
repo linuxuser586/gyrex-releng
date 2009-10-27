@@ -1,0 +1,60 @@
+<!--
+    Copyright (c) 2009 AGETO Service GmbH and others.
+    All rights reserved.
+
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v1.0 which accompanies this distribution,
+    and is available at http://www.eclipse.org/legal/epl-v10.html.
+
+    Contributors:
+        Gunnar Wagenknecht - initial API and implementation
+ -->
+<!--
+	1. You must check out the following projects to your workspace:
+
+	     org.eclipse.gyrex.releng.builder
+
+	2. To run automated JUnit tests headlessly, you will require Xvfb or Xvnc; without this,
+	   UI tests will be launched into your current OS session (ie., on view port :0) and you may
+	   inadvertently interact with them. (Non-UI tests can be run without fear of accidental
+	   interaction and do not have this requirement.)
+
+	3. You must also ensure that the path specified for Java, and the version of Eclipse stated in
+	   build.properties are correct for your machine. Edit these properties in build.local.properties
+	   to suit your needs. See build.local.properties.example
+-->
+<project default="run" name="org.eclipse.gyrex.releng/builder/build.xml - Run a Gyrex build using PDE Build">
+
+	<target name="run" description="Performs a Gyrex build">
+
+		<!-- set a writable build root (default to /tmp/build) -->
+		<condition property="writableBuildRoot" value="/temp/build" else="/tmp/build"><os family="windows"/></condition>
+
+		<!-- set timestamp for the build -->
+		<tstamp>
+			<format property="buildTimestamp" pattern="yyyyMMddHHmm" />
+		</tstamp>
+
+		<!-- load build specific properties -->
+		<property file="build.local.properties" />
+		<property file="build.properties" />
+
+		<!-- set default location of the build helpers script -->
+		<property name="buildhelpers.xml" location="common/buildhelpers.xml"/>
+
+		<!-- set default for the build directory -->
+		<property name="buildDirectory" value="${writableBuildRoot}" />
+
+		<!-- set directory where the basebuilder can be found -->
+		<!--<property name="org.eclipse.releng.basebuilder" value="${writableBuildRoot}/org.eclipse.releng.basebuilder" />-->
+
+		<!-- bootstrap basebuilder if necessary -->
+		<!--<ant antfile="${buildhelpers.xml}" target="bootstrap-org.eclipse.releng.basebuilder" />-->
+
+		<!-- build the product -->
+		<touch file="${user.home}/.cvspass" />
+		<ant antfile="configs/gyrex-1.0.x/build.xml"></ant>
+
+	</target>
+
+</project>

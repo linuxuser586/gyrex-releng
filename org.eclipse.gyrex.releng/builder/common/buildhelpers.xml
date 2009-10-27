@@ -1,0 +1,137 @@
+<!--
+    Copyright (c) 2009 AGETO Service GmbH and others.
+    All rights reserved.
+
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v1.0 which accompanies this distribution,
+    and is available at http://www.eclipse.org/legal/epl-v10.html.
+
+    Contributors:
+        Gunnar Wagenknecht - initial API and implementation
+ -->
+<!--
+
+	This file contains helper targets. It's not called directly but from your
+	main build script.
+
+	Note, please do not customize this file or you'll loose the ability to simply
+	upgrade to a new version of the build helpers.
+
+-->
+<project name="org.eclipse.gyrex.releng.build.helpers" default="nodefault" >
+
+	<description>Some helpers provided by the Darn Simple PDE Builder for your build.</description>
+
+	<!-- fake default target -->
+    <target name="nodefault">
+    	<fail taskname="This script must not be called directly."/>
+    </target>
+
+	<!-- =================================
+          target: bootstrap-org.eclipse.releng.basebuilder
+         ================================= -->
+	<target name="bootstrap-org.eclipse.releng.basebuilder" description="Performs bootstrapping of org.eclipse.releng.basebuilder from Eclipse CVS" unless="org.eclipse.releng.basebuilder.exists">
+
+		<!-- verify required properties are set -->
+		<fail unless="org.eclipse.releng.basebuilder" message="Required property 'org.eclipse.releng.basebuilder' not set! Please set it to the target location of the org.eclipse.releng.basebuilder."/>
+
+		<!-- set property if basebuilder exists -->
+		<available file="${org.eclipse.releng.basebuilder}" type="dir" property="org.eclipse.releng.basebuilder.exists"/>
+
+		<!-- call sup targets to perform actually checkout if necessary -->
+		<antcall target="org.eclipse.releng.basebuilder-checkout" />
+		<antcall target="org.eclipse.releng.basebuilder-uselocal" />
+
+    </target>
+
+	<!-- performs basebuilder checkout from CVS if org.eclipse.releng.basebuilder.exists is not set -->
+	<target name="org.eclipse.releng.basebuilder-checkout" unless="org.eclipse.releng.basebuilder.exists">
+
+		<!-- set default branch/tag to check out -->
+		<property name="org.eclipse.releng.basebuilder.tag" value="HEAD"/>
+
+		<!-- perform checkout -->
+		<echo level="info" message="[BOOTSTRAP] Perform checkout of org.eclipse.releng.basebuilder (using tag/branch '${org.eclipse.releng.basebuilder.tag}')"/>
+		<cvs
+			cvsRoot=":pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse"
+			package="org.eclipse.releng.basebuilder"
+			dest="${org.eclipse.releng.basebuilder}"
+			failonerror="true"
+			tag="${org.eclipse.releng.basebuilder.tag}"
+		/>
+    </target>
+
+	<!-- prints a message informing that local basebuilder will be used if rg.eclipse.releng.basebuilder.exists is set -->
+	<target name="org.eclipse.releng.basebuilder-uselocal" if="org.eclipse.releng.basebuilder.exists">
+		<echo level="info" message="[BOOTSTRAP] Using local available org.eclipse.releng.basebuilder (${org.eclipse.releng.basebuilder})"/>
+    </target>
+
+
+	<!-- =================================
+          target: build-everything
+         ================================= -->
+    <target name="build-product" description="Performs a build of a specific product">
+		<!-- verify required properties are set -->
+		<fail unless="product.file" message="Required property 'product.file' not set! Please set it to the product definition file."/>
+
+		<!-- verify the product definition exists -->
+    	<available file="${product.file}" type="file" property="product.file.exists"/>
+		<fail unless="product.file.exists" message="The Eclipse product definition file '${product.file}' could not be read! Please verify the property 'product.file' is set correctly and that the file is available and readable!"/>
+
+
+	</target>
+
+
+
+
+	<property name="pde.build.scripts"	value="${eclipse.pdebuild.scripts}"/>
+	<property name="buildDirectory" location="${basedir}/src" />
+
+	<target name="main" depends="checkArgs,init">
+		<ant antfile="build.xml" dir="${pde.build.scripts}" />
+	</target>
+
+	<target name="checkArgs" unless="builder">
+		<echo message="-Dbuilder=&lt;path&gt; required." />
+		<fail/>
+	</target>
+
+	<target name="init">
+		<touch file="${user.home}/.cvspass" />
+		<available file="${buildDirectory}/label.properties" property="label.properties.exists" />
+		<antcall target="create.label.properties" />
+		<property file="${buildDirectory}/label.properties" />
+	</target>
+
+	<target name="create.label.properties" unless="label.properties.exists">
+		<mkdir dir="${buildDirectory}" />
+		<tstamp/>
+		<property name="date" value="${DSTAMP}" />
+		<property name="time" value="${TSTAMP}" />
+		<property name="timestamp" value="${date}${time}" />
+		<property name="buildType" value="I" />
+		<property name="buildId" value="${buildType}${date}" />
+
+		<!--this naming convention used by php scripts on download server-->
+		<property name="buildLabel" value="${buildType}-${buildId}-${timestamp}" />
+
+		<!--store the build label information in a file-->
+		<echo file="${buildDirectory}/label.properties" append="true" >
+		buildDirectory=${buildDirectory}
+		</echo>
+		<echo file="${buildDirectory}/label.properties" append="true" >
+		buildType=${buildType}
+		</echo>
+		<echo file="${buildDirectory}/label.properties" append="true" >
+		buildId=${buildId}
+		</echo>
+		<echo file="${buildDirectory}/label.properties" append="true" >
+		timestamp=${timestamp}
+		</echo>
+		<echo file="${buildDirectory}/label.properties" append="true" >
+		buildLabel=${buildLabel}
+		</echo>
+	</target>
+
+
+</project>
