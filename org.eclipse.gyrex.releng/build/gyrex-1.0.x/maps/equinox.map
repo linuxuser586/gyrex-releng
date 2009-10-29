@@ -33,15 +33,6 @@ plugin@org.eclipse.equinox.http.registry,1.0.200=p2IU,id=org.eclipse.equinox.htt
 plugin@org.eclipse.equinox.http.registry.source,1.0.200=p2IU,id=org.eclipse.equinox.http.registry.source,version=1.0.200.v20090520-1800,repository=http://download.eclipse.org/releases/galileo
 plugin@org.eclipse.equinox.http.servlet,1.0.200=p2IU,id=org.eclipse.equinox.http.servlet,version=1.0.200.v20090520-1800,repository=http://download.eclipse.org/releases/galileo
 plugin@org.eclipse.equinox.http.servlet.source,1.0.200=p2IU,id=org.eclipse.equinox.http.servlet.source,version=1.0.200.v20090520-1800,repository=http://download.eclipse.org/releases/galileo
-plugin@org.eclipse.equinox.launcher,1.0.201=p2IU,id=org.eclipse.equinox.launcher,version=1.0.201.R35x_v20090715,repository=http://download.eclipse.org/releases/galileo
-plugin@org.eclipse.equinox.launcher.source,1.0.201=p2IU,id=org.eclipse.equinox.launcher.source,version=1.0.201.R35x_v20090715,repository=http://download.eclipse.org/releases/galileo
-fragment@org.eclipse.equinox.launcher.cocoa.macosx,1.0.1=p2IU,id=org.eclipse.equinox.launcher.cocoa.macosx,version=1.0.1.R35x_v20090707,repository=http://download.eclipse.org/releases/galileo
-fragment@org.eclipse.equinox.launcher.cocoa.macosx.x86_64,1.0.1=p2IU,id=org.eclipse.equinox.launcher.cocoa.macosx.x86_64,version=1.0.1.R35x_v20090707,repository=http://download.eclipse.org/releases/galileo
-fragment@org.eclipse.equinox.launcher.gtk.linux.ppc,1.0.200=p2IU,id=org.eclipse.equinox.launcher.gtk.linux.ppc,version=1.0.200.v20090519,repository=http://download.eclipse.org/releases/galileo
-fragment@org.eclipse.equinox.launcher.gtk.linux.x86,1.0.200=p2IU,id=org.eclipse.equinox.launcher.gtk.linux.x86,version=1.0.200.v20090520,repository=http://download.eclipse.org/releases/galileo
-fragment@org.eclipse.equinox.launcher.gtk.linux.x86_64,1.0.200=p2IU,id=org.eclipse.equinox.launcher.gtk.linux.x86_64,version=1.0.200.v20090519,repository=http://download.eclipse.org/releases/galileo
-fragment@org.eclipse.equinox.launcher.win32.win32.x86,1.0.200=p2IU,id=org.eclipse.equinox.launcher.win32.win32.x86,version=1.0.200.v20090519,repository=http://download.eclipse.org/releases/galileo
-fragment@org.eclipse.equinox.launcher.win32.win32.x86_64,1.1.0=p2IU,id=org.eclipse.equinox.launcher.win32.win32.x86_64,version=1.1.0.v20090316-0910,repository=http://download.eclipse.org/releases/galileo
 plugin@org.eclipse.equinox.log,1.2.0=p2IU,id=org.eclipse.equinox.log,version=1.2.0.v20090520-1800,repository=http://download.eclipse.org/releases/galileo
 plugin@org.eclipse.equinox.log.source,1.2.0=p2IU,id=org.eclipse.equinox.log.source,version=1.2.0.v20090520-1800,repository=http://download.eclipse.org/releases/galileo
 plugin@org.eclipse.equinox.metatype,1.0.2=p2IU,id=org.eclipse.equinox.metatype,version=1.0.2.v20090520-1800,repository=http://download.eclipse.org/releases/galileo
@@ -79,3 +70,12 @@ plugin@org.eclipse.core.contenttype.source,3.4.1=p2IU,id=org.eclipse.core.conten
 
 # Equinox launcher
 feature@org.eclipse.equinox.executable,3.3.200=p2IU,id=org.eclipse.equinox.executable,version=3.3.200.R35x_v20090724-7M-FneFF9aMTyz0pw04ONXn,repository=http://download.eclipse.org/releases/galileo
+plugin@org.eclipse.equinox.launcher,1.0.201=p2IU,id=org.eclipse.equinox.launcher,version=1.0.201.R35x_v20090715,repository=http://download.eclipse.org/releases/galileo
+plugin@org.eclipse.equinox.launcher.source,1.0.201=p2IU,id=org.eclipse.equinox.launcher.source,version=1.0.201.R35x_v20090715,repository=http://download.eclipse.org/releases/galileo
+fragment@org.eclipse.equinox.launcher.cocoa.macosx,1.0.1=p2IU,id=org.eclipse.equinox.launcher.cocoa.macosx,version=1.0.1.R35x_v20090707,repository=http://download.eclipse.org/releases/galileo
+fragment@org.eclipse.equinox.launcher.cocoa.macosx.x86_64,1.0.1=p2IU,id=org.eclipse.equinox.launcher.cocoa.macosx.x86_64,version=1.0.1.R35x_v20090707,repository=http://download.eclipse.org/releases/galileo
+fragment@org.eclipse.equinox.launcher.gtk.linux.ppc,1.0.200=p2IU,id=org.eclipse.equinox.launcher.gtk.linux.ppc,version=1.0.200.v20090519,repository=http://download.eclipse.org/releases/galileo
+fragment@org.eclipse.equinox.launcher.gtk.linux.x86,1.0.200=p2IU,id=org.eclipse.equinox.launcher.gtk.linux.x86,version=1.0.200.v20090520,repository=http://download.eclipse.org/releases/galileo
+fragment@org.eclipse.equinox.launcher.gtk.linux.x86_64,1.0.200=p2IU,id=org.eclipse.equinox.launcher.gtk.linux.x86_64,version=1.0.200.v20090519,repository=http://download.eclipse.org/releases/galileo
+fragment@org.eclipse.equinox.launcher.win32.win32.x86,1.0.200=p2IU,id=org.eclipse.equinox.launcher.win32.win32.x86,version=1.0.200.v20090519,repository=http://download.eclipse.org/releases/galileo
+fragment@org.eclipse.equinox.launcher.win32.win32.x86_64,1.1.0=p2IU,id=org.eclipse.equinox.launcher.win32.win32.x86_64,version=1.1.0.v20090316-0910,repository=http://download.eclipse.org/releases/galileo
