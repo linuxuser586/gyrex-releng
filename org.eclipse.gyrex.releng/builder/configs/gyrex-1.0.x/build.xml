@@ -20,9 +20,9 @@
 		<!-- ensure that the base folders exist -->
 		<mkdir dir="${baseLocation}" />
 		<!-- build the feature -->
-		<ant antfile="${eclipse.pdebuild.scripts}/build.xml" />
+		<!--ant antfile="${eclipse.pdebuild.scripts}/build.xml" /-->
 		<!-- build the product -->
-		<!--ant antfile="${eclipse.pdebuild.scripts}/productBuild/productBuild.xml" /-->
+		<ant antfile="${eclipse.pdebuild.scripts}/productBuild/productBuild.xml" />
 	</target>
 
 	<target name="init">
