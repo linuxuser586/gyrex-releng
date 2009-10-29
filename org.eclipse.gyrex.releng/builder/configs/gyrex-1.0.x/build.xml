@@ -22,7 +22,7 @@
 		<!-- build the feature -->
 		<ant antfile="${eclipse.pdebuild.scripts}/build.xml" />
 		<!-- build the product -->
-		<ant antfile="${eclipse.pdebuild.scripts}/productBuild/productBuild.xml" />
+		<!--ant antfile="${eclipse.pdebuild.scripts}/productBuild/productBuild.xml" /-->
 	</target>
 
 	<target name="init">
@@ -43,7 +43,8 @@
 		<property name="timestamp" value="${date}${time}" />
 		<property name="buildType" value="I" />
 		<property name="buildId" value="${buildType}${date}" />
-
+		<property name="forceContextQualifier" value="v${timestamp}" />
+		
 		<!--this naming convention used by php scripts on download server-->
 		<property name="buildLabel" value="${buildType}-${buildId}-${timestamp}" />
 
@@ -54,6 +55,7 @@ buildType=${buildType}
 buildId=${buildId}
 timestamp=${timestamp}
 buildLabel=${buildLabel}
+forceContextQualifier=${forceContextQualifier}
 		</echo>
 	</target>
 
