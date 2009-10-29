@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product application="org.eclipse.gyrex.boot.server" useFeatures="true" includeLaunchers="true">
+<product name="Gyrex Technical Preview (Incubation)" uid="org.eclipse.gyrex.products.techpreview" application="org.eclipse.gyrex.boot.server" version="1.0.0" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -27,7 +27,7 @@
    </plugins>
 
    <features>
-      <feature id="org.eclipse.gyrex.features.techpreview" version="1.0.0.qualifier"/>
+      <feature id="org.eclipse.gyrex.features.techpreview" version="0.0.0"/>
    </features>
 
 
