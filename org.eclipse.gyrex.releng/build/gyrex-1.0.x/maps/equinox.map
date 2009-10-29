@@ -70,7 +70,7 @@ plugin@org.eclipse.core.contenttype.source,3.4.1=p2IU,id=org.eclipse.core.conten
 
 # Equinox launcher
 #feature@org.eclipse.equinox.executable,3.3.200=p2IU,id=org.eclipse.equinox.executable,version=3.3.200.R35x_v20090724-7M-FneFF9aMTyz0pw04ONXn,repository=http://download.eclipse.org/releases/galileo
-feature@org.eclipse.equinox.executable=CVS,HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/rt,,org.eclipse.equinox/framework/bundles/org.eclipse.equinox.executable
+#feature@org.eclipse.equinox.executable=CVS,HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/rt,,org.eclipse.equinox/framework/bundles/org.eclipse.equinox.executable
 plugin@org.eclipse.equinox.launcher,1.0.201=p2IU,id=org.eclipse.equinox.launcher,version=1.0.201.R35x_v20090715,repository=http://download.eclipse.org/releases/galileo
 plugin@org.eclipse.equinox.launcher.source,1.0.201=p2IU,id=org.eclipse.equinox.launcher.source,version=1.0.201.R35x_v20090715,repository=http://download.eclipse.org/releases/galileo
 fragment@org.eclipse.equinox.launcher.cocoa.macosx,1.0.1=p2IU,id=org.eclipse.equinox.launcher.cocoa.macosx,version=1.0.1.R35x_v20090707,repository=http://download.eclipse.org/releases/galileo
@@ -80,3 +80,6 @@ fragment@org.eclipse.equinox.launcher.gtk.linux.x86,1.0.200=p2IU,id=org.eclipse.
 fragment@org.eclipse.equinox.launcher.gtk.linux.x86_64,1.0.200=p2IU,id=org.eclipse.equinox.launcher.gtk.linux.x86_64,version=1.0.200.v20090519,repository=http://download.eclipse.org/releases/galileo
 fragment@org.eclipse.equinox.launcher.win32.win32.x86,1.0.200=p2IU,id=org.eclipse.equinox.launcher.win32.win32.x86,version=1.0.200.v20090519,repository=http://download.eclipse.org/releases/galileo
 fragment@org.eclipse.equinox.launcher.win32.win32.x86_64,1.1.0=p2IU,id=org.eclipse.equinox.launcher.win32.win32.x86_64,version=1.1.0.v20090316-0910,repository=http://download.eclipse.org/releases/galileo
+
+# old update plug-in (until we have p2)
+feature@org.eclipse.update.configurator=CVS,v20092006-1400,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,,org.eclipse.update.configurator
