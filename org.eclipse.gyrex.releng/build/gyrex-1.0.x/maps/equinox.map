@@ -75,3 +75,7 @@ plugin@org.eclipse.core.runtime.compatibility.auth,3.2.100=p2IU,id=org.eclipse.c
 plugin@org.eclipse.core.runtime.compatibility.auth.source,3.2.100=p2IU,id=org.eclipse.core.runtime.compatibility.auth.source,version=3.2.100.v20090413,repository=http://download.eclipse.org/releases/galileo
 plugin@org.eclipse.core.contenttype,3.4.1=p2IU,id=org.eclipse.core.contenttype,version=3.4.1.R35x_v20090826-0451,repository=http://download.eclipse.org/releases/galileo
 plugin@org.eclipse.core.contenttype.source,3.4.1=p2IU,id=org.eclipse.core.contenttype.source,version=3.4.1.R35x_v20090826-0451,repository=http://download.eclipse.org/releases/galileo
+
+
+# Equinox launcher
+feature@org.eclipse.equinox.executable,3.3.200=p2IU,id=org.eclipse.equinox.executable,version=3.3.200.R35x_v20090724-7M-FneFF9aMTyz0pw04ONXn,repository=http://download.eclipse.org/releases/galileo
