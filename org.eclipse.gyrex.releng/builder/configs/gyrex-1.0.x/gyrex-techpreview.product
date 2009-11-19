@@ -13,7 +13,7 @@
       <vmArgsWin>-XX:+UseParallelGC -XX:MaxPermSize=128m</vmArgsWin>
    </launcherArgs>
 
-   <launcher>
+   <launcher name="gyrex">
       <solaris/>
       <win useIco="false">
          <bmp/>
@@ -27,7 +27,7 @@
    </plugins>
 
    <features>
-      <feature id="org.eclipse.gyrex.features.techpreview" version="0.0.0"/>
+      <feature id="org.eclipse.gyrex.features.techpreview"/>
    </features>
 
 

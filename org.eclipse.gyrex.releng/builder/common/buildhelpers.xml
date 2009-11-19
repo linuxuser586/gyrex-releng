@@ -77,8 +77,6 @@
 		<!-- verify the product definition exists -->
     	<available file="${product.file}" type="file" property="product.file.exists"/>
 		<fail unless="product.file.exists" message="The Eclipse product definition file '${product.file}' could not be read! Please verify the property 'product.file' is set correctly and that the file is available and readable!"/>
-
-
 	</target>
 
 
