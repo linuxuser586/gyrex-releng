@@ -17,8 +17,12 @@
 		<dirname file="${ant.file.build-gyrex-1.0.x}" property="builder"/>
 		<!-- read the build properties -->
 		<property file="${builder}/build.properties"/>
-		<!-- ensure that the base folders exist -->
-		<mkdir dir="${baseLocation}" />
+        <!-- ensure that the base folders exist -->
+        <mkdir dir="${baseLocation}" />
+        <mkdir dir="${repoBaseLocation}" />
+        <mkdir dir="${transformedRepoLocation}" />
+		<!-- download the launcher pieces -->
+		<antcall target="getLauncherComponents"/>
 		<!-- build the feature -->
 		<!--ant antfile="${eclipse.pdebuild.scripts}/build.xml" /-->
 		<!-- build the product -->
@@ -58,6 +62,18 @@ buildLabel=${buildLabel}
 forceContextQualifier=${forceContextQualifier}
 		</echo>
 	</target>
+
+    <target name="getLauncherComponents" depends="checkLocalLaunchers" unless="skipLaunchers">
+    	<!-- mirror the launchers -->
+    	<p2.mirror source="${launchersRepo}" destination="${repoBaseLocation}/launchers">
+    		<iu id="${launchersIU}" />
+    		<slicingOptions includeOptional="false" includeNonGreedy="false" followStrict="true" />
+    	</p2.mirror>
+    </target>
+
+    <target name="checkLocalLaunchers">
+        <available file="${repoBaseLocation}/launchers" type="dir" property="skipLaunchers" />
+    </target>
 
 
 </project>
