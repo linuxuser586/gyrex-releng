@@ -35,9 +35,9 @@
       <update label="%updateSiteName" url="http://download.eclipse.org/gyrex/updates/"/>
    </url>
 
-   <includes
-         id="org.eclipse.equinox.executable"
-         version="0.0.0"/>
+   <requires>
+      <import feature="org.eclipse.equinox.executable" version="3.3.200.R35x_v20090724-7M-FneFF9aMTyz0pw04ONXn" match="compatible"/>
+   </requires>
 
    <plugin
          id="org.eclipse.gyrex.admin"
