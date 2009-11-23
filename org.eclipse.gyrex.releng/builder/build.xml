@@ -35,13 +35,18 @@
 			<format property="buildTimestamp" pattern="yyyyMMddHHmm" />
 		</tstamp>
 
-		<!-- load build specific properties -->
+		<!-- load local build specific properties -->
 		<!-- (we allow custom local properties file via -Dbuild.local.properties=... -->
 		<property name="build.local.properties" location="build.local.properties"/>
 		<property file="${build.local.properties}" />
 		
-		<!-- load common build properties (aka. "default") -->
-		<property file="common/build.default.properties" />
+        <!-- load project build properties -->
+        <property name="build.project.properties" location="build.properties"/>
+        <property file="${build.project.properties}" />
+
+		<!-- load default build properties -->
+        <property name="build.default.properties" location="common/build.default.properties"/>
+		<property file="${build.default.properties}" />
 
 		<!-- set default location of the build helpers script -->
 		<property name="buildhelpers.xml" location="common/buildhelpers.xml"/>
