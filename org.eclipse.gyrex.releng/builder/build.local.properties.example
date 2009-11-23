@@ -1,30 +1,20 @@
-###############################################################################
-# Copyright (c) 2009 AGETO Service GmbH and others.
-# All rights reserved.
+# ----------------------
+# Local Build Properties
+# ----------------------
 #
-# This program and the accompanying materials are made available under the
-# terms of the Eclipse Public License v1.0 which accompanies this distribution,
-# and is available at http://www.eclipse.org/legal/epl-v10.html.
+#   Note, this file only exists locally. It's read by builder to set local 
+#   build options such as paths.
 #
-# Contributors:
-#     Gunnar Wagenknecht - initial API and implementation
-###############################################################################
-# note, this file only exists locally
-# it's read by the Ant launch configuration in Eclipse to run the build locally
+#   Save as "build.local.properties" and adjust the paths to suit your needs.
 #
-# save as "build.local.properties" and adjust the paths to suit your needs
-#
-# IMPORTANT: Please don't use backslash (\) on Windows. It might cause issues with
-#            mixed path names in Ant.
+#   IMPORTANT: Please don't use backslash (\) on Windows. It might cause issues with
+#              mixed path names in Ant.
 #
 
-# JVMs to use
-# set path and version of JVM to use; for 1.4, use JAVA14_HOME, for 6.0, use JAVA60_HOME
-JAVA13_HOME=D:/Java/jdk1.3.1_20
-JAVA14_HOME=D:/Java/jdk1.4.2_18
-JAVA50_HOME=D:/Java/jdk1.5.0_16
-JAVA60_HOME=D:/Java/jdk1.6.0_14
-
-# (re-)configure additional profiles
+# (re-)configure profiles
+J2SE-1.3=D:/Java/jdk1.3.1_20/jre/lib/rt.jar
+J2SE-1.4=D:/Java/jdk1.4.2_18/jre/lib/rt.jar
+J2SE-1.5=D:/Java/jdk1.5.0_16/jre/lib/rt.jar
+JavaSE-1.6=D:/Java/jdk1.6.0_17/jre/lib/rt.jar
 CDC-1.0/Foundation-1.0=D:/Java/foundation_1.0/ee.foundation-1.0.jar
 CDC-1.1/Foundation-1.1=D:/Java/foundation_1.1/ee.foundation-1.1.jar
