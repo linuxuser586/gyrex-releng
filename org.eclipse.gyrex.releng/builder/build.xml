@@ -27,7 +27,7 @@
 
 	<target name="run" description="Performs a Gyrex build">
 
-		<!-- set a writable build root (default to /tmp/build) -->
+		<!-- set a writable build root (default to /t[e]mp/build) -->
 		<condition property="writableBuildRoot" value="/temp/build" else="/tmp/build"><os family="windows"/></condition>
 
 		<!-- set timestamp for the build -->
@@ -36,8 +36,12 @@
 		</tstamp>
 
 		<!-- load build specific properties -->
-		<property file="build.local.properties" />
-		<property file="build.properties" />
+		<!-- (we allow custom local properties file via -Dbuild.local.properties=... -->
+		<property name="build.local.properties" location="build.local.properties"/>
+		<property file="${build.local.properties}" />
+		
+		<!-- load common build properties (aka. "default") -->
+		<property file="common/build.default.properties" />
 
 		<!-- set default location of the build helpers script -->
 		<property name="buildhelpers.xml" location="common/buildhelpers.xml"/>
