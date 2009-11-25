@@ -31,20 +31,16 @@
    <url>
       <update label="%updateSiteName" url="http://download.eclipse.org/gyrex/updates/"/>
    </url>
-   
+
    <requires>
       <import plugin="org.eclipse.equinox.common"/>
       <import plugin="org.eclipse.equinox.app"/>
       <import plugin="org.eclipse.equinox.security"/>
       <import plugin="org.eclipse.core.jobs" match="compatible"/>
       <import plugin="org.eclipse.osgi" match="compatible"/>
-      <import plugin="org.eclipse.ecf" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.ecf.filetransfer" match="greaterOrEqual"/>
       <import plugin="org.eclipse.equinox.frameworkadmin"/>
       <import plugin="org.eclipse.equinox.frameworkadmin.equinox"/>
       <import plugin="org.eclipse.equinox.registry"/>
-      <import plugin="org.eclipse.ecf.identity"/>
-      <import plugin="org.eclipse.ecf.provider.filetransfer"/>
    </requires>
 
    <plugin
@@ -157,6 +153,65 @@
          download-size="0"
          install-size="0"
          version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ecf"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ecf.filetransfer"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ecf.identity"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ecf.provider.filetransfer"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ecf.provider.filetransfer.httpclient"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ecf.provider.filetransfer.httpclient.ssl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ecf.provider.filetransfer.ssl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ecf.ssl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
          unpack="false"/>
 
 </feature>
