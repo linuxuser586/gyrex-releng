@@ -55,13 +55,16 @@
 		<property name="buildDirectory" value="${writableBuildRoot}" />
 
 		<!-- set directory where the basebuilder can be found -->
-		<!--<property name="org.eclipse.releng.basebuilder" value="${writableBuildRoot}/org.eclipse.releng.basebuilder" />-->
+		<property name="org.eclipse.releng.basebuilder" value="${writableBuildRoot}/org.eclipse.releng.basebuilder" />
 
 		<!-- bootstrap basebuilder if necessary -->
-		<!--<ant antfile="${buildhelpers.xml}" target="bootstrap-org.eclipse.releng.basebuilder" />-->
-
+		<!--
+		<ant antfile="${buildhelpers.xml}" target="bootstrap-org.eclipse.releng.basebuilder" />
+        -->
+		
 		<!-- build the product -->
 		<touch file="${user.home}/.cvspass" />
+		
 		<ant antfile="configs/gyrex-1.0.x/build.xml"></ant>
 
 	</target>
