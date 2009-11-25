@@ -180,3 +180,14 @@ plugin@com.ibm.icu.base.source,4.0.1=p2IU,id=com.ibm.icu.base.source,version=4.0
 # CQ 3200 [https://dev.eclipse.org/ipzilla/show_bug.cgi?id=3200]
 plugin@org.slf4j.api,1.5.6=p2IU,id=org.slf4j.api,version=1.5.6.v20090930-0800,repository=http://download.eclipse.org/tools/orbit/downloads/drops/S20091026190351/updateSite
 plugin@org.slf4j.api.source,1.5.6=p2IU,id=org.slf4j.api.source,version=1.5.6.v20090930-0800,repository=http://download.eclipse.org/tools/orbit/downloads/drops/S20091026190351/updateSite
+
+
+#
+#********************* p2 dependencies ***********************
+#
+# Bundles from Orbit for p2
+# TODO: clarify if CQ is necessary
+plugin@org.apache.xml.resolver,1.2.0=p2IU,id=org.apache.xml.resolver,version=1.2.0.v200902170519,repository=http://fullmoon.ottawa.ibm.com/tools/orbit/downloads/drops/R20090825191606/updateSite
+plugin@org.apache.xerces,2.8.0=p2IU,id=org.apache.xerces,version=2.8.0.v200803070308,repository=http://fullmoon.ottawa.ibm.com/tools/orbit/downloads/drops/R20090825191606/updateSite
+plugin@org.sat4j.core,2.1.0=p2IU,id=org.sat4j.core,version=2.1.0.v20090520,repository=http://www.eclipse.org/external/tools/orbit/downloads/drops/R20090825191606/updateSite
+plugin@org.sat4j.pb,2.1.0=p2IU,id=org.sat4j.pb,version=2.1.0.v20090520,repository=http://www.eclipse.org/external/tools/orbit/downloads/drops/R20090825191606/updateSite
