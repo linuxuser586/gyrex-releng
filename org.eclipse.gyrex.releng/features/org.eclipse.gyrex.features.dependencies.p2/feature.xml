@@ -38,8 +38,6 @@
       <import plugin="org.eclipse.equinox.security"/>
       <import plugin="org.eclipse.core.jobs" match="compatible"/>
       <import plugin="org.eclipse.osgi" match="compatible"/>
-      <import plugin="org.eclipse.equinox.frameworkadmin"/>
-      <import plugin="org.eclipse.equinox.frameworkadmin.equinox"/>
       <import plugin="org.eclipse.equinox.registry"/>
    </requires>
 
@@ -212,6 +210,27 @@
          install-size="0"
          version="0.0.0"
          fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.frameworkadmin"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.frameworkadmin.equinox"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.httpclient"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>
