@@ -143,3 +143,7 @@ plugin@org.eclipse.equinox.p2.updatechecker.source=p2IU,id=org.eclipse.equinox.p
 plugin@org.eclipse.equinox.p2.updatechecker=p2IU,id=org.eclipse.equinox.p2.updatechecker,version=1.1.0.v20090520-1905,repository=http://download.eclipse.org/releases/galileo
 plugin@org.eclipse.equinox.p2.updatesite.source,1.0.100=p2IU,id=org.eclipse.equinox.p2.updatesite.source,version=1.0.100.v20090525,repository=http://download.eclipse.org/releases/galileo
 plugin@org.eclipse.equinox.p2.updatesite,1.0.100=p2IU,id=org.eclipse.equinox.p2.updatesite,version=1.0.100.v20090525,repository=http://download.eclipse.org/releases/galileo
+plugin@org.eclipse.equinox.simpleconfigurator.manipulator.source=p2IU,id=org.eclipse.equinox.simpleconfigurator.manipulator.source,version=1.0.100.v20090520-1905,repository=http://download.eclipse.org/releases/galileo
+plugin@org.eclipse.equinox.simpleconfigurator.manipulator=p2IU,id=org.eclipse.equinox.simpleconfigurator.manipulator,version=1.0.100.v20090520-1905,repository=http://download.eclipse.org/releases/galileo
+plugin@org.eclipse.equinox.simpleconfigurator.source=p2IU,id=org.eclipse.equinox.simpleconfigurator.source,version=1.0.101.R35x_v20090807-1100,repository=http://download.eclipse.org/releases/galileo
+plugin@org.eclipse.equinox.simpleconfigurator=p2IU,id=org.eclipse.equinox.simpleconfigurator,version=1.0.101.R35x_v20090807-1100,repository=http://download.eclipse.org/releases/galileo
