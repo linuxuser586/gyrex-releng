@@ -71,8 +71,8 @@ forceContextQualifier=${forceContextQualifier}
     		<iu id="${launchersIU}" />
     	</p2.mirror>
     	<!-- verify download -->
-    	<antcall target="checkLocalLaunchers"/>
-    	<fail unless="skipLaunchers" message="Launchers could not be mirrored correctly. Launchers repository is empty but p2.mirror task was successful?!?"/>
+        <available file="${repoBaseLocation}/launchers/artifacts.jar" type="file" property="launcherMirrorOk" />
+    	<fail unless="launcherMirrorOk" message="Launchers could not be mirrored correctly. Launchers repository is empty but p2.mirror task was successful?!?"/>
     </target>
 
     <target name="checkLocalLaunchers">
