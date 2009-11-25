@@ -13,6 +13,8 @@
       <vmArgsWin>-XX:+UseParallelGC -XX:MaxPermSize=128m</vmArgsWin>
    </launcherArgs>
 
+   <windowImages/>
+
    <launcher name="gyrex">
       <solaris/>
       <win useIco="false">

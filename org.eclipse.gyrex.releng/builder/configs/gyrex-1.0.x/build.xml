@@ -65,14 +65,18 @@ forceContextQualifier=${forceContextQualifier}
 
     <target name="getLauncherComponents" depends="checkLocalLaunchers" unless="skipLaunchers">
     	<!-- mirror the launchers -->
-    	<p2.mirror source="${launchersRepo}" destination="${repoBaseLocation}/launchers">
+    	<p2.mirror source="${launchersRepo}" validate="true" verbose="true">
+    		<destination location="${repoBaseLocation}/launchers" name="Equinox Launcher Repo" append="false" />
+            <slicingOptions includeOptional="false" includeNonGreedy="false" followStrict="true" />
     		<iu id="${launchersIU}" />
-    		<slicingOptions includeOptional="false" includeNonGreedy="false" followStrict="true" />
     	</p2.mirror>
+    	<!-- verify download -->
+    	<antcall target="checkLocalLaunchers"/>
+    	<fail unless="checkLocalLaunchers" message="Launchers could not be mirrored correctly. Launchers repository is empty but p2.mirror task was successful?!?"/>
     </target>
 
     <target name="checkLocalLaunchers">
-        <available file="${repoBaseLocation}/launchers" type="dir" property="skipLaunchers" />
+        <available file="${repoBaseLocation}/launchers/artifacts.jar" type="file" property="skipLaunchers" />
     </target>
 
 
