@@ -67,10 +67,10 @@ plugin@org.eclipse.core.runtime.compatibility.auth.source,3.2.100=p2IU,id=org.ec
 plugin@org.eclipse.core.contenttype,3.4.1=p2IU,id=org.eclipse.core.contenttype,version=3.4.1.R35x_v20090826-0451,repository=http://download.eclipse.org/releases/galileo
 plugin@org.eclipse.core.contenttype.source,3.4.1=p2IU,id=org.eclipse.core.contenttype.source,version=3.4.1.R35x_v20090826-0451,repository=http://download.eclipse.org/releases/galileo
 
-plugin@org.eclipse.equinox.frameworkadmin.equinox,=p2IU,id=org.eclipse.equinox.frameworkadmin.equinox,version=1.0.100.v20090520-1905,repository=http://download.eclipse.org/releases/galileo
-plugin@org.eclipse.equinox.frameworkadmin.equinox.source,=p2IU,id=org.eclipse.equinox.frameworkadmin.equinox.source,version=1.0.100.v20090520-1905,repository=http://download.eclipse.org/releases/galileo
-plugin@org.eclipse.equinox.frameworkadmin,=p2IU,id=org.eclipse.equinox.frameworkadmin,version=1.0.100.v20090520-1905,repository=http://download.eclipse.org/releases/galileo
-plugin@org.eclipse.equinox.frameworkadmin.source,=p2IU,id=org.eclipse.equinox.frameworkadmin.source,version=1.0.100.v20090520-1905,repository=http://download.eclipse.org/releases/galileo
+plugin@org.eclipse.equinox.frameworkadmin.equinox=p2IU,id=org.eclipse.equinox.frameworkadmin.equinox,version=1.0.100.v20090520-1905,repository=http://download.eclipse.org/releases/galileo
+plugin@org.eclipse.equinox.frameworkadmin.equinox.source=p2IU,id=org.eclipse.equinox.frameworkadmin.equinox.source,version=1.0.100.v20090520-1905,repository=http://download.eclipse.org/releases/galileo
+plugin@org.eclipse.equinox.frameworkadmin=p2IU,id=org.eclipse.equinox.frameworkadmin,version=1.0.100.v20090520-1905,repository=http://download.eclipse.org/releases/galileo
+plugin@org.eclipse.equinox.frameworkadmin.source=p2IU,id=org.eclipse.equinox.frameworkadmin.source,version=1.0.100.v20090520-1905,repository=http://download.eclipse.org/releases/galileo
 
 
 # Equinox launcher
