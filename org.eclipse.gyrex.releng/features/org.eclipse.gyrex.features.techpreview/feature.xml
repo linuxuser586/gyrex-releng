@@ -35,10 +35,6 @@
       <update label="%updateSiteName" url="http://download.eclipse.org/gyrex/updates/"/>
    </url>
 
-   <includes
-         id="org.eclipse.gyrex.features.dependencies.p2"
-         version="0.0.0"/>
-
    <plugin
          id="org.eclipse.gyrex.admin"
          download-size="0"
