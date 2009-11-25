@@ -72,7 +72,7 @@ forceContextQualifier=${forceContextQualifier}
     	</p2.mirror>
     	<!-- verify download -->
     	<antcall target="checkLocalLaunchers"/>
-    	<fail unless="checkLocalLaunchers" message="Launchers could not be mirrored correctly. Launchers repository is empty but p2.mirror task was successful?!?"/>
+    	<fail unless="skipLaunchers" message="Launchers could not be mirrored correctly. Launchers repository is empty but p2.mirror task was successful?!?"/>
     </target>
 
     <target name="checkLocalLaunchers">
