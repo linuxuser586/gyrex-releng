@@ -16,7 +16,6 @@
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin,org.eclipse.gyrex.admin"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt,org.eclipse.gyrex.admin.web.gwt"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt.client,org.eclipse.gyrex.admin.web.gwt.client"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.rap,org.eclipse.gyrex.admin.web.rap"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.boot,org.eclipse.gyrex.boot"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.boot.defaultroles,org.eclipse.gyrex.boot.defaultroles"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.common,org.eclipse.gyrex.common"/>
