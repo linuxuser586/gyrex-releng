@@ -29,7 +29,7 @@
    </plugins>
 
    <features>
-      <feature id="org.eclipse.gyrex.features.techpreview"/>
+      <feature id="org.eclipse.gyrex.features.techpreview" version="1.0.0.qualifier"/>
    </features>
 
 
