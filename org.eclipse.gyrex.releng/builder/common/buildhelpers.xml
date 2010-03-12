@@ -79,8 +79,68 @@
 		<fail unless="product.file.exists" message="The Eclipse product definition file '${product.file}' could not be read! Please verify the property 'product.file' is set correctly and that the file is available and readable!"/>
 	</target>
 
+    <!-- ===============================
+         macro: eclipse.launch
+         =============================== -->
+    <macrodef name="eclipse.launch" description="This macro executes the default application of an eclipse installation.">
+        <attribute name="app" description="The Eclipse application to launch."/>
+        <attribute name="dir" description="The Eclipse installation dir."/>
+        <attribute name="fork" default="true" description="If Eclipse should be launched in a separate process (default: true)." />
+        <element name="args" optional="true" />
+        <sequential>
+            <!-- We assume that the eclipse installation is specified -->
+            <property name="@{app}.deploy.dir" location="@{dir}" />
 
+            <!-- Find the Eclipse launcher and adding its location to the @{app}.launcher property -->
+            <pathconvert property="@{app}.launcher">
+                <first count="1">
+                    <sort>
+                        <fileset dir="${@{app}.deploy.dir}/plugins" includes="**/org.eclipse.equinox.launcher_*.jar" />
+                        <reverse xmlns="antlib:org.apache.tools.ant.types.resources.comparators">
+                            <date />
+                        </reverse>
+                    </sort>
+                </first>
+            </pathconvert>
 
+            <!-- Launch the eclipse application -->
+            <java fork="true" jar="${@{app}.launcher}" dir="${@{app}.deploy.dir}" failonerror="true">
+                <!-- Uncomment to debug <jvmarg value="-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=y"/> -->
+                <args />
+            </java>
+        </sequential>
+    </macrodef>
+
+    <!-- ===============================
+         macro: antrunner
+         =============================== -->
+    <macrodef name="antrunner" description="This macro launches the Eclipse Ant Runner.">
+        <attribute name="target" description="The target to execute."/>
+        <attribute name="buildfile" description="The build file."/>
+        <attribute name="workspace" description="The Eclipse installation dir."/>
+        <attribute name="dir" description="The Eclipse installation dir."/>
+        <attribute name="fork" default="true" description="If the Ant runner should be launched in a separate process (default: true)." />
+        <element name="jvmargs" optional="true" />
+        <element name="antargs" optional="true" />
+        <sequential>
+            <eclipse.launch app="antrunner" dir="@{dir}" fork="@{fork}">
+                <args>
+                    <jvmarg value="-Xmx500m" />
+                    <jvmarg value="-Declipse.p2.MD5Check=false" />
+                    <!-- <jvmarg value="-Dorg.eclipse.update.jarprocessor.pack200=/shared/common/ibm-java2-ppc-50/bin" /> -->
+                    <jvmargs />
+                    <arg value="-data" />
+                    <arg value="@{workspace}" />
+                    <arg value="-application" />
+                    <arg value="org.eclipse.ant.core.antRunner" />
+                    <arg value="-buildfile" />
+                    <arg value="@{buildfile}" />
+                    <arg value="@{target}" />
+                    <antargs />
+                </args>
+            </eclipse.launch>
+        </sequential>
+    </macrodef>
 
 	<property name="pde.build.scripts"	value="${eclipse.pdebuild.scripts}"/>
 	<property name="buildDirectory" location="${basedir}/src" />

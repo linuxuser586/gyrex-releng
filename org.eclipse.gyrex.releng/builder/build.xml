@@ -79,6 +79,9 @@
 		<!-- load properties from the environment -->
 		<property environment="env" />
 
+		<!-- execute the run target -->
+		<antcall target="run"/>
+
 	</target>
 
 

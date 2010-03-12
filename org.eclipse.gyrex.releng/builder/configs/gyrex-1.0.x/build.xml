@@ -13,8 +13,23 @@
 
 	<description>Builds Gyrex 1.0.x.</description>
 
+	<!-- define builder home dir -->
+    <dirname file="${ant.file.build-gyrex-1.0.x}" property="builder"/>
+
+	<!-- load local build specific properties -->
+    <!-- (we allow custom local properties file via -Dbuild.local.properties=... -->
+    <property name="build.local.properties" location="${builder}/../../build.local.properties"/>
+    <property file="${build.local.properties}" />
+
+    <!-- load project build properties -->
+    <property name="build.project.properties" location="${builder}/../../build.properties"/>
+    <property file="${build.project.properties}" />
+
+    <!-- load default build properties -->
+    <property name="build.default.properties" location="${builder}/../../common/build.default.properties"/>
+    <property file="${build.default.properties}" />
+
 	<target name="main" depends="init">
-		<dirname file="${ant.file.build-gyrex-1.0.x}" property="builder"/>
 		<!-- read the build properties -->
 		<property file="${builder}/build.properties"/>
         <!-- ensure that the base folders exist -->
@@ -32,7 +47,7 @@
 	<target name="init">
 		<!-- create a pass file for the CVS client -->
 		<touch file="${user.home}/.cvspass" />
-		
+
 		<!-- create and save properties identifying this build, re-use existing properties if available -->
 		<available file="${buildDirectory}/label.properties" property="label.properties.exists" />
 		<antcall target="create.label.properties" />
@@ -48,7 +63,7 @@
 		<property name="buildType" value="I" />
 		<property name="buildId" value="${buildType}${date}" />
 		<property name="forceContextQualifier" value="v${timestamp}" />
-		
+
 		<!--this naming convention used by php scripts on download server-->
 		<property name="buildLabel" value="${buildType}-${buildId}-${timestamp}" />
 
