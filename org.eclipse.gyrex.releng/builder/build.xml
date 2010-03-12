@@ -67,7 +67,15 @@
 		<antcall target="bootstrap-org.eclipse.releng.basebuilder" />
 
 		<!-- execute Eclipse Ant to perform the build -->
-		<antrunner target="runInEclipse" buildfile="${ant.file.org.eclipse.gyrex.releng/builder/build.xml - Run a Gyrex build using PDE Build}" workspace="${buildDirectory}/workspace" dir="${org.eclipse.releng.basebuilder}"/>
+		<antrunner
+			target="runInEclipse"
+			buildfile="${ant.file.org.eclipse.gyrex.releng/builder/build.xml - Run a Gyrex build using PDE Build}"
+			workspace="${buildDirectory}/workspace"
+			dir="${org.eclipse.releng.basebuilder}">
+			<jvmargs>
+		        <arg value="-DwritableBuildRoot=${writableBuildRoot}" />
+			</jvmargs>
+		</antrunner>
 	</target>
 
 
@@ -75,6 +83,39 @@
          target: runInHudson
          =============================== -->
 	<target name="runInHudson" description="Hudson Target for performing a Gyrex build. Expects certain parameters from Hudson.">
+
+		<!--
+
+		    Note, in order to pass local build properties to a Hudson build
+		    you should configure a "Shell" task to be executed befor this
+		    Ant script. This task can generate a build.local.properties file.
+
+    		    <snip>
+                    # generate local build properties
+                    buildLocalProps=org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/builder/build.local.properties
+                    rm -f $buildLocalProps
+                    touch $buildLocalProps
+                    echo J2SE-1.4=/shared/common/j2sdk1.4.2_19/jre/lib/rt.jar >> $buildLocalProps
+                    echo J2SE-1.5=/shared/common/jdk-1.5.0_16/jre/lib/rt.jar >> $buildLocalProps
+                    echo JavaSE-1.6=/shared/common/jdk-1.6.0_10/jre/lib/rt.jar >> $buildLocalProps
+                    echo CDC-1.0/Foundation-1.0=/shared/common/org.eclipse.sdk-feature/libs/ee.foundation-1.0.jar >> $buildLocalProps
+                    echo CDC-1.1/Foundation-1.1=/shared/common/org.eclipse.sdk-feature/libs/ee.foundation.jar >> $buildLocalProps
+                    echo OSGi/Minimum-1.2=/shared/common/org.eclipse.sdk-feature/libs/ee.minimum-1.2.0.jar >> $buildLocalProps
+                    echo org.eclipse.update.jarprocessor.pack200=/shared/common/ibm-java2-ppc-50/bin >> $buildLocalProps
+                    echo eclipse.p2.MD5Check=false >> $buildLocalProps
+                    echo org.eclipse.releng.basebuilder=/opt/public/cbi/build/org.eclipse.releng.basebuilder_R36_M4 >> $buildLocalProps
+                </snip>
+
+            In the Ant script configuration you should (only) set the following
+            property and point to this target.
+
+                <snip>
+                    writableBuildRoot=$WORKSPACE/build
+                </snip>
+
+            That's all.
+
+		-->
 
 		<!-- load properties from the environment -->
 		<property environment="env" />
