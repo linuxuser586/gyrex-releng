@@ -25,47 +25,71 @@
 -->
 <project default="run" name="org.eclipse.gyrex.releng/builder/build.xml - Run a Gyrex build using PDE Build">
 
-	<target name="run" description="Performs a Gyrex build">
+	<!-- set a writable build root (default to /t[e]mp/build) -->
+	<condition property="writableBuildRoot" value="/temp/build" else="/tmp/build">
+		<os family="windows" />
+	</condition>
 
-		<!-- set a writable build root (default to /t[e]mp/build) -->
-		<condition property="writableBuildRoot" value="/temp/build" else="/tmp/build"><os family="windows"/></condition>
+	<!-- set timestamp for the build -->
+	<tstamp>
+		<format property="buildTimestamp" pattern="yyyyMMddHHmm" />
+	</tstamp>
 
-		<!-- set timestamp for the build -->
-		<tstamp>
-			<format property="buildTimestamp" pattern="yyyyMMddHHmm" />
-		</tstamp>
+	<!-- load local build specific properties -->
+	<!-- (we allow custom local properties file via -Dbuild.local.properties=... -->
+	<property name="build.local.properties" location="build.local.properties" />
+	<property file="${build.local.properties}" />
 
-		<!-- load local build specific properties -->
-		<!-- (we allow custom local properties file via -Dbuild.local.properties=... -->
-		<property name="build.local.properties" location="build.local.properties"/>
-		<property file="${build.local.properties}" />
-		
-        <!-- load project build properties -->
-        <property name="build.project.properties" location="build.properties"/>
-        <property file="${build.project.properties}" />
+	<!-- load project build properties -->
+	<property name="build.project.properties" location="build.properties" />
+	<property file="${build.project.properties}" />
 
-		<!-- load default build properties -->
-        <property name="build.default.properties" location="common/build.default.properties"/>
-		<property file="${build.default.properties}" />
+	<!-- load default build properties -->
+	<property name="build.default.properties" location="common/build.default.properties" />
+	<property file="${build.default.properties}" />
 
-		<!-- set default location of the build helpers script -->
-		<property name="buildhelpers.xml" location="common/buildhelpers.xml"/>
+	<!-- set default for the build directory -->
+	<property name="buildDirectory" value="${writableBuildRoot}" />
 
-		<!-- set default for the build directory -->
-		<property name="buildDirectory" value="${writableBuildRoot}" />
+	<!-- import common build helpers -->
+	<import file="common/buildhelpers.xml" />
+
+
+    <!-- ===============================
+         target: run
+         =============================== -->
+	<target name="run" description="Performs a Gyrex build. This is usally invoked from a vanilla Ant process.">
 
 		<!-- set directory where the basebuilder can be found -->
 		<property name="org.eclipse.releng.basebuilder" value="${writableBuildRoot}/org.eclipse.releng.basebuilder" />
 
 		<!-- bootstrap basebuilder if necessary -->
-		<!--
-		<ant antfile="${buildhelpers.xml}" target="bootstrap-org.eclipse.releng.basebuilder" />
-        -->
-		
+		<antcall target="bootstrap-org.eclipse.releng.basebuilder" />
+
+		<!-- execute Eclipse Ant to perform the build -->
+		<antrunner target="runInEclipse" buildfile="${ant.file.org.eclipse.gyrex.releng/builder/build.xml - Run a Gyrex build using PDE Build}" workspace="${buildDirectory}/workspace" dir="${org.eclipse.releng.basebuilder}"/>
+	</target>
+
+
+    <!-- ===============================
+         target: runInHudson
+         =============================== -->
+	<target name="runInHudson" description="Hudson Target for performing a Gyrex build. Expects certain parameters from Hudson.">
+
+		<!-- load properties from the environment -->
+		<property environment="env" />
+
+	</target>
+
+
+    <!-- ===============================
+         target: runInEclipse
+         =============================== -->
+	<target name="runInEclipse" description="Performs a Gyrex build from inside a running Eclipse instance.">
+
 		<!-- build the product -->
-		<touch file="${user.home}/.cvspass" />
-		
-		<ant antfile="configs/gyrex-1.0.x/build.xml"></ant>
+		<ant antfile="configs/gyrex-1.0.x/build.xml">
+		</ant>
 
 	</target>
 

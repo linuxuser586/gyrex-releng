@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.ant.AntLaunchConfigurationType">
 <booleanAttribute key="org.eclipse.ant.ui.DEFAULT_VM_INSTALL" value="false"/>
+<stringAttribute key="org.eclipse.debug.core.ATTR_REFRESH_SCOPE" value="${workspace}"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/org.eclipse.gyrex.releng.builder/build.xml"/>
 </listAttribute>
@@ -13,6 +14,16 @@
 <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.ant.ui.AntClasspathProvider"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="org.eclipse.gyrex.releng.builder"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.ant.ui.AntClasspathProvider"/>
+<mapAttribute key="org.eclipse.ui.externaltools.ATTR_ANT_PROPERTIES">
+<mapEntry key="writableBuildRoot" value="${resource_loc:/org.eclipse.gyrex.releng.builder}/tmp"/>
+<mapEntry key="eclipse.running" value="true"/>
+<mapEntry key="eclipse.pdebuild.templates" value="/D:/Eclipse/3.6-SDK-current/plugins/org.eclipse.pde.build_3.6.0.v20100123-1019/templates/"/>
+<mapEntry key="eclipse.home" value="D:\Eclipse\3.6-SDK-current"/>
+<mapEntry key="eclipse.pdebuild.home" value="/D:/Eclipse/3.6-SDK-current/plugins/org.eclipse.pde.build_3.6.0.v20100123-1019/./"/>
+<mapEntry key="eclipse.pdebuild.scripts" value="/D:/Eclipse/3.6-SDK-current/plugins/org.eclipse.pde.build_3.6.0.v20100123-1019/scripts/"/>
+</mapAttribute>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_ANT_TARGETS" value="runInEclipse,"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LAUNCH_CONFIGURATION_BUILD_SCOPE" value="${none}"/>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="${workspace_loc:/org.eclipse.gyrex.releng.builder/build.xml}"/>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="${workspace_loc:/org.eclipse.gyrex.releng.builder}"/>
 <stringAttribute key="process_factory_id" value="org.eclipse.ant.ui.remoteAntProcessFactory"/>
