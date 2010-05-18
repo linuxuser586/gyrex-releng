@@ -20,7 +20,7 @@
 -->
 <project name="org.eclipse.gyrex.releng.build.helpers" default="nodefault" >
 
-	<description>Some helpers provided by the Darn Simple PDE Builder for your build.</description>
+	<description>Some helpers to simplify building with PDE Build.</description>
 
 	<!-- fake default target -->
     <target name="nodefault">
