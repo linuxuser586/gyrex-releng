@@ -28,13 +28,13 @@
    </plugins>
 
    <features>
-      <feature id="org.eclipse.gyrex.features.server" version="1.0.0.qualifier"/>
-      <feature id="org.eclipse.gyrex.features.kernel" version="1.0.0.qualifier"/>
-      <feature id="org.eclipse.gyrex.features.http" version="1.0.0.qualifier"/>
-      <feature id="org.eclipse.gyrex.features.admin" version="1.0.0.qualifier"/>
-      <feature id="org.eclipse.gyrex.features.dependencies.commons" version="1.0.0.qualifier"/>
-      <feature id="org.eclipse.gyrex.features.dependencies.provisioning" version="1.0.0.qualifier"/>
-      <feature id="org.eclipse.gyrex.features.dependencies.web" version="1.0.0.qualifier"/>
+      <feature id="org.eclipse.gyrex.features.server"/>
+      <feature id="org.eclipse.gyrex.features.kernel"/>
+      <feature id="org.eclipse.gyrex.features.http"/>
+      <feature id="org.eclipse.gyrex.features.admin"/>
+      <feature id="org.eclipse.gyrex.features.dependencies.commons"/>
+      <feature id="org.eclipse.gyrex.features.dependencies.provisioning"/>
+      <feature id="org.eclipse.gyrex.features.dependencies.web"/>
    </features>
 
    <configurations>
