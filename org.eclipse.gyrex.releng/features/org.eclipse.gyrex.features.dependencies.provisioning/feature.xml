@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.gyrex.features.dependencies.provisioning"
       label="Provisioning Dependencies"
-      version="0.0.0"
+      version="1.0.0.qualifier"
       provider-name="Eclipse Gyrex">
 
    <description>
