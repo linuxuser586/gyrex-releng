@@ -9,5 +9,5 @@
 # Contributors:
 #     Gunnar Wagenknecht - initial API and implementation
 ###############################################################################
-
-# must be empty because this is just a p2 category and not a real feature
+properties.1.name=org.eclipse.equinox.p2.type.category
+properties.1.value=true

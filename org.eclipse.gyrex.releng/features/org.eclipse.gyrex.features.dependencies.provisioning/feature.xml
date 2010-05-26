@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.gyrex.features.dependencies.provisioning"
+      label="Provisioning Dependencies"
+      version="1.0.0.qualifier"
+      provider-name="Eclipse Gyrex">
+
+   <description>
+      A set of common libraries Gyrex depends on.
+   </description>
+
+   <copyright>
+      Please see the individual libraries.
+   </copyright>
+
+   <license>
+      Please see the individual libraries.
+   </license>
+
+   <includes
+         id="org.eclipse.equinox.server.p2"
+         version="0.0.0"/>
+
+</feature>

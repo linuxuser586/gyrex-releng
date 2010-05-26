@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.eclipse.gyrex.features.dependencies.commons"
-      label="Common Eclipse &amp; 3rd-Party Components"
+      label="Common Dependencies"
       version="1.0.0.qualifier"
       provider-name="Eclipse Gyrex">
 
-   <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+   <description>
+      A set of common libraries Gyrex depends on.
    </description>
 
-   <copyright url="http://www.example.com/copyright">
-      [Enter Copyright Description here.]
+   <copyright>
+      Please see the individual libraries.
    </copyright>
 
-   <license url="http://www.example.com/license">
-      [Enter License Description here.]
+   <license>
+      Please see the individual libraries.
    </license>
-
-   <includes
-         id="org.eclipse.equinox.server.p2"
-         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.equinox.app"
