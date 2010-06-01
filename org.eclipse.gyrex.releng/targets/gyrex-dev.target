@@ -105,6 +105,8 @@
 <unit id="ch.qos.logback.classic.source" version="0.9.19.v20100506-1420"/>
 <unit id="ch.qos.logback.core" version="0.9.19.v20100419-1216"/>
 <unit id="ch.qos.logback.core.source" version="0.9.19.v20100419-1216"/>
+<unit id="ch.qos.logback.slf4j" version=""/>
+<unit id="ch.qos.logback.slf4j.source" version=""/>
 <unit id="javax.servlet" version="2.5.0.v200910301333"/>
 <unit id="javax.servlet.source" version="2.5.0.v200910301333"/>
 <unit id="org.slf4j.api" version="1.5.11.v20100419-1106"/>

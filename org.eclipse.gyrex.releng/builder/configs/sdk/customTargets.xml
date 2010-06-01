@@ -170,18 +170,15 @@
 	<!-- - - - - - - - - - - - - - - - - -
           custom target: buildTargetPlatform
          - - - - - - - - - - - - - - - - - -->
-    <target name="buildTargetPlatform" depends="checkLocalTargetPlatform" unless="skipTargetDefinition">
+    <target name="buildTargetPlatform" unless="skipTargetDefinition">
     	<property name="transformTargetDefinitionScript" value="${builder}/../../common/transformTargetDefinition.xsl"/>
         <xslt style="${transformTargetDefinitionScript}"
               in="${targetDefinition}"
               out="${buildDirectory}/mirror_target_platform.xml">
             <param name="destination" expression="${repoBaseLocation}/target"/>
         </xslt>
+    	<!-- mirror target platform using p2 (will skip already mirrored pieces) -->
         <ant antfile="${buildDirectory}/mirror_target_platform.xml"/>
     </target>
-
-	<target name="checkLocalTargetPlatform">
-		<available property="skipTargetDefinition" file="${repoBaseLocation}/target" />
-	</target>
 
 </project>

@@ -69,5 +69,8 @@ plugin@org.eclipse.gyrex.persistence.jdbc=HEAD,:pserver:anonymous@dev.eclipse.or
 plugin@org.eclipse.gyrex.persistence.nondurable.map=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.nondurable.map
 plugin@org.eclipse.gyrex.persistence.solr=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.solr
 
-# Equinox HTTP Helpers
+### Gyrex Server
+plugin@org.eclipse.gyrex.server.defaultroles=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.server.defaultroles
+
+### Equinox HTTP Helpers
 plugin@org.eclipse.equinox.http.helper=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/rt,,org.eclipse.equinox/incubator/server-side/bundles/org.eclipse.equinox.http.helper
