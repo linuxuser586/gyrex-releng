@@ -1,0 +1,46 @@
+<!--
+    Copyright (c) 2010 Gunnar Wagenknecht and others.
+    All rights reserved.
+
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v1.0 which accompanies this distribution,
+    and is available at http://www.eclipse.org/legal/epl-v10.html.
+
+    Contributors:
+        Gunnar Wagenknecht - initial API and implementation
+ -->
+<project name="build-gyrex-sdk" default="main" >
+
+	<description>Builds the Gyrex SDK configuration</description>
+
+	<!-- define builder home dir -->
+    <dirname file="${ant.file.build-gyrex-sdk}" property="builder"/>
+
+	<!-- load local build specific properties -->
+    <!-- (we allow custom local properties file via -Dbuild.local.properties=... -->
+    <property name="build.local.properties" location="${builder}/../../build.local.properties"/>
+    <property file="${build.local.properties}" />
+
+    <!-- load project build properties -->
+    <property name="build.project.properties" location="${builder}/../../build.properties"/>
+    <property file="${build.project.properties}" />
+
+    <!-- load default build properties -->
+    <property name="build.default.properties" location="${builder}/../../common/build.default.properties"/>
+    <property file="${build.default.properties}" />
+
+	<!-- import common build helpers -->
+	<import file="${builder}/../../common/buildhelpers.xml" />
+
+	<!-- =================================
+          target: main
+         ================================= -->
+    <target name="main" description="Builds the Gyrex SDK">
+    	<!-- prepare -->
+        <antcall target="builder.prepare"/>
+		<!-- build the feature -->
+		<ant antfile="${eclipse.pdebuild.scripts}/build.xml" />
+    </target>
+
+
+</project>

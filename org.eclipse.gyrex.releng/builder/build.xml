@@ -1,5 +1,5 @@
 <!--
-    Copyright (c) 2009 AGETO Service GmbH and others.
+    Copyright (c) 2010,2009 AGETO Service GmbH and others.
     All rights reserved.
 
     This program and the accompanying materials are made available under the
@@ -131,8 +131,8 @@
          =============================== -->
 	<target name="runInEclipse" description="Performs a Gyrex build from inside a running Eclipse instance.">
 
-		<!-- build the product -->
-		<ant antfile="configs/gyrex-1.0.x/build.xml">
+		<!-- build the sdk -->
+		<ant antfile="configs/sdk/build.xml">
 		</ant>
 
 	</target>

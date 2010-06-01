@@ -1,5 +1,5 @@
 <!--
-    Copyright (c) 2009 AGETO Service GmbH and others.
+    Copyright (c) 2009,2010 Gunnar Wagenknecht and others.
     All rights reserved.
 
     This program and the accompanying materials are made available under the
@@ -67,18 +67,6 @@
     </target>
 
 
-	<!-- =================================
-          target: build-everything
-         ================================= -->
-    <target name="build-product" description="Performs a build of a specific product">
-		<!-- verify required properties are set -->
-		<fail unless="product.file" message="Required property 'product.file' not set! Please set it to the product definition file."/>
-
-		<!-- verify the product definition exists -->
-    	<available file="${product.file}" type="file" property="product.file.exists"/>
-		<fail unless="product.file.exists" message="The Eclipse product definition file '${product.file}' could not be read! Please verify the property 'product.file' is set correctly and that the file is available and readable!"/>
-	</target>
-
     <!-- ===============================
          macro: eclipse.launch
          =============================== -->
@@ -145,17 +133,33 @@
 	<property name="pde.build.scripts"	value="${eclipse.pdebuild.scripts}"/>
 	<property name="buildDirectory" location="${basedir}/src" />
 
-	<target name="main" depends="checkArgs,init">
-		<ant antfile="build.xml" dir="${pde.build.scripts}" />
+	<target name="builder.prepare" depends="builder.checkArgs,builder.init">
+		<!-- read the build properties -->
+		<property file="${builder}/build.properties"/>
+        <!-- ensure that the base folders exist -->
+        <mkdir dir="${baseLocation}" />
+        <mkdir dir="${repoBaseLocation}" />
+        <mkdir dir="${transformedRepoLocation}" />
+		<!-- download the launcher pieces -->
+		<!--antcall target="getLauncherComponents"/-->
+        <!-- download the target platform pieces -->
+        <!--antcall target="getTargetDefinitionComponents"/-->
+		<!-- build the feature -->
+		<!--ant antfile="${eclipse.pdebuild.scripts}/build.xml" /-->
+		<!-- build a product -->
+		<!--ant antfile="${eclipse.pdebuild.scripts}/productBuild/productBuild.xml" /-->
 	</target>
 
-	<target name="checkArgs" unless="builder">
+	<target name="builder.checkArgs" unless="builder">
 		<echo message="-Dbuilder=&lt;path&gt; required." />
 		<fail/>
 	</target>
 
-	<target name="init">
+	<target name="builder.init">
+		<!-- create a pass file for the CVS client -->
 		<touch file="${user.home}/.cvspass" />
+
+		<!-- create and save properties identifying this build, re-use existing properties if available -->
 		<available file="${buildDirectory}/label.properties" property="label.properties.exists" />
 		<antcall target="create.label.properties" />
 		<property file="${buildDirectory}/label.properties" />
@@ -169,27 +173,63 @@
 		<property name="timestamp" value="${date}${time}" />
 		<property name="buildType" value="I" />
 		<property name="buildId" value="${buildType}${date}" />
+		<property name="forceContextQualifier" value="v${timestamp}" />
 
 		<!--this naming convention used by php scripts on download server-->
 		<property name="buildLabel" value="${buildType}-${buildId}-${timestamp}" />
 
 		<!--store the build label information in a file-->
 		<echo file="${buildDirectory}/label.properties" append="true" >
-		buildDirectory=${buildDirectory}
+			buildDirectory=${buildDirectory}
 		</echo>
 		<echo file="${buildDirectory}/label.properties" append="true" >
-		buildType=${buildType}
+			buildType=${buildType}
 		</echo>
 		<echo file="${buildDirectory}/label.properties" append="true" >
-		buildId=${buildId}
+			buildId=${buildId}
 		</echo>
 		<echo file="${buildDirectory}/label.properties" append="true" >
-		timestamp=${timestamp}
+			timestamp=${timestamp}
 		</echo>
 		<echo file="${buildDirectory}/label.properties" append="true" >
-		buildLabel=${buildLabel}
+			buildLabel=${buildLabel}
+		</echo>
+		<echo file="${buildDirectory}/label.properties" append="true" >
+			forceContextQualifier=${forceContextQualifier}
 		</echo>
 	</target>
+
+    <target name="getLauncherComponents" depends="checkLocalLaunchers" unless="skipLaunchers">
+    	<!-- mirror the launchers -->
+    	<p2.mirror source="${launchersRepo}" validate="true" verbose="true">
+    		<destination location="${repoBaseLocation}/launchers" name="Equinox Launcher Repo" append="false" />
+            <slicingOptions includeOptional="false" includeNonGreedy="false" followStrict="true" />
+    		<iu id="${launchersIU}" />
+    	</p2.mirror>
+    	<!-- verify download -->
+        <available file="${repoBaseLocation}/launchers/artifacts.jar" type="file" property="launcherMirrorOk" />
+    	<fail unless="launcherMirrorOk" message="Launchers could not be mirrored correctly. Launchers repository is empty but p2.mirror task was successful?!?"/>
+    </target>
+
+    <target name="checkLocalLaunchers">
+        <available file="${repoBaseLocation}/launchers/artifacts.jar" type="file" property="skipLaunchers" />
+    </target>
+
+    <target name="getTargetDefinitionComponents" depends="checkLocalTargetDefinition" unless="skipTargetDefinition">
+    	<available file="${targetDefinition}" property="targetDefinitionOk"/>
+        <fail unless="targetDefinitionOk" message="Target definition '${targetDefinition}' not found. Is the property correctly set?"/>
+        <!-- mirror the target definition -->
+        <eclipse.target.resolver targetDefinition="${targetDefinition}" verbose="true">
+            <destination location="${repoBaseLocation}/target" name="Target Definition Repo" append="false" />
+        </eclipse.target.resolver>
+        <!-- verify download -->
+        <available file="${repoBaseLocation}/target/artifacts.jar" type="file" property="targetDefinitionMirrorOk" />
+        <fail unless="targetDefinitionMirrorOk" message="Target definition could not be mirrored correctly. Target repository is empty but eclipse.target.resolver task was successful?!?"/>
+    </target>
+
+    <target name="checkLocalTargetDefinition">
+        <available file="${repoBaseLocation}/target/artifacts.jar" type="file" property="skipTargetDefinition" />
+    </target>
 
 
 </project>
