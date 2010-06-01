@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Gyrex Server" uid="org.eclipse.gyrex.products.server" application="org.eclipse.gyrex.boot.server" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="Gyrex Server Product" uid="org.eclipse.gyrex.products.server" application="org.eclipse.gyrex.boot.server" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -43,6 +43,7 @@
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="3" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="3" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.gyrex.log.http" autoStart="true" startLevel="0" />
       <plugin id="org.slf4j.api" autoStart="true" startLevel="2" />
    </configurations>
 
