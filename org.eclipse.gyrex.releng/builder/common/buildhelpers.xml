@@ -55,10 +55,15 @@
 		<cvs
 			cvsRoot=":pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse"
 			package="org.eclipse.releng.basebuilder"
-			command="-d ${org.eclipse.releng.basebuilder}"
+			dest="${org.eclipse.releng.basebuilder}"
 			failonerror="true"
 			tag="${org.eclipse.releng.basebuilder.tag}">
 		</cvs>
+
+		<!-- relocate base builder to correct directory -->
+		<move todir="${org.eclipse.releng.basebuilder}">
+			<fileset dir="${org.eclipse.releng.basebuilder}/org.eclipse.releng.basebuilder"/>
+		</move>
     </target>
 
 	<!-- prints a message informing that local basebuilder will be used if rg.eclipse.releng.basebuilder.exists is set -->
