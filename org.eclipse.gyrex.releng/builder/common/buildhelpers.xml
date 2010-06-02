@@ -55,10 +55,10 @@
 		<cvs
 			cvsRoot=":pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse"
 			package="org.eclipse.releng.basebuilder"
-			dest="${org.eclipse.releng.basebuilder}"
+			command="-d ${org.eclipse.releng.basebuilder}"
 			failonerror="true"
-			tag="${org.eclipse.releng.basebuilder.tag}"
-		/>
+			tag="${org.eclipse.releng.basebuilder.tag}">
+		</cvs>
     </target>
 
 	<!-- prints a message informing that local basebuilder will be used if rg.eclipse.releng.basebuilder.exists is set -->
