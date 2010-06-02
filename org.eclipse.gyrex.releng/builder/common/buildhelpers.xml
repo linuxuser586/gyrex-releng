@@ -163,6 +163,10 @@
 		<available file="${buildDirectory}/label.properties" property="label.properties.exists" />
 		<antcall target="create.label.properties" />
 		<property file="${buildDirectory}/label.properties" />
+
+		<!-- set the p2 repo names -->
+		<property name="p2.metadata.repo.name" value="${p2.repo.name.prefix} (Build ${buildLabel})"/>
+		<property name="p2.artifact.repo.name" value="${p2.repo.name.prefix} (Build ${buildLabel})"/>
 	</target>
 
 	<target name="create.label.properties" unless="label.properties.exists">
