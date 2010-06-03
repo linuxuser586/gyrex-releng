@@ -250,7 +250,7 @@
 
 		<!-- call the actual clean targets -->
 		<antcall target="clean-writableBuildRoot"/>
-		<antcall target="clean-writableBuildRoot"/>
+		<antcall target="clean-buildDirectory"/>
 
 	</target>
 
