@@ -129,10 +129,10 @@
 
 		<!-- load properties from the environment -->
 		<property environment="env" />
-		<condition property="buildType" value="${env.BUILD_TYPE}" else="I">
+		<condition property="buildType" value="${env.BUILD_TYPE}">
 			<isset property="env.BUILD_TYPE" />
 		</condition>
-		<condition property="buildServer" value="${env.BUILD_URL}" else="LOCAL BUILD">
+		<condition property="buildServer" value="${env.BUILD_URL}">
 			<isset property="env.BUILD_URL" />
 		</condition>
 
