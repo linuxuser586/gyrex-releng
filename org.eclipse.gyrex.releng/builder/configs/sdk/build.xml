@@ -38,6 +38,8 @@
     <target name="main" description="Builds the Gyrex SDK">
     	<!-- prepare -->
         <antcall target="builder.prepare"/>
+		<!-- print build information -->
+		<echo message="Gyrex build ${topLevelElementId} ${buildLabel}"/>
 		<!-- build the feature -->
 		<ant antfile="${eclipse.pdebuild.scripts}/build.xml" />
     </target>
