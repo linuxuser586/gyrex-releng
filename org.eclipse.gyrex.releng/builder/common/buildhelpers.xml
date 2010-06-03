@@ -168,15 +168,20 @@
 			<property name="org.eclipse.releng.basebuilder.tag" value="R36_RC2"/>
 			<property name="org.eclipse.releng.basebuilder" value="${writableBuildRoot}/org.eclipse.releng.basebuilder_${org.eclipse.releng.basebuilder.tag}" />
 			<!-- launch the antrunner -->
-			<antrunner
-				target="@{target}"
-				buildfile="@{buildfile}"
-				workspace="@{workspace}"
-				dir="${org.eclipse.releng.basebuilder}"
-				fork="@{fork}">
-				<jvmargs />
-				<antargs />
-			</antrunner>
+			<eclipse.launch app="antrunner" dir="${org.eclipse.releng.basebuilder}" fork="@{fork}">
+				<args>
+					<jvmarg value="-Xmx500m" />
+					<jvmargs />
+					<arg value="-data" />
+					<arg value="@{workspace}" />
+					<arg value="-application" />
+					<arg value="org.eclipse.ant.core.antRunner" />
+					<arg value="-buildfile" />
+					<arg value="@{buildfile}" />
+					<arg value="@{target}" />
+					<antargs />
+				</args>
+			</eclipse.launch>
 		</sequential>
 	</macrodef>
 
