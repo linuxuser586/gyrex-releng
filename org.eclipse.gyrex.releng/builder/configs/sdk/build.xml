@@ -39,7 +39,7 @@
     	<!-- prepare -->
         <antcall target="builder.prepare"/>
 		<!-- print build information -->
-		<echo message="Gyrex build ${topLevelElementId} ${buildLabel}"/>
+		<echo message="Gyrex SDK build: ${buildLabel}"/>
 		<!-- build the feature -->
 		<ant antfile="${eclipse.pdebuild.scripts}/build.xml" />
     </target>

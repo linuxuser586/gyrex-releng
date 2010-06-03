@@ -29,6 +29,7 @@
 	<!-- Steps to do before setup -->
 	<!-- ===================================================================== -->
 	<target name="preSetup">
+		<echo message="Gyrex SDK build ${topLevelElementId} ${buildLabel}"/>
 	</target>
 
 	<!-- ===================================================================== -->
