@@ -50,7 +50,7 @@
 	<property file="${build.default.properties}" />
 
 	<!-- set default for the build directory -->
-	<property name="buildDirectory" value="${writableBuildRoot}" />
+	<property name="buildDirectory" value="${writableBuildRoot}/work" />
 
 	<!-- import common build helpers -->
 	<import file="common/buildhelpers.xml" />
@@ -61,11 +61,11 @@
          =============================== -->
 	<target name="run" description="Performs a Gyrex build. This is usally invoked from a vanilla Ant process.">
 
+		<!-- smart clean up of build area from last build if necessary -->
+		<antcall target="clean"/>
+
 		<!-- initialize/read build identifiers -->
 		<antcall target="label.properties.init"/>
-
-		<!-- set directory where the basebuilder can be found -->
-		<property name="org.eclipse.releng.basebuilder" value="${writableBuildRoot}/org.eclipse.releng.basebuilder" />
 
 		<!-- bootstrap basebuilder if necessary -->
 		<antcall target="bootstrap-org.eclipse.releng.basebuilder" />
@@ -78,6 +78,7 @@
 			dir="${org.eclipse.releng.basebuilder}">
 			<jvmargs>
 		        <arg value="-DwritableBuildRoot=${writableBuildRoot}" />
+		        <arg value="-DbuildDirectory=${buildDirectory}" />
 			</jvmargs>
 		</antrunner>
 	</target>
@@ -150,7 +151,9 @@
          =============================== -->
 	<target name="runInEclipse" description="Performs a Gyrex build from inside a running Eclipse instance." depends="label.properties.init">
 
-		<!-- initialize/read build identifiers (double check, but should be triggered through depends call) -->
+		<!-- note, we do not perform a clean here because usually "run" should be called alread -->
+
+		<!-- initialize/read build identifiers (double check, but should be triggered through depends attribute) -->
 		<antcall target="label.properties.init"/>
 
 		<!-- print build information -->

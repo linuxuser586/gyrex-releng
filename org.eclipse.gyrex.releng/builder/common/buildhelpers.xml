@@ -23,35 +23,59 @@
 	<description>Some helpers to simplify building with PDE Build.</description>
 
 	<!-- fake default target -->
-    <target name="nodefault">
-    	<fail taskname="This script must not be called directly."/>
-    </target>
+	<target name="nodefault">
+		<fail taskname="This script must not be called directly."/>
+	</target>
 
 	<!-- =================================
           target: bootstrap-org.eclipse.releng.basebuilder
          ================================= -->
 	<target name="bootstrap-org.eclipse.releng.basebuilder" description="Performs bootstrapping of org.eclipse.releng.basebuilder from Eclipse CVS" unless="org.eclipse.releng.basebuilder.exists">
 
-		<!-- verify required properties are set -->
-		<fail unless="org.eclipse.releng.basebuilder" message="Required property 'org.eclipse.releng.basebuilder' not set! Please set it to the target location of the org.eclipse.releng.basebuilder."/>
+		<!-- set default branch/tag to check out (currently R36_RC2) -->
+		<property name="org.eclipse.releng.basebuilder.tag" value="R36_RC2"/>
 
-		<!-- set property if basebuilder exists -->
-		<available file="${org.eclipse.releng.basebuilder}" type="dir" property="org.eclipse.releng.basebuilder.exists"/>
+		<!-- default basebuilder location -->
+		<property name="org.eclipse.releng.basebuilder" value="${writableBuildRoot}/org.eclipse.releng.basebuilder_${org.eclipse.releng.basebuilder.tag}" />
+
+		<!-- check if we need to checkout basebuilder -->
+		<condition property="org.eclipse.releng.basebuilder-checkout">
+			<or>
+				<!-- checkout if if doesn't exist -->
+				<not>
+					<available file="${org.eclipse.releng.basebuilder}" type="dir"/>
+				</not>
+				<!-- checkout fresh if it should come from HEAD and is within writableBuildRoot -->
+				<and>
+					<equals arg1="${org.eclipse.releng.basebuilder.tag}" arg2="HEAD"/>
+					<contains string="${org.eclipse.releng.basebuilder}" substring="${writableBuildRoot}"/>
+				</and>
+				<!-- checkout fresh for S and R builds if within writableBuildRoot -->
+				<and>
+					<or>
+						<equals arg1="${buildType}" arg2="S"/>
+						<equals arg1="${buildType}" arg2="R"/>
+					</or>
+					<contains string="${org.eclipse.releng.basebuilder}" substring="${writableBuildRoot}"/>
+				</and>
+			</or>
+		</condition>
 
 		<!-- call sup targets to perform actually checkout if necessary -->
 		<antcall target="org.eclipse.releng.basebuilder-checkout" />
-		<antcall target="org.eclipse.releng.basebuilder-uselocal" />
 
-    </target>
+		<!-- print message -->
+		<echo level="info" message="[BOOTSTRAP] Using org.eclipse.releng.basebuilder: ${org.eclipse.releng.basebuilder}"/>
+	</target>
 
 	<!-- performs basebuilder checkout from CVS if org.eclipse.releng.basebuilder.exists is not set -->
-	<target name="org.eclipse.releng.basebuilder-checkout" unless="org.eclipse.releng.basebuilder.exists">
-
-		<!-- set default branch/tag to check out -->
-		<property name="org.eclipse.releng.basebuilder.tag" value="HEAD"/>
+	<target name="org.eclipse.releng.basebuilder-checkout" if="org.eclipse.releng.basebuilder-checkout">
+		<!-- remove up any existing basebuilder -->
+		<delete dir="${org.eclipse.releng.basebuilder}" quiet="true"/>
+		<mkdir dir="${org.eclipse.releng.basebuilder}"/>
 
 		<!-- perform checkout -->
-		<echo level="info" message="[BOOTSTRAP] Perform checkout of org.eclipse.releng.basebuilder (using tag/branch '${org.eclipse.releng.basebuilder.tag}')"/>
+		<echo level="info" message="[BOOTSTRAP] Perform checkout of org.eclipse.releng.basebuilder using tag/branch '${org.eclipse.releng.basebuilder.tag}'"/>
 		<cvs
 			cvsRoot=":pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse"
 			package="org.eclipse.releng.basebuilder"
@@ -64,92 +88,79 @@
 		<move todir="${org.eclipse.releng.basebuilder}">
 			<fileset dir="${org.eclipse.releng.basebuilder}/org.eclipse.releng.basebuilder"/>
 		</move>
-    </target>
-
-	<!-- prints a message informing that local basebuilder will be used if rg.eclipse.releng.basebuilder.exists is set -->
-	<target name="org.eclipse.releng.basebuilder-uselocal" if="org.eclipse.releng.basebuilder.exists">
-		<echo level="info" message="[BOOTSTRAP] Using local available org.eclipse.releng.basebuilder (${org.eclipse.releng.basebuilder})"/>
-    </target>
+	</target>
 
 
-    <!-- ===============================
+	<!-- ===============================
          macro: eclipse.launch
          =============================== -->
-    <macrodef name="eclipse.launch" description="This macro executes the default application of an eclipse installation.">
-        <attribute name="app" description="The Eclipse application to launch."/>
-        <attribute name="dir" description="The Eclipse installation dir."/>
-        <attribute name="fork" default="true" description="If Eclipse should be launched in a separate process (default: true)." />
-        <element name="args" optional="true" />
-        <sequential>
-            <!-- We assume that the eclipse installation is specified -->
-            <property name="@{app}.deploy.dir" location="@{dir}" />
+	<macrodef name="eclipse.launch" description="This macro executes the default application of an eclipse installation.">
+		<attribute name="app" description="The Eclipse application to launch."/>
+		<attribute name="dir" description="The Eclipse installation dir."/>
+		<attribute name="fork" default="true" description="If Eclipse should be launched in a separate process (default: true)." />
+		<element name="args" optional="true" />
+		<sequential>
+			<!-- We assume that the eclipse installation is specified -->
+			<property name="@{app}.deploy.dir" location="@{dir}" />
 
-            <!-- Find the Eclipse launcher and adding its location to the @{app}.launcher property -->
-            <pathconvert property="@{app}.launcher">
-                <first count="1">
-                    <sort>
-                        <fileset dir="${@{app}.deploy.dir}/plugins" includes="**/org.eclipse.equinox.launcher_*.jar" />
-                        <reverse xmlns="antlib:org.apache.tools.ant.types.resources.comparators">
-                            <date />
-                        </reverse>
-                    </sort>
-                </first>
-            </pathconvert>
+			<!-- Find the Eclipse launcher and adding its location to the @{app}.launcher property -->
+			<pathconvert property="@{app}.launcher">
+				<first count="1">
+					<sort>
+						<fileset dir="${@{app}.deploy.dir}/plugins" includes="**/org.eclipse.equinox.launcher_*.jar" />
+						<reverse xmlns="antlib:org.apache.tools.ant.types.resources.comparators">
+							<date />
+						</reverse>
+					</sort>
+				</first>
+			</pathconvert>
 
-            <!-- Launch the eclipse application -->
-            <java fork="true" jar="${@{app}.launcher}" dir="${@{app}.deploy.dir}" failonerror="true">
-                <!-- Uncomment to debug <jvmarg value="-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=y"/> -->
-                <args />
-            </java>
-        </sequential>
-    </macrodef>
+			<!-- Launch the eclipse application -->
+			<java fork="true" jar="${@{app}.launcher}" dir="${@{app}.deploy.dir}" failonerror="true">
+				<!-- Uncomment to debug <jvmarg value="-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=y"/> -->
+				<args />
+			</java>
+		</sequential>
+	</macrodef>
 
-    <!-- ===============================
+	<!-- ===============================
          macro: antrunner
          =============================== -->
-    <macrodef name="antrunner" description="This macro launches the Eclipse Ant Runner.">
-        <attribute name="target" description="The target to execute."/>
-        <attribute name="buildfile" description="The build file."/>
-        <attribute name="workspace" description="The Eclipse installation dir."/>
-        <attribute name="dir" description="The Eclipse installation dir."/>
-        <attribute name="fork" default="true" description="If the Ant runner should be launched in a separate process (default: true)." />
-        <element name="jvmargs" optional="true" />
-        <element name="antargs" optional="true" />
-        <sequential>
-            <eclipse.launch app="antrunner" dir="@{dir}" fork="@{fork}">
-                <args>
-                    <jvmarg value="-Xmx500m" />
-                    <jvmarg value="-Declipse.p2.MD5Check=false" />
-                    <!-- <jvmarg value="-Dorg.eclipse.update.jarprocessor.pack200=/shared/common/ibm-java2-ppc-50/bin" /> -->
-                    <jvmargs />
-                    <arg value="-data" />
-                    <arg value="@{workspace}" />
-                    <arg value="-application" />
-                    <arg value="org.eclipse.ant.core.antRunner" />
-                    <arg value="-buildfile" />
-                    <arg value="@{buildfile}" />
-                    <arg value="@{target}" />
-                    <antargs />
-                </args>
-            </eclipse.launch>
-        </sequential>
-    </macrodef>
+	<macrodef name="antrunner" description="This macro launches the Eclipse Ant Runner.">
+		<attribute name="target" description="The target to execute."/>
+		<attribute name="buildfile" description="The build file."/>
+		<attribute name="workspace" description="The Eclipse installation dir."/>
+		<attribute name="dir" description="The Eclipse installation dir."/>
+		<attribute name="fork" default="true" description="If the Ant runner should be launched in a separate process (default: true)." />
+		<element name="jvmargs" optional="true" />
+		<element name="antargs" optional="true" />
+		<sequential>
+			<eclipse.launch app="antrunner" dir="@{dir}" fork="@{fork}">
+				<args>
+					<jvmarg value="-Xmx500m" />
+					<jvmarg value="-Declipse.p2.MD5Check=false" />
+					<!-- <jvmarg value="-Dorg.eclipse.update.jarprocessor.pack200=/shared/common/ibm-java2-ppc-50/bin" /> -->
+					<jvmargs />
+					<arg value="-data" />
+					<arg value="@{workspace}" />
+					<arg value="-application" />
+					<arg value="org.eclipse.ant.core.antRunner" />
+					<arg value="-buildfile" />
+					<arg value="@{buildfile}" />
+					<arg value="@{target}" />
+					<antargs />
+				</args>
+			</eclipse.launch>
+		</sequential>
+	</macrodef>
 
-	<target name="builder.prepare" depends="builder.checkArgs,builder.init">
-		<!-- read the build properties -->
+	<target name="builder.prepare" depends="builder.checkArgs,builder.init" description="Performs necessary preparation/initialization for a specific builder.">
+		<!-- read the builder specific build properties -->
 		<property file="${builder}/build.properties"/>
-        <!-- ensure that the base folders exist -->
-        <mkdir dir="${baseLocation}" />
-        <mkdir dir="${repoBaseLocation}" />
-        <mkdir dir="${transformedRepoLocation}" />
-		<!-- download the launcher pieces -->
-		<!--antcall target="getLauncherComponents"/-->
-        <!-- download the target platform pieces -->
-        <!--antcall target="getTargetDefinitionComponents"/-->
-		<!-- build the feature -->
-		<!--ant antfile="${eclipse.pdebuild.scripts}/build.xml" /-->
-		<!-- build a product -->
-		<!--ant antfile="${eclipse.pdebuild.scripts}/productBuild/productBuild.xml" /-->
+		<!-- ensure that the base folders exist -->
+		<mkdir dir="${baseLocation}" />
+		<mkdir dir="${repoBaseLocation}" />
+		<mkdir dir="${transformedRepoLocation}" />
 	</target>
 
 	<target name="builder.checkArgs" unless="builder">
@@ -166,16 +177,16 @@
 		<property name="p2.artifact.repo.name" value="${p2.repo.name.prefix} (Build ${buildLabel})"/>
 	</target>
 
-    <target name="label.properties.init" description="Initializes the label.properties (if not already initialized)" depends="checkBuildDirectory">
+	<target name="label.properties.init" description="Initializes the label.properties (if not already initialized)" depends="checkBuildDirectory">
 		<!-- create and save properties identifying this build, re-use existing properties if available -->
 		<available file="${buildDirectory}/label.properties" property="label.properties.exists" />
 		<antcall target="create.label.properties" />
 		<property file="${buildDirectory}/label.properties" />
 
-    	<!-- place a copy the label.properties into the output target directory -->
-    	<mkdir dir="${buildDirectory}/${buildLabel}"/>
-    	<copy todir="${buildDirectory}/${buildLabel}" file="${buildDirectory}/label.properties"/>
-    </target>
+		<!-- place a copy the label.properties into the output target directory -->
+		<mkdir dir="${buildDirectory}/${buildLabel}"/>
+		<copy todir="${buildDirectory}/${buildLabel}" file="${buildDirectory}/label.properties"/>
+	</target>
 
 	<target name="create.label.properties" unless="label.properties.exists" depends="checkBuildDirectory">
 		<echo message="Initializing label.properties"/>
@@ -222,37 +233,39 @@
 		<fail/>
 	</target>
 
-    <target name="getLauncherComponents" depends="checkLocalLaunchers" unless="skipLaunchers">
-    	<!-- mirror the launchers -->
-    	<p2.mirror source="${launchersRepo}" validate="true" verbose="true">
-    		<destination location="${repoBaseLocation}/launchers" name="Equinox Launcher Repo" append="false" />
-            <slicingOptions includeOptional="false" includeNonGreedy="false" followStrict="true" />
-    		<iu id="${launchersIU}" />
-    	</p2.mirror>
-    	<!-- verify download -->
-        <available file="${repoBaseLocation}/launchers/artifacts.jar" type="file" property="launcherMirrorOk" />
-    	<fail unless="launcherMirrorOk" message="Launchers could not be mirrored correctly. Launchers repository is empty but p2.mirror task was successful?!?"/>
-    </target>
 
-    <target name="checkLocalLaunchers">
-        <available file="${repoBaseLocation}/launchers/artifacts.jar" type="file" property="skipLaunchers" />
-    </target>
+	<!-- =================================
+          target: clean
+         ================================= -->
+	<target name="clean" description="Performs general cleanup of the build area." unless="noclean">
 
-    <target name="getTargetDefinitionComponents" depends="checkLocalTargetDefinition" unless="skipTargetDefinition">
-    	<available file="${targetDefinition}" property="targetDefinitionOk"/>
-        <fail unless="targetDefinitionOk" message="Target definition '${targetDefinition}' not found. Is the property correctly set?"/>
-        <!-- mirror the target definition -->
-        <eclipse.target.resolver targetDefinition="${targetDefinition}" verbose="true">
-            <destination location="${repoBaseLocation}/target" name="Target Definition Repo" append="false" />
-        </eclipse.target.resolver>
-        <!-- verify download -->
-        <available file="${repoBaseLocation}/target/artifacts.jar" type="file" property="targetDefinitionMirrorOk" />
-        <fail unless="targetDefinitionMirrorOk" message="Target definition could not be mirrored correctly. Target repository is empty but eclipse.target.resolver task was successful?!?"/>
-    </target>
+		<!-- check if we need to do a full clean -->
+		<condition property="clean-full">
+			<!-- full clean on S and R builds -->
+			<or>
+				<equals arg1="${buildType}" arg2="S"/>
+				<equals arg1="${buildType}" arg2="R"/>
+			</or>
+		</condition>
 
-    <target name="checkLocalTargetDefinition">
-        <available file="${repoBaseLocation}/target/artifacts.jar" type="file" property="skipTargetDefinition" />
-    </target>
+		<!-- call the actual clean targets -->
+		<antcall target="clean-writableBuildRoot"/>
+		<antcall target="clean-writableBuildRoot"/>
 
+	</target>
+
+	<target name="clean-writableBuildRoot" if="clean-full">
+		<echo message="[CLEAN] Performing full clean: ${writableBuildRoot}"/>
+		<!-- delete whole writableBuildRoot -->
+		<delete dir="${writableBuildRoot}" quiet="true"/>
+		<mkdir dir="${writableBuildRoot}"/>
+	</target>
+
+	<target name="clean-buildDirectory" unless="clean-full">
+		<echo message="[CLEAN] Performing partial clean: ${buildDirectory}"/>
+		<!-- delete buildDirectory -->
+		<delete dir="${buildDirectory}" quiet="true"/>
+		<mkdir dir="${buildDirectory}"/>
+	</target>
 
 </project>
