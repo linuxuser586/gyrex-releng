@@ -23,7 +23,8 @@
 	   build.properties are correct for your machine. Edit these properties in build.local.properties
 	   to suit your needs. See build.local.properties.example
 -->
-<project default="run" name="org.eclipse.gyrex.releng/builder/build.xml - Run a Gyrex build using PDE Build">
+<project default="run" name="org.eclipse.gyrex.releng-builder-build">
+	<description>Run a Gyrex build using PDE Build</description>
 
 	<!-- set a writable build root (default to /t[e]mp/build) -->
 	<condition property="writableBuildRoot" value="/temp/build" else="/tmp/build">
@@ -72,7 +73,7 @@
 		<!-- execute Eclipse Ant to perform the build -->
 		<antrunner
 			target="runInEclipse"
-			buildfile="${ant.file.org.eclipse.gyrex.releng/builder/build.xml - Run a Gyrex build using PDE Build}"
+			buildfile="${ant.file.org.eclipse.gyrex.releng-builder-build}"
 			workspace="${buildDirectory}/workspace"
 			dir="${org.eclipse.releng.basebuilder}">
 			<jvmargs>
