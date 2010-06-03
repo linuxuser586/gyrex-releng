@@ -135,9 +135,6 @@
         </sequential>
     </macrodef>
 
-	<property name="pde.build.scripts"	value="${eclipse.pdebuild.scripts}"/>
-	<property name="buildDirectory" location="${basedir}/src" />
-
 	<target name="builder.prepare" depends="builder.checkArgs,builder.init">
 		<!-- read the build properties -->
 		<property file="${builder}/build.properties"/>
@@ -169,7 +166,7 @@
 		<property name="p2.artifact.repo.name" value="${p2.repo.name.prefix} (Build ${buildLabel})"/>
 	</target>
 
-    <target name="label.properties.init" description="Initializes the label.properties (if not already initialized)">
+    <target name="label.properties.init" description="Initializes the label.properties (if not already initialized)" depends="checkBuildDirectory">
 		<!-- create and save properties identifying this build, re-use existing properties if available -->
 		<available file="${buildDirectory}/label.properties" property="label.properties.exists" />
 		<antcall target="create.label.properties" />
@@ -180,8 +177,9 @@
     	<copy todir="${buildDirectory}/${buildLabel}" file="${buildDirectory}/label.properties"/>
     </target>
 
+	<target name="create.label.properties" unless="label.properties.exists" depends="checkBuildDirectory">
+		<echo message="Initializing label.properties"/>
 
-	<target name="create.label.properties" unless="label.properties.exists">
 		<mkdir dir="${buildDirectory}" />
 		<tstamp/>
 		<property name="date" value="${DSTAMP}" />
@@ -217,6 +215,11 @@
 		<echo file="${buildDirectory}/label.properties" append="true" >
 			forceContextQualifier=${forceContextQualifier}
 		</echo>
+	</target>
+
+	<target name="checkBuildDirectory" unless="buildDirectory">
+		<echo message="Proptery 'buildDirectory' not set. Please set it using -DbuildDirectory=&lt;path&gt; required." />
+		<fail/>
 	</target>
 
     <target name="getLauncherComponents" depends="checkLocalLaunchers" unless="skipLaunchers">

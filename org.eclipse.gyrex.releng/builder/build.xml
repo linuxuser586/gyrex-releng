@@ -59,7 +59,7 @@
     <!-- ===============================
          target: run
          =============================== -->
-	<target name="run" description="Performs a Gyrex build. This is usally invoked from a vanilla Ant process.">
+	<target name="run" description="Performs a Gyrex build. This is usally invoked from a vanilla Ant process." depends="label.properties.init">
 
 		<!-- initialize/read build identifiers -->
 		<antcall target="label.properties.init"/>
@@ -148,16 +148,16 @@
     <!-- ===============================
          target: runInEclipse
          =============================== -->
-	<target name="runInEclipse" description="Performs a Gyrex build from inside a running Eclipse instance.">
+	<target name="runInEclipse" description="Performs a Gyrex build from inside a running Eclipse instance." depends="label.properties.init">
 
 		<!-- initialize/read build identifiers -->
 		<antcall target="label.properties.init"/>
 
 		<!-- print build information -->
-		<echo message="Gyrex build running on: {buildServer}"/>
-		<echo message="Gyrex build type: {buildType}"/>
-		<echo message="Gyrex build id: {buildId}"/>
-		<echo message="Gyrex build label: {buildLabel}"/>
+		<echo message="Gyrex build running on: ${buildServer}"/>
+		<echo message="Gyrex build type: ${buildType}"/>
+		<echo message="Gyrex build id: ${buildId}"/>
+		<echo message="Gyrex build label: ${buildLabel}"/>
 
 		<!-- build the sdk -->
 		<ant antfile="configs/sdk/build.xml"/>
