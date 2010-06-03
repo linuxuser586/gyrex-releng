@@ -160,19 +160,26 @@
 		<fail/>
 	</target>
 
-	<target name="builder.init">
+	<target name="builder.init" depends="label.properties.init">
 		<!-- create a pass file for the CVS client -->
 		<touch file="${user.home}/.cvspass" />
-
-		<!-- create and save properties identifying this build, re-use existing properties if available -->
-		<available file="${buildDirectory}/label.properties" property="label.properties.exists" />
-		<antcall target="create.label.properties" />
-		<property file="${buildDirectory}/label.properties" />
 
 		<!-- set the p2 repo names -->
 		<property name="p2.metadata.repo.name" value="${p2.repo.name.prefix} (Build ${buildLabel})"/>
 		<property name="p2.artifact.repo.name" value="${p2.repo.name.prefix} (Build ${buildLabel})"/>
 	</target>
+
+    <target name="label.properties.init" description="Initializes the label.properties (if not already initialized)">
+		<!-- create and save properties identifying this build, re-use existing properties if available -->
+		<available file="${buildDirectory}/label.properties" property="label.properties.exists" />
+		<antcall target="create.label.properties" />
+		<property file="${buildDirectory}/label.properties" />
+
+    	<!-- place a copy the label.properties into the output target directory -->
+    	<mkdir dir="${buildDirectory}/${buildLabel}"/>
+    	<copy todir="${buildDirectory}/${buildLabel}" file="${buildDirectory}/label.properties"/>
+    </target>
+
 
 	<target name="create.label.properties" unless="label.properties.exists">
 		<mkdir dir="${buildDirectory}" />
@@ -183,6 +190,7 @@
 		<property name="buildType" value="I" />
 		<property name="buildId" value="${buildType}${date}" />
 		<property name="forceContextQualifier" value="v${timestamp}" />
+		<property name="buildServer" value="LOCAL BUILD" />
 
 		<!--this naming convention used by php scripts on download server-->
 		<property name="buildLabel" value="${buildType}-${buildId}-${timestamp}" />
@@ -190,6 +198,9 @@
 		<!--store the build label information in a file-->
 		<echo file="${buildDirectory}/label.properties" append="true" >
 			buildDirectory=${buildDirectory}
+		</echo>
+		<echo file="${buildDirectory}/label.properties" append="true" >
+			buildServer=${buildServer}
 		</echo>
 		<echo file="${buildDirectory}/label.properties" append="true" >
 			buildType=${buildType}

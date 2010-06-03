@@ -60,6 +60,9 @@
          =============================== -->
 	<target name="run" description="Performs a Gyrex build. This is usally invoked from a vanilla Ant process.">
 
+		<!-- initialize/read build identifiers -->
+		<antcall target="label.properties.init"/>
+
 		<!-- set directory where the basebuilder can be found -->
 		<property name="org.eclipse.releng.basebuilder" value="${writableBuildRoot}/org.eclipse.releng.basebuilder" />
 
@@ -113,12 +116,27 @@
                     writableBuildRoot=$WORKSPACE/build
                 </snip>
 
+            The following Hudson parameters will be supported for parameterized builds.
+
+                <snip>
+                    BUILD_TYPE (one of N,I,S or R; defaults to I)
+                </snip>
+
             That's all.
 
 		-->
 
 		<!-- load properties from the environment -->
 		<property environment="env" />
+		<condition property="buildType" value="${env.BUILD_TYPE}" else="I">
+			<isset property="env.BUILD_TYPE" />
+		</condition>
+		<condition property="buildServer" value="${env.BUILD_URL}" else="LOCAL BUILD">
+			<isset property="env.BUILD_URL" />
+		</condition>
+
+		<echo message="Hudson build ID: ${env.BUILD_ID}"/>
+	    <echo message="Hudson build number: ${env.BUILD_NUMBER}"/>
 
 		<!-- execute the run target -->
 		<antcall target="run"/>
@@ -131,9 +149,11 @@
          =============================== -->
 	<target name="runInEclipse" description="Performs a Gyrex build from inside a running Eclipse instance.">
 
+		<!-- initialize/read build identifiers -->
+		<antcall target="label.properties.init"/>
+
 		<!-- build the sdk -->
-		<ant antfile="configs/sdk/build.xml">
-		</ant>
+		<ant antfile="configs/sdk/build.xml"/>
 
 	</target>
 
