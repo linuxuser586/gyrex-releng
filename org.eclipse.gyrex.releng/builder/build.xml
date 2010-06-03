@@ -153,6 +153,12 @@
 		<!-- initialize/read build identifiers -->
 		<antcall target="label.properties.init"/>
 
+		<!-- print build information -->
+		<echo message="Gyrex build running on: {buildServer}"/>
+		<echo message="Gyrex build type: {buildType}"/>
+		<echo message="Gyrex build id: {buildId}"/>
+		<echo message="Gyrex build label: {buildLabel}"/>
+
 		<!-- build the sdk -->
 		<ant antfile="configs/sdk/build.xml"/>
 
