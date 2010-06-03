@@ -193,7 +193,7 @@
 		<property name="buildServer" value="LOCAL BUILD" />
 
 		<!--this naming convention used by php scripts on download server-->
-		<property name="buildLabel" value="${buildType}-${buildId}-${timestamp}" />
+		<property name="buildLabel" value="${buildType}${buildId}-${timestamp}" />
 
 		<!--store the build label information in a file-->
 		<echo file="${buildDirectory}/label.properties" append="true" >
