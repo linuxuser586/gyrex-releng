@@ -59,7 +59,7 @@
     <!-- ===============================
          target: run
          =============================== -->
-	<target name="run" description="Performs a Gyrex build. This is usally invoked from a vanilla Ant process." depends="label.properties.init">
+	<target name="run" description="Performs a Gyrex build. This is usally invoked from a vanilla Ant process.">
 
 		<!-- initialize/read build identifiers -->
 		<antcall target="label.properties.init"/>
@@ -150,7 +150,7 @@
          =============================== -->
 	<target name="runInEclipse" description="Performs a Gyrex build from inside a running Eclipse instance." depends="label.properties.init">
 
-		<!-- initialize/read build identifiers -->
+		<!-- initialize/read build identifiers (double check, but should be triggered through depends call) -->
 		<antcall target="label.properties.init"/>
 
 		<!-- print build information -->
