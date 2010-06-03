@@ -153,9 +153,10 @@
 	</macrodef>
 
 	<!-- ===============================
-         macro: antrunner
+         macro: basebuilder
          =============================== -->
 	<macrodef name="basebuilder" description="This macro launches the Eclipse basebuilder.">
+		<!-- note, this macro allows to have the basebuilder default location logic within buildhelpers.xml -->
 		<attribute name="target" description="The target to execute."/>
 		<attribute name="buildfile" description="The build file."/>
 		<attribute name="workspace" description="The Eclipse instance dir."/>
