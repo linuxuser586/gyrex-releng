@@ -138,8 +138,6 @@
 			<eclipse.launch app="antrunner" dir="@{dir}" fork="@{fork}">
 				<args>
 					<jvmarg value="-Xmx500m" />
-					<jvmarg value="-Declipse.p2.MD5Check=false" />
-					<!-- <jvmarg value="-Dorg.eclipse.update.jarprocessor.pack200=/shared/common/ibm-java2-ppc-50/bin" /> -->
 					<jvmargs />
 					<arg value="-data" />
 					<arg value="@{workspace}" />
@@ -151,6 +149,33 @@
 					<antargs />
 				</args>
 			</eclipse.launch>
+		</sequential>
+	</macrodef>
+
+	<!-- ===============================
+         macro: antrunner
+         =============================== -->
+	<macrodef name="basebuilder" description="This macro launches the Eclipse basebuilder.">
+		<attribute name="target" description="The target to execute."/>
+		<attribute name="buildfile" description="The build file."/>
+		<attribute name="workspace" description="The Eclipse instance dir."/>
+		<attribute name="fork" default="true" description="If the Ant runner should be launched in a separate process (default: true)." />
+		<element name="jvmargs" optional="true" />
+		<element name="antargs" optional="true" />
+		<sequential>
+			<!-- initialize defaults using logic from bootstrap-org.eclipse.releng.basebuilder -->
+			<property name="org.eclipse.releng.basebuilder.tag" value="R36_RC2"/>
+			<property name="org.eclipse.releng.basebuilder" value="${writableBuildRoot}/org.eclipse.releng.basebuilder_${org.eclipse.releng.basebuilder.tag}" />
+			<!-- launch the antrunner -->
+			<antrunner
+				target="@{target}"
+				buildfile="@{buildfile}"
+				workspace="@{workspace}"
+				dir="${org.eclipse.releng.basebuilder}"
+				fork="@{fork}">
+				<jvmargs />
+				<antargs />
+			</antrunner>
 		</sequential>
 	</macrodef>
 

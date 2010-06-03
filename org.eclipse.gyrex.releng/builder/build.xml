@@ -68,19 +68,18 @@
 		<antcall target="label.properties.init"/>
 
 		<!-- bootstrap basebuilder if necessary -->
-		<antcall target="bootstrap-org.eclipse.releng.basebuilder" />
+		<antcall target="bootstrap-org.eclipse.releng.basebuilder"/>
 
-		<!-- execute Eclipse Ant to perform the build -->
-		<antrunner
+		<!-- execute basebuilder Eclipse Ant to perform the build -->
+		<basebuilder
 			target="runInEclipse"
 			buildfile="${ant.file.org.eclipse.gyrex.releng-builder-build}"
-			workspace="${buildDirectory}/workspace"
-			dir="${org.eclipse.releng.basebuilder}">
+			workspace="${buildDirectory}/workspace">
 			<jvmargs>
 		        <arg value="-DwritableBuildRoot=${writableBuildRoot}" />
 		        <arg value="-DbuildDirectory=${buildDirectory}" />
 			</jvmargs>
-		</antrunner>
+		</basebuilder>
 	</target>
 
 
