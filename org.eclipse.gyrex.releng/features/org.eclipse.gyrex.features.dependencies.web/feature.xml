@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.eclipse.gyrex.features.dependencies.web"
-      label="Web Dependencies"
+      label="%featureName"
       version="1.0.0.qualifier"
-      provider-name="Eclipse Gyrex">
+      provider-name="%providerName">
 
    <description>
-      A set of common libraries Gyrex depends on.
+      %description
    </description>
 
    <copyright>
-      Please see the individual libraries.
+      %copyright
    </copyright>
 
    <license>
-      Please see the individual libraries.
+      %license
    </license>
 
    <plugin
