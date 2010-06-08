@@ -39,7 +39,6 @@
 <unit id="javax.xml.soap" version="0.0.0"/>
 <unit id="javax.xml.stream" version="0.0.0"/>
 <unit id="javax.xml.ws" version="0.0.0"/>
-<unit id="javax.xml.ws.source" version="0.0.0"/>
 <unit id="org.apache.commons.beanutils" version="0.0.0"/>
 <unit id="org.apache.commons.beanutils.source" version="0.0.0"/>
 <unit id="org.apache.commons.cli" version="0.0.0"/>
