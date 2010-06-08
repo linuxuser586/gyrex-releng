@@ -119,7 +119,7 @@
 <unit id="org.slf4j.jcl.source" version="1.5.11.v20100419-1106"/>
 <unit id="org.slf4j.log4j" version="1.5.11.v20100419-1106"/>
 <unit id="org.slf4j.log4j.source" version="1.5.11.v20100419-1106"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20100514103823/repository/"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20100519200754/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.eclipse.equinox.sdk.feature.group" version="3.6.0.v20100519-7G7R-7lz-qs-z-vnhGTVo6f8jIiy"/>
