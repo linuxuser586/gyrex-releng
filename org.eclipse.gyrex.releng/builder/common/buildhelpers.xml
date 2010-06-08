@@ -312,27 +312,4 @@
 		<mkdir dir="${buildDirectory}"/>
 	</target>
 
-	<!-- ===================================================================== -->
-	<!-- Generate a container feature based on the product file                -->
-	<!-- The plugin or feature containing the .product file will need to exist -->
-	<!-- already, use preSetup or postSetup to fetch it if necessary           -->
-	<!-- ===================================================================== -->
-	<target name="generateFeature">
-		<eclipse.generateFeature
-			featureId="org.eclipse.pde.build.container.feature"
-			buildDirectory="${buildDirectory}"
-			baseLocation="${baseLocation}"
-			productFile="${product}"
-			verify="${verify}"
-			pluginPath="${transformedRepoLocation}${path.separator}${pluginPath}"
-			configInfo="${configs}"
-			pluginList="${pluginList}"
-			featureList="${featureList}"
-			includeLaunchers="${includeLaunchers}"
-			buildPropertiesFile="${generatedBuildProperties}"
-			nestedInclusions="${nestedInclusions}"
-			filterP2Base="${filterP2Base}"
-		/>
-	</target>
-
 </project>
