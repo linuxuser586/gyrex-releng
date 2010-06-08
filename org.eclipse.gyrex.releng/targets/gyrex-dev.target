@@ -122,13 +122,13 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20100519200754/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
-<unit id="org.eclipse.equinox.executable.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/eclipse/updates/3.6milestones/"/>
-</location>
-<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.eclipse.equinox.compendium.sdk.feature.group" version="3.6.0.v20100421-7V7RFisFNObpCoqow"/>
 <unit id="org.eclipse.equinox.core.sdk.feature.group" version="3.6.0.v20100603-7sF99FsFFUu63a35g6s"/>
 <unit id="org.eclipse.equinox.serverside.sdk.feature.group" version="3.6.0.v20100421-7u7NFVgFN5JdPKM_N9VZwrdLT3o3"/>
+<repository location="http://download.eclipse.org/eclipse/updates/3.6milestones/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
+<unit id="org.eclipse.equinox.executable.feature.group" version="3.4.0.v20100524-7M7K-FIhIez-egBko15H73"/>
 <repository location="http://download.eclipse.org/eclipse/updates/3.6milestones/"/>
 </location>
 </locations>
