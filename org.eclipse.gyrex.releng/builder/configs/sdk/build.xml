@@ -32,12 +32,11 @@
 	<!-- import common build helpers -->
 	<import file="${builder}/../../common/buildhelpers.xml" />
 
-	<!-- =================================
+	<!-- ==================================================================================
           target: main
-         ================================= -->
-    <target name="main" description="Builds the Gyrex SDK">
-    	<!-- prepare -->
-        <antcall target="builder.prepare"/>
+          depends on: 'builder.prepare' to inherit common builder behavior
+         ================================================================================== -->
+    <target name="main" description="Builds the Gyrex SDK" depends="builder.prepare">
 		<!-- print build information -->
 		<echo message="Gyrex SDK build: ${buildLabel}"/>
 		<!-- build the feature -->

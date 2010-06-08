@@ -64,7 +64,7 @@
 		<!-- smart clean up of build area from last build if necessary -->
 		<antcall target="clean"/>
 
-		<!-- initialize/read build identifiers -->
+		<!-- initialize build identifiers -->
 		<antcall target="label.properties.init"/>
 
 		<!-- bootstrap basebuilder if necessary -->
@@ -145,15 +145,12 @@
 	</target>
 
 
-    <!-- ===============================
+    <!-- ========================================================================
          target: runInEclipse
-         =============================== -->
+          depends on: 'label.properties.init' to initialize and inherit common
+                      build identifying properties
+         ======================================================================== -->
 	<target name="runInEclipse" description="Performs a Gyrex build from inside a running Eclipse instance." depends="label.properties.init">
-
-		<!-- note, we do not perform a clean here because usually "run" should be called alread -->
-
-		<!-- initialize/read build identifiers (double check, but should be triggered through depends attribute) -->
-		<antcall target="label.properties.init"/>
 
 		<!-- print build information -->
 		<echo message="Gyrex build running on: ${buildServer}"/>
