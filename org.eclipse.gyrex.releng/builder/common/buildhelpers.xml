@@ -185,6 +185,10 @@
 		</sequential>
 	</macrodef>
 
+	<!-- =====================================================================
+		  target: builder.prepare
+		  depends on: builder.checkArgs, builder.init
+		 ===================================================================== -->
 	<target name="builder.prepare" depends="builder.checkArgs,builder.init" description="Performs necessary preparation/initialization for a specific builder.">
 		<!-- read the builder specific build properties -->
 		<property file="${builder}/build.properties"/>
@@ -194,11 +198,13 @@
 		<mkdir dir="${transformedRepoLocation}" />
 	</target>
 
+	<!-- builder: ensure required properties are set -->
 	<target name="builder.checkArgs" unless="builder">
 		<echo message="-Dbuilder=&lt;path&gt; required." />
 		<fail/>
 	</target>
 
+	<!-- builder: initialize properties/defaults -->
 	<target name="builder.init" depends="label.properties.init">
 		<!-- create a pass file for the CVS client -->
 		<touch file="${user.home}/.cvspass" />
@@ -208,6 +214,9 @@
 		<property name="p2.artifact.repo.name" value="${p2.repo.name.prefix} (Build ${buildLabel})"/>
 	</target>
 
+	<!-- =====================================================================
+		  target: label.properties.init
+		 ===================================================================== -->
 	<target name="label.properties.init" description="Initializes the label.properties (if not already initialized)" depends="checkBuildDirectory">
 		<!-- create and save properties identifying this build, re-use existing properties if available -->
 		<available file="${buildDirectory}/label.properties" property="label.properties.exists" />
@@ -219,6 +228,7 @@
 		<copy todir="${buildDirectory}/${buildLabel}" file="${buildDirectory}/label.properties"/>
 	</target>
 
+	<!-- creates a label.properties file -->
 	<target name="create.label.properties" unless="label.properties.exists" depends="checkBuildDirectory">
 		<echo message="Initializing label.properties"/>
 
@@ -259,6 +269,7 @@
 		</echo>
 	</target>
 
+	<!-- ensures property buildDirectory is set -->
 	<target name="checkBuildDirectory" unless="buildDirectory">
 		<echo message="Proptery 'buildDirectory' not set. Please set it using -DbuildDirectory=&lt;path&gt; required." />
 		<fail/>
@@ -285,6 +296,7 @@
 
 	</target>
 
+	<!-- clean: full writableBuildRoot when property clean-full is set -->
 	<target name="clean-writableBuildRoot" if="clean-full">
 		<echo message="[CLEAN] Performing full clean: ${writableBuildRoot}"/>
 		<!-- delete whole writableBuildRoot -->
@@ -292,11 +304,35 @@
 		<mkdir dir="${writableBuildRoot}"/>
 	</target>
 
-	<target name="clean-buildDirectory" unless="clean-full">
+	<!-- clean: only buildDirectory unless property clean-full is set -->
+	<target name="clean-buildDirectory" unless="clean-full" depends="checkBuildDirectory">
 		<echo message="[CLEAN] Performing partial clean: ${buildDirectory}"/>
 		<!-- delete buildDirectory -->
 		<delete dir="${buildDirectory}" quiet="true"/>
 		<mkdir dir="${buildDirectory}"/>
+	</target>
+
+	<!-- ===================================================================== -->
+	<!-- Generate a container feature based on the product file                -->
+	<!-- The plugin or feature containing the .product file will need to exist -->
+	<!-- already, use preSetup or postSetup to fetch it if necessary           -->
+	<!-- ===================================================================== -->
+	<target name="generateFeature">
+		<eclipse.generateFeature
+			featureId="org.eclipse.pde.build.container.feature"
+			buildDirectory="${buildDirectory}"
+			baseLocation="${baseLocation}"
+			productFile="${product}"
+			verify="${verify}"
+			pluginPath="${transformedRepoLocation}${path.separator}${pluginPath}"
+			configInfo="${configs}"
+			pluginList="${pluginList}"
+			featureList="${featureList}"
+			includeLaunchers="${includeLaunchers}"
+			buildPropertiesFile="${generatedBuildProperties}"
+			nestedInclusions="${nestedInclusions}"
+			filterP2Base="${filterP2Base}"
+		/>
 	</target>
 
 </project>
