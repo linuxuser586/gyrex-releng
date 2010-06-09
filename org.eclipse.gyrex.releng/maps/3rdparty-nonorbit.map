@@ -13,5 +13,4 @@
 #
 
 # CQ 2845 [https://dev.eclipse.org/ipzilla/show_bug.cgi?id=2845]
-plugin@org.codehaus.jackson=v0_9_3,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/3rdparty/bundles/org.codehaus.jackson
-
+plugin@org.codehaus.jackson=v20100609-1205,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/3rdparty/bundles/org.codehaus.jackson
