@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><profiles version="2">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<profiles version="2">
 <profile kind="CleanUpProfile" name="Gyrex v1" version="2">
 <setting id="cleanup.remove_unused_private_fields" value="true"/>
 <setting id="cleanup.always_use_parentheses_in_expressions" value="true"/>
@@ -32,6 +33,7 @@
 <setting id="cleanup.add_missing_methods" value="false"/>
 <setting id="cleanup.make_local_variable_final" value="true"/>
 <setting id="cleanup.correct_indentation" value="true"/>
+<setting id="cleanup.add_missing_override_annotations_interface_methods" value="true"/>
 <setting id="cleanup.remove_unused_imports" value="true"/>
 <setting id="cleanup.remove_trailing_whitespaces_ignore_empty" value="false"/>
 <setting id="cleanup.make_private_fields_final" value="true"/>

@@ -21,7 +21,7 @@ feature@org.eclipse.gyrex.features.server=v20100608-0840,:pserver:anonymous@dev.
 
 ### dependency features
 feature@org.eclipse.gyrex.features.dependencies.commons=v20100608-1217,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.commons
-feature@org.eclipse.gyrex.features.dependencies.provisioning=v20100608-1217,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.provisioning
+feature@org.eclipse.gyrex.features.dependencies.provisioning=v20100721-1018,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.provisioning
 feature@org.eclipse.gyrex.features.dependencies.web=v20100609-1205,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.web
 
 ### Gyrex Kernel
