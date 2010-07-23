@@ -26,7 +26,7 @@ feature@org.eclipse.gyrex.features.dependencies.web=v20100609-1205,:pserver:anon
 
 ### Gyrex Kernel
 #plugin@org.eclipse.gyrex.=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/
-plugin@org.eclipse.gyrex.boot=v20100609-1150,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.boot
+plugin@org.eclipse.gyrex.boot=v20100723-1132,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.boot
 plugin@org.eclipse.gyrex.boot.defaultroles=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.boot.defaultroles
 plugin@org.eclipse.gyrex.common=v20100607-1005,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.common
 plugin@org.eclipse.gyrex.configuration=v20100607-1005,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.configuration
