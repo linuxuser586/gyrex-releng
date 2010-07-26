@@ -44,10 +44,10 @@ plugin@org.eclipse.gyrex.admin.web.gwt=v20100607-1005,:pserver:anonymous@dev.ecl
 plugin@org.eclipse.gyrex.admin.web.gwt.client=v20100615-0635,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt.client
 
 ### Gyrex HTTP Component
-plugin@org.eclipse.gyrex.http=v20100607-1005,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http
+plugin@org.eclipse.gyrex.http=v20100726-0928,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http
 fragment@org.eclipse.gyrex.http.errorpagehandler=v20100607-1005,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.errorpagehandler
 plugin@org.eclipse.gyrex.http.errorpagehandler.resources=v20100607-1005,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.errorpagehandler.resources
-plugin@org.eclipse.gyrex.http.registry=v20100615-1256,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.registry
+plugin@org.eclipse.gyrex.http.registry=v20100726-0928,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.registry
 
 ### Gyrex HTTP Component Jetty Engine
 plugin@org.eclipse.gyrex.http.jetty=v20100702-0733,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.jetty
