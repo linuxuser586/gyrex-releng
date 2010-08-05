@@ -18,11 +18,14 @@ feature@org.eclipse.gyrex.features.http=v20100609-1150,:pserver:anonymous@dev.ec
 feature@org.eclipse.gyrex.features.web=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.web
 feature@org.eclipse.gyrex.features.admin=v20100608-0840,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.admin
 feature@org.eclipse.gyrex.features.server=v20100608-0840,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.server
+feature@org.eclipse.gyrex.features.modelandservices=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.modelandservices
 
 ### dependency features
 feature@org.eclipse.gyrex.features.dependencies.commons=v20100804-1205,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.commons
 feature@org.eclipse.gyrex.features.dependencies.provisioning=v20100721-1018,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.provisioning
 feature@org.eclipse.gyrex.features.dependencies.web=v20100609-1205,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.web
+feature@org.eclipse.gyrex.features.dependencies.solr=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.solr
+feature@org.eclipse.gyrex.features.dependencies.persistence=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.persistence
 
 ### Gyrex Kernel
 #plugin@org.eclipse.gyrex.=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/
@@ -66,11 +69,21 @@ plugin@org.eclipse.gyrex.gwt.common=v20100607-1005,:pserver:anonymous@dev.eclips
 plugin@org.eclipse.gyrex.gwt.service=v20100607-1005,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.gwt.service
 
 ### Gyrex Persistence Component
-plugin@org.eclipse.gyrex.persistence=v20100607-1005,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence
-plugin@org.eclipse.gyrex.persistence.derby=v20100607-1005,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.derby
-plugin@org.eclipse.gyrex.persistence.jdbc=v20100607-1005,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.jdbc
-plugin@org.eclipse.gyrex.persistence.nondurable.map=v20100607-1005,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.nondurable.map
-plugin@org.eclipse.gyrex.persistence.solr=v20100607-1005,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.solr
+plugin@org.eclipse.gyrex.persistence=v20100805-0715,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence
+plugin@org.eclipse.gyrex.persistence.derby=v20100805-0715,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.derby
+plugin@org.eclipse.gyrex.persistence.jdbc=v20100805-0715,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.jdbc
+plugin@org.eclipse.gyrex.persistence.nondurable.map=v20100805-0715,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.nondurable.map
+plugin@org.eclipse.gyrex.persistence.solr=v20100805-0715,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.solr
+
+### Gyrex Model And Services
+plugin@org.eclipse.gyrex.model.common=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.model.common
+plugin@org.eclipse.gyrex.services.common=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.services.common
+
+### Gyrex CDS
+plugin@org.eclipse.gyrex.cds.model=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.model
+plugin@org.eclipse.gyrex.cds.model.solr=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.model.solr
+plugin@org.eclipse.gyrex.cds.service=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.service
+plugin@org.eclipse.gyrex.cds.service.solr=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.service.solr
 
 ### Gyrex Server
 plugin@org.eclipse.gyrex.server.defaultroles=v20100607-1005,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.server.defaultroles
