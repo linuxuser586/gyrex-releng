@@ -1,14 +1,8 @@
-###############################################################################
-# Copyright (c) 2009 AGETO Service GmbH and others.
-# All rights reserved.
+####################
+# Gyrex Components #
+####################
 #
-# This program and the accompanying materials are made available under the
-# terms of the Eclipse Public License v1.0 which accompanies this distribution,
-# and is available at http://www.eclipse.org/legal/epl-v10.html.
-#
-# Contributors:
-#     Gunnar Wagenknecht - initial API and implementation
-###############################################################################
+# This files lists all Gyrex components.
 
 ### features
 feature@org.eclipse.gyrex.features=v20100608-0840,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features
