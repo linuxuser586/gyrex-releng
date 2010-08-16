@@ -60,7 +60,7 @@ plugin@org.eclipse.gyrex.toolkit.gwt.server=v20100816-0655,:pserver:anonymous@de
 
 ### Gyrex GWT AddOns
 plugin@org.eclipse.gyrex.gwt.common=v20100607-1005,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.gwt.common
-plugin@org.eclipse.gyrex.gwt.service=v20100607-1005,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.gwt.service
+plugin@org.eclipse.gyrex.gwt.service=v20100816-1150,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.gwt.service
 
 ### Gyrex Persistence Component
 plugin@org.eclipse.gyrex.persistence=v20100805-0715,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence
