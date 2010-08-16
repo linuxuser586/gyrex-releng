@@ -38,7 +38,7 @@ plugin@org.eclipse.gyrex.=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/techn
 ### Gyrex Admin
 plugin@org.eclipse.gyrex.admin=v20100816-0655,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin
 plugin@org.eclipse.gyrex.admin.web.gwt=v20100816-0655,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt
-plugin@org.eclipse.gyrex.admin.web.gwt.client=v20100816-1135,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt.client
+plugin@org.eclipse.gyrex.admin.web.gwt.client=v20100816-1500,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt.client
 
 ### Gyrex HTTP Component
 plugin@org.eclipse.gyrex.http=v20100726-0928,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http
