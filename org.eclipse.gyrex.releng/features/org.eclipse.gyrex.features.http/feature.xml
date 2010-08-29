@@ -40,20 +40,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gyrex.http.errorpagehandler"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.gyrex.http.errorpagehandler.resources"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"/>
-
-   <plugin
          id="org.eclipse.gyrex.http.registry"
          download-size="0"
          install-size="0"
