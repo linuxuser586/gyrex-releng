@@ -190,8 +190,6 @@
 		  depends on: builder.checkArgs, builder.init
 		 ===================================================================== -->
 	<target name="builder.prepare" depends="builder.checkArgs,builder.init" description="Performs necessary preparation/initialization for a specific builder.">
-		<!-- read the builder specific build properties -->
-		<property file="${builder}/build.properties"/>
 		<!-- ensure that the base folders exist -->
 		<mkdir dir="${baseLocation}" />
 		<mkdir dir="${repoBaseLocation}" />
@@ -206,10 +204,14 @@
 
 	<!-- builder: initialize properties/defaults -->
 	<target name="builder.init" depends="label.properties.init">
+		<!-- read the builder specific build properties (after label properties init) -->
+		<property file="${builder}/build.properties"/>
+
 		<!-- create a pass file for the CVS client -->
 		<touch file="${user.home}/.cvspass" />
 
 		<!-- set the p2 repo names -->
+		<property name="p2.repo.name.prefix" value="p2 repository"/>
 		<property name="p2.metadata.repo.name" value="${p2.repo.name.prefix} (Build ${buildLabel})"/>
 		<property name="p2.artifact.repo.name" value="${p2.repo.name.prefix} (Build ${buildLabel})"/>
 	</target>
