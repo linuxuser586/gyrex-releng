@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
     Copyright (c) 2010 AGETO and others.
     All rights reserved.
      
@@ -9,7 +10,6 @@
     Contributors:
         Gunnar Wagenknecht - initial API and implementation
  -->
-
 <feature
       id="org.eclipse.gyrex.features.dependencies.web"
       label="%featureName"
@@ -163,42 +163,7 @@
          unpack="false"/>
 
    <plugin
-         id="javax.servlet.jsp"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="javax.servlet.jsp.jstl"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.equinox.jsp.jasper"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="javax.el"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.commons.el"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.jasper"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -212,7 +177,14 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.equinox.jsp.jasper.registry"
+         id="javax.servlet.jsp"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="javax.servlet.jsp.jstl"
          download-size="0"
          install-size="0"
          version="0.0.0"
