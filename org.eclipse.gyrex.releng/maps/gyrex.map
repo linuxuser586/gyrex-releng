@@ -41,11 +41,11 @@ plugin@org.eclipse.gyrex.admin.web.gwt=v20100816-0655,:pserver:anonymous@dev.ecl
 plugin@org.eclipse.gyrex.admin.web.gwt.client=v20100827-1645,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt.client
 
 ### Gyrex HTTP Component
-plugin@org.eclipse.gyrex.http=v20100827-1645,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http
+plugin@org.eclipse.gyrex.http=v20100903-1010,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http
 plugin@org.eclipse.gyrex.http.registry=v20100827-1645,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.registry
 
 ### Gyrex HTTP Component Jetty Engine
-plugin@org.eclipse.gyrex.http.jetty=v20100902-1815,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.jetty
+plugin@org.eclipse.gyrex.http.jetty=v20100903-1010,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.jetty
 
 ### Gyrex HTTP Component Logging
 plugin@org.eclipse.gyrex.log.http=v20100827-1645,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.log.http
@@ -61,7 +61,7 @@ plugin@org.eclipse.gyrex.gwt.common=v20100816-1150,:pserver:anonymous@dev.eclips
 plugin@org.eclipse.gyrex.gwt.service=v20100816-1150,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.gwt.service
 
 ### Gyrex Persistence Component
-plugin@org.eclipse.gyrex.persistence=v20100902-1815,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence
+plugin@org.eclipse.gyrex.persistence=v20100903-1010,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence
 plugin@org.eclipse.gyrex.persistence.derby=v20100805-0715,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.derby
 plugin@org.eclipse.gyrex.persistence.jdbc=v20100805-0715,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.jdbc
 plugin@org.eclipse.gyrex.persistence.nondurable.map=v20100805-0715,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.nondurable.map
