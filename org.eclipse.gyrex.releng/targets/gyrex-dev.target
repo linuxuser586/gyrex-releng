@@ -107,12 +107,6 @@
 <repository location="http://download.eclipse.org/eclipse/updates/3.6/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
-<unit id="ch.qos.logback.classic" version="0.0.0"/>
-<unit id="ch.qos.logback.classic.source" version="0.0.0"/>
-<unit id="ch.qos.logback.core" version="0.0.0"/>
-<unit id="ch.qos.logback.core.source" version="0.0.0"/>
-<unit id="ch.qos.logback.slf4j" version="0.0.0"/>
-<unit id="ch.qos.logback.slf4j.source" version="0.0.0"/>
 <unit id="com.google.collect" version="0.0.0"/>
 <unit id="com.google.collect.source" version="0.0.0"/>
 <unit id="com.sun.xml.bind" version="0.0.0"/>
@@ -181,16 +175,6 @@
 <unit id="org.mortbay.jetty.source" version="0.0.0"/>
 <unit id="org.mortbay.jetty.util" version="0.0.0"/>
 <unit id="org.mortbay.jetty.util.source" version="0.0.0"/>
-<unit id="org.slf4j.api" version="0.0.0"/>
-<unit id="org.slf4j.api.source" version="0.0.0"/>
-<unit id="org.slf4j.ext" version="0.0.0"/>
-<unit id="org.slf4j.ext.source" version="0.0.0"/>
-<unit id="org.slf4j.jcl" version="0.0.0"/>
-<unit id="org.slf4j.jcl.source" version="0.0.0"/>
-<unit id="org.slf4j.jul" version="0.0.0"/>
-<unit id="org.slf4j.jul.source" version="0.0.0"/>
-<unit id="org.slf4j.log4j" version="0.0.0"/>
-<unit id="org.slf4j.log4j.source" version="0.0.0"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20100519200754/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
@@ -200,6 +184,25 @@
 <unit id="org.apache.xml.security" version="1.4.2.v201005080400"/>
 <unit id="org.apache.ws.commons.util" version="1.0.1.v20100518-1140"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20100721061755/repository/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
+<unit id="ch.qos.logback.classic" version="0.9.24.v20100831-0715"/>
+<unit id="ch.qos.logback.classic.source" version="0.9.24.v20100831-0715"/>
+<unit id="ch.qos.logback.core" version="0.9.24.v20100831-0715"/>
+<unit id="ch.qos.logback.core.source" version="0.9.24.v20100831-0715"/>
+<unit id="ch.qos.logback.slf4j" version="0.9.24.v20100831-0715"/>
+<unit id="ch.qos.logback.slf4j.source" version="0.9.24.v20100831-0715"/>
+<unit id="org.slf4j.api" version="1.6.1.v20100831-0715"/>
+<unit id="org.slf4j.ext" version="1.6.1.v20100831-0715"/>
+<unit id="org.slf4j.ext.source" version="1.6.1.v20100831-0715"/>
+<unit id="org.slf4j.api.source" version="1.6.1.v20100831-0715"/>
+<unit id="org.slf4j.jul" version="1.6.1.v20100831-0715"/>
+<unit id="org.slf4j.jul.source" version="1.6.1.v20100831-0715"/>
+<unit id="org.slf4j.jcl" version="1.6.1.v20100831-0715"/>
+<unit id="org.slf4j.jcl.source" version="1.6.1.v20100831-0715"/>
+<unit id="org.slf4j.log4j" version="1.6.1.v20100831-0715"/>
+<unit id="org.slf4j.log4j.source" version="1.6.1.v20100831-0715"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20100831105311/repository/"/>
 </location>
 </locations>
 <targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
