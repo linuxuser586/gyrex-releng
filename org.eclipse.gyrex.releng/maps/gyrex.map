@@ -72,7 +72,7 @@ plugin@org.eclipse.gyrex.model.common=HEAD,:pserver:anonymous@dev.eclipse.org:/c
 plugin@org.eclipse.gyrex.services.common=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.services.common
 
 ### Gyrex CDS
-plugin@org.eclipse.gyrex.cds.model=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.model
+plugin@org.eclipse.gyrex.cds.model=v20100922-1515,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.model
 plugin@org.eclipse.gyrex.cds.model.solr=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.model.solr
 plugin@org.eclipse.gyrex.cds.service=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.service
 plugin@org.eclipse.gyrex.cds.service.solr=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.service.solr
