@@ -65,7 +65,7 @@ plugin@org.eclipse.gyrex.persistence=v20100903-1010,:pserver:anonymous@dev.eclip
 plugin@org.eclipse.gyrex.persistence.derby=v20100805-0715,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.derby
 plugin@org.eclipse.gyrex.persistence.jdbc=v20100805-0715,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.jdbc
 plugin@org.eclipse.gyrex.persistence.nondurable.map=v20100805-0715,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.nondurable.map
-plugin@org.eclipse.gyrex.persistence.solr=v20100903-1105,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.solr
+plugin@org.eclipse.gyrex.persistence.solr=v20100922-1515,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.solr
 
 ### Gyrex Model And Services
 plugin@org.eclipse.gyrex.model.common=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.model.common
@@ -73,9 +73,9 @@ plugin@org.eclipse.gyrex.services.common=HEAD,:pserver:anonymous@dev.eclipse.org
 
 ### Gyrex CDS
 plugin@org.eclipse.gyrex.cds.model=v20100922-1515,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.model
-plugin@org.eclipse.gyrex.cds.model.solr=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.model.solr
-plugin@org.eclipse.gyrex.cds.service=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.service
-plugin@org.eclipse.gyrex.cds.service.solr=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.service.solr
+plugin@org.eclipse.gyrex.cds.model.solr=v20100922-1515,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.model.solr
+plugin@org.eclipse.gyrex.cds.service=v20100922-1515,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.service
+plugin@org.eclipse.gyrex.cds.service.solr=v20100922-1515,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.service.solr
 
 ### Gyrex Server
 plugin@org.eclipse.gyrex.server.defaultroles=v20100827-1645,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.server.defaultroles
