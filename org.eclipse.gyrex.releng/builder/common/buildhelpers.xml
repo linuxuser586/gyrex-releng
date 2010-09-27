@@ -167,10 +167,13 @@
 			<!-- initialize defaults using logic from bootstrap-org.eclipse.releng.basebuilder -->
 			<property name="org.eclipse.releng.basebuilder.tag" value="r36x_20100623"/>
 			<property name="org.eclipse.releng.basebuilder" value="${writableBuildRoot}/org.eclipse.releng.basebuilder_${org.eclipse.releng.basebuilder.tag}" />
+			<!-- initialize defaults for system properties which should be inherited -->
+			<property name="eclipse.p2.mirrors" value="true"/>
 			<!-- launch the antrunner -->
 			<eclipse.launch app="antrunner" dir="${org.eclipse.releng.basebuilder}" fork="@{fork}">
 				<args>
 					<jvmarg value="-Xmx500m" />
+					<jvmarg value="-Declipse.p2.mirrors=${eclipse.p2.mirrors}" />
 					<jvmargs />
 					<arg value="-data" />
 					<arg value="@{workspace}" />
