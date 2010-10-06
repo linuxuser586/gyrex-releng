@@ -8,7 +8,7 @@
 feature@org.eclipse.gyrex.features=v20100902-1815,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features
 feature@org.eclipse.gyrex.features.sdk=v20100829-0915,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.sdk
 feature@org.eclipse.gyrex.features.kernel=v20100829-0915,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.kernel
-feature@org.eclipse.gyrex.features.http=v20100829-1320,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.http
+feature@org.eclipse.gyrex.features.http=v20101006-0805,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.http
 feature@org.eclipse.gyrex.features.web=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.web
 feature@org.eclipse.gyrex.features.admin=v20100829-0915,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.admin
 feature@org.eclipse.gyrex.features.server=v20100829-0915,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.server
@@ -17,7 +17,7 @@ feature@org.eclipse.gyrex.features.modelandservices=v20100829-0915,:pserver:anon
 ### dependency features
 feature@org.eclipse.gyrex.features.dependencies.commons=v20100829-0915,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.commons
 feature@org.eclipse.gyrex.features.dependencies.provisioning=v20100829-0915,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.provisioning
-feature@org.eclipse.gyrex.features.dependencies.web=v20100830-0955,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.web
+feature@org.eclipse.gyrex.features.dependencies.web=v20101006-0805,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.web
 feature@org.eclipse.gyrex.features.dependencies.solr=v20100829-0915,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.solr
 feature@org.eclipse.gyrex.features.dependencies.persistence=v20100829-0915,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.persistence
 
@@ -41,14 +41,18 @@ plugin@org.eclipse.gyrex.admin.web.gwt=v20100816-0655,:pserver:anonymous@dev.ecl
 plugin@org.eclipse.gyrex.admin.web.gwt.client=v20100827-1645,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt.client
 
 ### Gyrex HTTP Component
-plugin@org.eclipse.gyrex.http=v20100903-1010,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http
+plugin@org.eclipse.gyrex.http=v20101006-0805,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http
 plugin@org.eclipse.gyrex.http.registry=v20100827-1645,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.registry
 
 ### Gyrex HTTP Component Jetty Engine
-plugin@org.eclipse.gyrex.http.jetty=v20100922-1640,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.jetty
+plugin@org.eclipse.gyrex.http.jetty=v20101006-0805,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.jetty
 
 ### Gyrex HTTP Component Logging
 plugin@org.eclipse.gyrex.log.http=v20100827-1645,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.log.http
+
+### Gyrex HTTP Component Equinox HttpService Integration
+plugin@org.eclipse.gyrex.http.equinoxhttpservice=v20101006-0805,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.equinoxhttpservice
+
 
 ### Gyrex Toolkit
 plugin@org.eclipse.gyrex.toolkit=v20100816-0655,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.toolkit
