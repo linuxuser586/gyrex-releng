@@ -270,12 +270,20 @@
 		</echo>
 
 		<antcall target="addTo.label.properties.ifSet-forceContextQualifier"/>
+		<antcall target="addTo.label.properties.ifSet-fetchTag"/>
 	</target>
 
 	<!-- adds forceContextQualifier to label.properties file only if set -->
 	<target name="addTo.label.properties.ifSet-forceContextQualifier" if="forceContextQualifier">
 		<echo file="${buildDirectory}/label.properties" append="true" >
 			forceContextQualifier=${forceContextQualifier}
+		</echo>
+	</target>
+
+	<!-- adds fetchTag to label.properties file only if set -->
+	<target name="addTo.label.properties.ifSet-fetchTag" if="fetchTag">
+		<echo file="${buildDirectory}/label.properties" append="true" >
+			fetchTag=${fetchTag}
 		</echo>
 	</target>
 
