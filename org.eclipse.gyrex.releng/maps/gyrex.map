@@ -29,7 +29,7 @@ plugin@org.eclipse.gyrex.common=v20100827-1645,:pserver:anonymous@dev.eclipse.or
 plugin@org.eclipse.gyrex.configuration=v20100810-1116,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.configuration
 plugin@org.eclipse.gyrex.configuration.impl=v20100810-1116,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.configuration.impl
 plugin@org.eclipse.gyrex.context=v20100902-1815,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.context
-plugin@org.eclipse.gyrex.log=v20100827-1645,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.log
+plugin@org.eclipse.gyrex.log=v20101006-0910,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.log
 fragment@org.eclipse.gyrex.log.slf4j.integration=v20100607-1005,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.log.slf4j.integration
 plugin@org.eclipse.gyrex.monitoring=v20100827-1645,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.monitoring
 plugin@org.eclipse.gyrex.preferences=v20100827-1645,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.preferences
@@ -48,7 +48,7 @@ plugin@org.eclipse.gyrex.http.registry=v20100827-1645,:pserver:anonymous@dev.ecl
 plugin@org.eclipse.gyrex.http.jetty=v20101006-0805,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.jetty
 
 ### Gyrex HTTP Component Logging
-plugin@org.eclipse.gyrex.log.http=v20100827-1645,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.log.http
+plugin@org.eclipse.gyrex.log.http=v20101006-0910,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.log.http
 
 ### Gyrex HTTP Component Equinox HttpService Integration
 plugin@org.eclipse.gyrex.http.equinoxhttpservice=v20101006-0805,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.equinoxhttpservice
