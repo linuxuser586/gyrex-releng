@@ -83,4 +83,4 @@ plugin@org.eclipse.gyrex.cds.solr=v20101007-1020,:pserver:anonymous@dev.eclipse.
 plugin@org.eclipse.gyrex.server.defaultroles=v20100827-1645,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.server.defaultroles
 
 ### Equinox HTTP Helpers
-plugin@org.eclipse.equinox.http.helper=v20101007-1020,:pserver:anonymous@dev.eclipse.org:/cvsroot/rt,,org.eclipse.equinox/incubator/server-side/bundles/org.eclipse.equinox.http.helper
+plugin@org.eclipse.equinox.http.helper=v20090223-1400,:pserver:anonymous@dev.eclipse.org:/cvsroot/rt,,org.eclipse.equinox/incubator/server-side/bundles/org.eclipse.equinox.http.helper
