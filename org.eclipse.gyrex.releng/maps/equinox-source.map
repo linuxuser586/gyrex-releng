@@ -1,9 +1,0 @@
-######################
-# Equinox Components #
-######################
-#
-# This files lists all Equinox components consumed from source.
-
-
-### Equinox HTTP Helpers
-plugin@org.eclipse.equinox.http.helper=v20090223-1400,:pserver:anonymous@dev.eclipse.org:/cvsroot/rt,,org.eclipse.equinox/incubator/server-side/bundles/org.eclipse.equinox.http.helper
