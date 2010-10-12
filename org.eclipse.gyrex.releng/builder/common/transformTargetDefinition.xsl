@@ -15,38 +15,38 @@
 
  -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
-    <xsl:output method="xml" indent="yes" />
-    <xsl:decimal-format decimal-separator="." grouping-separator="," />
+  <xsl:output method="xml" indent="yes" />
+  <xsl:decimal-format decimal-separator="." grouping-separator="," />
 
-    <xsl:param name="verbose" select="'false'" />
-    <xsl:param name="destination" select="'file:${repoBaseLocation}/combined'" />
+  <xsl:param name="verbose" select="'false'" />
+  <xsl:param name="destination" select="'file:${repoBaseLocation}/combined'" />
 
-    <xsl:template match="target">
-        <project name="Mirror base platforms" default="mirrorBasePlatform">
-            <target name="mirrorBasePlatform" description="Mirrors a base platform for building">
-                <xsl:apply-templates />
-            </target>
-        </project>
-    </xsl:template>
+  <xsl:template match="target">
+    <project name="Mirror base platforms" default="mirrorBasePlatform">
+      <target name="mirrorBasePlatform" description="Mirrors a base platform for building">
+        <xsl:apply-templates />
+      </target>
+    </project>
+  </xsl:template>
 
-    <xsl:template match="location">
-        <xsl:variable name="locationUrl" select="./repository/@location" />
-        <p2.mirror
-                destination="{$destination}"
-                verbose="true">
-            <slicingOptions includeOptional="false" includeNonGreedy="false" followStrict="true" />
-            <source>
-                <repository location="{$locationUrl}" />
-            </source>
-            <xsl:apply-templates />
-        </p2.mirror>
-    </xsl:template>
+  <xsl:template match="location[@type='InstallableUnit']">
+    <xsl:variable name="locationUrl" select="./repository/@location" />
+    <xsl:if test="$locationUrl">
+      <p2.mirror destination="{$destination}" verbose="true">
+        <slicingOptions includeOptional="false" includeNonGreedy="false" followStrict="true" />
+        <source>
+          <repository location="{$locationUrl}" />
+        </source>
+        <xsl:apply-templates />
+      </p2.mirror>
+    </xsl:if>
+  </xsl:template>
 
-    <xsl:template match="unit">
-        <iu id="{@id}" version="{@version}" />
-    </xsl:template>
+  <xsl:template match="unit">
+    <iu id="{@id}" version="{@version}" />
+  </xsl:template>
 
-    <!-- ignore anything else -->
-    <xsl:template match="environment|targetJRE|launcherArgs|includeBundles" />
+  <!-- ignore anything else -->
+  <xsl:template match="environment|targetJRE|launcherArgs|includeBundles" />
 
 </xsl:stylesheet>
