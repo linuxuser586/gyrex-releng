@@ -42,22 +42,10 @@
 <unit id="javax.xml.soap" version="0.0.0"/>
 <unit id="javax.xml.stream" version="0.0.0"/>
 <unit id="javax.xml.ws" version="0.0.0"/>
-<unit id="org.apache.commons.beanutils" version="0.0.0"/>
-<unit id="org.apache.commons.beanutils.source" version="0.0.0"/>
 <unit id="org.apache.commons.cli" version="0.0.0"/>
 <unit id="org.apache.commons.cli.source" version="0.0.0"/>
-<unit id="org.apache.commons.codec" version="0.0.0"/>
-<unit id="org.apache.commons.codec.source" version="0.0.0"/>
-<unit id="org.apache.commons.collections" version="0.0.0"/>
-<unit id="org.apache.commons.collections.source" version="0.0.0"/>
 <unit id="org.apache.commons.el" version="0.0.0"/>
 <unit id="org.apache.commons.el.source" version="0.0.0"/>
-<unit id="org.apache.commons.fileupload" version="0.0.0"/>
-<unit id="org.apache.commons.fileupload.source" version="0.0.0"/>
-<unit id="org.apache.commons.httpclient" version="0.0.0"/>
-<unit id="org.apache.commons.httpclient.source" version="0.0.0"/>
-<unit id="org.apache.commons.io" version="0.0.0"/>
-<unit id="org.apache.commons.io.source" version="0.0.0"/>
 <unit id="org.apache.commons.jxpath" version="0.0.0"/>
 <unit id="org.apache.commons.jxpath.source" version="0.0.0"/>
 <unit id="org.apache.commons.logging" version="0.0.0"/>
@@ -211,6 +199,26 @@
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.eclipse.core.jobs.source" version="0.0.0"/>
 <repository location="http://download.eclipse.org/eclipse/updates/3.6/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
+<unit id="org.apache.hadoop.zookeeper" version="3.3.1.v20101101-1045"/>
+<unit id="org.apache.hadoop.zookeeper.source" version="3.3.1.v20101101-1045"/>
+<repository location="http://download.eclipse.org/tools/orbit/committers/drops/I20101106015223/repository"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
+<unit id="org.apache.commons.beanutils" version="1.7.0.v200902170505"/>
+<unit id="org.apache.commons.beanutils.source" version="1.7.0.v200803061811"/>
+<unit id="org.apache.commons.codec" version="1.3.0.v20100518-1140"/>
+<unit id="org.apache.commons.codec.source" version="1.3.0.v20100518-1140"/>
+<unit id="org.apache.commons.collections.source" version="3.2.0.v201005080500"/>
+<unit id="org.apache.commons.collections" version="3.2.0.v201005080500"/>
+<unit id="org.apache.commons.fileupload" version="1.2.0.v20080604-1500"/>
+<unit id="org.apache.commons.fileupload.source" version="1.2.0.v20080604-1500"/>
+<unit id="org.apache.commons.httpclient" version="3.1.0.v201005080502"/>
+<unit id="org.apache.commons.httpclient.source" version="3.1.0.v201005080502"/>
+<unit id="org.apache.commons.io" version="1.4.0.v20081110-1000"/>
+<unit id="org.apache.commons.io.source" version="1.4.0.v20081110-1000"/>
+<repository location="http://download.eclipse.org/tools/orbit/committers/drops/I20101106015223/repository"/>
 </location>
 </locations>
 <targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
