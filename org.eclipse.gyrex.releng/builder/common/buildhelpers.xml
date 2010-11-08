@@ -97,7 +97,6 @@
 	<macrodef name="eclipse.launch" description="This macro executes the default application of an eclipse installation.">
 		<attribute name="app" description="The Eclipse application to launch."/>
 		<attribute name="dir" description="The Eclipse installation dir."/>
-		<attribute name="fork" default="true" description="If Eclipse should be launched in a separate process (default: true)." />
 		<element name="args" optional="true" />
 		<sequential>
 			<!-- We assume that the eclipse installation is specified -->
@@ -131,11 +130,10 @@
 		<attribute name="buildfile" description="The build file."/>
 		<attribute name="workspace" description="The Eclipse installation dir."/>
 		<attribute name="dir" description="The Eclipse installation dir."/>
-		<attribute name="fork" default="true" description="If the Ant runner should be launched in a separate process (default: true)." />
 		<element name="jvmargs" optional="true" />
 		<element name="antargs" optional="true" />
 		<sequential>
-			<eclipse.launch app="antrunner" dir="@{dir}" fork="@{fork}">
+			<eclipse.launch app="antrunner" dir="@{dir}">
 				<args>
 					<jvmarg value="-Xmx500m" />
 					<jvmargs />
@@ -160,17 +158,16 @@
 		<attribute name="target" description="The target to execute."/>
 		<attribute name="buildfile" description="The build file."/>
 		<attribute name="workspace" description="The Eclipse instance dir."/>
-		<attribute name="fork" default="true" description="If the Ant runner should be launched in a separate process (default: true)." />
 		<element name="jvmargs" optional="true" />
 		<element name="antargs" optional="true" />
 		<sequential>
 			<!-- initialize defaults using logic from bootstrap-org.eclipse.releng.basebuilder -->
-			<property name="org.eclipse.releng.basebuilder.tag" value="r36x_20100623"/>
+			<property name="org.eclipse.releng.basebuilder.tag" value="HEAD"/>
 			<property name="org.eclipse.releng.basebuilder" value="${writableBuildRoot}/org.eclipse.releng.basebuilder_${org.eclipse.releng.basebuilder.tag}" />
 			<!-- initialize defaults for system properties which should be inherited -->
 			<property name="eclipse.p2.mirrors" value="true"/>
 			<!-- launch the antrunner -->
-			<eclipse.launch app="antrunner" dir="${org.eclipse.releng.basebuilder}" fork="@{fork}">
+			<eclipse.launch app="antrunner" dir="${org.eclipse.releng.basebuilder}">
 				<args>
 					<jvmarg value="-Xmx500m" />
 					<jvmarg value="-Declipse.p2.mirrors=${eclipse.p2.mirrors}" />
