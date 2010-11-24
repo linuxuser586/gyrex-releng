@@ -45,8 +45,8 @@
  	<!-- ===================================================================== -->
 
 	<!-- we only need the group config because groupConfigurations is implicitly true when p2.gathering=true -->
-	<property name="assemble.org.eclipse.gyrex.features.sdk.group.group.group" value="true" />
- 	<target name="assemble.org.eclipse.gyrex.features.sdk.group.group.group">
+	<property name="assemble.org.eclipse.gyrex.features.group.group.group" value="true" />
+ 	<target name="assemble.org.eclipse.gyrex.features.group.group.group">
  		<ant antfile="${assembleScriptName}" dir="${buildDirectory}">
  			<property name="archiveName" value="${archiveNamePrefix}-${buildId}-group.zip"/>
 		</ant>
