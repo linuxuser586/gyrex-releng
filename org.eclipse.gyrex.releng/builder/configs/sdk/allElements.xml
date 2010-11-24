@@ -48,7 +48,7 @@
 	<property name="assemble.org.eclipse.gyrex.features.group.group.group" value="true" />
  	<target name="assemble.org.eclipse.gyrex.features.group.group.group">
  		<ant antfile="${assembleScriptName}" dir="${buildDirectory}">
- 			<property name="archiveName" value="${archiveNamePrefix}-${buildId}-group.zip"/>
+ 			<property name="archiveName" value="${archiveNamePrefix}-${buildLabel}-repo.zip"/>
 		</ant>
  	</target>
 </project>
