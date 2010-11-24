@@ -121,6 +121,7 @@
 
                 <snip>
                     BUILD_TYPE (one of N,I,S or R; defaults to I)
+                    BUILD_IDENTIFIER (custom build idendifier, leave empty for default)
                 </snip>
 
             That's all.
@@ -130,10 +131,22 @@
 		<!-- load properties from the environment -->
 		<property environment="env" />
 		<condition property="buildType" value="${env.BUILD_TYPE}">
-			<isset property="env.BUILD_TYPE" />
+			<and>
+				<isset property="env.BUILD_TYPE" />
+				<length string="${env.BUILD_TYPE}" trim="true" when="greater" length="0" />
+			</and>
+		</condition>
+		<condition property="buildId" value="${env.BUILD_IDENTIFIER}">
+			<and>
+				<isset property="env.BUILD_IDENTIFIER" />
+				<length string="${env.BUILD_IDENTIFIER}" trim="true" when="greater" length="0" />
+			</and>
 		</condition>
 		<condition property="buildServer" value="${env.BUILD_URL}">
-			<isset property="env.BUILD_URL" />
+			<and>
+				<isset property="env.BUILD_URL" />
+				<length string="${env.BUILD_URL}" trim="true" when="greater" length="0" />
+			</and>
 		</condition>
 
 		<echo message="Hudson build ID: ${env.BUILD_ID}"/>
