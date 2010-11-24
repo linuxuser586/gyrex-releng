@@ -117,7 +117,7 @@
                     writableBuildRoot=$WORKSPACE/build
                 </snip>
 
-            The following Hudson parameters will be supported for parameterized builds.
+            The following parameters will be supported for parameterized Hudson builds.
 
                 <snip>
                     BUILD_TYPE (one of N,I,S or R; defaults to I)
@@ -128,20 +128,24 @@
 
 		-->
 
+		<!-- read Hudson build parameters -->
+        <!-- Note, Hudson typically submits them to the Ant script using -D<PARAMETER>=[value]. -->
+		<!-- The value might be an empty string if not selected. -->
+		<condition property="buildType" value="${BUILD_TYPE}">
+			<and>
+				<isset property="BUILD_TYPE" />
+				<length string="${BUILD_TYPE}" trim="true" when="greater" length="0" />
+			</and>
+		</condition>
+		<condition property="buildId" value="${BUILD_IDENTIFIER}">
+			<and>
+				<isset property="BUILD_IDENTIFIER" />
+				<length string="${BUILD_IDENTIFIER}" trim="true" when="greater" length="0" />
+			</and>
+		</condition>
+
 		<!-- load properties from the environment -->
 		<property environment="env" />
-		<condition property="buildType" value="${env.BUILD_TYPE}">
-			<and>
-				<isset property="env.BUILD_TYPE" />
-				<length string="${env.BUILD_TYPE}" trim="true" when="greater" length="0" />
-			</and>
-		</condition>
-		<condition property="buildId" value="${env.BUILD_IDENTIFIER}">
-			<and>
-				<isset property="env.BUILD_IDENTIFIER" />
-				<length string="${env.BUILD_IDENTIFIER}" trim="true" when="greater" length="0" />
-			</and>
-		</condition>
 		<condition property="buildServer" value="${env.BUILD_URL}">
 			<and>
 				<isset property="env.BUILD_URL" />
