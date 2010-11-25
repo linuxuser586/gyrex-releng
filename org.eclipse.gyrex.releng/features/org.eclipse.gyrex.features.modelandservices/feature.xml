@@ -22,7 +22,7 @@
    </url>
 
    <requires>
-      <import feature="org.eclipse.gyrex.features.kernel" version="1.0.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.gyrex.features.kernel" version="1.0.0" match="compatible"/>
    </requires>
 
    <plugin
