@@ -43,9 +43,10 @@ fragment@org.eclipse.gyrex.log.frameworklogadapter=v20101108-1140,:pserver:anony
 
 
 ### Gyrex Admin
-plugin@org.eclipse.gyrex.admin=v20101111-1055,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin
-plugin@org.eclipse.gyrex.admin.web.gwt=v20101110-1210,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt
-plugin@org.eclipse.gyrex.admin.web.gwt.client=v20101108-1140,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt.client
+plugin@org.eclipse.gyrex.admin=v20101129-1310,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin
+plugin@org.eclipse.gyrex.admin.web.gwt=v20101129-1310,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt
+plugin@org.eclipse.gyrex.admin.web.gwt.client=v20101129-1310,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt.client
+plugin@org.eclipse.gyrex.admin.cloud=v20101129-1310,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.cloud
 
 ### Gyrex HTTP Component
 plugin@org.eclipse.gyrex.http=v20101118-0940,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http
