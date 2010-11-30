@@ -21,6 +21,11 @@
       <update label="%updateSiteName" url="http://download.eclipse.org/gyrex/"/>
    </url>
 
+   <requires>
+      <import feature="org.eclipse.gyrex.features.http" version="1.0.0.qualifier" match="compatible"/>
+      <import feature="org.eclipse.gyrex.features.kernel" version="1.0.0.qualifier" match="compatible"/>
+   </requires>
+
    <plugin
          id="org.eclipse.gyrex.admin"
          download-size="0"

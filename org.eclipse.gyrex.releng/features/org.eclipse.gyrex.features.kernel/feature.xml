@@ -14,10 +14,7 @@
       id="org.eclipse.gyrex.features.kernel"
       label="%featureName"
       version="1.0.0.qualifier"
-      provider-name="%providerName"
-      os="linux,macosx,win32"
-      ws="cocoa,gtk,win32"
-      arch="x86,x86_64">
+      provider-name="%providerName">
 
    <description url="http://www.eclipse.org/gyrex/">
       %description
