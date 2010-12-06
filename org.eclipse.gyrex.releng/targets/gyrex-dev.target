@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
-
 <target name="Gyrex Development">
 <locations>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
-<unit id="org.eclipse.equinox.sdk.feature.group" version="3.7.0.v20100910-7H7W8Z7vAsAivrN6SCFI52Z96f7U"/>
+<unit id="org.eclipse.equinox.sdk.feature.group" version="0.0.0"/>
 <repository location="http://download.eclipse.org/eclipse/updates/3.7milestones"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
@@ -20,30 +19,14 @@
 <unit id="org.apache.commons.httpclient.source" version="3.1.0.v201005080502"/>
 <unit id="org.apache.commons.io" version="1.4.0.v20081110-1000"/>
 <unit id="org.apache.commons.io.source" version="1.4.0.v20081110-1000"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101014084557/repository"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.mortbay.jetty.server" version="6.1.23.v201004211559"/>
 <unit id="org.mortbay.jetty.server.source" version="6.1.23.v201004211559"/>
 <unit id="org.mortbay.jetty.util.source" version="6.1.23.v201004211559"/>
 <unit id="org.mortbay.jetty.util" version="6.1.23.v201004211559"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101014084557/repository"/>
-</location>
-<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
-<unit id="javax.ws.rs" version="1.1.1.v20101004-1200"/>
-<unit id="javax.ws.rs.source" version="1.1.1.v20101004-1200"/>
-<unit id="org.codehaus.jackson.mapper" version="1.6.0.v20101005-0925"/>
-<unit id="org.codehaus.jackson.mapper.source" version="1.6.0.v20101005-0925"/>
-<unit id="org.codehaus.jackson.smile" version="1.6.0.v20101005-0925"/>
-<unit id="org.codehaus.jackson.smile.source" version="1.6.0.v20101005-0925"/>
-<unit id="org.codehaus.jackson.core" version="1.6.0.v20101005-0925"/>
-<unit id="org.codehaus.jackson.core.source" version="1.6.0.v20101005-0925"/>
-<unit id="org.codehaus.jackson.jaxrs" version="1.6.0.v20101005-1100"/>
-<unit id="org.codehaus.jackson.jaxrs.source" version="1.6.0.v20101005-1100"/>
-<unit id="org.json" version="1.0.0.v201003050614"/>
-<unit id="org.codehaus.jackson.xc" version="1.6.0.v20101005-0925"/>
-<unit id="org.codehaus.jackson.xc.source" version="1.6.0.v20101005-0925"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101014084557/repository"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="com.google.collect" version="0.0.0"/>
@@ -80,7 +63,7 @@
 <unit id="org.json" version="0.0.0"/>
 <unit id="org.hamcrest.core" version="0.0.0"/>
 <unit id="org.hamcrest.core.source" version="0.0.0"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20100519200754/repository/"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.apache.commons.net" version="2.0.0.v200905272248"/>
@@ -89,19 +72,7 @@
 <unit id="org.apache.httpcomponents.httpcore.nio" version="4.0.0.v200905121600"/>
 <unit id="org.apache.httpcomponents.httpcore.nio.source" version="4.0.0.v200905121600"/>
 <unit id="org.apache.httpcomponents.httpcore.source" version="4.0.0.v200905121600"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101014084557/repository"/>
-</location>
-<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
-<unit id="org.apache.derby" version="10.5.1.1_201010140907"/>
-<unit id="org.apache.derby.source" version="10.5.1.1_201010140907"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101014084557/repository"/>
-</location>
-<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
-<unit id="com.google.gwt.servlet" version="2.1.0.v20101123-0805"/>
-<unit id="com.google.gwt.servlet.source" version="2.1.0.v20101123-0805"/>
-<unit id="com.google.gwt.user" version="2.1.0.v20101123-0805"/>
-<unit id="com.google.gwt.user.source" version="2.1.0.v20101123-0805"/>
-<repository location="http://download.eclipse.org/tools/orbit/committers/drops/I20101123154506/repository/"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.apache.xmlrpc" version="3.0.0.v20100427-1100"/>
@@ -109,16 +80,16 @@
 <unit id="org.apache.xml.serializer" version="2.7.1.v201005080400"/>
 <unit id="org.apache.xml.security" version="1.4.2.v201005080400"/>
 <unit id="org.apache.ws.commons.util" version="1.0.1.v20100518-1140"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20100721061755/repository/"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
-<unit id="org.eclipse.equinox.executable.feature.group" version="3.5.0.v20101019-7O7NFUFFK_Qj3j14z0bp"/>
+<unit id="org.eclipse.equinox.executable.feature.group" version="0.0.0"/>
 <repository location="http://download.eclipse.org/eclipse/updates/3.7milestones"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.apache.hadoop.zookeeper" version="3.3.1.v20101104-1545"/>
 <unit id="org.apache.hadoop.zookeeper.source" version="3.3.1.v20101104-1545"/>
-<repository location="http://download.eclipse.org/tools/orbit/committers/drops/I20101106015223/repository"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.apache.lucene" version="2.9.1.v20100421-0704"/>
@@ -149,14 +120,14 @@
 <unit id="org.apache.solr.client.solrj.source" version="1.4.0.v20100421-0704"/>
 <unit id="org.apache.solr.servlet" version="1.4.0.v20100421-0704"/>
 <unit id="org.apache.solr.servlet.source" version="1.4.0.v20100421-0704"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20100519200754/repository/"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.eclipse.e4.core.di" version="0.0.0"/>
 <repository location="http://download.eclipse.org/e4/sdk/drops/R-4.0-201007271520/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
-<unit id="org.eclipse.jetty.sdk.feature.group" version="7.2.0.201011011723"/>
+<unit id="org.eclipse.jetty.sdk.feature.group" version="0.0.0"/>
 <repository location="http://download.eclipse.org/releases/indigo/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
@@ -164,7 +135,7 @@
 <unit id="org.junit" version="3.8.2.v3_8_2_v20100427-1100"/>
 <unit id="org.junit.source" version="4.8.1.v4_8_1_v20100427-1100"/>
 <unit id="org.junit.source" version="3.8.2.v3_8_2_v20100427-1100"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20100519200754/repository/"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="ch.qos.logback.classic" version="0.9.24.v20100831-0715"/>
@@ -183,7 +154,7 @@
 <unit id="org.slf4j.jcl.source" version="1.6.1.v20100831-0715"/>
 <unit id="org.slf4j.log4j" version="1.6.1.v20100831-0715"/>
 <unit id="org.slf4j.log4j.source" version="1.6.1.v20100831-0715"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20100831105311/repository/"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.eclipse.pde.junit.runtime" version="0.0.0"/>
@@ -203,12 +174,32 @@
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="com.ibm.icu" version="4.2.1.v20100412"/>
 <unit id="com.ibm.icu.source" version="4.2.1.v20100412"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20100519200754/repository/"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.apache.commons.lang.source" version="2.4.0.v201005080502"/>
 <unit id="org.apache.commons.lang" version="2.4.0.v201005080502"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20100519200754/repository/"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
+<unit id="org.json" version="1.0.0.v201011060100"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
+<unit id="org.apache.derby" version="10.5.1.1_201012040702"/>
+<unit id="org.apache.derby.source" version="10.5.1.1_201012040702"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
+<unit id="com.google.gwt.servlet" version="2.0.4.v20100709-0658"/>
+<unit id="com.google.gwt.servlet.source" version="2.0.4.v20100709-0658"/>
+<unit id="com.google.gwt.user" version="2.0.4.v20100709-0658"/>
+<unit id="com.google.gwt.user.source" version="2.0.4.v20100709-0658"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
+<unit id="org.eclipse.rap.runtime.sdk.feature.group" version="0.0.0"/>
+<repository location="http://download.eclipse.org/releases/indigo/"/>
 </location>
 </locations>
 <targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
