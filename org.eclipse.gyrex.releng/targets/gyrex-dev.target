@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Gyrex Development" sequenceNumber="5">
+<target name="Gyrex Development" sequenceNumber="6">
 <locations>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="com.google.collect" version="0.0.0"/>
@@ -209,7 +209,7 @@
 <repository location="http://download.eclipse.org/rt/rap/1.4/runtime/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.jetty.all.feature.group" version="7.2.0.201011011723"/>
+<unit id="org.eclipse.jetty.sdk.feature.group" version="7.2.0.201011011723"/>
 <repository location="http://download.eclipse.org/jetty/updates/jetty-rt-3.7milestones/"/>
 </location>
 </locations>
