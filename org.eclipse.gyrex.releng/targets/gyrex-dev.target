@@ -90,7 +90,7 @@
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.apache.hadoop.zookeeper" version="3.3.1.v20101104-1545"/>
 <unit id="org.apache.hadoop.zookeeper.source" version="3.3.1.v20101104-1545"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
+<repository location="http://download.eclipse.org/tools/orbit/committers/drops/I20101207192321/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.apache.lucene" version="2.9.1.v20100421-0704"/>
@@ -129,7 +129,7 @@
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.eclipse.jetty.sdk.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/releases/indigo/"/>
+<repository location="http://download.eclipse.org/releases/staging/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.junit" version="4.8.1.v4_8_1_v20100427-1100"/>
@@ -170,7 +170,7 @@
 <unit id="org.eclipse.core.contenttype.source" version="0.0.0"/>
 <unit id="org.eclipse.core.net" version="0.0.0"/>
 <unit id="org.eclipse.core.net.source" version="0.0.0"/>
-<repository location="http://download.eclipse.org/releases/indigo/"/>
+<repository location="http://download.eclipse.org/releases/staging/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="com.ibm.icu" version="4.2.1.v20100412"/>
@@ -196,7 +196,7 @@
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.eclipse.rap.runtime.sdk.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/releases/indigo/"/>
+<repository location="http://download.eclipse.org/releases/staging/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.codehaus.jackson.mapper" version="1.6.0.v20101005-0925"/>
