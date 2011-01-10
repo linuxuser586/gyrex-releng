@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Gyrex Development" sequenceNumber="6">
+<target name="Gyrex Development">
 <locations>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="com.google.collect" version="0.0.0"/>
 <unit id="com.google.collect.source" version="0.0.0"/>
 <unit id="com.sun.xml.bind" version="0.0.0"/>
@@ -40,7 +40,7 @@
 <unit id="org.hamcrest.core.source" version="0.0.0"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.apache.lucene" version="2.9.1.v20100421-0704"/>
 <unit id="org.apache.lucene.analysis" version="2.9.1.v20100421-0704"/>
 <unit id="org.apache.lucene.analysis.source" version="2.9.1.v20100421-0704"/>
@@ -71,7 +71,7 @@
 <unit id="org.apache.solr.servlet.source" version="1.4.0.v20100421-0704"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.eclipse.pde.junit.runtime" version="0.0.0"/>
 <unit id="org.eclipse.pde.junit.runtime.source" version="0.0.0"/>
 <unit id="org.eclipse.jdt.junit.runtime" version="0.0.0"/>
@@ -86,12 +86,12 @@
 <unit id="org.eclipse.core.net.source" version="0.0.0"/>
 <repository location="http://download.eclipse.org/eclipse/updates/3.7milestones"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.apache.hadoop.zookeeper" version="3.3.1.v20101104-1545"/>
 <unit id="org.apache.hadoop.zookeeper.source" version="3.3.1.v20101104-1545"/>
 <repository location="http://download.eclipse.org/tools/orbit/committers/drops/I20101207192321/repository/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.apache.xmlrpc" version="3.0.0.v20100427-1100"/>
 <unit id="org.apache.ws.commons.schema" version="1.4.2.v201003051240"/>
 <unit id="org.apache.xml.serializer" version="2.7.1.v201005080400"/>
@@ -99,31 +99,31 @@
 <unit id="org.apache.ws.commons.util" version="1.0.1.v20100518-1140"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.eclipse.e4.core.di" version="0.0.0"/>
 <repository location="http://download.eclipse.org/e4/sdk/drops/R-4.0-201007271520/repository/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.junit" version="4.8.1.v4_8_1_v20100427-1100"/>
 <unit id="org.junit" version="3.8.2.v3_8_2_v20100427-1100"/>
 <unit id="org.junit.source" version="4.8.1.v4_8_1_v20100427-1100"/>
 <unit id="org.junit.source" version="3.8.2.v3_8_2_v20100427-1100"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.eclipse.equinox.sdk.feature.group" version="3.7.0.v20101115-7L7W8Z8Vz-PloLC4r6lHZf17CS6W"/>
 <repository location="http://download.eclipse.org/eclipse/updates/3.7milestones"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.apache.derby" version="10.5.1.1_201012040702"/>
 <unit id="org.apache.derby.source" version="10.5.1.1_201012040702"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.eclipse.equinox.executable.feature.group" version="0.0.0"/>
 <repository location="http://download.eclipse.org/eclipse/updates/3.7milestones"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="ch.qos.logback.classic" version="0.9.24.v20100831-0715"/>
 <unit id="ch.qos.logback.classic.source" version="0.9.24.v20100831-0715"/>
 <unit id="ch.qos.logback.core" version="0.9.24.v20100831-0715"/>
@@ -142,7 +142,7 @@
 <unit id="org.slf4j.log4j.source" version="1.6.1.v20100831-0715"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.codehaus.jackson.mapper" version="1.6.0.v20101005-0925"/>
 <unit id="org.codehaus.jackson.mapper.source" version="1.6.0.v20101005-0925"/>
 <unit id="org.codehaus.jackson.smile" version="1.6.0.v20101005-0925"/>
@@ -156,7 +156,7 @@
 <unit id="org.codehaus.jackson.xc.source" version="1.6.0.v20101005-0925"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.apache.commons.beanutils" version="1.7.0.v200902170505"/>
 <unit id="org.apache.commons.beanutils.source" version="1.7.0.v200803061811"/>
 <unit id="org.apache.commons.codec" version="1.3.0.v20100518-1140"/>
@@ -171,14 +171,14 @@
 <unit id="org.apache.commons.io.source" version="1.4.0.v20081110-1000"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="com.google.gwt.servlet" version="2.0.4.v20100709-0658"/>
 <unit id="com.google.gwt.servlet.source" version="2.0.4.v20100709-0658"/>
 <unit id="com.google.gwt.user" version="2.0.4.v20100709-0658"/>
 <unit id="com.google.gwt.user.source" version="2.0.4.v20100709-0658"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.apache.commons.net" version="2.0.0.v200905272248"/>
 <unit id="org.apache.commons.net.source" version="2.0.0.v200905272248"/>
 <unit id="org.apache.httpcomponents.httpcore" version="4.0.0.v200905121600"/>
@@ -187,32 +187,451 @@
 <unit id="org.apache.httpcomponents.httpcore.source" version="4.0.0.v200905121600"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="com.ibm.icu" version="4.2.1.v20100412"/>
 <unit id="com.ibm.icu.source" version="4.2.1.v20100412"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.apache.commons.lang.source" version="2.4.0.v201005080502"/>
 <unit id="org.apache.commons.lang" version="2.4.0.v201005080502"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.mortbay.jetty.server" version="6.1.23.v201004211559"/>
 <unit id="org.mortbay.jetty.server.source" version="6.1.23.v201004211559"/>
 <unit id="org.mortbay.jetty.util.source" version="6.1.23.v201004211559"/>
 <unit id="org.mortbay.jetty.util" version="6.1.23.v201004211559"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20101204061544/repository/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.eclipse.rap.runtime.sdk.feature.group" version="1.4.0.20101214-0912"/>
 <repository location="http://download.eclipse.org/rt/rap/1.4/runtime/"/>
 </location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
 <unit id="org.eclipse.jetty.sdk.feature.group" version="7.2.0.201011011723"/>
 <repository location="http://download.eclipse.org/jetty/updates/jetty-rt-3.7milestones/"/>
 </location>
 </locations>
+<includeBundles>
+<plugin id="org.eclipse.ecf.provider.filetransfer.ssl"/>
+<plugin id="org.apache.xml.security"/>
+<plugin id="org.eclipse.core.net.source"/>
+<plugin id="org.eclipse.rap.demo.source"/>
+<plugin id="org.eclipse.rap.design.example.source"/>
+<plugin id="javax.transaction"/>
+<plugin id="org.apache.solr.servlet.source"/>
+<plugin id="org.eclipse.jetty.jmx"/>
+<plugin id="org.eclipse.equinox.io.source"/>
+<plugin id="org.eclipse.equinox.launcher.carbon.macosx"/>
+<plugin id="com.ibm.icu.source"/>
+<plugin id="org.apache.solr.client.solrj.source"/>
+<plugin id="org.eclipse.equinox.frameworkadmin.equinox.source"/>
+<plugin id="javax.servlet.jsp" version="2.0.0.v200806031607"/>
+<plugin id="javax.xml.bind.source"/>
+<plugin id="org.eclipse.equinox.security.ui"/>
+<plugin id="org.eclipse.rap.design.example"/>
+<plugin id="org.eclipse.equinox.p2.engine"/>
+<plugin id="org.apache.taglibs.standard.glassfish"/>
+<plugin id="org.eclipse.equinox.http.servlet" version="1.1.0.v20100503"/>
+<plugin id="ch.qos.logback.core"/>
+<plugin id="org.sat4j.core"/>
+<plugin id="org.eclipse.equinox.frameworkadmin.equinox"/>
+<plugin id="org.eclipse.equinox.p2.console"/>
+<plugin id="org.apache.lucene.core.source"/>
+<plugin id="org.apache.solr.common"/>
+<plugin id="org.eclipse.equinox.p2.core"/>
+<plugin id="org.eclipse.rap.ui.workbench"/>
+<plugin id="org.eclipse.jetty.deploy"/>
+<plugin id="org.apache.lucene.source"/>
+<plugin id="org.eclipse.rap.rwt.q07"/>
+<plugin id="org.eclipse.equinox.p2.publisher.source"/>
+<plugin id="org.eclipse.equinox.security.macosx.source"/>
+<plugin id="org.eclipse.osgi.source" version="3.7.0.v20101207"/>
+<plugin id="org.eclipse.rap.demo.databinding"/>
+<plugin id="org.eclipse.equinox.http.servlet" version="1.1.100.v20101204"/>
+<plugin id="org.eclipse.core.runtime"/>
+<plugin id="org.eclipse.equinox.p2.directorywatcher"/>
+<plugin id="org.apache.jasper.source"/>
+<plugin id="org.eclipse.equinox.http.registry.source"/>
+<plugin id="org.eclipse.osgi" version="3.7.0.v20101207"/>
+<plugin id="org.eclipse.equinox.transforms.xslt.source"/>
+<plugin id="org.eclipse.jetty.websocket"/>
+<plugin id="org.slf4j.log4j.source"/>
+<plugin id="javax.inject.source"/>
+<plugin id="com.ibm.icu.base"/>
+<plugin id="org.eclipse.equinox.p2.ql"/>
+<plugin id="org.eclipse.equinox.jsp.jasper.registry"/>
+<plugin id="org.eclipse.equinox.launcher.gtk.linux.s390"/>
+<plugin id="org.eclipse.equinox.p2.updatechecker"/>
+<plugin id="org.eclipse.equinox.metatype"/>
+<plugin id="org.apache.commons.net"/>
+<plugin id="org.eclipse.ecf.provider.filetransfer.httpclient.ssl.source"/>
+<plugin id="org.eclipse.core.commands.source"/>
+<plugin id="javax.annotation.source"/>
+<plugin id="org.eclipse.equinox.transforms.hook.source"/>
+<plugin id="com.google.gwt.servlet"/>
+<plugin id="javax.annotation"/>
+<plugin id="org.apache.commons.httpclient"/>
+<plugin id="org.eclipse.equinox.p2.reconciler.dropins.source"/>
+<plugin id="org.json"/>
+<plugin id="org.apache.ws.commons.util"/>
+<plugin id="com.google.collect"/>
+<plugin id="org.slf4j.ext.source"/>
+<plugin id="org.eclipse.equinox.p2.repository.tools"/>
+<plugin id="org.eclipse.ecf.source"/>
+<plugin id="org.eclipse.equinox.weaving.caching.source"/>
+<plugin id="org.codehaus.jackson.jaxrs.source"/>
+<plugin id="org.apache.commons.lang.source"/>
+<plugin id="org.eclipse.jetty.http"/>
+<plugin id="org.eclipse.equinox.launcher.win32.win32.x86_64"/>
+<plugin id="org.eclipse.equinox.launcher.cocoa.macosx.x86_64"/>
+<plugin id="org.apache.lucene.memory.source"/>
+<plugin id="org.apache.commons.beanutils.source"/>
+<plugin id="org.eclipse.equinox.launcher"/>
+<plugin id="org.eclipse.equinox.ip.source"/>
+<plugin id="org.eclipse.equinox.concurrent.source"/>
+<plugin id="org.eclipse.equinox.jsp.jasper.registry.source"/>
+<plugin id="org.apache.commons.codec"/>
+<plugin id="org.apache.hadoop.zookeeper"/>
+<plugin id="org.apache.commons.el.source"/>
+<plugin id="org.eclipse.equinox.p2.ql.source"/>
+<plugin id="org.eclipse.equinox.ip"/>
+<plugin id="org.apache.solr.client.solrj.embedded"/>
+<plugin id="org.eclipse.equinox.p2.discovery"/>
+<plugin id="org.apache.xmlrpc"/>
+<plugin id="org.apache.geronimo.specs.geronimo-jaspic_1.0_spec"/>
+<plugin id="org.eclipse.equinox.p2.touchpoint.eclipse"/>
+<plugin id="org.apache.commons.fileupload"/>
+<plugin id="org.eclipse.rap.junit.source"/>
+<plugin id="org.eclipse.equinox.launcher.gtk.aix.ppc"/>
+<plugin id="org.apache.lucene.queries"/>
+<plugin id="org.apache.lucene.analysis"/>
+<plugin id="org.eclipse.e4.core.di"/>
+<plugin id="org.eclipse.equinox.launcher.gtk.linux.x86"/>
+<plugin id="org.eclipse.equinox.simpleconfigurator"/>
+<plugin id="org.apache.derby.source"/>
+<plugin id="org.eclipse.equinox.supplement"/>
+<plugin id="org.eclipse.equinox.registry.source"/>
+<plugin id="org.eclipse.equinox.p2.core.source"/>
+<plugin id="org.mortbay.jetty.util.source"/>
+<plugin id="org.eclipse.equinox.launcher.gtk.linux.s390x"/>
+<plugin id="org.eclipse.equinox.p2.ui.sdk"/>
+<plugin id="org.eclipse.equinox.p2.repository.source"/>
+<plugin id="org.eclipse.rap.demo"/>
+<plugin id="org.eclipse.equinox.p2.operations.source"/>
+<plugin id="org.codehaus.jackson.xc.source"/>
+<plugin id="org.eclipse.equinox.weaving.hook.source"/>
+<plugin id="org.eclipse.core.jobs"/>
+<plugin id="org.eclipse.equinox.p2.director"/>
+<plugin id="org.eclipse.equinox.preferences"/>
+<plugin id="org.eclipse.equinox.launcher.gtk.solaris.x86"/>
+<plugin id="org.eclipse.equinox.servletbridge.source"/>
+<plugin id="org.eclipse.ecf.provider.filetransfer.httpclient"/>
+<plugin id="org.junit.source" version="3.8.2.v3_8_2_v20100427-1100"/>
+<plugin id="org.eclipse.jetty.util"/>
+<plugin id="org.objectweb.asm"/>
+<plugin id="org.eclipse.rap.rwt.theme.classic.source"/>
+<plugin id="com.google.collect.source"/>
+<plugin id="org.apache.commons.io"/>
+<plugin id="org.eclipse.equinox.p2.metadata.source"/>
+<plugin id="org.eclipse.equinox.p2.updatesite.source"/>
+<plugin id="org.eclipse.core.databinding.beans"/>
+<plugin id="javax.inject"/>
+<plugin id="org.eclipse.equinox.p2.updatechecker.source"/>
+<plugin id="com.sun.el"/>
+<plugin id="org.codehaus.jackson.jaxrs"/>
+<plugin id="org.codehaus.jackson.mapper"/>
+<plugin id="org.apache.lucene.memory"/>
+<plugin id="org.eclipse.rap.ui.views"/>
+<plugin id="ch.qos.logback.classic.source"/>
+<plugin id="org.slf4j.jul"/>
+<plugin id="org.eclipse.equinox.p2.installer.source"/>
+<plugin id="org.codehaus.jackson.core.source"/>
+<plugin id="com.ibm.icu"/>
+<plugin id="org.eclipse.ecf.filetransfer"/>
+<plugin id="org.eclipse.equinox.common.source"/>
+<plugin id="org.eclipse.equinox.http.registry"/>
+<plugin id="org.eclipse.rap.ui"/>
+<plugin id="com.ibm.icu.base.source"/>
+<plugin id="javax.mail.glassfish"/>
+<plugin id="org.slf4j.jul.source"/>
+<plugin id="org.eclipse.core.runtime.source" version="3.6.100.v20101122"/>
+<plugin id="org.eclipse.equinox.wireadmin"/>
+<plugin id="org.slf4j.jcl.source"/>
+<plugin id="org.eclipse.pde.junit.runtime"/>
+<plugin id="org.eclipse.equinox.simpleconfigurator.manipulator.source"/>
+<plugin id="org.eclipse.ecf.provider.filetransfer.ssl.source"/>
+<plugin id="org.eclipse.equinox.frameworkadmin"/>
+<plugin id="org.eclipse.equinox.launcher.gtk.hpux.ia64_32"/>
+<plugin id="org.eclipse.equinox.common"/>
+<plugin id="org.apache.lucene.misc.source"/>
+<plugin id="org.apache.lucene.misc"/>
+<plugin id="org.eclipse.equinox.http.source"/>
+<plugin id="org.eclipse.equinox.p2.ui.admin.source"/>
+<plugin id="org.eclipse.jetty.continuation"/>
+<plugin id="org.apache.oro"/>
+<plugin id="org.eclipse.jdt.core.compiler.batch"/>
+<plugin id="org.eclipse.core.databinding.property"/>
+<plugin id="org.eclipse.equinox.p2.updatesite"/>
+<plugin id="org.eclipse.jetty.io"/>
+<plugin id="org.eclipse.equinox.p2.directorywatcher.source"/>
+<plugin id="org.eclipse.jdt.junit4.runtime"/>
+<plugin id="org.apache.oro.source"/>
+<plugin id="org.eclipse.equinox.frameworkadmin.source"/>
+<plugin id="org.eclipse.equinox.p2.ui.admin.rcp.source"/>
+<plugin id="org.eclipse.equinox.launcher.gtk.aix.ppc64"/>
+<plugin id="org.eclipse.equinox.metatype.source"/>
+<plugin id="org.eclipse.rap.jface.source"/>
+<plugin id="org.eclipse.equinox.cm.source"/>
+<plugin id="org.eclipse.equinox.security.win32.x86.source"/>
+<plugin id="org.apache.lucene.spellchecker"/>
+<plugin id="org.eclipse.osgi.services"/>
+<plugin id="org.eclipse.equinox.weaving.caching.j9"/>
+<plugin id="org.eclipse.equinox.jsp.jasper"/>
+<plugin id="org.eclipse.equinox.registry"/>
+<plugin id="org.eclipse.rap.junit.runtime"/>
+<plugin id="org.eclipse.equinox.weaving.hook"/>
+<plugin id="org.eclipse.equinox.useradmin"/>
+<plugin id="org.eclipse.core.databinding.observable.source"/>
+<plugin id="org.eclipse.equinox.p2.metadata"/>
+<plugin id="org.eclipse.jetty.plus"/>
+<plugin id="org.eclipse.equinox.cm"/>
+<plugin id="javax.persistence.source"/>
+<plugin id="org.eclipse.rap.jface.databinding"/>
+<plugin id="org.eclipse.equinox.io"/>
+<plugin id="org.eclipse.equinox.p2.ui.sdk.scheduler.source"/>
+<plugin id="org.apache.xml.serializer"/>
+<plugin id="org.eclipse.equinox.p2.reconciler.dropins"/>
+<plugin id="org.eclipse.core.variables"/>
+<plugin id="org.eclipse.jdt.junit.runtime.source" version="3.4.300.v20101206-1800"/>
+<plugin id="org.eclipse.rap.junit"/>
+<plugin id="org.eclipse.core.databinding.property.source"/>
+<plugin id="org.eclipse.jetty.server"/>
+<plugin id="org.hamcrest.core"/>
+<plugin id="org.eclipse.equinox.security.win32.x86"/>
+<plugin id="org.eclipse.ecf.ssl.source"/>
+<plugin id="org.apache.commons.beanutils"/>
+<plugin id="ch.qos.logback.classic"/>
+<plugin id="org.apache.commons.logging.source"/>
+<plugin id="org.apache.commons.httpclient.source"/>
+<plugin id="ch.qos.logback.core.source"/>
+<plugin id="org.junit" version="4.8.1.v4_8_1_v20100427-1100"/>
+<plugin id="org.eclipse.equinox.p2.touchpoint.natives"/>
+<plugin id="org.eclipse.rap.junit.runtime.source"/>
+<plugin id="org.apache.commons.codec.source"/>
+<plugin id="org.eclipse.jetty.osgi.boot.warurl"/>
+<plugin id="org.eclipse.core.runtime.source" version="3.6.100.v20100628"/>
+<plugin id="org.eclipse.equinox.p2.installer"/>
+<plugin id="javax.xml"/>
+<plugin id="org.eclipse.equinox.p2.console.source"/>
+<plugin id="ch.qos.logback.slf4j.source"/>
+<plugin id="org.eclipse.ecf.provider.filetransfer.httpclient.source"/>
+<plugin id="javax.xml.stream"/>
+<plugin id="org.junit" version="3.8.2.v3_8_2_v20100427-1100"/>
+<plugin id="org.eclipse.equinox.launcher.win32.win32.x86"/>
+<plugin id="org.eclipse.osgi.services.source"/>
+<plugin id="org.eclipse.equinox.launcher.cocoa.macosx"/>
+<plugin id="org.eclipse.ecf.filetransfer.source"/>
+<plugin id="org.eclipse.equinox.p2.repository"/>
+<plugin id="org.apache.commons.logging"/>
+<plugin id="org.eclipse.equinox.launcher.gtk.linux.ppc64"/>
+<plugin id="org.apache.lucene.analysis.source"/>
+<plugin id="org.apache.solr.client.solrj"/>
+<plugin id="org.eclipse.core.contenttype.source" version="3.4.100.v20101203-1034"/>
+<plugin id="javax.el"/>
+<plugin id="org.eclipse.equinox.p2.ui.sdk.scheduler"/>
+<plugin id="org.eclipse.rap.jface.databinding.source"/>
+<plugin id="org.apache.lucene.spellchecker.source"/>
+<plugin id="org.eclipse.core.commands"/>
+<plugin id="org.eclipse.equinox.ds.source"/>
+<plugin id="org.eclipse.equinox.p2.garbagecollector"/>
+<plugin id="javax.management.remote"/>
+<plugin id="org.eclipse.equinox.preferences.source"/>
+<plugin id="org.eclipse.rap.rwt.theme.classic"/>
+<plugin id="org.eclipse.equinox.p2.extensionlocation"/>
+<plugin id="org.eclipse.equinox.launcher.source"/>
+<plugin id="javax.persistence"/>
+<plugin id="org.mortbay.jetty.server"/>
+<plugin id="org.eclipse.equinox.p2.repository.tools.source"/>
+<plugin id="org.eclipse.equinox.security.macosx"/>
+<plugin id="org.eclipse.core.expressions"/>
+<plugin id="org.mortbay.jetty.util"/>
+<plugin id="org.eclipse.rap.ui.cheatsheets.source"/>
+<plugin id="javax.transaction.source"/>
+<plugin id="org.eclipse.jetty.jsp-2.1"/>
+<plugin id="org.eclipse.rap.jface"/>
+<plugin id="org.eclipse.equinox.weaving.caching"/>
+<plugin id="org.codehaus.jackson.smile.source"/>
+<plugin id="org.apache.hadoop.zookeeper.source"/>
+<plugin id="org.hamcrest.core.source"/>
+<plugin id="org.eclipse.equinox.event"/>
+<plugin id="org.eclipse.jetty.jaspi"/>
+<plugin id="org.eclipse.ecf.ssl"/>
+<plugin id="org.eclipse.equinox.weaving.aspectj.source"/>
+<plugin id="org.eclipse.rap.ui.views.source"/>
+<plugin id="com.google.gwt.servlet.source"/>
+<plugin id="org.apache.solr.core"/>
+<plugin id="org.eclipse.equinox.p2.publisher"/>
+<plugin id="org.eclipse.equinox.log.source"/>
+<plugin id="org.eclipse.equinox.http.jetty.source"/>
+<plugin id="org.eclipse.jetty.annotations"/>
+<plugin id="org.codehaus.jackson.xc"/>
+<plugin id="org.eclipse.equinox.p2.ui.sdk.source"/>
+<plugin id="org.eclipse.equinox.wireadmin.source"/>
+<plugin id="org.apache.httpcomponents.httpcore"/>
+<plugin id="org.eclipse.jetty.osgi.httpservice"/>
+<plugin id="org.eclipse.equinox.p2.metadata.repository.source"/>
+<plugin id="org.eclipse.equinox.security.source"/>
+<plugin id="org.apache.lucene.core"/>
+<plugin id="org.eclipse.jetty.rewrite"/>
+<plugin id="org.eclipse.jdt.junit4.runtime.source"/>
+<plugin id="org.eclipse.equinox.util"/>
+<plugin id="org.junit.source" version="4.8.1.v4_8_1_v20100427-1100"/>
+<plugin id="org.eclipse.help"/>
+<plugin id="org.eclipse.ecf.provider.filetransfer.source"/>
+<plugin id="javax.servlet.jsp.source"/>
+<plugin id="org.eclipse.ecf"/>
+<plugin id="org.eclipse.equinox.p2.director.source"/>
+<plugin id="org.apache.derby"/>
+<plugin id="org.eclipse.equinox.p2.ui.source"/>
+<plugin id="org.eclipse.equinox.p2.discovery.compatibility"/>
+<plugin id="org.eclipse.equinox.p2.engine.source"/>
+<plugin id="org.eclipse.jdt.junit.runtime.source" version="3.4.200.v20100824-0800"/>
+<plugin id="org.apache.solr.common.source"/>
+<plugin id="org.apache.lucene.queries.source"/>
+<plugin id="org.eclipse.rap.ui.forms"/>
+<plugin id="org.apache.jasper"/>
+<plugin id="com.google.gwt.user"/>
+<plugin id="org.eclipse.ecf.identity"/>
+<plugin id="org.slf4j.jcl"/>
+<plugin id="org.eclipse.equinox.p2.artifact.repository"/>
+<plugin id="org.eclipse.equinox.p2.ui"/>
+<plugin id="org.eclipse.core.contenttype"/>
+<plugin id="org.eclipse.equinox.weaving.caching.j9.source"/>
+<plugin id="org.eclipse.equinox.p2.ui.admin.rcp"/>
+<plugin id="org.eclipse.core.databinding"/>
+<plugin id="org.eclipse.jetty.osgi.boot.logback"/>
+<plugin id="org.eclipse.equinox.security"/>
+<plugin id="org.eclipse.jetty.client"/>
+<plugin id="org.eclipse.help.source"/>
+<plugin id="org.eclipse.equinox.useradmin.source"/>
+<plugin id="org.apache.httpcomponents.httpcore.nio"/>
+<plugin id="javax.servlet"/>
+<plugin id="org.eclipse.rap.demo.databinding.source"/>
+<plugin id="org.apache.solr.client.solrj.embedded.source"/>
+<plugin id="org.eclipse.equinox.http.servlet.source"/>
+<plugin id="org.slf4j.ext"/>
+<plugin id="org.eclipse.equinox.ds"/>
+<plugin id="org.eclipse.equinox.servletbridge"/>
+<plugin id="org.eclipse.equinox.supplement.source"/>
+<plugin id="org.apache.lucene.snowball"/>
+<plugin id="org.eclipse.equinox.p2.ui.admin"/>
+<plugin id="org.eclipse.equinox.p2.operations"/>
+<plugin id="org.eclipse.core.net"/>
+<plugin id="javax.servlet.jsp.jstl"/>
+<plugin id="org.apache.lucene.highlighter.source"/>
+<plugin id="org.eclipse.jetty.jndi"/>
+<plugin id="org.eclipse.equinox.weaving.aspectj"/>
+<plugin id="org.eclipse.equinox.p2.director.app"/>
+<plugin id="org.apache.commons.net.source"/>
+<plugin id="org.eclipse.equinox.p2.metadata.generator.source"/>
+<plugin id="org.eclipse.rap.ui.workbench.source"/>
+<plugin id="org.eclipse.equinox.p2.touchpoint.natives.source"/>
+<plugin id="com.google.gwt.user.source"/>
+<plugin id="org.slf4j.api.source"/>
+<plugin id="org.eclipse.jetty.osgi.boot"/>
+<plugin id="org.eclipse.rap.ui.forms.source"/>
+<plugin id="javax.servlet.source"/>
+<plugin id="org.codehaus.jackson.mapper.source"/>
+<plugin id="javax.servlet.jsp" version="2.1.0.v201004190952"/>
+<plugin id="org.codehaus.jackson.smile"/>
+<plugin id="org.eclipse.ecf.provider.filetransfer.httpclient.ssl"/>
+<plugin id="org.eclipse.jetty.servlet"/>
+<plugin id="org.slf4j.api"/>
+<plugin id="org.codehaus.jackson.core"/>
+<plugin id="org.eclipse.equinox.p2.garbagecollector.source"/>
+<plugin id="org.eclipse.pde.junit.runtime.source"/>
+<plugin id="org.apache.commons.lang"/>
+<plugin id="org.apache.commons.el"/>
+<plugin id="org.sat4j.pb"/>
+<plugin id="org.eclipse.equinox.p2.metadata.generator"/>
+<plugin id="org.eclipse.equinox.simpleconfigurator.manipulator"/>
+<plugin id="org.eclipse.osgi.util.source"/>
+<plugin id="org.eclipse.equinox.http.servletbridge"/>
+<plugin id="org.eclipse.equinox.log"/>
+<plugin id="org.eclipse.rap.ui.cheatsheets"/>
+<plugin id="javax.xml.soap"/>
+<plugin id="javax.xml.bind"/>
+<plugin id="org.eclipse.rap.ui.source"/>
+<plugin id="org.apache.lucene.highlighter"/>
+<plugin id="org.slf4j.log4j"/>
+<plugin id="com.sun.xml.bind"/>
+<plugin id="org.apache.httpcomponents.httpcore.nio.source"/>
+<plugin id="org.eclipse.equinox.device.source"/>
+<plugin id="org.eclipse.equinox.event.source"/>
+<plugin id="org.eclipse.equinox.transforms.hook"/>
+<plugin id="org.eclipse.core.jobs.source"/>
+<plugin id="org.eclipse.equinox.p2.artifact.repository.source"/>
+<plugin id="org.apache.commons.io.source"/>
+<plugin id="org.eclipse.core.databinding.observable"/>
+<plugin id="javax.management"/>
+<plugin id="org.eclipse.core.contenttype.source" version="3.4.100.v20100505-1235"/>
+<plugin id="org.apache.lucene"/>
+<plugin id="org.eclipse.equinox.servletbridge.extensionbundle"/>
+<plugin id="javax.mail.glassfish.source"/>
+<plugin id="org.eclipse.rap.rwt.q07.source"/>
+<plugin id="org.eclipse.equinox.launcher.gtk.linux.x86_64"/>
+<plugin id="org.eclipse.equinox.p2.metadata.repository"/>
+<plugin id="org.eclipse.equinox.p2.touchpoint.eclipse.source"/>
+<plugin id="org.eclipse.equinox.launcher.gtk.solaris.sparc"/>
+<plugin id="org.eclipse.jetty.xml"/>
+<plugin id="org.apache.commons.collections"/>
+<plugin id="org.eclipse.equinox.util.source"/>
+<plugin id="org.eclipse.equinox.p2.jarprocessor.source"/>
+<plugin id="org.eclipse.equinox.http.jetty"/>
+<plugin id="org.eclipse.osgi.util"/>
+<plugin id="org.eclipse.equinox.http.servletbridge.source"/>
+<plugin id="org.eclipse.equinox.p2.ui.discovery"/>
+<plugin id="org.mortbay.jetty.server.source"/>
+<plugin id="org.eclipse.jetty.webapp"/>
+<plugin id="org.eclipse.equinox.app"/>
+<plugin id="org.eclipse.core.databinding.beans.source"/>
+<plugin id="org.apache.jasper.glassfish"/>
+<plugin id="org.apache.httpcomponents.httpcore.source"/>
+<plugin id="org.eclipse.jetty.servlets"/>
+<plugin id="org.eclipse.equinox.app.source"/>
+<plugin id="org.eclipse.jdt.junit.runtime"/>
+<plugin id="org.apache.lucene.snowball.source"/>
+<plugin id="org.eclipse.equinox.transforms.xslt"/>
+<plugin id="org.eclipse.core.databinding.source"/>
+<plugin id="com.sun.xml.bind.source"/>
+<plugin id="org.eclipse.equinox.simpleconfigurator.source"/>
+<plugin id="org.apache.geronimo.specs.geronimo-annotation_1.0_spec"/>
+<plugin id="org.eclipse.core.expressions.source"/>
+<plugin id="javax.xml.ws"/>
+<plugin id="org.apache.solr.servlet"/>
+<plugin id="org.eclipse.equinox.concurrent"/>
+<plugin id="org.apache.ws.commons.schema"/>
+<plugin id="org.eclipse.rap.rwt"/>
+<plugin id="org.eclipse.equinox.p2.director.app.source"/>
+<plugin id="org.eclipse.rap.rwt.source"/>
+<plugin id="org.eclipse.equinox.jsp.jasper.source"/>
+<plugin id="org.eclipse.equinox.p2.jarprocessor"/>
+<plugin id="org.eclipse.equinox.p2.extensionlocation.source"/>
+<plugin id="ch.qos.logback.slf4j"/>
+<plugin id="org.apache.solr.core.source"/>
+<plugin id="org.apache.commons.fileupload.source"/>
+<plugin id="org.eclipse.ecf.provider.filetransfer"/>
+<plugin id="org.eclipse.jetty.security"/>
+<plugin id="org.eclipse.equinox.device"/>
+<plugin id="org.eclipse.jetty.osgi.boot.jsp"/>
+<plugin id="org.apache.commons.collections.source"/>
+<plugin id="javax.activation"/>
+<plugin id="org.eclipse.equinox.security.ui.source"/>
+<plugin id="org.eclipse.ecf.identity.source"/>
+<plugin id="org.eclipse.equinox.http"/>
+</includeBundles>
 <targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 <launcherArgs>
 <vmArgs>-Dorg.eclipse.equinox.http.jetty.autostart=false&#13;
