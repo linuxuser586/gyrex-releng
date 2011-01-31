@@ -45,11 +45,8 @@ fragment@org.eclipse.gyrex.log.frameworklogadapter=v20101108-1140,:pserver:anony
 
 ### Gyrex Admin
 plugin@org.eclipse.gyrex.admin.ui=v20110131-1900,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui
-#plugin@org.eclipse.gyrex.admin=v20101129-1310,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin
-#plugin@org.eclipse.gyrex.admin.web.gwt=v20101129-1310,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt
-#plugin@org.eclipse.gyrex.admin.web.gwt.client=v20101210-1610,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt.client
-plugin@org.eclipse.gyrex.admin.ui.cloud=v20101129-1310,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.cloud
-plugin@org.eclipse.gyrex.admin.ui.http.jetty=v20101129-1310,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.http.jetty
+plugin@org.eclipse.gyrex.admin.ui.cloud=v20110131-1900,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.cloud
+plugin@org.eclipse.gyrex.admin.ui.http.jetty=v20110131-1900,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.http.jetty
 
 ### Gyrex HTTP Component
 plugin@org.eclipse.gyrex.http=v20110110-1630,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http
@@ -63,12 +60,6 @@ plugin@org.eclipse.gyrex.log.http=v20101108-1140,:pserver:anonymous@dev.eclipse.
 
 ### Gyrex HTTP Component Equinox HttpService Integration
 plugin@org.eclipse.gyrex.http.equinoxhttpservice=v20110110-1630,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.equinoxhttpservice
-
-
-### Gyrex Toolkit
-#plugin@org.eclipse.gyrex.toolkit=v20101210-1610,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.toolkit
-#plugin@org.eclipse.gyrex.toolkit.gwt.client=v20101207-0820,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.toolkit.gwt.client
-#plugin@org.eclipse.gyrex.toolkit.gwt.server=v20101207-0820,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.toolkit.gwt.server
 
 ### Gyrex GWT AddOns
 plugin@org.eclipse.gyrex.gwt.common=v20101108-1140,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.gwt.common
