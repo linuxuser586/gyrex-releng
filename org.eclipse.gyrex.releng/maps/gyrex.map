@@ -48,7 +48,8 @@ plugin@org.eclipse.gyrex.admin.ui=v20110131-1900,:pserver:anonymous@dev.eclipse.
 #plugin@org.eclipse.gyrex.admin=v20101129-1310,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin
 #plugin@org.eclipse.gyrex.admin.web.gwt=v20101129-1310,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt
 #plugin@org.eclipse.gyrex.admin.web.gwt.client=v20101210-1610,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt.client
-#plugin@org.eclipse.gyrex.admin.cloud=v20101129-1310,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.cloud
+plugin@org.eclipse.gyrex.admin.ui.cloud=v20101129-1310,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.cloud
+plugin@org.eclipse.gyrex.admin.ui.http.jetty=v20101129-1310,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.http.jetty
 
 ### Gyrex HTTP Component
 plugin@org.eclipse.gyrex.http=v20110110-1630,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http
