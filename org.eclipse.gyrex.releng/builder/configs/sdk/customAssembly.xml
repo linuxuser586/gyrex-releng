@@ -1,0 +1,12 @@
+<project name="gyrex-sdk-customAddembly" default="noDefault">
+
+	<!-- import default targets in order to only define overridden below -->
+	<import file="${eclipse.pdebuild.templates}/headless-build/customAssembly.xml" />
+
+	<!-- every time gather.bin.parts is called, we will add the resulting artifact into a separate archive to be sent for signing -->
+	<target name="gather.bin.parts" >
+		<!-- remember this so we can sign & pack only the things we built ourselves -->
+		<echo append="true" file="${buildDirectory}/built.list" message="**/${projectName}.jar${line.separator}" />
+	</target>
+
+</project>

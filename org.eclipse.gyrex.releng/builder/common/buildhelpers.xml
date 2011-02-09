@@ -202,7 +202,7 @@
 	<!-- builder: ensure required properties are set -->
 	<target name="builder.checkArgs" unless="builder">
 		<echo message="-Dbuilder=&lt;path&gt; required." />
-		<fail/>
+		<fail message="-Dbuilder=&lt;path&gt; required."/>
 	</target>
 
 	<!-- builder: initialize properties/defaults -->

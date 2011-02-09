@@ -52,8 +52,11 @@
 	<!-- set default for the build directory -->
 	<property name="buildDirectory" value="${writableBuildRoot}/work" />
 
+	<!-- set default for common build scripts -->
+	<property name="commonBuildScripts" location="common"/>
+
 	<!-- import common build helpers -->
-	<import file="common/buildhelpers.xml" />
+	<import file="${commonBuildScripts}/buildhelpers.xml" />
 
 
     <!-- ===============================
@@ -76,8 +79,9 @@
 			buildfile="${ant.file.org.eclipse.gyrex.releng-builder-build}"
 			workspace="${buildDirectory}/workspace">
 			<jvmargs>
-		        <arg value="-DwritableBuildRoot=${writableBuildRoot}" />
-		        <arg value="-DbuildDirectory=${buildDirectory}" />
+		        <arg value="-DwritableBuildRoot=${writableBuildRoot}"/>
+		        <arg value="-DbuildDirectory=${buildDirectory}"/>
+				<arg value="-DcommonBuildScripts=${commonBuildScripts}"/>
 			</jvmargs>
 		</basebuilder>
 	</target>
@@ -91,7 +95,7 @@
 		<!--
 
 		    Note, in order to pass local build properties to a Hudson build
-		    you should configure a "Shell" task to be executed befor this
+		    you should configure a "Shell" task to be executed before this
 		    Ant script. This task can generate a build.local.properties file.
 
     		    <snip>
@@ -101,13 +105,12 @@
                     touch $buildLocalProps
                     echo J2SE-1.4=/shared/common/j2sdk1.4.2_19/jre/lib/rt.jar >> $buildLocalProps
                     echo J2SE-1.5=/shared/common/jdk-1.5.0_16/jre/lib/rt.jar >> $buildLocalProps
-                    echo JavaSE-1.6=/shared/common/jdk-1.6.0_10/jre/lib/rt.jar >> $buildLocalProps
+                    echo JavaSE-1.6=/shared/common/jdk-1.6.0_10/jre/lib/rt.jar:/shared/common/jdk-1.6.0_10/jre/lib/jsse.jar >> $buildLocalProps
                     echo CDC-1.0/Foundation-1.0=/shared/common/org.eclipse.sdk-feature/libs/ee.foundation-1.0.jar >> $buildLocalProps
                     echo CDC-1.1/Foundation-1.1=/shared/common/org.eclipse.sdk-feature/libs/ee.foundation.jar >> $buildLocalProps
                     echo OSGi/Minimum-1.2=/shared/common/org.eclipse.sdk-feature/libs/ee.minimum-1.2.0.jar >> $buildLocalProps
                     echo org.eclipse.update.jarprocessor.pack200=/shared/common/ibm-java2-ppc-50/bin >> $buildLocalProps
                     echo eclipse.p2.MD5Check=false >> $buildLocalProps
-                    echo org.eclipse.releng.basebuilder=/opt/public/cbi/build/org.eclipse.releng.basebuilder_R36_M4 >> $buildLocalProps
                 </snip>
 
             In the Ant script configuration you should (only) set the following

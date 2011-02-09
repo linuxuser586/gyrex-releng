@@ -1,19 +1,20 @@
 <project name="gyrex-sdk-customTargets" default="noDefault">
 
-	<!-- ===================================================================== -->
-	<!-- Run a given ${target} on all elements being built -->
-	<!-- Add one <ant> task for each top level element being built. -->
-	<!-- ===================================================================== -->
-	<import file="allElements.xml" />
-	<target name="allElements">
-		<antcall target="allElementsDelegator"/>
-	</target>
+	<!-- import default targets in order to only define overridden below -->
+	<import file="${eclipse.pdebuild.templates}/headless-build/customTargets.xml"/>
+
+	<!-- set default for common build scripts -->
+	<property name="commonBuildScripts" location="../../common"/>
+
+	<!-- import signing script -->
+	<import file="${commonBuildScripts}/sign.xml"/>
 
 	<!-- ===================================================================== -->
 	<!-- Check out map files from correct repository -->
 	<!-- Replace values for mapsCheckoutTag as desired. -->
 	<!-- ===================================================================== -->
 	<target name="getMapFiles" depends="checkLocalMaps" unless="skipMaps">
+		<!-- this is easier for Gyrex; we assume maps are already local -->
 		<!-- simply copy the map files from the releng project -->
 		<property name="localMapsDir" value="${builder}/../../../maps"/>
 		<copy todir="${buildDirectory}/maps">
@@ -21,6 +22,7 @@
 		</copy>
 	</target>
 
+	<!-- checks if maps have already been fetched -->
 	<target name="checkLocalMaps">
 		<available property="skipMaps" file="${buildDirectory}/maps" />
 	</target>
@@ -29,148 +31,59 @@
 	<!-- Steps to do before setup -->
 	<!-- ===================================================================== -->
 	<target name="preSetup">
+		<!-- log a message -->
 		<echo message="Gyrex SDK build ${topLevelElementId} ${buildLabel}"/>
-	</target>
-
-	<!-- ===================================================================== -->
-	<!-- Steps to do after setup but before starting the build proper -->
-	<!-- ===================================================================== -->
-	<target name="postSetup">
-	</target>
-
-	<!-- ===================================================================== -->
-	<!-- Steps to do before fetching the build elements -->
-	<!-- ===================================================================== -->
-	<target name="preFetch">
 	</target>
 
 	<!-- ===================================================================== -->
 	<!-- Steps to do after fetching the build elements -->
 	<!-- ===================================================================== -->
 	<target name="postFetch">
+		<!-- change source references to pserver if ssh was used -->
 		<replace file="${buildDirectory}/sourceReferences.properties" token=":extssh" value=":pserver"  />
+
+		<!-- replace any tokens in source files -->
+		<replace dir="${buildDirectory}/plugins" value="${buildLabel}" token="@build@">
+			<include name="**/about.mappings" />
+		</replace>
 	</target>
 
 	<!-- ===================================================================== -->
 	<!-- Steps to do before the repositories are being processed -->
 	<!-- ===================================================================== -->
 	<target name="preProcessRepos">
+		<!-- mirror target definition to local disc -->
 		<antcall target="buildTargetPlatform"/>
-	</target>
-
-	<!-- ===================================================================== -->
-	<!-- Steps to do after the repositories have been processed -->
-	<!-- ===================================================================== -->
-	<target name="postProcessRepos">
-	</target>
-
-	<!-- ===================================================================== -->
-	<!-- Steps to do before generating the build scripts. -->
-	<!-- ===================================================================== -->
-	<target name="preGenerate">
-	</target>
-
-	<!-- ===================================================================== -->
-	<!-- Steps to do after generating the build scripts. -->
-	<!-- ===================================================================== -->
-	<target name="postGenerate">
-		<antcall target="clean" />
-	</target>
-
-	<!-- ===================================================================== -->
-	<!-- Steps to do before running the build.xmls for the elements being built. -->
-	<!-- ===================================================================== -->
-	<target name="preProcess">
-	</target>
-
-	<!-- ===================================================================== -->
-	<!-- Steps to do after running the build.xmls for the elements being built. -->
-	<!-- ===================================================================== -->
-	<target name="postProcess">
-	</target>
-
-	<!-- ===================================================================== -->
-	<!-- Steps to do before running assemble. -->
-	<!-- ===================================================================== -->
-	<target name="preAssemble">
-	</target>
-
-	<!-- ===================================================================== -->
-	<!-- Steps to do after  running assemble. -->
-	<!-- ===================================================================== -->
-	<target name="postAssemble">
-	</target>
-
-	<!-- ===================================================================== -->
-	<!-- Steps to do before running package. -->
-	<!-- ===================================================================== -->
-	<target name="prePackage">
-	</target>
-
-	<!-- ===================================================================== -->
-	<!-- Steps to do after  running package. -->
-	<!-- ===================================================================== -->
-	<target name="postPackage">
 	</target>
 
 	<!-- ===================================================================== -->
 	<!-- Steps to do after the build is done. -->
 	<!-- ===================================================================== -->
 	<target name="postBuild">
+		<!-- collect compile logs -->
 		<antcall target="gatherLogs" />
-	</target>
 
-	<!-- ===================================================================== -->
-	<!-- Steps to do to test the build results -->
-	<!-- ===================================================================== -->
-	<target name="test">
-	</target>
+		<!-- sign the build -->
+		<property name="signingArchive" location="${buildDirectory}/gyrex-sdk-bundles-for-signing-${buildId}.zip" />
+		<property name="p2RepoWithArtifactsToSign" location="${buildDirectory}/buildRepo" />
+		<createSigningArchive file="${signingArchive}" basedir="${p2RepoWithArtifactsToSign}" includesfile="${buildDirectory}/built.list"/>
+		<signArchive file="${signingArchive}" projectId="gyrex" jobId="${buildType}-builds" email="gunnar@wagenknecht.org"/>
 
-	<!-- ===================================================================== -->
-	<!-- Steps to do to publish the build results -->
-	<!-- ===================================================================== -->
-	<target name="publish">
-	</target>
+		<!-- unzip signed build over top of the repository -->
+		<extractSignedArchive file="${signingArchive}" targetDir="${p2RepoWithArtifactsToSign}"/>
 
-	<!-- ===================================================================== -->
-	<!-- Default target                                                        -->
-	<!-- ===================================================================== -->
-	<target name="noDefault">
-		<echo message="You must specify a target when invoking this file" />
-	</target>
+		<!-- pack signed artifacts and update p2 repo checksums -->
+		<updateSignedRepo repodir="${p2RepoWithArtifactsToSign}" includesfile="${buildDirectory}/built.list"/>
 
+	</target>
 
     <!-- ===================================================================== -->
-
-    <!-- - - - - - - - - - - - - - - - - -
-          helper target: clean
-         - - - - - - - - - - - - - - - - - -->
-	<target name="clean" unless="noclean">
-		<antcall target="allElements">
-			<param name="target" value="cleanElement" />
-		</antcall>
-	</target>
-
-    <!-- - - - - - - - - - - - - - - - - -
-          helper target: gatherLogs
-         - - - - - - - - - - - - - - - - - -->
-	<target name="gatherLogs">
-		<mkdir dir="${buildDirectory}/${buildLabel}/compilelogs" />
-		<antcall target="allElements">
-			<param name="target" value="gatherLogs" />
-		</antcall>
-		<unzip dest="${buildDirectory}/${buildLabel}/compilelogs" overwrite="true">
-			<fileset dir="${buildDirectory}/features">
-				<include name="**/*.log.zip" />
-			</fileset>
-		</unzip>
-	</target>
 
 	<!-- - - - - - - - - - - - - - - - - -
           custom target: buildTargetPlatform
          - - - - - - - - - - - - - - - - - -->
     <target name="buildTargetPlatform" unless="skipTargetDefinition">
-    	<property name="transformTargetDefinitionScript" value="${builder}/../../common/transformTargetDefinition.xsl"/>
+    	<property name="transformTargetDefinitionScript" value="${commonBuildScripts}/transformTargetDefinition.xsl"/>
         <xslt style="${transformTargetDefinitionScript}"
               in="${targetDefinition}"
               out="${buildDirectory}/mirror_target_platform.xml">

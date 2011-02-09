@@ -29,8 +29,11 @@
     <property name="build.default.properties" location="${builder}/../../common/build.default.properties"/>
     <property file="${build.default.properties}" />
 
+	<!-- set default for common build scripts -->
+	<property name="commonBuildScripts" location="../../common"/>
+
 	<!-- import common build helpers -->
-	<import file="${builder}/../../common/buildhelpers.xml" />
+	<import file="${commonBuildScripts}/buildhelpers.xml" />
 
 	<!-- ==================================================================================
           target: main
