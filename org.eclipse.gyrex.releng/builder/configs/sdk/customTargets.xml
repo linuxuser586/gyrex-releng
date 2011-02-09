@@ -104,7 +104,7 @@
 	<target name="assembleFinalRepo">
 		<!--p2.composite.repository location="file:${updateSite}"  /-->
 		<p2.mirror source="file:${buildDirectory}/buildRepo" log="${buildDirectory}/finalRepoLog.txt" ignoreErrors="true">
-			<destination compressed="true" name="${p2.repo.name}" location="file:${buildDirectory}/finalRepo"/>
+			<destination compressed="true" name="${p2.repo.name.prefix} (Build ${buildLabel})" location="file:${buildDirectory}/finalRepo"/>
 		</p2.mirror>
 		<zip destfile="${buildDirectory}/${buildLabel}/${archiveNamePrefix}-${buildLabel}-repo.zip" filesonly="false" whenempty="skip" update="true">
 			<zipfileset dir="${buildDirectory}/finalRepo" includes="**/**" excludes="" />
