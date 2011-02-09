@@ -182,14 +182,12 @@
 			<antcall target="updateSignedRepo">
 				<param name="repoDir" value="@{repoDir}"/>
 				<param name="includesFile" value="@{includesFile}"/>
-				<!-- set signingArchive to allow checkCanSign to pass -->
-				<param name="signingArchive" value="dummy"/>
 			</antcall>
 		</sequential>
 	</macrodef>
 
 	<!-- extracts signed archive -->
-	<target name="updateSignedRepo" depends="checkCanSign" unless="skipSigning" if="canSign">
+	<target name="updateSignedRepo">
 		<fail unless="repoDir" message="Property repoDir must be set."/>
 		<fail unless="includesFile" message="Property includesFile must be set."/>
 

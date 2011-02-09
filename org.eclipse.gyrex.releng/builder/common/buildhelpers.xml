@@ -23,7 +23,7 @@
 	<description>Some helpers to simplify building with PDE Build.</description>
 
 	<!-- set default branch/tag to check out for basebuilder (when property 'org.eclipse.releng.basebuilder.tag' is not set)  -->
-	<property name="org.eclipse.releng.basebuilder.tag.default" value="R3_6_1"/>
+	<property name="org.eclipse.releng.basebuilder.tag.default" value="R37_M5"/>
 
 	<!-- fake default target -->
 	<target name="nodefault">

@@ -6,6 +6,9 @@
 	<!-- set default for common build scripts -->
 	<property name="commonBuildScripts" location="../../common"/>
 
+	<!-- set default for gyrex build configsscripts -->
+	<property name="commonBuildScripts" location="../../common"/>
+
 	<!-- import signing script -->
 	<import file="${commonBuildScripts}/sign.xml"/>
 
@@ -75,6 +78,8 @@
 		<!-- pack signed artifacts and update p2 repo checksums -->
 		<updateSignedRepo repodir="${p2RepoWithArtifactsToSign}" includesfile="${buildDirectory}/built.list"/>
 
+		<!-- generate the final repo -->
+		<antcall target="assembleFinalRepo"/>
 	</target>
 
     <!-- ===================================================================== -->
@@ -92,5 +97,18 @@
     	<!-- mirror target platform using p2 (will skip already mirrored pieces) -->
         <ant antfile="${buildDirectory}/mirror_target_platform.xml"/>
     </target>
+
+	<!-- - - - - - - - - - - - - - - - - -
+          custom target: assembleFinalRepo
+         - - - - - - - - - - - - - - - - - -->
+	<target name="assembleFinalRepo">
+		<!--p2.composite.repository location="file:${updateSite}"  /-->
+		<p2.mirror source="file:${buildDirectory}/buildRepo" log="${buildDirectory}/finalRepoLog.txt" ignoreErrors="true">
+			<destination compressed="true" name="${p2.repo.name}" location="file:${buildDirectory}/finalRepo"/>
+		</p2.mirror>
+		<zip destfile="${buildDirectory}/${buildLabel}/${archiveNamePrefix}-${buildLabel}-repo.zip" filesonly="false" whenempty="skip" update="true">
+			<zipfileset dir="${buildDirectory}/finalRepo" includes="**/**" excludes="" />
+		</zip>
+	</target>
 
 </project>
