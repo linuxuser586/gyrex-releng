@@ -14,7 +14,7 @@
 
    <windowImages/>
 
-   <launcher>
+   <launcher name="gyrex">
       <solaris/>
       <win useIco="false">
          <bmp/>

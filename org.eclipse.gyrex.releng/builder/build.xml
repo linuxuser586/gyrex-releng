@@ -181,6 +181,9 @@
 		<!-- build the sdk -->
 		<ant antfile="configs/sdk/build.xml"/>
 
+		<!-- build the server -->
+		<ant antfile="configs/server/build.xml"/>
+
 	</target>
 
 </project>

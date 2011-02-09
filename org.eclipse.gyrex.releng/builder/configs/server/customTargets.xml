@@ -1,0 +1,25 @@
+<project name="gyrex-server-customTargets" default="noDefault">
+
+	<!-- import default targets in order to only define overridden below -->
+	<import file="${eclipse.pdebuild.templates}/headless-build/customTargets.xml"/>
+
+	<!-- set default for common build scripts -->
+	<property name="commonBuildScripts" location="../../common"/>
+
+	<!-- ===================================================================== -->
+	<!-- Steps to do before setup -->
+	<!-- ===================================================================== -->
+	<target name="preSetup">
+		<!-- log a message -->
+		<echo message="Gyrex Server build ${topLevelElementId} ${buildLabel}"/>
+	</target>
+
+	<!-- ===================================================================== -->
+	<!-- Steps to do before the repositories are being processed -->
+	<!-- ===================================================================== -->
+	<target name="preProcessRepos">
+		<!-- unzip the final SDK repo into the repo location -->
+		<unzip dest="${repoBaseLocation}/gyrex-${buildLabel}" src="${buildDirectory}/${buildLabel}/${archiveNamePrefix}-${buildLabel}-repo.zip"/>
+	</target>
+
+</project>

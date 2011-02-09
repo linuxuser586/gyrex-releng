@@ -6,9 +6,6 @@
 	<!-- set default for common build scripts -->
 	<property name="commonBuildScripts" location="../../common"/>
 
-	<!-- set default for gyrex build configsscripts -->
-	<property name="commonBuildScripts" location="../../common"/>
-
 	<!-- import signing script -->
 	<import file="${commonBuildScripts}/sign.xml"/>
 
