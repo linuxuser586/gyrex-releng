@@ -11,6 +11,7 @@ rm -f $buildLocalProps
 cp $buildLocalPropsTemplate $buildLocalProps
 
 # set build type specific properties
+echo '' >> $buildLocalProps
 if [ "$BUILD_TYPE" = "N" ]; then
     echo '# customization for nightly builds' >> $buildLocalProps
     echo fetchTag=HEAD >> $buildLocalProps
@@ -19,6 +20,9 @@ elif [ "$BUILD_TYPE" = "I" ]; then
     echo '# customization for integration builds' >> $buildLocalProps
     echo skipSign=true >> $buildLocalProps
 fi
+echo '#' >> $buildLocalProps
+echo "# generated `date`" >> $buildLocalProps
+echo '#' >> $buildLocalProps
 
 # print generated properties to log
 echo "Generated build environment properties: $buildLocalProps"
