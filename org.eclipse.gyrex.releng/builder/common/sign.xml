@@ -67,17 +67,6 @@
 		<fail unless="signingArchive" message="Property signingArchive is required an should specify the complete location of the archive to create."/>
 		<!-- signing script must exist -->
 		<available type="file" file="/usr/bin/sign" property="canSign"/>
-		<!-- check if we should skip signing -->
-		<condition property="skipSign" value="true">
-			<!-- skip signing if not an S or R builds -->
-			<not>
-				<or>
-					<equals arg1="${buildType}" arg2="S"/>
-					<equals arg1="${buildType}" arg2="R"/>
-				</or>
-			</not>
-		</condition>
-		<antcall target="printSkipSigningMessage"/>
 	</target>
 
 	<!-- prints a message when signing will be skipped -->
@@ -111,6 +100,7 @@
 		<attribute name="jobId" description="Build job identifier." default="unnamedBuildJob"/>
 		<attribute name="email" description="Email to send status too." default="nomail"/>
 		<sequential>
+			<antcall target="printSkipSigningMessage"/>
 			<antcall target="printCannotSignMessage">
 				<param name="signingArchive" value="@{file}"/>
 			</antcall>
