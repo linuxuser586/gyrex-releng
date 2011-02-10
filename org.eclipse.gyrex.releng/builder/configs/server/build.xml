@@ -43,7 +43,11 @@
 		<!-- print build information -->
 		<echo message="Gyrex Server build: ${buildLabel}"/>
 		<!-- build the feature -->
-		<ant antfile="${eclipse.pdebuild.scripts}/productBuild/productBuild.xml" />
+		<ant antfile="${eclipse.pdebuild.scripts}/productBuild/productBuild.xml">
+			<!-- we use a custom allElementsFile in order to customize naming of the result -->
+			<!-- (see also http://aniefer.blogspot.com/2011/02/overriding-pdebuild-with-ant-import.html) -->
+			<property name="allElementsFile " location="${builder}/allElements.xml"/>
+		</ant>
     </target>
 
 
