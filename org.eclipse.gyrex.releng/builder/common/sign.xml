@@ -67,6 +67,8 @@
 		<fail unless="signingArchive" message="Property signingArchive is required an should specify the complete location of the archive to create."/>
 		<!-- signing script must exist -->
 		<available type="file" file="/usr/bin/sign" property="canSign"/>
+		<!-- print warning message if unable to sign -->
+		<antcall target="printCannotSignMessage"/>
 	</target>
 
 	<!-- prints a message when signing will be skipped -->
@@ -75,7 +77,7 @@
 	</target>
 
 	<!-- prints a message when signing is not possible -->
-	<target name="printCannotSignMessage" depends="checkCanSign" unless="canSign">
+	<target name="printCannotSignMessage" unless="canSign">
 		<echo message="Unable to sign archive ${signingArchive}. Signing can only be done on Eclipse.org build machine."/>
 	</target>
 
@@ -101,9 +103,6 @@
 		<attribute name="email" description="Email to send status too." default="nomail"/>
 		<sequential>
 			<antcall target="printSkipSigningMessage"/>
-			<antcall target="printCannotSignMessage">
-				<param name="signingArchive" value="@{file}"/>
-			</antcall>
 			<antcall target="signArchive">
 				<param name="signingArchive" value="@{file}"/>
 				<param name="projectFolder" value="@{projectId}"/>
