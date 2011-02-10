@@ -35,7 +35,7 @@
          ================================= -->
 	<target name="bootstrap-org.eclipse.releng.basebuilder" description="Performs bootstrapping of org.eclipse.releng.basebuilder from Eclipse CVS" unless="org.eclipse.releng.basebuilder.exists">
 
-		<!-- set default branch/tag to check out (currently R3_6_1, occures twice in this file) -->
+		<!-- set default branch/tag to check out -->
 		<property name="org.eclipse.releng.basebuilder.tag" value="${org.eclipse.releng.basebuilder.tag.default}"/>
 
 		<!-- default basebuilder location -->

@@ -67,11 +67,27 @@
 		<fail unless="signingArchive" message="Property signingArchive is required an should specify the complete location of the archive to create."/>
 		<!-- signing script must exist -->
 		<available type="file" file="/usr/bin/sign" property="canSign"/>
+		<!-- check if we should skip signing -->
+		<condition property="skipSign" value="true">
+			<!-- skip signing if not an S or R builds -->
+			<not>
+				<or>
+					<equals arg1="${buildType}" arg2="S"/>
+					<equals arg1="${buildType}" arg2="R"/>
+				</or>
+			</not>
+		</condition>
+		<antcall target="printSkipSigningMessage"/>
+	</target>
+
+	<!-- prints a message when signing will be skipped -->
+	<target name="printSkipSigningMessage" if="skipSign">
+		<echo level="info" message="Skipping signing request for archive ${signingArchive}. Disabled for ${buildType} builds."/>
 	</target>
 
 	<!-- prints a message when signing is not possible -->
-	<target name="printSkipSigningMessage" depends="checkCanSign" unless="canSign">
-		<echo message="Skipping signing request for archive ${signingArchive}. Signing can only be done on Eclipse.org build machine."/>
+	<target name="printCannotSignMessage" depends="checkCanSign" unless="canSign">
+		<echo message="Unable to sign archive ${signingArchive}. Signing can only be done on Eclipse.org build machine."/>
 	</target>
 
 	<!-- creates the archive based on a list of items to sign -->
@@ -95,7 +111,7 @@
 		<attribute name="jobId" description="Build job identifier." default="unnamedBuildJob"/>
 		<attribute name="email" description="Email to send status too." default="nomail"/>
 		<sequential>
-			<antcall target="printSkipSigningMessage">
+			<antcall target="printCannotSignMessage">
 				<param name="signingArchive" value="@{file}"/>
 			</antcall>
 			<antcall target="signArchive">
