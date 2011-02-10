@@ -1,10 +1,17 @@
 #!/bin/bash
 
+# path to the releng builder within the Hudson workspace
+# (this might vary between Hudson jobs)
+builderHome=releng/org.eclipse.gyrex.releng/builder
+if [ ! -f $builderHome ]; then
+	echo "Builder could not be found ($builderHome). Please check the Hudson job is setup correctly!"
+	exit 1
+fi
 # generate local build properties from environment template
-buildLocalProps=releng/org.eclipse.gyrex.releng/builder/build.local.properties
-buildLocalPropsTemplate=releng/org.eclipse.gyrex.releng/builder/environments/hudson.eclipse.org/build.local.properties
+buildLocalProps=$builderHome/build.local.properties
+buildLocalPropsTemplate=$builderHome/environments/hudson.eclipse.org/build.local.properties
 if [ ! -f $buildLocalPropsTemplate ]; then
-	echo "Build environment template ($buildLocalPropsTemplate) not found. Please check the job is setup correctly!"
+	echo "Build environment template ($buildLocalPropsTemplate) not found. Please check the Hudson job is setup correctly!"
 	exit 1
 fi
 rm -f $buildLocalProps
