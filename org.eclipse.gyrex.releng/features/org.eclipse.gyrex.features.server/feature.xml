@@ -22,9 +22,9 @@
    </url>
 
    <requires>
-      <import feature="org.eclipse.gyrex.features.kernel" version="1.0.0.qualifier" match="compatible"/>
-      <import feature="org.eclipse.gyrex.features.http" version="1.0.0.qualifier" match="compatible"/>
-      <import feature="org.eclipse.gyrex.features.admin" version="1.0.0.qualifier" match="compatible"/>
+      <import feature="org.eclipse.gyrex.features.kernel" version="1.0.0" match="equivalent"/>
+      <import feature="org.eclipse.gyrex.features.http" version="1.0.0" match="equivalent"/>
+      <import feature="org.eclipse.gyrex.features.admin" version="1.0.0" match="equivalent"/>
    </requires>
 
    <plugin
