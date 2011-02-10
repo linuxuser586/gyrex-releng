@@ -1,5 +1,5 @@
 <!--
-    Copyright (c) 2010 Gunnar Wagenknecht and others.
+    Copyright (c) 2011 Gunnar Wagenknecht and others.
     All rights reserved.
 
     This program and the accompanying materials are made available under the
@@ -9,12 +9,12 @@
     Contributors:
         Gunnar Wagenknecht - initial API and implementation
  -->
-<project name="build-gyrex-server" default="main" >
+<project name="build-gyrex-repository" default="main" >
 
-	<description>Builds the Gyrex Server configuration</description>
+	<description>Builds the final Gyrex repository</description>
 
 	<!-- define builder home dir -->
-    <dirname file="${ant.file.build-gyrex-server}" property="builder"/>
+    <dirname file="${ant.file.build-gyrex-repository}" property="builder"/>
 
 	<!-- load local build specific properties -->
     <!-- (we allow custom local properties file via -Dbuild.local.properties=... -->
@@ -39,16 +39,18 @@
           target: main
           depends on: 'builder.prepare' to inherit common builder behavior
          ================================================================================== -->
-    <target name="main" description="Builds the Gyrex Server" depends="builder.prepare">
+    <target name="main" description="Builds the Gyrex Repository" depends="builder.prepare">
 		<!-- print build information -->
-		<echo message="Gyrex Server build: ${buildLabel}"/>
-		<!-- build the feature -->
-		<ant antfile="${eclipse.pdebuild.scripts}/productBuild/productBuild.xml">
-			<!-- we use a custom allElementsFile in order to customize naming of the result -->
-			<!-- (see also http://aniefer.blogspot.com/2011/02/overriding-pdebuild-with-ant-import.html) -->
-			<!-- (note: this might cause some <available> deprecation warnings) -->
-			<property name="allElementsFile " location="${builder}/allElements.xml"/>
-		</ant>
+		<echo message="Gyrex Repository build: ${buildLabel}"/>
+    	
+		<!-- at this time we capture everything that is in the build repository -->
+		<!--p2.composite.repository location="file:${updateSite}"  /-->
+		<p2.mirror source="file:${buildDirectory}/buildRepo" log="${buildDirectory}/${archiveNamePrefix}-${buildId}-repo.log" ignoreErrors="true">
+			<destination compressed="true" name="${p2.repo.name.prefix} (Build ${buildId})" location="file:${repoBaseLocation}/${archiveNamePrefix}-${buildId}-repo"/>
+		</p2.mirror>
+		<zip destfile="${buildDirectory}/${buildLabel}/${archiveNamePrefix}-${buildId}-repo.zip" filesonly="false" whenempty="skip" update="true">
+			<zipfileset dir="${repoBaseLocation}/${archiveNamePrefix}-${buildId}-repo" includes="**/**" excludes="" />
+		</zip>
     </target>
 
 

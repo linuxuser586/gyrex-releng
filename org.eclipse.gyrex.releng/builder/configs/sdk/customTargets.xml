@@ -75,8 +75,11 @@
 		<!-- pack signed artifacts and update p2 repo checksums -->
 		<updateSignedRepo repodir="${p2RepoWithArtifactsToSign}" includesfile="${buildDirectory}/built.list"/>
 
-		<!-- generate the final repo -->
-		<antcall target="assembleFinalRepo"/>
+		<!-- generate SDK repo for following builds -->
+		<antcall target="createSdkRepo"/>
+
+		<!-- clean up build directory in order to not confuse following builds -->
+		<antcall target="cleanupBuildDirectory"/>
 	</target>
 
     <!-- ===================================================================== -->
@@ -96,16 +99,47 @@
     </target>
 
 	<!-- - - - - - - - - - - - - - - - - -
-          custom target: assembleFinalRepo
+          custom target: createSdkRepo
          - - - - - - - - - - - - - - - - - -->
-	<target name="assembleFinalRepo">
-		<!--p2.composite.repository location="file:${updateSite}"  /-->
-		<p2.mirror source="file:${buildDirectory}/buildRepo" log="${buildDirectory}/finalRepoLog.txt" ignoreErrors="true">
-			<destination compressed="true" name="${p2.repo.name.prefix} (Build ${buildLabel})" location="file:${buildDirectory}/finalRepo"/>
+	<target name="createSdkRepo">
+		<p2.mirror source="file:${buildDirectory}/buildRepo" log="${buildDirectory}/${archiveNamePrefix}-${buildLabel}-sdkrepo.log" ignoreErrors="true">
+			<destination compressed="true" name="${p2.repo.name.prefix} (Build ${buildLabel})" location="file:${repoBaseLocation}/${archiveNamePrefix}-${buildLabel}-sdkrepo"/>
 		</p2.mirror>
-		<zip destfile="${buildDirectory}/${buildLabel}/${archiveNamePrefix}-${buildLabel}-repo.zip" filesonly="false" whenempty="skip" update="true">
-			<zipfileset dir="${buildDirectory}/finalRepo" includes="**/**" excludes="" />
+		<zip destfile="${buildDirectory}/${archiveNamePrefix}-${buildLabel}-sdkrepo.zip" filesonly="false" whenempty="skip" update="true">
+			<zipfileset dir="${repoBaseLocation}/${archiveNamePrefix}-${buildLabel}-sdkrepo" includes="**/**" excludes="" />
 		</zip>
 	</target>
 
+	<!-- - - - - - - - - - - - - - - - - -
+          custom target: cleanupBuildDirectory
+         - - - - - - - - - - - - - - - - - -->
+	<target name="cleanupBuildDirectory">
+		<!-- move source fetched & used for compile out of build directory -->
+		<mkdir dir="${buildDirectory}/sdk"/>
+		<move todir="${buildDirectory}/sdk">
+			<fileset dir="${buildDirectory}">
+    			<include name="features/**"/>
+    			<include name="plugins/**"/>
+    			<include name="fetch_*"/>
+    			<include name="assemble*"/>
+    			<include name="built.list"/>
+    			<include name="compile*"/>
+    			<include name="package*"/>
+    			<include name="directory.txt"/>
+    			<include name="finalFeaturesVersions*"/>
+    			<include name="finalPluginsVersions*"/>
+			</fileset>
+		</move>
+
+		<!-- backup important files (just in case) -->
+		<copy todir="${buildDirectory}/sdk">
+			<fileset dir="${buildDirectory}">
+    			<include name="label.properties"/>
+    			<include name="*.log"/>
+			</fileset>
+		</copy>
+		
+	</target>
+
 </project>
+

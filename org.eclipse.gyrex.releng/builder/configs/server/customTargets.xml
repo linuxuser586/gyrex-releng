@@ -14,12 +14,4 @@
 		<echo message="Gyrex Server build ${topLevelElementId} ${buildLabel}"/>
 	</target>
 
-	<!-- ===================================================================== -->
-	<!-- Steps to do before the repositories are being processed -->
-	<!-- ===================================================================== -->
-	<target name="preProcessRepos">
-		<!-- unzip the final SDK repo into the repo location -->
-		<unzip dest="${repoBaseLocation}/gyrex-${buildLabel}" src="${buildDirectory}/${buildLabel}/${archiveNamePrefix}-${buildLabel}-repo.zip"/>
-	</target>
-
 </project>

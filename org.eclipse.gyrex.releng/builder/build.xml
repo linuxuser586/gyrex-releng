@@ -183,6 +183,9 @@
 
 		<!-- build the server -->
 		<ant antfile="configs/server/build.xml"/>
+		
+		<!-- build the repository -->
+		<ant antfile="configs/repository/build.xml"/>
 
 	</target>
 
