@@ -1,0 +1,5 @@
+instructions.configure=\
+addRepository(type:0,location:http${#58}//download.eclipse.org/gyrex/1.0/,name:Gyrex Updates);\
+addRepository(type:1,location:http${#58}//download.eclipse.org/gyrex/1.0/,name:Gyrex Updates);\
+addRepository(type:0,location:http${#58}//download.eclipse.org/releases/indigo/,name:Indigo);\
+addRepository(type:1,location:http${#58}//download.eclipse.org/releases/indigo/,name:Indigo);
