@@ -41,7 +41,7 @@
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
-      <plugin id="org.eclipse.gyrex.log.http" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.gyrex.log.http" autoStart="true" startLevel="5" />
    </configurations>
 
 </product>
