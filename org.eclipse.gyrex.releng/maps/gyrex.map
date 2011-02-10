@@ -23,7 +23,7 @@ feature@org.eclipse.gyrex.features.dependencies.admin=v20110131-1900,:pserver:an
 
 ### Gyrex Kernel
 #plugin@org.eclipse.gyrex.=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/
-plugin@org.eclipse.gyrex.boot=v20110131-1900,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.boot
+plugin@org.eclipse.gyrex.boot=v20110210-0930,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.boot
 plugin@org.eclipse.gyrex.common=v20110131-1900,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.common
 plugin@org.eclipse.gyrex.configuration=v20101109-0940,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.configuration
 plugin@org.eclipse.gyrex.configuration.impl=v20101109-0940,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.configuration.impl
@@ -82,4 +82,3 @@ plugin@org.eclipse.gyrex.cds.solr=v20110131-1900,:pserver:anonymous@dev.eclipse.
 
 ### Gyrex Server
 plugin@org.eclipse.gyrex.server.defaultroles=v20101220-2010,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.server.defaultroles
-
