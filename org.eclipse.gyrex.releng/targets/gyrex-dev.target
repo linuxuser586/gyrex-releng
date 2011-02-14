@@ -26,21 +26,6 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20110124210048/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.pde.junit.runtime" version="0.0.0"/>
-<unit id="org.eclipse.pde.junit.runtime.source" version="0.0.0"/>
-<unit id="org.eclipse.jdt.junit.runtime" version="0.0.0"/>
-<unit id="org.eclipse.jdt.junit.runtime.source" version="0.0.0"/>
-<unit id="org.eclipse.jdt.junit4.runtime" version="0.0.0"/>
-<unit id="org.eclipse.jdt.junit4.runtime.source" version="0.0.0"/>
-<unit id="org.eclipse.core.runtime" version="0.0.0"/>
-<unit id="org.eclipse.core.runtime.source" version="0.0.0"/>
-<unit id="org.eclipse.core.contenttype" version="0.0.0"/>
-<unit id="org.eclipse.core.contenttype.source" version="0.0.0"/>
-<unit id="org.eclipse.core.net" version="0.0.0"/>
-<unit id="org.eclipse.core.net.source" version="0.0.0"/>
-<repository location="http://download.eclipse.org/eclipse/updates/3.7milestones"/>
-</location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.equinox.sdk.feature.group" version="3.7.0.v20110123-7L7W8Z8W1Q-o0s4vt1ZSqhuUgmCP"/>
 <repository location="http://download.eclipse.org/eclipse/updates/3.7milestones"/>
 </location>
