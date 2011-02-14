@@ -43,14 +43,91 @@
 		<!-- print build information -->
 		<echo message="Gyrex Repository build: ${buildLabel}"/>
     	
+    	<!-- that's the location we mirror everything too -->
+		<makeurl property="resultRepoLocationUrl" file="${repoBaseLocation}/${archiveNamePrefix}-${buildId}-repo"/>    	
+
 		<!-- at this time we capture everything that is in the build repository -->
-		<!--p2.composite.repository location="file:${updateSite}"  /-->
 		<p2.mirror source="file:${buildDirectory}/buildRepo" log="${buildDirectory}/${archiveNamePrefix}-${buildId}-repo.log" ignoreErrors="true">
-			<destination compressed="true" name="${p2.repo.name.prefix} (Build ${buildId})" location="file:${repoBaseLocation}/${archiveNamePrefix}-${buildId}-repo"/>
+			<destination compressed="true" name="${p2.repo.name.prefix} (Build ${buildId})" location="${resultRepoLocationUrl}"/>
 		</p2.mirror>
 		<zip destfile="${buildDirectory}/${buildLabel}/${archiveNamePrefix}-${buildId}-repo.zip" filesonly="false" whenempty="skip" update="true">
 			<zipfileset dir="${repoBaseLocation}/${archiveNamePrefix}-${buildId}-repo" includes="**/**" excludes="" />
 		</zip>
+    	
+    	<!-- publish to eclipse.org downloads area -->
+    	<antcall target="publishToDownloadArea"/>
+    	
+    </target>
+	
+	<!-- - - - - - - - - - - - - - - - - - 
+          target: publishToDownloadArea                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="publishToDownloadArea" unless="skipPublish">
+            
+		<!-- check if we have *local* access on eclipse.org -->
+		<condition property="publishToDownloadAreaIsPossible">
+			<and>
+				<!-- composite repo location must exist -->
+				<available file="${publishBaseDirectory}" type="dir"/>
+				
+				<!-- build type must be allowed for publishing -->
+				<or>
+					<equals arg1="${buildType}" arg2="S"/>
+					<equals arg1="${buildType}" arg2="R"/>
+					<!-- note, we do publish those as well but we also need to clean-up old builds regulary -->
+					<equals arg1="${buildType}" arg2="I"/>
+					<equals arg1="${buildType}" arg2="M"/>
+				</or>
+			</and>
+		</condition>
+
+    	<!-- call publish target -->
+    	<antcall target="mirrorToPublishTarget"/>
+    	
+    </target>
+
+	<!-- - - - - - - - - - - - - - - - - - 
+          target: mirrorToPublishTarget                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="mirrorToPublishTarget" if="publishToDownloadAreaIsPossible">
+    	<fail unless="resultRepoLocationUrl" message="property resultRepoLocationUrl not set"/>
+    	<fail unless="publishBaseDirectory" message="property publishBaseDirectory not set"/>
+    	<fail unless="publishRepoStream" message="property publishRepoStream not set"/>
+    	<fail unless="publishRepoBasePath" message="property publishRepoBasePath not set"/>
+    	
+    	<!-- generate all the relevant urls -->
+		<makeurl property="templateRepoUrl" file="${buildDirectory}/publishRepoTemplate"/>    	
+		<makeurl property="publishBuildRepoUrl" file="${publishBaseDirectory}${publishRepoBasePath}/${buildLabel}"/>
+		<makeurl property="publishCompositeRepoUrl" file="${publishBaseDirectory}${publishRepoBasePath}"/>
+
+    	<!-- generate template with proper mirror urls -->
+		<mkdir dir="${buildDirectory}/publishRepoTemplate"/>
+		<copy file="${builder}/template-eclipse.org/artifacts.xml" tofile="${buildDirectory}/publishRepoTemplate/artifacts.xml">
+			<filterset>
+				<filter token="REPO_NAME" value="${p2.repo.name.prefix} (Build ${buildId})"/>
+				<filter token="REPO_PATH" value="${publishRepoBasePath}/${buildLabel}"/>
+			</filterset>
+		</copy>
+
+    	<!-- create composite if it doesn't exist -->
+    	<p2.composite.artifact.repository.create location="${publishCompositeRepoUrl}" failonexists="false" name="${p2.repo.name.prefix} (${publishRepoStream} builds)" description="Composite repository with references to all ${publishRepoStream} builds."/>
+    	<p2.composite.metadata.repository.create location="${publishCompositeRepoUrl}" failonexists="false" name="${p2.repo.name.prefix} (${publishRepoStream} builds)" description="Composite repository with references to all ${publishRepoStream} builds."/>
+
+    	<!-- mirror to target (but only the bits that really changed) -->
+    	<mkdir dir="${publishBaseDirectory}${publishRepoBasePath}/${buildLabel}"/>
+		<p2.mirror source="${resultRepoLocationUrl}" log="${buildDirectory}/${buildLabel}/publish-repo.log" ignoreErrors="true">
+			<destination compressed="true" name="${p2.repo.name.prefix} (Build ${buildId})" location="${publishBuildRepoUrl}" append="true" format="${resultRepoLocationUrl}" kind="metadata"/>
+			<destination compressed="true" name="${p2.repo.name.prefix} (Build ${buildId})" location="${publishBuildRepoUrl}" append="true" format="${templateRepoUrl}" kind="artifact"/>
+			<comparator comparator="org.eclipse.equinox.p2.repository.tools.jar.comparator" comparatorLog="${buildDirectory}/${buildLabel}/publish-repo-compare.log">
+				<!-- compare against the existing composite to not mirror duplicate bits -->
+				<repository location="${publishCompositeRepoUrl}" />
+			</comparator>
+		</p2.mirror>
+
+		<!-- add to composite repo -->
+        <p2.composite.artifact.repository.add location="${publishCompositeRepoUrl}" child="${buildLabel}" />
+        <p2.composite.metadata.repository.add location="${publishCompositeRepoUrl}" child="${buildLabel}" />
+    	
     </target>
 
 
