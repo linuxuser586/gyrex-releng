@@ -23,16 +23,17 @@ if [ "$BUILD_TYPE" = "N" ]; then
     echo '# customization for nightly builds' >> $buildLocalProps
     echo fetchTag=HEAD >> $buildLocalProps
     echo skipSign=true >> $buildLocalProps
+    echo skipPublish=true >> $buildLocalProps
 elif [ "$BUILD_TYPE" = "I" ]; then
     echo '# customization for integration builds' >> $buildLocalProps
     echo skipSign=true >> $buildLocalProps
-	echo publishRepoStream=1.0/integration >> $buildLocalProps
+    echo publishRepoStream=1.0/integration >> $buildLocalProps
 elif [ "$BUILD_TYPE" = "M" ]; then
     echo '# customization for maintenance builds' >> $buildLocalProps
-	echo publishRepoStream=1.0/maintenance >> $buildLocalProps
+    echo publishRepoStream=1.0/maintenance >> $buildLocalProps
 elif [ "$BUILD_TYPE" = "S" ]; then
     echo '# customization for stable builds' >> $buildLocalProps
-	echo publishRepoStream=1.0/milestones >> $buildLocalProps
+    echo publishRepoStream=1.0/milestones >> $buildLocalProps
 fi
 echo '#' >> $buildLocalProps
 echo "# generated `date`" >> $buildLocalProps
