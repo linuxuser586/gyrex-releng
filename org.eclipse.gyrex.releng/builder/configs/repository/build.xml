@@ -44,6 +44,7 @@
 		<echo message="Gyrex Repository build: ${buildLabel}"/>
     	
     	<!-- that's the location we mirror everything too -->
+    	<mkdir dir="${repoBaseLocation}/${archiveNamePrefix}-${buildId}-repo"/> <!-- required by makeurl -->
 		<makeurl property="resultRepoLocationUrl" file="${repoBaseLocation}/${archiveNamePrefix}-${buildId}-repo"/>    	
 
 		<!-- at this time we capture everything that is in the build repository -->
@@ -96,12 +97,14 @@
     	<fail unless="publishRepoBasePath" message="property publishRepoBasePath not set"/>
     	
     	<!-- generate all the relevant urls -->
+    	<mkdir dir="${buildDirectory}/publishRepoTemplate"/>
+    	<mkdir dir="${publishBaseDirectory}${publishRepoBasePath}/${buildLabel}"/>
+    	<mkdir dir="${publishBaseDirectory}${publishRepoBasePath}"/>
 		<makeurl property="templateRepoUrl" file="${buildDirectory}/publishRepoTemplate"/>    	
 		<makeurl property="publishBuildRepoUrl" file="${publishBaseDirectory}${publishRepoBasePath}/${buildLabel}"/>
 		<makeurl property="publishCompositeRepoUrl" file="${publishBaseDirectory}${publishRepoBasePath}"/>
 
     	<!-- generate template with proper mirror urls -->
-		<mkdir dir="${buildDirectory}/publishRepoTemplate"/>
 		<copy file="${builder}/template-eclipse.org/artifacts.xml" tofile="${buildDirectory}/publishRepoTemplate/artifacts.xml">
 			<filterset>
 				<filter token="REPO_NAME" value="${p2.repo.name.prefix} (Build ${buildId})"/>
@@ -114,7 +117,6 @@
     	<p2.composite.metadata.repository.create location="${publishCompositeRepoUrl}" failonexists="false" name="${p2.repo.name.prefix} (${publishRepoStream} builds)" description="Composite repository with references to all ${publishRepoStream} builds."/>
 
     	<!-- mirror to target (but only the bits that really changed) -->
-    	<mkdir dir="${publishBaseDirectory}${publishRepoBasePath}/${buildLabel}"/>
 		<p2.mirror source="${resultRepoLocationUrl}" log="${buildDirectory}/${buildLabel}/publish-repo.log" ignoreErrors="true">
 			<destination compressed="true" name="${p2.repo.name.prefix} (Build ${buildId})" location="${publishBuildRepoUrl}" append="true" format="${resultRepoLocationUrl}" kind="metadata"/>
 			<destination compressed="true" name="${p2.repo.name.prefix} (Build ${buildId})" location="${publishBuildRepoUrl}" append="true" format="${templateRepoUrl}" kind="artifact"/>
