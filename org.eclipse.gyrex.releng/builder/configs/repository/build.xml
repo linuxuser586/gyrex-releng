@@ -87,9 +87,7 @@
 		</copy>
 	</target>
 	
-	<!-- - - - - - - - - - - - - - - - - - 
-          target: publishToDownloadArea                      
-         - - - - - - - - - - - - - - - - - -->
+	<!-- publish bits to download area -->
     <target name="publishToDownloadArea" unless="skipPublish">
             
 		<!-- check if we have *local* access on eclipse.org -->
