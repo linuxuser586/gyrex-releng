@@ -82,14 +82,15 @@
 			</and>
 		</condition>
 
-    	<!-- call publish target -->
+    	<!-- mirror repo -->
     	<antcall target="mirrorToPublishTarget"/>
     	
-    </target>
+    	<!-- copy artifacts -->
+    	<antcall target="copyArtifactsToPublishTarget"/>
 
-	<!-- - - - - - - - - - - - - - - - - - 
-          target: mirrorToPublishTarget                      
-         - - - - - - - - - - - - - - - - - -->
+	</target>
+	
+	<!-- mirrors p2 repository to download area -->
     <target name="mirrorToPublishTarget" if="publishToDownloadAreaIsPossible">
     	<fail unless="resultRepoLocationUrl" message="property resultRepoLocationUrl not set"/>
     	<fail unless="publishBaseDirectory" message="property publishBaseDirectory not set"/>
@@ -131,6 +132,36 @@
         <p2.composite.metadata.repository.add location="${publishCompositeRepoUrl}" child="${buildLabel}" />
     	
     </target>
+
+	<!-- copy artifacts to download area -->
+	<target name="copyArtifactsToPublishTarget" if="publishToDownloadAreaIsPossible">
+    	<fail unless="publishRepoStream" message="property publishRepoStream not set"/>
+    	<fail unless="publishRepoBasePath" message="property publishRepoBasePath not set"/>
+		
+		<!-- give the build type a better name -->
+		<condition property="buildTypeName" value="Release"><equals arg1="${buildType}" arg2="R"/></condition>
+		<condition property="buildTypeName" value="Stable Build"><equals arg1="${buildType}" arg2="S"/></condition>
+		<condition property="buildTypeName" value="Integration Build"><equals arg1="${buildType}" arg2="I"/></condition>
+		<property name="buildTypeName" value="Build"/> 
+		
+		<!-- generate build index html -->
+		<copy file="${builder}/template-eclipse.org/build-index.html" tofile="${buildDirectory}/${buildLabel}/index.html">
+			<filterset>
+				<filter token="BUILD_TYPE" value="${buildTypeName}"/>
+				<filter token="BUILD_ID" value="${buildId}"/>
+				<filter token="BUILD_LABEL" value="${buildLabel}"/>
+				<filter token="BUILD_PATH" value="${publishRepoBasePath}/${buildLabel}"/>
+				<filter token="SERVER_ARCHIVE_PREFIX" value="${archiveNamePrefix}"/>
+				<filter token="REPO_ARCHIVE_PREFIX" value="${archiveNamePrefix}"/>
+			</filterset>
+		</copy>
+
+		<!-- copy everything from build label directory -->
+		<copy todir="${publishBaseDirectory}${publishRepoBasePath}/${buildLabel}">
+			<fileset dir="${buildDirectory}/${buildLabel}"/>
+		</copy>
+		
+	</target>
 
 
 </project>
