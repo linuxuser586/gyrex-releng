@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Gyrex - @BUILD_TYPE@ @BUILD_ID@</title>
+	<title>Gyrex - @BUILD_TYPE@</title>
 	<base href="http://download.eclipse.org/" />
 	<link rel="stylesheet" type="text/css" href="http://www.eclipse.org/eclipse.org-common/yui/2.6.0/build/reset-fonts-grids/reset-fonts-grids.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="http://www.eclipse.org/eclipse.org-common/yui/2.6.0/build/menu/assets/skins/sam/menu.css" media="screen" />
@@ -78,26 +78,11 @@
 		</div>
 
 		<div id="midcolumn">
-			<h1>@BUILD_TYPE@ @BUILD_ID@</h1>
-			<p>This page provides access to a particular Gyrex release build.</p>
+			<h1>@BUILD_TYPE@</h1>
+			<p>@BUILD_TYPE_TAGLINE@</p>
 
-			<h2>Gyrex Server</h2>
-			<p>This is a ready-to-run server package. It's suitable for deployment as well as testing scenarios. Learn <a href="http://www.eclipse.org/gyrex/getting-started/">how to use this package</a>.</p>
-			<ul>
-				<li><code><a href="http://www.eclipse.org/downloads/download.php?file=@BUILD_PATH@/@SERVER_ARCHIVE_PREFIX@-@BUILD_ID@-win32.zip">@SERVER_ARCHIVE_PREFIX@-@BUILD_ID@-win32.zip</a></code><br/><small>(Windows, 32bit)</small></li>
-				<li><code><a href="http://www.eclipse.org/downloads/download.php?file=@BUILD_PATH@/@SERVER_ARCHIVE_PREFIX@-@BUILD_ID@-win32-x86_64.zip">@SERVER_ARCHIVE_PREFIX@-@BUILD_ID@-win32-x86_64.zip</a></code><br/><small>(Windows, 64bit)</small></li>
-				<li><code><a href="http://www.eclipse.org/downloads/download.php?file=@BUILD_PATH@/@SERVER_ARCHIVE_PREFIX@-@BUILD_ID@-linux-gtk.tar.gz">@SERVER_ARCHIVE_PREFIX@-@BUILD_ID@-linux-gtk.tar.gz</a></code><br/><small>(Linux, 32bit)</small></li>
-				<li><code><a href="http://www.eclipse.org/downloads/download.php?file=@BUILD_PATH@/@SERVER_ARCHIVE_PREFIX@-@BUILD_ID@-linux-gtk-x86_64.tar.gz">@SERVER_ARCHIVE_PREFIX@-@BUILD_ID@-linux-gtk-x86_64.tar.gz</a></code><br/><small>(Linux, 64bit)</small></li>
-				<li><code><a href="http://www.eclipse.org/downloads/download.php?file=@BUILD_PATH@/@SERVER_ARCHIVE_PREFIX@-@BUILD_ID@-macosx-cocoa.tar.gz">@SERVER_ARCHIVE_PREFIX@-@BUILD_ID@-macosx-cocoa.tar.gz</a></code><br/><small>(Mac OS X, 32bit)</small></li>
-				<li><code><a href="http://www.eclipse.org/downloads/download.php?file=@BUILD_PATH@/@SERVER_ARCHIVE_PREFIX@-@BUILD_ID@-macosx-cocoa-x86_64.tar.gz">@SERVER_ARCHIVE_PREFIX@-@BUILD_ID@-macosx-cocoa-x86_64.tar.gz</a></code><br/><small>(Mac OS X, 64bit)</small></li>
-			</ul>
-
-			<h2>Gyrex Runtime (Target Components)</h2>
-			<p>This is essentially the package you need for developing Gyrex based server applications. It contains the complete source code and should be added to you target platform.</p>
-			<ul>
-				<li><code><a href="http://download.eclipse.org@BUILD_PATH@">http://download.eclipse.org@BUILD_PATH@</a></code><br/><small>(software site)</small></li>
-				<li><code><a href="http://download.eclipse.org@BUILD_PATH@/@REPO_ARCHIVE_PREFIX@-@BUILD_ID@-repo.zip">@REPO_ARCHIVE_PREFIX@-@BUILD_ID@-repo.zip</a></code><br/><small>(zipped version)</small></li>
-			</ul>
+			<h2>Software Site</h2>
+			<p><code><a href="http://download.eclipse.org@REPO_PATH@/">http://download.eclipse.org@REPO_PATH@</a></code></p>
 		</div>
 
 		<script type="text/javascript">
