@@ -89,8 +89,8 @@
          - - - - - - - - - - - - - - - - - -->
     <target name="buildTargetPlatform" unless="skipTargetDefinition">
     	<!-- make sure to wipe out any existing repos from previous builds in case we are rebuilding in the same location -->
-    	<delete>
-			<fileset dir="${repoBaseLocation}">
+    	<delete includeemptydirs="true" verbose="yes">
+			<fileset dir="${repoBaseLocation}" >
 			    <include name="${archiveNamePrefix}*"/>
 			</fileset>
 		</delete>
