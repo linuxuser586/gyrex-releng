@@ -43,16 +43,22 @@
 		<!-- print build information -->
 		<echo message="Gyrex Repository build: ${buildLabel}"/>
     	
+    	<!--
+    		The final repository generation is somewhat dump. It relies on everything being
+    		published by previous PDE Build configs into the build repository. We should
+    		verify this being ok with the PDE Build guru.
+    	-->
+    	
     	<!-- that's the location we mirror everything too -->
-    	<mkdir dir="${repoBaseLocation}/${archiveNamePrefix}-${buildId}-repo"/> <!-- required by makeurl -->
-		<makeurl property="resultRepoLocationUrl" file="${repoBaseLocation}/${archiveNamePrefix}-${buildId}-repo"/>    	
+    	<mkdir dir="${buildDirectory}/${archiveNamePrefix}-${buildId}-repo"/> <!-- required by makeurl -->
+		<makeurl property="resultRepoLocationUrl" file="${buildDirectory}/${archiveNamePrefix}-${buildId}-repo"/>    	
 
 		<!-- at this time we capture everything that is in the build repository -->
 		<p2.mirror source="file:${buildDirectory}/buildRepo" log="${buildDirectory}/${archiveNamePrefix}-${buildId}-repo.log" ignoreErrors="true">
 			<destination compressed="true" name="${p2.repo.name.prefix} (Build ${buildId})" location="${resultRepoLocationUrl}"/>
 		</p2.mirror>
 		<zip destfile="${buildDirectory}/${buildLabel}/${archiveNamePrefix}-${buildId}-repo.zip" filesonly="false" whenempty="skip" update="true">
-			<zipfileset dir="${repoBaseLocation}/${archiveNamePrefix}-${buildId}-repo" includes="**/**" excludes="" />
+			<zipfileset dir="${buildDirectory}/${archiveNamePrefix}-${buildId}-repo" includes="**/**" excludes="" />
 		</zip>
     	
     	<!-- generate additional publishing files (html pages & stuff) -->
@@ -60,7 +66,6 @@
     	
     	<!-- publish to eclipse.org downloads area -->
     	<antcall target="publishToDownloadArea"/>
-    	
     </target>
 	
 	<!-- generates additional publishing files -->

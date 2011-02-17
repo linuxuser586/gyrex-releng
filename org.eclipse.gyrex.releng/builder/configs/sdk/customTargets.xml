@@ -88,12 +88,6 @@
           custom target: buildTargetPlatform
          - - - - - - - - - - - - - - - - - -->
     <target name="buildTargetPlatform" unless="skipTargetDefinition">
-    	<!-- make sure to wipe out any existing repos from previous builds in case we are rebuilding in the same location -->
-    	<delete includeemptydirs="true" verbose="yes">
-			<fileset dir="${repoBaseLocation}" >
-			    <include name="${archiveNamePrefix}*"/>
-			</fileset>
-		</delete>
 		<!-- generate mirror script -->
     	<property name="transformTargetDefinitionScript" value="${commonBuildScripts}/transformTargetDefinition.xsl"/>
         <xslt style="${transformTargetDefinitionScript}"
@@ -109,11 +103,12 @@
           custom target: createSdkRepo
          - - - - - - - - - - - - - - - - - -->
 	<target name="createSdkRepo">
+		<!-- generate sdk repo from build repo -->
 		<p2.mirror source="file:${buildDirectory}/buildRepo" log="${buildDirectory}/${archiveNamePrefix}-${buildLabel}-sdkrepo.log" ignoreErrors="true">
-			<destination compressed="true" name="${p2.repo.name.prefix} (Build ${buildLabel})" location="file:${repoBaseLocation}/${archiveNamePrefix}-${buildLabel}-sdkrepo"/>
+			<destination compressed="true" name="${p2.repo.name.prefix} (Build ${buildLabel})" location="file:${buildDirectory}/${archiveNamePrefix}-${buildLabel}-sdkrepo"/>
 		</p2.mirror>
 		<zip destfile="${buildDirectory}/${archiveNamePrefix}-${buildLabel}-sdkrepo.zip" filesonly="false" whenempty="skip" update="true">
-			<zipfileset dir="${repoBaseLocation}/${archiveNamePrefix}-${buildLabel}-sdkrepo" includes="**/**" excludes="" />
+			<zipfileset dir="${buildDirectory}/${archiveNamePrefix}-${buildLabel}-sdkrepo" includes="**/**" excludes="" />
 		</zip>
 	</target>
 
