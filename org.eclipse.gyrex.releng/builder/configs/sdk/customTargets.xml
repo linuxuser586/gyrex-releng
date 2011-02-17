@@ -88,6 +88,13 @@
           custom target: buildTargetPlatform
          - - - - - - - - - - - - - - - - - -->
     <target name="buildTargetPlatform" unless="skipTargetDefinition">
+    	<!-- make sure to wipe out any existing repos from previous builds in case we are rebuilding in the same location -->
+    	<delete>
+			<fileset dir="${repoBaseLocation}">
+			    <include name="${archiveNamePrefix}*"/>
+			</fileset>
+		</delete>
+		<!-- generate mirror script -->
     	<property name="transformTargetDefinitionScript" value="${commonBuildScripts}/transformTargetDefinition.xsl"/>
         <xslt style="${transformTargetDefinitionScript}"
               in="${targetDefinition}"
