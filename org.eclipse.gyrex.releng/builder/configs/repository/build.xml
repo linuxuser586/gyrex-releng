@@ -154,8 +154,8 @@
 		</p2.mirror>
 
 		<!-- add to composite repo -->
-    	<p2.composite.repository>
-			<repository location="${publishCompositeRepoUrl}" failonexists="false" name="${p2.repo.name.prefix} (${publishRepoStream} builds)" description="Composite repository with references to all ${publishRepoStream} builds." compressed="false"/>
+    	<p2.composite.repository failonexists="false">
+			<repository location="${publishCompositeRepoUrl}" name="${p2.repo.name.prefix} (${publishRepoStream} builds)" description="Composite repository with references to all ${publishRepoStream} builds." compressed="false"/>
 			<add>
 				<repository location="${buildLabel}" kind="M" />
 				<repository location="${buildLabel}" kind="A" />
