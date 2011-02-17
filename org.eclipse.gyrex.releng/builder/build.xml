@@ -179,10 +179,10 @@
 		<echo message="Gyrex build label: ${buildLabel}"/>
 
 		<!-- build the sdk -->
-		<ant antfile="configs/sdk/build.xml"/>
+		<!--ant antfile="configs/sdk/build.xml"/-->
 
 		<!-- build the server -->
-		<ant antfile="configs/server/build.xml"/>
+		<!--ant antfile="configs/server/build.xml"/-->
 		
 		<!-- build the repository -->
 		<ant antfile="configs/repository/build.xml"/>
