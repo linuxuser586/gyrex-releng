@@ -138,10 +138,6 @@
 			</filterset>
 		</copy>
 
-    	<!-- create composite if it doesn't exist -->
-    	<p2.composite.artifact.repository.create location="${publishCompositeRepoUrl}" failonexists="false" name="${p2.repo.name.prefix} (${publishRepoStream} builds)" description="Composite repository with references to all ${publishRepoStream} builds." compressed="false"/>
-    	<p2.composite.metadata.repository.create location="${publishCompositeRepoUrl}" failonexists="false" name="${p2.repo.name.prefix} (${publishRepoStream} builds)" description="Composite repository with references to all ${publishRepoStream} builds." compressed="false"/>
-
     	<!-- mirror to target (but only the bits that really changed) -->
 		<p2.mirror source="${resultRepoLocationUrl}" log="${buildDirectory}/${buildLabel}/publish-repo.log" ignoreErrors="true">
 			<destination compressed="true" name="${p2.repo.name.prefix} (Build ${buildId})" location="${publishBuildRepoUrl}" append="true" format="${resultRepoLocationUrl}" kind="metadata"/>
@@ -153,8 +149,13 @@
 		</p2.mirror>
 
 		<!-- add to composite repo -->
-        <p2.composite.artifact.repository.add location="${publishCompositeRepoUrl}" child="${buildLabel}" />
-        <p2.composite.metadata.repository.add location="${publishCompositeRepoUrl}" child="${buildLabel}" />
+    	<p2.composite.repository>
+			<repository location="${publishCompositeRepoUrl}" failonexists="false" name="${p2.repo.name.prefix} (${publishRepoStream} builds)" description="Composite repository with references to all ${publishRepoStream} builds." compressed="false"/>
+			<add>
+				<repository location="${buildLabel}" kind="M" />
+				<repository location="${buildLabel}" kind="A" />
+			</add>
+    	</p2.composite.repository>
     	
     </target>
 
