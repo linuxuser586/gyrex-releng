@@ -198,7 +198,7 @@
 				<filter token="REPO_PATH" value="${publishRepoBasePath}"/>
 			</filterset>
 		</copy>
-		<exec executable="/usr/bin/php" dir="${publishBaseDirectory}${publishRepoBasePath}" output="${publishBaseDirectory}${publishRepoBasePath}/index.html">
+		<exec dir="${publishBaseDirectory}${publishRepoBasePath}" executable="php" output="${publishBaseDirectory}${publishRepoBasePath}/index.html">
 			<arg value="-f"/>
 			<arg value="repo-index.php"/>
 		</exec>
