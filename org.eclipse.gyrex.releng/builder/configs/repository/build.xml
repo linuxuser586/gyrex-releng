@@ -174,34 +174,9 @@
 			<fileset dir="${buildDirectory}/${buildLabel}"/>
 		</copy>
 		
-		<!-- give the build type a better name -->
-		<condition property="buildTypeName" value="Release"><equals arg1="${buildType}" arg2="R"/></condition>
-		<condition property="buildTypeName" value="Stable Build"><equals arg1="${buildType}" arg2="S"/></condition>
-		<condition property="buildTypeName" value="Integration Build"><equals arg1="${buildType}" arg2="I"/></condition>
-		<property name="buildTypeName" value="Build"/> 
-		<condition property="buildTypesName" value="Releases"><equals arg1="${buildType}" arg2="R"/></condition>
-		<condition property="buildTypesName" value="Stable Builds"><equals arg1="${buildType}" arg2="S"/></condition>
-		<condition property="buildTypesName" value="Integration Builds"><equals arg1="${buildType}" arg2="I"/></condition>
-		<property name="buildTypesName" value="Builds"/> 
-		<condition property="buildTypeTagLine" value="Extensively tested. Production ready. Supported."><equals arg1="${buildType}" arg2="R"/></condition>
-		<condition property="buildTypeTagLine" value="Stay up-to-date without compromising stability. May contain unfinished functionality. Not recommended for production use."><equals arg1="${buildType}" arg2="S"/></condition>
-		<condition property="buildTypeTagLine" value="Obligated for committers. Recommended for contributors and extenders."><equals arg1="${buildType}" arg2="I"/></condition>
-		<property name="buildTypeTagLine" value="Right from from the build machine."/> 
-		
-		<!-- generate repo index html -->
-		<copy todir="${publishBaseDirectory}${publishRepoBasePath}">
-			<fileset dir="${builder}/template-eclipse.org/repo-index" includes="repo-index*"/>
-			<filterset>
-				<filter token="BUILD_TYPE" value="${buildTypeName}"/>
-				<filter token="BUILD_TYPES" value="${buildTypesName}"/>
-				<filter token="BUILD_TYPE_TAGLINE" value="${buildTypeTagLine}"/>
-				<filter token="REPO_PATH" value="${publishRepoBasePath}"/>
-			</filterset>
-		</copy>
-		<exec dir="${publishBaseDirectory}${publishRepoBasePath}" executable="php" output="${publishBaseDirectory}${publishRepoBasePath}/index.html">
-			<arg value="-f"/>
-			<arg value="repo-index.php"/>
-		</exec>
+		<!-- generate repo index html using our helper script -->
+		<delete file="${publishBaseDirectory}${publishRepoBasePath}/index.html" failonerror="false"/>
+		<get dest="${publishBaseDirectory}${publishRepoBasePath}/index.html" src="http://www.eclipse.org/gyrex/download/helpers/repo-index.php?buildType=${buildType}&amp;repoPath=${publishRepoBasePath}" verbose="true" ignoreerrors="false"/>
 	</target>
 
 
