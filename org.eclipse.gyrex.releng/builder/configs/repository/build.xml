@@ -178,7 +178,7 @@
     	<fail unless="publishRepoBasePath" message="property publishRepoBasePath not set"/>
 
 		<!-- copy everything from build label directory -->
-		<copy todir="${publishBaseDirectory}${publishRepoBasePath}/${buildLabel}">
+		<copy todir="${publishBaseDirectory}${publishRepoBasePath}/${buildLabel}" includeemptydirs="false">
 			<fileset dir="${buildDirectory}/${buildLabel}"/>
 		</copy>
 	</target>
