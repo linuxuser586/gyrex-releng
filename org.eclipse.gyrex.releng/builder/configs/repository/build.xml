@@ -168,7 +168,7 @@
     	<available file="${buildDirectory}/publishRepoTemplate/compositeContent.xml" property="compositeContentXmlAvailable"/>
     	<fail unless="compositeContentXmlAvailable" message="compositeContent.xml not available"/>
 		<delete file="${publishBaseDirectory}${publishRepoBasePath}/index.html" failonerror="false"/>
-		<property name="generatePublishRepoIndexCommand" value="cat '${buildDirectory}/publishRepoTemplate/compositeContent.xml' | curl -X POST -H 'Content-type: text/xml' -o '${publishBaseDirectory}${publishRepoBasePath}/index.html' -d @- ${publishRepoIndexGeneratorUrl}?buildType=${buildType}&amp;repoPath=${publishRepoBasePath}"/>
+		<property name="generatePublishRepoIndexCommand" value="cat '${buildDirectory}/publishRepoTemplate/compositeContent.xml' | curl -X POST -H 'Content-type: text/xml' -o '${publishBaseDirectory}${publishRepoBasePath}/index.html' -d @- '${publishRepoIndexGeneratorUrl}?buildType=${buildType}&amp;repoPath=${publishRepoBasePath}'"/>
 		<echo message="Generating repository index.html using: ${generatePublishRepoIndexCommand}"/>
 		<exec executable="/bin/bash">
 			<arg value="-c"/>
