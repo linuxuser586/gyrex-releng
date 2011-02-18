@@ -31,6 +31,8 @@
 	<target name="postBuild">
 		<!-- cleanup extracted sdk repo (this is important for subsequent builds) -->
 		<delete dir="${repoBaseLocation}/${archiveNamePrefix}-${buildLabel}-sdkrepo"/>
+		<!-- we also need to remove the transformed repos as they are polluted by now -->
+		<delete dir="${transformedRepoLocation}"/>
 	</target>
 	
 </project>
