@@ -165,9 +165,9 @@
 		<!-- generate composite repo index html using our helper online php -->
     	<unjar src="${publishBaseDirectory}${publishRepoBasePath}/compositeContent.jar" dest="${buildDirectory}/publishRepoTemplate" overwrite="true"/>
 		<delete file="${publishBaseDirectory}${publishRepoBasePath}/index.html" failonerror="false"/>
-		<exec executable="/bin/bash" output="${publishBaseDirectory}${publishRepoBasePath}/index.html">
+		<exec executable="/bin/bash">
 			<arg value="-c"/>
-			<arg value="cat ${buildDirectory}/publishRepoTemplate/compositeContent.xml | curl -X POST -H 'Content-type: text/xml' -d @- http://www.eclipse.org/gyrex/download/helpers/repo-index.php?buildType=${buildType}"/>
+			<arg value="cat ${buildDirectory}/publishRepoTemplate/compositeContent.xml | curl -X POST -H 'Content-type: text/xml' -o '${publishBaseDirectory}${publishRepoBasePath}/index.html' -d @- http://www.eclipse.org/gyrex/download/helpers/repo-index.php?buildType=${buildType}"/>
 		</exec>
     	
     </target>
