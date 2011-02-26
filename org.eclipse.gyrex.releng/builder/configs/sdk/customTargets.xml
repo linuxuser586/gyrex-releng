@@ -147,9 +147,13 @@
 	<target name="gatherLogs">
 		<echo message="Gather log files"/>
 		<mkdir dir="${buildDirectory}/${buildLabel}/compilelogs" />
-		<antcall target="allElements">
-			<param name="target" value="gatherLogs" />
-		</antcall>
+		<!-- gather logs does not seem to process feature includes correctly -->
+		<!-- we therefore collect logs from SDK feature directly -->
+		<!-- TODO: we may need to rethink our master/category handling feature -->
+ 		<ant antfile="${genericTargets}" target="gatherLogs">
+	 		<property name="type" value="feature" />
+	 		<property name="id" value="org.eclipse.gyrex.features.sdk" />
+ 		</ant>
 		<unzip dest="${buildDirectory}/${buildLabel}/compilelogs" overwrite="true">
 			<fileset dir="${buildDirectory}/features">
 				<include name="**/*.log.zip" />
