@@ -143,5 +143,19 @@
 		
 	</target>
 
+	<!-- collects compile logs -->
+	<target name="gatherLogs">
+		<echo message="Gather log files"/>
+		<mkdir dir="${buildDirectory}/${buildLabel}/compilelogs" />
+		<antcall target="allElements">
+			<param name="target" value="gatherLogs" />
+		</antcall>
+		<unzip dest="${buildDirectory}/${buildLabel}/compilelogs" overwrite="true">
+			<fileset dir="${buildDirectory}/features">
+				<include name="**/*.log.zip" />
+			</fileset>
+		</unzip>
+	</target>
+
 </project>
 
