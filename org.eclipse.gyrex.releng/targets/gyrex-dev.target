@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Gyrex Development" sequenceNumber="9">
+<target name="Gyrex Development" sequenceNumber="10">
 <locations>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.xmlrpc" version="3.0.0.v20100427-1100"/>
@@ -225,6 +225,9 @@
 <repository location="http://download.eclipse.org/eclipse/updates/3.7milestones"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.mylyn_feature.feature.group" version="3.5.0.I20110225-1516"/>
+<unit id="org.eclipse.mylyn.bugzilla_feature.feature.group" version="3.5.0.I20110225-1516"/>
+<unit id="org.eclipse.mylyn.commons.feature.group" version="3.5.0.I20110225-1516"/>
 <unit id="org.eclipse.mylyn.sdk_feature.feature.group" version="3.5.0.I20110225-1516"/>
 <repository location="http://download.eclipse.org/mylyn/snapshots/weekly"/>
 </location>
