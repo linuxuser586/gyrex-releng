@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Gyrex Development" sequenceNumber="8">
+<target name="Gyrex Development" sequenceNumber="9">
 <locations>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.xmlrpc" version="3.0.0.v20100427-1100"/>
@@ -223,6 +223,10 @@
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.equinox.executable.feature.group" version="3.5.0.v20101220-7P7NFUFFLWUl6m499UD1941"/>
 <repository location="http://download.eclipse.org/eclipse/updates/3.7milestones"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.mylyn.sdk_feature.feature.group" version="3.5.0.I20110225-1516"/>
+<repository location="http://download.eclipse.org/mylyn/snapshots/weekly"/>
 </location>
 </locations>
 <targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
