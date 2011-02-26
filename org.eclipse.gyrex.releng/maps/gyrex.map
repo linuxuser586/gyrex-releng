@@ -25,8 +25,6 @@ feature@org.eclipse.gyrex.features.dependencies.admin=v20110215-1145,:pserver:an
 #plugin@org.eclipse.gyrex.=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/
 plugin@org.eclipse.gyrex.boot=v20110215-1150,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.boot
 plugin@org.eclipse.gyrex.common=v20110131-1900,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.common
-plugin@org.eclipse.gyrex.configuration=v20101109-0940,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.configuration
-plugin@org.eclipse.gyrex.configuration.impl=v20110215-1150,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.configuration.impl
 plugin@org.eclipse.gyrex.context=v20110110-1630,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.context
 plugin@org.eclipse.gyrex.cloud=v20110215-1150,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.cloud
 plugin@org.eclipse.gyrex.monitoring=v20110131-1900,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.monitoring
@@ -78,7 +76,6 @@ plugin@org.eclipse.gyrex.services.common=v20110110-1630,:pserver:anonymous@dev.e
 
 ### Gyrex CDS
 plugin@org.eclipse.gyrex.cds=v20110131-1900,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds
-plugin@org.eclipse.gyrex.cds.solr=v20110131-1900,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.solr
 
 ### Gyrex Server
 plugin@org.eclipse.gyrex.server.defaultroles=v20101220-2010,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.server.defaultroles
