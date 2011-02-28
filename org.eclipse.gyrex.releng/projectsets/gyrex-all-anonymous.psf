@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <psf version="2.0">
 <provider id="org.eclipse.team.cvs.core.cvsnature">
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/3rdparty/bundles/org.apache.commons.csv,org.apache.commons.csv,v1_0_0"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin,org.eclipse.gyrex.admin"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt,org.eclipse.gyrex.admin.web.gwt"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.admin.web.gwt.client,org.eclipse.gyrex.admin.web.gwt.client"/>
+<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui,org.eclipse.gyrex.admin.ui"/>
+<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.cloud,org.eclipse.gyrex.admin.ui.cloud"/>
+<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.http.jetty,org.eclipse.gyrex.admin.ui.http.jetty"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.boot,org.eclipse.gyrex.boot"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds,org.eclipse.gyrex.cds"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.solr,org.eclipse.gyrex.cds.solr"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.cds.solr.tests,org.eclipse.gyrex.cds.solr.tests"/>
+<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.boot.tests,org.eclipse.gyrex.boot.tests"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.cloud,org.eclipse.gyrex.cloud"/>
+<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.cloud.tests,org.eclipse.gyrex.cloud.tests"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.common,org.eclipse.gyrex.common"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.configuration,org.eclipse.gyrex.configuration"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.configuration.impl,org.eclipse.gyrex.configuration.impl"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.context,org.eclipse.gyrex.context"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.context.tests,org.eclipse.gyrex.context.tests"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/examples/bundles/org.eclipse.gyrex.examples.bugsearch,org.eclipse.gyrex.examples.bugsearch"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/examples/features/org.eclipse.gyrex.examples.bugsearch-feature,org.eclipse.gyrex.examples.bugsearch-feature"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/examples/bundles/org.eclipse.gyrex.examples.bugsearch.gwt.internal,org.eclipse.gyrex.examples.bugsearch.gwt.internal"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/examples/bundles/org.eclipse.gyrex.examples.fanshop,org.eclipse.gyrex.examples.fanshop"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/examples/features/org.eclipse.gyrex.examples.fanshop-feature,org.eclipse.gyrex.examples.fanshop-feature"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features,org.eclipse.gyrex.features"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.admin,org.eclipse.gyrex.features.admin"/>
+<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.admin,org.eclipse.gyrex.features.dependencies.admin"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.commons,org.eclipse.gyrex.features.dependencies.commons"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.persistence,org.eclipse.gyrex.features.dependencies.persistence"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.provisioning,org.eclipse.gyrex.features.dependencies.provisioning"/>
@@ -33,9 +25,6 @@
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.sdk,org.eclipse.gyrex.features.sdk"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.sdk.tests,org.eclipse.gyrex.features.sdk.tests"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.server,org.eclipse.gyrex.features.server"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.gwt.common,org.eclipse.gyrex.gwt.common"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.gwt.service,org.eclipse.gyrex.gwt.service"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.gwt.service.tests,org.eclipse.gyrex.gwt.service.tests"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http,org.eclipse.gyrex.http"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.equinoxhttpservice,org.eclipse.gyrex.http.equinoxhttpservice"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.jetty,org.eclipse.gyrex.http.jetty"/>
@@ -56,54 +45,33 @@
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.tests,org.eclipse.gyrex.persistence.tests"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.preferences,org.eclipse.gyrex.preferences"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng,org.eclipse.gyrex.releng"/>
+<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.search,org.eclipse.gyrex.search"/>
+<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.search.tests,org.eclipse.gyrex.search.tests"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.server.defaultroles,org.eclipse.gyrex.server.defaultroles"/>
+<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.server.tests,org.eclipse.gyrex.server.tests"/>
 <project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.services.common,org.eclipse.gyrex.services.common"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.toolkit,org.eclipse.gyrex.toolkit"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/examples/bundles/org.eclipse.gyrex.toolkit.examples.simple,org.eclipse.gyrex.toolkit.examples.simple"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.toolkit.gwt.client,org.eclipse.gyrex.toolkit.gwt.client"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.toolkit.gwt.client.tests,org.eclipse.gyrex.toolkit.gwt.client.tests"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/examples/bundles/org.eclipse.gyrex.toolkit.gwt.examples,org.eclipse.gyrex.toolkit.gwt.examples"/>
-<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,org.eclipse.gyrex/toolkit/bundles/org.eclipse.gyrex.toolkit.gwt.server,org.eclipse.gyrex.toolkit.gwt.server"/>
 </provider>
-<workingSets editPageId="org.eclipse.ui.resourceWorkingSetPage" id="1241420305573_4" label="Gyrex 3rdParty" name="Gyrex 3rdParty">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.apache.commons.csv" type="4"/>
-</workingSets>
 <workingSets editPageId="org.eclipse.ui.resourceWorkingSetPage" id="1241420305573_5" label="Gyrex Admin" name="Gyrex Admin">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.admin.web.gwt.client" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.admin" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.admin.cloud" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.admin.web.rap" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.admin.web.gwt" type="4"/>
-</workingSets>
-<workingSets editPageId="org.eclipse.ui.resourceWorkingSetPage" id="1241420305573_6" label="Gyrex CDS" name="Gyrex CDS">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.cds" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.cds.solr.tests" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.cds.solr" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.persistence.solr" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.admin.ui.log" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.admin.ui.persistence" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.admin.ui.http.jetty" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.admin.ui.cloud" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.admin.ui.persistence.solr" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.admin.ui" type="4"/>
 </workingSets>
 <workingSets editPageId="org.eclipse.ui.resourceWorkingSetPage" id="1241420305573_7" label="Gyrex Core" name="Gyrex Core">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.configuration.impl" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.monitoring" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.context" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.cloud" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.server.tests" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.boot.tests" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.boot" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.server.defaultroles" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.context.tests" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.common" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.configuration" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.cloud.tests" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.preferences" type="4"/>
-</workingSets>
-<workingSets editPageId="org.eclipse.ui.resourceWorkingSetPage" id="1241420305573_8" label="Gyrex Example Applications" name="Gyrex Example Applications">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.examples.fanshop-feature" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.examples.fanshop" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.examples.bugsearch-feature" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.examples.bugsearch" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.examples.bugsearch.gwt.internal" type="4"/>
-</workingSets>
-<workingSets editPageId="org.eclipse.ui.resourceWorkingSetPage" id="1241420305573_10" label="Gyrex GWT AddOns" name="Gyrex GWT AddOns">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.gwt.common" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.gwt.service" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.gwt.service.tests" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.jobs" type="4"/>
 </workingSets>
 <workingSets editPageId="org.eclipse.ui.resourceWorkingSetPage" id="1241420305573_11" label="Gyrex HTTP" name="Gyrex HTTP">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.http.registry" type="4"/>
@@ -144,17 +112,15 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.releng" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.features.http" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.features.dependencies.solr" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.features.dependencies.admin" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.features.modelandservices" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.features" type="4"/>
 </workingSets>
-<workingSets editPageId="org.eclipse.ui.resourceWorkingSetPage" id="1241420305573_14" label="Gyrex Toolkit" name="Gyrex Toolkit">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.toolkit.rap" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.toolkit.gwt.client.tests" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.toolkit.gwt.client" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.toolkit.rap.example" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.toolkit.gwt.examples" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.toolkit.gwt.server" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.toolkit" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.toolkit.examples.simple" type="4"/>
+<workingSets editPageId="org.eclipse.ui.resourceWorkingSetPage" id="1241420305573_6" label="Gyrex Search" name="Gyrex Search">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.search" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.search.tests" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.persistence.solr" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.search" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.gyrex.search.tests" type="4"/>
 </workingSets>
 </psf>
