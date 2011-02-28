@@ -11,7 +11,7 @@
         Gunnar Wagenknecht - initial API and implementation
  -->
 <feature
-      id="org.eclipse.gyrex.features"
+      id="org.eclipse.gyrex.features.master"
       label="All Gyrex Components (Incubation)"
       version="1.0.0.qualifier"
       provider-name="Eclipse Gyrex">
