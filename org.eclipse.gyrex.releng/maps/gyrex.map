@@ -89,3 +89,4 @@ plugin@org.eclipse.gyrex.http.tests=HEAD,:pserver:anonymous@dev.eclipse.org:/cvs
 plugin@org.eclipse.gyrex.persistence.tests=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.tests
 plugin@org.eclipse.gyrex.persistence.derby.tests=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.derby.tests
 plugin@org.eclipse.gyrex.search.tests=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.search.tests
+plugin@org.eclipse.gyrex.preferences.tests=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.preferences.tests
