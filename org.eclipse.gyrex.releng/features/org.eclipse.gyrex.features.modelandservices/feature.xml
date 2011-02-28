@@ -61,13 +61,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gyrex.cds"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.gyrex.model.common"
          download-size="0"
          install-size="0"
@@ -83,6 +76,13 @@
 
    <plugin
          id="org.eclipse.gyrex.persistence.context.preferences"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.gyrex.search"
          download-size="0"
          install-size="0"
          version="0.0.0"
