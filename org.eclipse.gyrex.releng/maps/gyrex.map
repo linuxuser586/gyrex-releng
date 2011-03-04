@@ -27,7 +27,7 @@ plugin@org.eclipse.gyrex.boot=v20110228-2230,:pserver:anonymous@dev.eclipse.org:
 plugin@org.eclipse.gyrex.common=v20110228-1055,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.common
 plugin@org.eclipse.gyrex.context=v20110228-2230,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.context
 plugin@org.eclipse.gyrex.cloud=v20110304-0855,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.cloud
-plugin@org.eclipse.gyrex.monitoring=v20110131-1900,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.monitoring
+plugin@org.eclipse.gyrex.monitoring=v20110304-1705,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.monitoring
 plugin@org.eclipse.gyrex.preferences=v20110304-0855,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.preferences
 
 #plugin@org.eclipse.gyrex.=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.
@@ -71,11 +71,11 @@ plugin@org.eclipse.gyrex.persistence.solr=v20110228-1055,:pserver:anonymous@dev.
 plugin@org.eclipse.gyrex.persistence.context.preferences=v20110228-1055,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.context.preferences
 
 ### Gyrex Model And Services
-plugin@org.eclipse.gyrex.model.common=v20110228-1055,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.model.common
+plugin@org.eclipse.gyrex.model.common=v20110304-1705,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.model.common
 plugin@org.eclipse.gyrex.services.common=v20110228-1055,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.services.common
 
 ### Gyrex CDS
-plugin@org.eclipse.gyrex.search=v20110304-1015,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.search
+plugin@org.eclipse.gyrex.search=v20110304-1705,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.search
 
 ### Gyrex Server
 plugin@org.eclipse.gyrex.server.defaultroles=v20101220-2010,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.server.defaultroles
