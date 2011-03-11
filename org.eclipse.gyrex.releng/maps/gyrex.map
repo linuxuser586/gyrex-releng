@@ -28,7 +28,7 @@ plugin@org.eclipse.gyrex.common=v20110228-1055,:pserver:anonymous@dev.eclipse.or
 plugin@org.eclipse.gyrex.context=v20110228-2230,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.context
 plugin@org.eclipse.gyrex.cloud=v20110310-1645,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.cloud
 plugin@org.eclipse.gyrex.jobs=v20110304-1705,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.jobs
-plugin@org.eclipse.gyrex.monitoring=v20110304-1705,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.monitoring
+plugin@org.eclipse.gyrex.monitoring=v20110311-1130,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.monitoring
 plugin@org.eclipse.gyrex.p2=v20110308-1920,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.p2
 plugin@org.eclipse.gyrex.preferences=v20110304-0855,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.preferences
 
@@ -52,7 +52,7 @@ plugin@org.eclipse.gyrex.http=v20110228-1055,:pserver:anonymous@dev.eclipse.org:
 plugin@org.eclipse.gyrex.http.registry=v20101108-1140,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.registry
 
 ### Gyrex HTTP Component Jetty Engine
-plugin@org.eclipse.gyrex.http.jetty=v20110304-0855,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.jetty
+plugin@org.eclipse.gyrex.http.jetty=v20110311-1130,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.jetty
 
 ### Gyrex HTTP Component Logging
 plugin@org.eclipse.gyrex.log.http=v20101108-1140,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.log.http
@@ -67,9 +67,9 @@ plugin@org.eclipse.gyrex.gwt.service=v20101108-1140,:pserver:anonymous@dev.eclip
 ### Gyrex Persistence Component
 plugin@org.eclipse.gyrex.persistence=v20110304-1015,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence
 plugin@org.eclipse.gyrex.persistence.derby=v20110228-1055,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.derby
-plugin@org.eclipse.gyrex.persistence.jdbc=v20110228-1055,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.jdbc
+plugin@org.eclipse.gyrex.persistence.jdbc=v20110311-1130,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.jdbc
 plugin@org.eclipse.gyrex.persistence.nondurable.map=v20110110-1630,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.nondurable.map
-plugin@org.eclipse.gyrex.persistence.solr=v20110311-1120,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.solr
+plugin@org.eclipse.gyrex.persistence.solr=v20110311-1130,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.solr
 plugin@org.eclipse.gyrex.persistence.context.preferences=v20110228-1055,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.context.preferences
 
 ### Gyrex Model And Services
