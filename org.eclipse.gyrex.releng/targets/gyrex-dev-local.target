@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.6"?>
+
+<target includeMode="feature" name="Gyrex Development (local)" sequenceNumber="-1">
+<locations>
+<location path="${resource_loc:/org.eclipse.gyrex.releng}/targets/gyrex-dev-exported" type="Profile"/>
+</locations>
+<launcherArgs>
+<vmArgs>-server -XX:+UseParallelGC -XX:MaxPermSize=128m</vmArgs>
+<programArgs>-console -nosplash</programArgs>
+</launcherArgs>
+</target>
