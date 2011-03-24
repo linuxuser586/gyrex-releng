@@ -75,14 +75,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gyrex.log.frameworklogadapter"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.gyrex.p2"
          download-size="0"
          install-size="0"
