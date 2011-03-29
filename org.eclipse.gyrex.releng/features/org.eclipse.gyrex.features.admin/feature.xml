@@ -18,12 +18,13 @@
    </license>
 
    <url>
-      <update label="%updateSiteName" url="http://download.eclipse.org/gyrex/"/>
+      <update label="%updateSiteName" url="http://download.eclipse.org/gyrex/1.0/"/>
    </url>
 
    <requires>
       <import feature="org.eclipse.gyrex.features.http" version="1.0.0" match="equivalent"/>
       <import feature="org.eclipse.gyrex.features.kernel" version="1.0.0" match="equivalent"/>
+      <import feature="org.eclipse.gyrex.features.processing" version="1.0.0" match="equivalent"/>
    </requires>
 
    <plugin
@@ -63,6 +64,13 @@
 
    <plugin
          id="org.eclipse.gyrex.admin.ui.context"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.gyrex.admin.ui.jobs"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -29,7 +29,7 @@
    </license>
 
    <url>
-      <update label="%updateSiteName" url="http://download.eclipse.org/gyrex/"/>
+      <update label="%updateSiteName" url="http://download.eclipse.org/gyrex/1.0/"/>
    </url>
 
    <plugin
