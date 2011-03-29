@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Gyrex Development" sequenceNumber="20">
+<target name="Gyrex Development" sequenceNumber="21">
 <locations>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.derby" version="10.5.1.1_201103041228"/>
@@ -214,6 +214,10 @@
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.rap.runtime.sdk.feature.group" version="1.4.0.20110315-1602"/>
 <repository location="http://download.eclipse.org/rt/rap/1.4/runtime/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.quartz" version="1.8.3.v20110329-1050"/>
+<repository location="http://download.eclipse.org/tools/orbit/committers/drops/I20110329105737/repository/"/>
 </location>
 </locations>
 <targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
