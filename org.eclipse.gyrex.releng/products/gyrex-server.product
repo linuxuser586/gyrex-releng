@@ -157,12 +157,14 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
    <features>
       <feature id="org.eclipse.gyrex.features.server"/>
       <feature id="org.eclipse.gyrex.features.kernel"/>
+      <feature id="org.eclipse.gyrex.features.processing"/>
       <feature id="org.eclipse.gyrex.features.http"/>
       <feature id="org.eclipse.gyrex.features.admin"/>
       <feature id="org.eclipse.gyrex.features.dependencies.commons"/>
       <feature id="org.eclipse.gyrex.features.dependencies.provisioning"/>
       <feature id="org.eclipse.gyrex.features.dependencies.web"/>
       <feature id="org.eclipse.gyrex.features.dependencies.admin"/>
+      <feature id="org.eclipse.gyrex.features.dependencies.processing"/>
    </features>
 
    <configurations>
