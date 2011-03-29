@@ -88,7 +88,7 @@
    <includes
          id="org.eclipse.gyrex.features.dependencies.provisioning.source"
          version="0.0.0"/>
-         
+
    <includes
          id="org.eclipse.gyrex.features.dependencies.admin"
          version="0.0.0"/>
@@ -107,6 +107,22 @@
 
    <includes
          id="org.eclipse.gyrex.features.dependencies.solr.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gyrex.features.dependencies.processing"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gyrex.features.dependencies.processing.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gyrex.features.processing"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gyrex.features.processing.source"
          version="0.0.0"/>
 
 </feature>
