@@ -31,7 +31,7 @@ plugin@org.eclipse.gyrex.context=v20110316-2315,:pserver:anonymous@dev.eclipse.o
 plugin@org.eclipse.gyrex.cloud=v20110324-0000,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.cloud
 plugin@org.eclipse.gyrex.monitoring=v20110311-1130,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.monitoring
 plugin@org.eclipse.gyrex.p2=v20110324-0000,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.p2
-plugin@org.eclipse.gyrex.preferences=v20110316-2140,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.preferences
+plugin@org.eclipse.gyrex.preferences=v20110329-1525,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.preferences
 
 #plugin@org.eclipse.gyrex.=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.
 
