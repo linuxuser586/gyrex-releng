@@ -44,6 +44,9 @@
 
   <xsl:template match="unit">
     <iu id="{@id}" version="{@version}" />
+    <xsl:if test="not(substring(@id,string-length(@id)+1-string-length('.source'))='.source')">
+    <iu id="{@id}.source" version="{@version}" />
+    </xsl:if>
   </xsl:template>
 
   <!-- ignore anything else -->
