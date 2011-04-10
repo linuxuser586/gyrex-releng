@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Gyrex Development" sequenceNumber="22">
+<target name="Gyrex Development" sequenceNumber="23">
 <locations>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.derby" version="10.5.1.1_201103041228"/>
@@ -233,6 +233,11 @@
 <unit id="javax.servlet.jsp.glassfish.feature.group" version="2.1.0.201103121747"/>
 <unit id="javax.servlet.jsp.glassfish.source.feature.group" version="2.1.0.201103121747"/>
 <repository location="http://download.eclipse.org/jetty/updates/jetty-rt-3.7milestones/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.kohsuke.args4j" version="2.0.12.v200910131500"/>
+<unit id="org.kohsuke.args4j.source" version="2.0.12.v200910131500"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20110304120314/repository/"/>
 </location>
 </locations>
 <targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
