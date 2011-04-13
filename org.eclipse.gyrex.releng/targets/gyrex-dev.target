@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Gyrex Development" sequenceNumber="23">
+<target name="Gyrex Development" sequenceNumber="24">
 <locations>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.derby" version="10.5.1.1_201103041228"/>
@@ -237,6 +237,10 @@
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.kohsuke.args4j" version="2.0.12.v200910131500"/>
 <unit id="org.kohsuke.args4j.source" version="2.0.12.v200910131500"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20110304120314/repository/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.apache.felix.gogo.runtime" version="0.6.1.v201101181528"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20110304120314/repository/"/>
 </location>
 </locations>
