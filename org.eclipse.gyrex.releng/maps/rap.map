@@ -1,7 +1,0 @@
-####################
-# RAP Components #
-####################
-#
-
-### Gyrex Server
-plugin@org.eclipse.rwt.widgets.upload=v20101213_R14-M4,:pserver:anonymous@dev.eclipse.org:/cvsroot/rt,,org.eclipse.rap/sandbox/org.eclipse.rwt.widgets.upload
