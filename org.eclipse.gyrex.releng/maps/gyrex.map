@@ -96,6 +96,6 @@ plugin@org.eclipse.gyrex.context.tests=v20110413-1355,:pserver:anonymous@dev.ecl
 plugin@org.eclipse.gyrex.http.tests=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.tests
 plugin@org.eclipse.gyrex.persistence.tests=v20110413-1355,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.tests
 plugin@org.eclipse.gyrex.persistence.derby.tests=v20110413-1355,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.derby.tests
-plugin@org.eclipse.gyrex.search.tests=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.search.tests
+plugin@org.eclipse.gyrex.search.tests=v20110413-1355,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.search.tests
 plugin@org.eclipse.gyrex.preferences.tests=v20110413-1355,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.preferences.tests
 plugin@org.eclipse.gyrex.server.tests=v20110413-1355,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.server.tests
