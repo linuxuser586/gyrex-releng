@@ -1,0 +1,7 @@
+####################
+# Shared License   #
+####################
+#
+
+### shared license feature
+feature@org.eclipse.license=v20110208,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,,org.eclipse.sdk-feature/features/org.eclipse.license
