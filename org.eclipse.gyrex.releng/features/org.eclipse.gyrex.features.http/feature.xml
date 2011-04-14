@@ -49,7 +49,7 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gyrex.log.http"
+         id="org.eclipse.gyrex.http.log"
          download-size="0"
          install-size="0"
          version="0.0.0"
