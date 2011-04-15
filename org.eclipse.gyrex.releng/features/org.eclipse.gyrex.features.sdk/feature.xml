@@ -120,6 +120,14 @@
          version="0.0.0"/>
 
    <includes
+         id="org.eclipse.gyrex.features.dependencies.eclipselink"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gyrex.features.dependencies.eclipselink.source"
+         version="0.0.0"/>
+
+   <includes
          id="org.eclipse.gyrex.features.processing"
          version="0.0.0"/>
 
