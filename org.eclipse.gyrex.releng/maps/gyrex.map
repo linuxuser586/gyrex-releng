@@ -6,7 +6,7 @@
 
 ### features
 feature@org.eclipse.gyrex.features.master=v20110414-1515,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.master
-feature@org.eclipse.gyrex.features.sdk=v20110427-0650,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.sdk
+feature@org.eclipse.gyrex.features.sdk=v20110427-0655,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.sdk
 feature@org.eclipse.gyrex.features.kernel=v20110414-1020,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.kernel
 feature@org.eclipse.gyrex.features.http=v20110414-1020,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.http
 feature@org.eclipse.gyrex.features.admin=v20110414-1950,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.admin
