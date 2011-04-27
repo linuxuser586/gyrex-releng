@@ -74,10 +74,6 @@
 <repository location="http://download.eclipse.org/e4/sdk/drops/R-4.0-201007271520/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.e4.core.di" version="0.0.0"/>
-<repository location="http://download.eclipse.org/eclipse/updates/4.1-I-builds/"/>
-</location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.lucene" version="2.9.1.v201101211721"/>
 <unit id="org.apache.lucene.analysis" version="2.9.1.v201101211721"/>
 <unit id="org.apache.lucene.core" version="2.9.1.v201101211721"/>
