@@ -50,7 +50,7 @@ plugin@org.eclipse.gyrex.admin.ui.p2=v20110324-0000,:pserver:anonymous@dev.eclip
 plugin@org.eclipse.gyrex.admin.ui.context=v20110427-0650,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.context
 
 ### Gyrex HTTP Component
-plugin@org.eclipse.gyrex.http=v20110502-0755,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http
+plugin@org.eclipse.gyrex.http=v20110502-2140,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http
 plugin@org.eclipse.gyrex.http.registry=v20110502-0750,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.registry
 
 ### Gyrex HTTP Component Jetty Engine
