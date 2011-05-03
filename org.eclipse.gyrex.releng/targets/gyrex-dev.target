@@ -228,10 +228,10 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20110422041657/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.jetty.bundles.f.source.feature.group" version="7.3.1.201103121747"/>
-<unit id="org.eclipse.jetty.core.feature.group" version="7.3.1.201103121747"/>
-<unit id="javax.servlet.jsp.glassfish.feature.group" version="2.1.0.201103121747"/>
-<unit id="javax.servlet.jsp.glassfish.source.feature.group" version="2.1.0.201103121747"/>
+<unit id="org.eclipse.jetty.bundles.f.source.feature.group" version="7.4.0.201105030934"/>
+<unit id="org.eclipse.jetty.core.feature.group" version="7.4.0.201105030934"/>
+<unit id="javax.servlet.jsp.glassfish.feature.group" version="2.1.0.201105030934"/>
+<unit id="javax.servlet.jsp.glassfish.source.feature.group" version="2.1.0.201105030934"/>
 <repository location="http://download.eclipse.org/jetty/updates/jetty-rt-3.7milestones/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
@@ -240,7 +240,7 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20110422041657/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.persistence.sdk.feature.group" version="2.3.0.v20110312-r9123"/>
+<unit id="org.eclipse.persistence.sdk.feature.group" version="2.3.0.v20110429-r9282"/>
 <repository location="http://download.eclipse.org/rt/eclipselink/milestone-updates/"/>
 </location>
 </locations>
