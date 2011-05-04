@@ -4,4 +4,4 @@
 #
 
 ### Gyrex Server
-plugin@org.eclipse.rwt.widgets.upload=v20101213_R14-M4,:pserver:anonymous@dev.eclipse.org:/cvsroot/rt,,org.eclipse.rap/sandbox/org.eclipse.rwt.widgets.upload
+plugin@org.eclipse.rwt.widgets.upload=v20110503_R14-M7,:pserver:anonymous@dev.eclipse.org:/cvsroot/rt,,org.eclipse.rap/sandbox/org.eclipse.rwt.widgets.upload
