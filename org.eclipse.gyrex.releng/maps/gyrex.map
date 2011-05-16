@@ -26,7 +26,7 @@ feature@org.eclipse.gyrex.features.dependencies.admin=v20110324-0000,:pserver:an
 ### Gyrex Kernel
 #plugin@org.eclipse.gyrex.=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/
 plugin@org.eclipse.gyrex.boot=v20110427-0650,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.boot
-plugin@org.eclipse.gyrex.common=v20110505-1830,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.common
+plugin@org.eclipse.gyrex.common=v20110516-1825,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.common
 plugin@org.eclipse.gyrex.context=v20110427-0650,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.context
 plugin@org.eclipse.gyrex.cloud=v20110511-1340,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.cloud
 plugin@org.eclipse.gyrex.monitoring=v20110311-1130,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.monitoring
