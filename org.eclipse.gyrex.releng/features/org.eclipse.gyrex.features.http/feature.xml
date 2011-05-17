@@ -24,7 +24,7 @@
    </url>
 
    <requires>
-      <import feature="org.eclipse.gyrex.features.kernel" version="1.0.0" match="equivalent"/>
+      <import feature="org.eclipse.gyrex.features.kernel" version="0.10.0" match="equivalent"/>
    </requires>
 
    <plugin
