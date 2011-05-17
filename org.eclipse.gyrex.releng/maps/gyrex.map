@@ -71,7 +71,7 @@ plugin@org.eclipse.gyrex.persistence=v20110427-0650,:pserver:anonymous@dev.eclip
 plugin@org.eclipse.gyrex.persistence.derby=v20110414-1515,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.derby
 plugin@org.eclipse.gyrex.persistence.jdbc=v20110427-0650,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.jdbc
 plugin@org.eclipse.gyrex.persistence.nondurable.map=v20110110-1630,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.nondurable.map
-plugin@org.eclipse.gyrex.persistence.solr=v20110414-2030,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.solr
+plugin@org.eclipse.gyrex.persistence.solr=v20110517-1350,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.solr
 plugin@org.eclipse.gyrex.persistence.context.preferences=v20110228-1055,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.context.preferences
 
 ### Gyrex Model And Services
