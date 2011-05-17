@@ -220,7 +220,7 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20110515001817/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.rap.runtime.sdk.feature.group" version="1.4.0.20110504-1831"/>
+<unit id="org.eclipse.rap.runtime.sdk.feature.group" version="1.4.0.20110517-0945"/>
 <repository location="http://download.eclipse.org/rt/rap/1.4/runtime/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
