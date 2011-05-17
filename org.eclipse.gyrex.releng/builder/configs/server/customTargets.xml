@@ -11,7 +11,7 @@
 	<!-- ===================================================================== -->
 	<target name="preSetup">
 		<!-- log a message -->
-		<echo message="Gyrex Server build ${topLevelElementId} ${buildLabel}"/>
+		<echo message="Gyrex Server build ${buildLabel}"/>
 	</target>
 
 	<!-- ===================================================================== -->
