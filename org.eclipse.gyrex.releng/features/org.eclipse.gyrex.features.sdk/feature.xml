@@ -83,8 +83,4 @@
          id="org.eclipse.gyrex.features.sdk.withoutdeps"
          version="0.0.0"/>
 
-   <includes
-         id="org.eclipse.gyrex.features.sdk.withoutdeps.source"
-         version="0.0.0"/>
-
 </feature>
