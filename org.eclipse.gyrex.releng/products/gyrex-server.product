@@ -9,6 +9,7 @@
    <launcherArgs>
       <programArgs>-nosplash
 -console</programArgs>
+      <vmArgs>-Dfile.encoding=UTF-8</vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
    </launcherArgs>
 
