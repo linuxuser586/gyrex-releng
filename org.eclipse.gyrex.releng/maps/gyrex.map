@@ -47,7 +47,7 @@ plugin@org.eclipse.gyrex.admin.ui=v20110530-1600,:pserver:anonymous@dev.eclipse.
 plugin@org.eclipse.gyrex.admin.ui.cloud=v20110518-1230,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.cloud
 plugin@org.eclipse.gyrex.admin.ui.http=v20110525-1130,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.http
 plugin@org.eclipse.gyrex.admin.ui.http.jetty=v20110518-1230,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.http.jetty
-plugin@org.eclipse.gyrex.admin.ui.v20110530-1600,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.jobs
+plugin@org.eclipse.gyrex.admin.ui.jobs=v20110530-1600,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.jobs
 plugin@org.eclipse.gyrex.admin.ui.p2=v20110518-1230,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.p2
 plugin@org.eclipse.gyrex.admin.ui.context=v20110525-0935,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.context
 
