@@ -231,8 +231,18 @@
 		<!-- place a copy the label.properties into the output target directory -->
 		<mkdir dir="${buildDirectory}/${buildLabel}"/>
 		<copy todir="${buildDirectory}/${buildLabel}" file="${buildDirectory}/label.properties"/>
+		
+		<!-- place a copy of the build.local.properties into the output target directory -->
+		<available file="${build.local.properties}" property="build.local.properties.exists" />
+		<antcall target="backup.build.local.properties" />
 	</target>
 
+	<!-- creates a label.properties file -->
+	<target name="backup.build.local.properties" if="build.local.properties.exists" depends="checkBuildDirectory">
+		<echo message="Copying build.local.properties"/>
+		<copy todir="${buildDirectory}/${buildLabel}" file="${build.local.properties}"/>
+	</target>
+	
 	<!-- creates a label.properties file -->
 	<target name="create.label.properties" unless="label.properties.exists" depends="checkBuildDirectory">
 		<echo message="Initializing label.properties"/>
