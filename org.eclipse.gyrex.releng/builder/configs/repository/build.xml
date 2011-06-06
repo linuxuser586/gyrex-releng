@@ -199,10 +199,16 @@
     	<fail unless="publishRepoBasePath" message="property publishRepoBasePath not set"/>
     	<fail unless="buildLabel" message="property buildLabel not set"/>
 
+		<!-- set proper group writable -->
+		<exec executable="/bin/bash">
+			<arg value="-c"/>
+			<arg value="chgrp technology.gyrex -R '${publishBaseDirectory}${publishRepoBasePath}'"/>
+		</exec>
+
 		<!-- update file permissions to ensure group writable -->
 		<exec executable="/bin/bash">
 			<arg value="-c"/>
-			<arg value="chmod g+w -R '${publishBaseDirectory}${publishRepoBasePath}/${buildLabel}'"/>
+			<arg value="chmod g+w -R '${publishBaseDirectory}${publishRepoBasePath}'"/>
 		</exec>
 	</target>
 
