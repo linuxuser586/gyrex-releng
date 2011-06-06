@@ -34,6 +34,9 @@ elif [ "$BUILD_TYPE" = "M" ]; then
 elif [ "$BUILD_TYPE" = "S" ]; then
     echo '# customization for stable builds' >> $buildLocalProps
     echo publishRepoStream=0.10/milestones >> $buildLocalProps
+elif [ "$BUILD_TYPE" = "R" ]; then
+    echo '# customization for release builds' >> $buildLocalProps
+    echo publishRepoStream=0.10 >> $buildLocalProps
 fi
 echo '#' >> $buildLocalProps
 echo "# generated `date`" >> $buildLocalProps
