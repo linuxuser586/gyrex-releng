@@ -305,6 +305,7 @@
 			<or>
 				<equals arg1="${buildType}" arg2="S"/>
 				<equals arg1="${buildType}" arg2="R"/>
+				<equals arg1="${buildType}" arg2="I"/>
 			</or>
 		</condition>
 
