@@ -118,7 +118,10 @@
     	<!-- copy artifacts -->
     	<antcall target="copyArtifactsToPublishTarget"/>
 
-	</target>
+    	<!-- fix file permissions -->
+    	<antcall target="fixFilePermissionsOfPublishTarget"/>
+    	
+    </target>
 	
 	<!-- mirrors p2 repository to download area -->
     <target name="mirrorToPublishTarget" if="publishToDownloadAreaIsPossible">
@@ -130,8 +133,8 @@
     	
     	<!-- generate all the relevant urls -->
     	<mkdir dir="${buildDirectory}/publishRepoTemplate"/>
-    	<mkdir dir="${publishBaseDirectory}${publishRepoBasePath}/${buildLabel}"/>
     	<mkdir dir="${publishBaseDirectory}${publishRepoBasePath}"/>
+    	<mkdir dir="${publishBaseDirectory}${publishRepoBasePath}/${buildLabel}"/>
 		<makeurl property="templateRepoUrl" file="${buildDirectory}/publishRepoTemplate"/>    	
 		<makeurl property="publishBuildRepoUrl" file="${publishBaseDirectory}${publishRepoBasePath}/${buildLabel}"/>
 		<makeurl property="publishCompositeRepoUrl" file="${publishBaseDirectory}${publishRepoBasePath}"/>
@@ -188,6 +191,19 @@
 		<copy todir="${publishBaseDirectory}${publishRepoBasePath}/${buildLabel}" includeemptydirs="false">
 			<fileset dir="${buildDirectory}/${buildLabel}"/>
 		</copy>
+	</target>
+
+	<!-- fix file permissions in download area -->
+	<target name="fixFilePermissionsOfPublishTarget" if="publishToDownloadAreaIsPossible">
+    	<fail unless="publishBaseDirectory" message="property publishBaseDirectory not set"/>
+    	<fail unless="publishRepoBasePath" message="property publishRepoBasePath not set"/>
+    	<fail unless="buildLabel" message="property buildLabel not set"/>
+
+		<!-- update file permissions to ensure group writable -->
+		<exec executable="/bin/bash">
+			<arg value="-c"/>
+			<arg value="chmod g+w -R '${publishBaseDirectory}${publishRepoBasePath}/${buildLabel}'"/>
+		</exec>
 	</target>
 
 
