@@ -252,6 +252,7 @@
 				<propertyref prefix="publish"/>
 				<propertyref prefix="eclipse"/>
 				<propertyref prefix="skip"/>
+				<propertyref prefix="org.eclipse"/>
 				
 				<!-- java profiles -->
 				<propertyref prefix="J2SE"/>
