@@ -232,51 +232,61 @@
 		<mkdir dir="${buildDirectory}/${buildLabel}"/>
 		<copy todir="${buildDirectory}/${buildLabel}" file="${buildDirectory}/label.properties"/>
 		
-		<!-- place a copy of the build.local.properties into the output target directory -->
-		<available file="${build.local.properties}" property="build.local.properties.exists" />
-		<antcall target="backup.build.local.properties" />
+		<!-- dump build driving properties into the output target directory (every time) -->
+		<antcall target="create.build.properties" />
 	</target>
 
-	<!-- creates a label.properties file -->
-	<target name="backup.build.local.properties" if="build.local.properties.exists" depends="checkBuildDirectory">
-		<echo message="Copying build.local.properties"/>
-		<copy todir="${buildDirectory}/${buildLabel}" file="${build.local.properties}"/>
+	<!-- creates a build.properties file (every time) -->
+	<target name="create.build.properties" depends="checkBuildDirectory">
+		<echo message="Initializing build.properties"/>
+		
+		<!-- dump build information in a file-->
+		<mkdir dir="${buildDirectory}" />
+		<tstamp>
+			<format property="build.properties.dump.time" pattern="yyyyMMdd-HHmmssSSSZ"/>
+		</tstamp>
+		<echoproperties destfile="${buildDirectory}/build.${build.properties.dump.time}.properties" format="text">
+			<propertyset>
+				<!-- build driving properties -->
+				<propertyref prefix="build"/>
+				<propertyref prefix="publish"/>
+				<propertyref prefix="eclipse"/>
+				<propertyref prefix="skip"/>
+				
+				<!-- java profiles -->
+				<propertyref prefix="J2SE"/>
+				<propertyref prefix="JavaSE"/>
+				<propertyref prefix="CDC"/>
+				<propertyref prefix="OSGi"/>
+			</propertyset>
+		</echoproperties>
 	</target>
 	
-	<!-- creates a label.properties file -->
+	<!-- creates a label.properties file (unless it already exists) -->
 	<target name="create.label.properties" unless="label.properties.exists" depends="checkBuildDirectory">
 		<echo message="Initializing label.properties"/>
 
-		<mkdir dir="${buildDirectory}" />
+		<!-- initialize properties with defaults (if not already done) -->
 		<tstamp/>
 		<property name="date" value="${DSTAMP}" />
 		<property name="time" value="${TSTAMP}" />
 		<property name="timestamp" value="${date}${time}" />
 		<property name="buildType" value="I" />
 		<property name="buildId" value="${buildType}${date}" />
-		<property name="buildServer" value="LOCAL BUILD" />
-
-		<!--this naming convention used by php scripts on download server-->
 		<property name="buildLabel" value="${buildType}-${buildId}-${timestamp}" />
 
-		<!--store the build label information in a file-->
+		<!-- store the build label information in a file -->
+		<mkdir dir="${buildDirectory}" />
 		<echo file="${buildDirectory}/label.properties" append="true" >
-			buildDirectory=${buildDirectory}
-		</echo>
-		<echo file="${buildDirectory}/label.properties" append="true" >
-			buildServer=${buildServer}
-		</echo>
-		<echo file="${buildDirectory}/label.properties" append="true" >
-			buildType=${buildType}
-		</echo>
-		<echo file="${buildDirectory}/label.properties" append="true" >
-			buildId=${buildId}
-		</echo>
-		<echo file="${buildDirectory}/label.properties" append="true" >
+
+			# 
+			# build label information
+			#
 			timestamp=${timestamp}
-		</echo>
-		<echo file="${buildDirectory}/label.properties" append="true" >
+			buildType=${buildType}
+			buildId=${buildId}
 			buildLabel=${buildLabel}
+
 		</echo>
 
 		<antcall target="addTo.label.properties.ifSet-forceContextQualifier"/>
@@ -286,14 +296,20 @@
 	<!-- adds forceContextQualifier to label.properties file only if set -->
 	<target name="addTo.label.properties.ifSet-forceContextQualifier" if="forceContextQualifier">
 		<echo file="${buildDirectory}/label.properties" append="true" >
+			
+			# context qualifier override
 			forceContextQualifier=${forceContextQualifier}
+
 		</echo>
 	</target>
 
 	<!-- adds fetchTag to label.properties file only if set -->
 	<target name="addTo.label.properties.ifSet-fetchTag" if="fetchTag">
 		<echo file="${buildDirectory}/label.properties" append="true" >
+			
+			# fetch tag override
 			fetchTag=${fetchTag}
+			
 		</echo>
 	</target>
 
