@@ -6,7 +6,7 @@
 
 ### features
 feature@org.eclipse.gyrex.features.master=v20110518-1115,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.master
-feature@org.eclipse.gyrex.features.sdk=v20110525-1130,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.sdk
+feature@org.eclipse.gyrex.features.sdk=v20110608-0640,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.sdk
 feature@org.eclipse.gyrex.features.sdk.withoutdeps=v20110525-1130,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.sdk.withoutdeps
 feature@org.eclipse.gyrex.features.kernel=v20110518-1115,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.kernel
 feature@org.eclipse.gyrex.features.http=v20110518-1115,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.http
@@ -16,13 +16,13 @@ feature@org.eclipse.gyrex.features.modelandservices=v20110518-1115,:pserver:anon
 feature@org.eclipse.gyrex.features.processing=v20110518-1115,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.processing
 
 ### dependency features
-feature@org.eclipse.gyrex.features.dependencies.commons=v20110518-1115,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.commons
-feature@org.eclipse.gyrex.features.dependencies.provisioning=v20110518-1115,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.provisioning
-feature@org.eclipse.gyrex.features.dependencies.web=v20110518-1115,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.web
-feature@org.eclipse.gyrex.features.dependencies.processing=v20110518-1115,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.processing
-feature@org.eclipse.gyrex.features.dependencies.solr=v20110518-1115,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.solr
-feature@org.eclipse.gyrex.features.dependencies.persistence=v20110518-1115,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.persistence
-feature@org.eclipse.gyrex.features.dependencies.admin=v20110518-1115,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.admin
+feature@org.eclipse.gyrex.features.dependencies.commons=v20110608-0640,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.commons
+feature@org.eclipse.gyrex.features.dependencies.provisioning=v20110608-0640,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.provisioning
+feature@org.eclipse.gyrex.features.dependencies.web=v20110608-0640,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.web
+feature@org.eclipse.gyrex.features.dependencies.processing=v20110608-0640,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.processing
+feature@org.eclipse.gyrex.features.dependencies.solr=v20110608-0640,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.solr
+feature@org.eclipse.gyrex.features.dependencies.persistence=v20110608-0640,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.persistence
+feature@org.eclipse.gyrex.features.dependencies.admin=v20110608-0640,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.admin
 
 ### Gyrex Kernel
 #plugin@org.eclipse.gyrex.=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/
