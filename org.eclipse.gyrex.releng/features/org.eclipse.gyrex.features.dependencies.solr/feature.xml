@@ -3,9 +3,11 @@
       id="org.eclipse.gyrex.features.dependencies.solr"
       label="%featureName"
       version="0.10.0.qualifier"
-      provider-name="%providerName">
+      provider-name="%providerName"
+      license-feature="org.eclipse.license"
+      license-feature-version="1.0.0.qualifier">
 
-   <description>
+   <description url="http://www.eclipse.org/gyrex/">
       %description
    </description>
 
@@ -13,7 +15,7 @@
       %copyright
    </copyright>
 
-   <license>
+   <license url="%licenseURL">
       %license
    </license>
 
