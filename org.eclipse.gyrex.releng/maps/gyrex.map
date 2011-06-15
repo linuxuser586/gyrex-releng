@@ -81,7 +81,7 @@ plugin@org.eclipse.gyrex.model.common=v20110608-0730,:pserver:anonymous@dev.ecli
 plugin@org.eclipse.gyrex.services.common=v20110608-0730,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.services.common
 
 ### Gyrex Search
-plugin@org.eclipse.gyrex.search=v20110614-0800,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.search
+plugin@org.eclipse.gyrex.search=v20110615-0612,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.search
 
 ### Gyrex Server
 plugin@org.eclipse.gyrex.server.defaultroles=v20110608-0730,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.server.defaultroles
