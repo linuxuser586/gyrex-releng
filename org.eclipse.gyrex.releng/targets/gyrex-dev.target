@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Gyrex Development" sequenceNumber="30">
+<target name="Gyrex Development" sequenceNumber="31">
 <locations>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.equinox.sdk.feature.group" version="3.7.0.v20110502-7M7W8Z8eNV4UqfbhicjDN-ROgjNc"/>
@@ -41,10 +41,6 @@
 <unit id="javax.servlet.jsp.glassfish.feature.group" version="2.1.0.v20110513"/>
 <unit id="javax.servlet.jsp.glassfish.source.feature.group" version="2.1.0.v20110513"/>
 <repository location="http://download.eclipse.org/jetty/updates/jetty-rt-3.7milestones/"/>
-</location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.rap.tooling.feature.group" version="1.4.0.20110614-2335"/>
-<repository location="http://download.eclipse.org/rt/rap/1.4/tooling/RC4a/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.httpcomponents.httpcore" version="4.1.0.v201101201700"/>
@@ -238,6 +234,10 @@
 <unit id="org.apache.commons.codec" version="1.3.0.v201101211617"/>
 <unit id="org.apache.commons.codec.source" version="1.3.0.v201101211617"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.rap.runtime.sdk.feature.group" version="1.4.0.20110614-2335"/>
+<repository location="http://download.eclipse.org/rt/rap/1.4/runtime/RC4a/"/>
 </location>
 </locations>
 <targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
