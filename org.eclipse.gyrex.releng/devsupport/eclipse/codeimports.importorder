@@ -1,9 +1,0 @@
-#Organize Import Order
-#Thu Feb 07 10:19:32 CET 2008
-6=com
-5=org
-4=org.eclipse
-3=org.eclipse.cloudfree
-2=net
-1=javax
-0=java
