@@ -24,10 +24,10 @@
    </url>
 
    <requires>
-      <import feature="org.eclipse.gyrex.features.kernel" version="0.10.0" match="equivalent"/>
-      <import feature="org.eclipse.gyrex.features.http" version="0.10.0" match="equivalent"/>
-      <import feature="org.eclipse.gyrex.features.admin" version="0.10.0" match="equivalent"/>
-      <import feature="org.eclipse.gyrex.features.processing" version="0.10.0" match="equivalent"/>
+      <import feature="org.eclipse.gyrex.features.kernel" version="0.11.0" match="equivalent"/>
+      <import feature="org.eclipse.gyrex.features.http" version="0.11.0" match="equivalent"/>
+      <import feature="org.eclipse.gyrex.features.admin" version="0.11.0" match="equivalent"/>
+      <import feature="org.eclipse.gyrex.features.processing" version="0.11.0" match="equivalent"/>
    </requires>
 
    <plugin
