@@ -52,11 +52,11 @@ plugin@org.eclipse.gyrex.admin.ui.p2=v20110608-0730,:pserver:anonymous@dev.eclip
 plugin@org.eclipse.gyrex.admin.ui.context=v20110608-0730,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui.context
 
 ### Gyrex HTTP Component
-plugin@org.eclipse.gyrex.http=v20110608-0730,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http
+plugin@org.eclipse.gyrex.http=v20110923-1955,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http
 plugin@org.eclipse.gyrex.http.registry=v20110608-0730,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.registry
 
 ### Gyrex HTTP Component Jetty Engine
-plugin@org.eclipse.gyrex.http.jetty=v20110919-1200,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.jetty
+plugin@org.eclipse.gyrex.http.jetty=v20110923-1955,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.jetty
 
 ### Gyrex HTTP Component Logging
 plugin@org.eclipse.gyrex.http.log=v20110608-0730,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.log
