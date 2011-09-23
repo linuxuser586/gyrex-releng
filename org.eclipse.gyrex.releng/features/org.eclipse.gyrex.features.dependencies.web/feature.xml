@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.gyrex.features.dependencies.web"
       label="%featureName"
-      version="0.10.0.qualifier"
+      version="0.11.0.qualifier"
       provider-name="%providerName"
       license-feature="org.eclipse.license"
       license-feature-version="1.0.0.qualifier">
@@ -140,13 +140,6 @@
 
    <plugin
          id="org.codehaus.jackson.smile"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.equinox.http.jetty"
          download-size="0"
          install-size="0"
          version="0.0.0"
