@@ -198,13 +198,6 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.mortbay.jetty.server" version="6.1.23.v201012071420"/>
-<unit id="org.mortbay.jetty.server.source" version="6.1.23.v201012071420"/>
-<unit id="org.mortbay.jetty.util.source" version="6.1.23.v201012071420"/>
-<unit id="org.mortbay.jetty.util" version="6.1.23.v201012071420"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository/"/>
-</location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.net" version="2.2.0.v201101241833"/>
 <unit id="org.apache.commons.net.source" version="2.2.0.v201101241833"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository/"/>
@@ -245,8 +238,8 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.jetty.bundles.f.feature.group" version="7.5.2"/>
-<unit id="org.eclipse.jetty.bundles.f.source.feature.group" version="7.5.2"/>
+<unit id="org.eclipse.jetty.bundles.f.feature.group" version="7.5.3"/>
+<unit id="org.eclipse.jetty.bundles.f.source.feature.group" version="7.5.3"/>
 <repository location="http://download.eclipse.org/jetty/updates/jetty-bundles-7.x/"/>
 </location>
 </locations>
