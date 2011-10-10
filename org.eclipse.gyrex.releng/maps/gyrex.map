@@ -29,7 +29,7 @@ feature@org.eclipse.gyrex.features.dependencies.admin=v20110926-1435,:pserver:an
 plugin@org.eclipse.gyrex.boot=v20110915-2007,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.boot
 plugin@org.eclipse.gyrex.common=v20110920-1046,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.common
 plugin@org.eclipse.gyrex.context=v20110923-1840,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.context
-plugin@org.eclipse.gyrex.cloud=v20111004-1200,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.cloud
+plugin@org.eclipse.gyrex.cloud=v20111010-1216,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.cloud
 plugin@org.eclipse.gyrex.monitoring=v20110901-1642,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.monitoring
 plugin@org.eclipse.gyrex.p2=v20110623-1435,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.p2
 plugin@org.eclipse.gyrex.preferences=v20110926-1205,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.preferences
@@ -40,7 +40,7 @@ plugin@org.eclipse.gyrex.preferences=v20110926-1205,:pserver:anonymous@dev.eclip
 fragment@org.eclipse.gyrex.frameworklogadapter=v20110608-0730,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.frameworklogadapter
 
 ### Gyrex Jobs
-plugin@org.eclipse.gyrex.jobs=v20111005-0950,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.jobs
+plugin@org.eclipse.gyrex.jobs=v20111010-1216,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.jobs
 
 ### Gyrex Admin
 plugin@org.eclipse.gyrex.admin.ui=v20110908-0910,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/admin/bundles/org.eclipse.gyrex.admin.ui
@@ -56,7 +56,7 @@ plugin@org.eclipse.gyrex.http=v20110923-1955,:pserver:anonymous@dev.eclipse.org:
 plugin@org.eclipse.gyrex.http.registry=v20110608-0730,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.registry
 
 ### Gyrex HTTP Component Jetty Engine
-plugin@org.eclipse.gyrex.http.jetty=v20111005-2025,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.jetty
+plugin@org.eclipse.gyrex.http.jetty=v20111010-1216,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.jetty
 
 ### Gyrex HTTP Component Logging
 plugin@org.eclipse.gyrex.http.log=v20110608-0730,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.http.log
