@@ -146,14 +146,14 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.jetty.ajp"
+         id="org.eclipse.jetty.monitor"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.jetty.monitor"
+         id="org.eclipse.jetty.xml"
          download-size="0"
          install-size="0"
          version="0.0.0"
