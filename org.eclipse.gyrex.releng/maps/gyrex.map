@@ -37,7 +37,7 @@ plugin@org.eclipse.gyrex.preferences=v20111011-0948,:pserver:anonymous@dev.eclip
 #plugin@org.eclipse.gyrex.=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.
 
 ### Framework Log Hook
-fragment@org.eclipse.gyrex.frameworklogadapter=v20110608-0730,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.frameworklogadapter
+fragment@org.eclipse.gyrex.frameworklogadapter=v20111013-1427,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.frameworklogadapter
 
 ### Gyrex Jobs
 plugin@org.eclipse.gyrex.jobs=v20111012-1002,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.jobs
