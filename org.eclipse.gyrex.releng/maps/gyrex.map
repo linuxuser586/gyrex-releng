@@ -87,7 +87,7 @@ plugin@org.eclipse.gyrex.search=v20111024-0620,:pserver:anonymous@dev.eclipse.or
 plugin@org.eclipse.gyrex.server.defaultroles=v20110608-0730,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.server.defaultroles
 
 ### tests
-feature@org.eclipse.gyrex.features.tests=v20110825-1450,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.tests
+feature@org.eclipse.gyrex.features.tests=v20111024-0740,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.tests
 plugin@org.eclipse.gyrex.boot.tests=v20111024-0620,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.boot.tests
 plugin@org.eclipse.gyrex.cloud.tests=v20111024-0620,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.cloud.tests
 plugin@org.eclipse.gyrex.context.tests=v20111024-0620,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.context.tests
@@ -96,4 +96,4 @@ plugin@org.eclipse.gyrex.persistence.tests=v20110608-0730,:pserver:anonymous@dev
 plugin@org.eclipse.gyrex.persistence.derby.tests=v20110608-0730,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.persistence.derby.tests
 plugin@org.eclipse.gyrex.search.tests=v20110608-0730,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/services/bundles/org.eclipse.gyrex.search.tests
 plugin@org.eclipse.gyrex.preferences.tests=v20110608-0730,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.preferences.tests
-plugin@org.eclipse.gyrex.server.tests=v20110724-1140,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.server.tests
+plugin@org.eclipse.gyrex.server.tests=v20111024-0740,:pserver:anonymous@dev.eclipse.org:/cvsroot/technology,,org.eclipse.gyrex/platform/bundles/org.eclipse.gyrex.server.tests
