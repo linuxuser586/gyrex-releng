@@ -169,9 +169,9 @@
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.lucene" version="2.9.1.v201101211721"/>
 <unit id="org.apache.lucene.analysis" version="2.9.1.v201101211721"/>
-<unit id="org.apache.lucene.core" version="3.0.3.v201111231628"/>
+<unit id="org.apache.lucene.core" version="2.9.1.v201101211721"/>
 <unit id="org.apache.lucene.highlighter" version="2.9.1.v20100421-0704"/>
-<unit id="org.apache.lucene.memory" version="3.0.3.v201111151751"/>
+<unit id="org.apache.lucene.memory" version="2.9.1.v20100421-0704"/>
 <unit id="org.apache.lucene.misc" version="2.9.1.v20100421-0704"/>
 <unit id="org.apache.lucene.queries" version="2.9.1.v20100421-0704"/>
 <unit id="org.apache.lucene.snowball" version="2.9.1.v20100421-0704"/>
@@ -183,9 +183,9 @@
 <unit id="org.apache.solr.servlet" version="1.4.0.v20100421-0704"/>
 <unit id="org.apache.lucene.source" version="2.9.1.v201101211721"/>
 <unit id="org.apache.lucene.analysis.source" version="2.9.1.v201101211721"/>
-<unit id="org.apache.lucene.core.source" version="3.0.3.v201111231628"/>
+<unit id="org.apache.lucene.core.source" version="2.9.1.v201101211721"/>
 <unit id="org.apache.lucene.highlighter.source" version="2.9.1.v20100421-0704"/>
-<unit id="org.apache.lucene.memory.source" version="3.0.3.v201111151751"/>
+<unit id="org.apache.lucene.memory.source" version="2.9.1.v20100421-0704"/>
 <unit id="org.apache.lucene.misc.source" version="2.9.1.v20100421-0704"/>
 <unit id="org.apache.lucene.queries.source" version="2.9.1.v20100421-0704"/>
 <unit id="org.apache.lucene.snowball.source" version="2.9.1.v20100421-0704"/>
