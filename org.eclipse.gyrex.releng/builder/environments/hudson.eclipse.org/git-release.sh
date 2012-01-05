@@ -58,7 +58,6 @@ do
         shift
 done
 
-buildTagRoot
 if [ -z $buildTagRoot ]; then
   echo You must provide -buildTagRoot
   echo args: "$ARGS"
