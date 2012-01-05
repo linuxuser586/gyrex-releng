@@ -23,10 +23,16 @@ if [ ! -d $builderHome ]; then
 fi
 
 # where all the build tagging happens
-buildTagRoot=$WORKSPACE/buildTagging
+buildTagRoot=$WORKSPACE/tags
+if [ ! -d $buildTagRoot ]; then
+	mkdir $buildTagRoot
+fi
 
 # the git cache
 gitCache=$WORKSPACE/gitCache
+if [ ! -d $gitCache ]; then
+	mkdir $gitCache
+fi
 
 
 generateLocalBuildProperties () {
@@ -76,17 +82,12 @@ generateLocalBuildProperties () {
 
 
 tagRepo () {
-    # ensure directory exists
-	if [ ! -d $buildTagRoot ]; then
-		mkdir $buildTagRoot
-	fi
-	
 	# find the last used tag
 	buildTag=${BUILD_TYPE}$(date +%Y%m%d)-$(date +%H%M)-b${BUILD_NUMBER}
-	oldBuildTag=$( cat $buildTagRoot/${BUILD_TYPE}buildTag.properties )
+	oldBuildTag=$( cat $buildTagRoot/last-${BUILD_TYPE}-buildTag.properties )
 	echo "Using build tag: $buildTag"
 	echo "Last build tag: $oldBuildTag"
-	echo $buildTag >$buildTagRoot/${BUILD_TYPE}buildTag.properties
+	echo $buildTag >$buildTagRoot/last-${BUILD_TYPE}-buildTag.properties
 	
 	# fetch tag helper scripts
 	cp -f $builderHome/environments/hudson.eclipse.org/git*.sh $buildTagRoot
@@ -95,7 +96,7 @@ tagRepo () {
 	pushd $buildTagRoot
 	/bin/bash git-release.sh \
    -buildType "${BUILD_TYPE}" -gitCache "$gitCache" -root "$buildTagRoot" \
-   -oldBuildTag $oldBuildTag -buildTag $buildTag
+   -oldBuildTag "$oldBuildTag" -buildTag "$buildTag"
 	popd
 	mailx -s "$eclipseStream SDK Build: $buildTag submission" gunnar@eclipse.org <$buildTagRoot/$buildTag/report.txt
 }

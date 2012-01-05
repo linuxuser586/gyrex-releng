@@ -123,7 +123,7 @@ pushd $buildTagRoot
 relengRepo=$gitCache/$(gitCacheDirName 'git://git.eclipse.org/gitroot/gyrex/platform.git')/releng/org.eclipse.gyrex.releng
 
 # pull the releng project to get the list of repositories to tag
-#pull "git://git.eclipse.org/gitroot/gyrex/platform.git" $relengBranch
+pull "git://git.eclipse.org/gitroot/gyrex/platform.git" $relengBranch
 
 # cleanup temp files (from last build)
 rm -f repos-clean.txt clones.txt repos-report.txt
