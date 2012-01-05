@@ -7,8 +7,7 @@
 
 
 ROOT=$1; shift
-TMP=/tmp/git-submission-$(date +%Y%m%d)-$(date +%H%M)_
-rm -f ${TMP}proj_changed_$$.txt ${TMP}bug_list_$$.txt ${TMP}bug_info_$$.txt
+rm -f /tmp/proj_changed_$$.txt /tmp/bug_list_$$.txt /tmp/bug_info_$$.txt
 
 # Generate directory name used in gitCache from repo Url
 # Usage: gitCacheDirName repositoryURL
@@ -23,29 +22,29 @@ while [ $# -gt 0 ]; do
 	LAST_TAG="$1"; shift
 	BUILD_TAG="$1"; shift
 	cd $ROOT/$REPO_DIR
-	git diff --name-only ${LAST_TAG} ${BUILD_TAG} | cut -f2 -d/ | sort -u >>${TMP}proj_changed_$$.txt
+	git diff --name-only ${LAST_TAG} ${BUILD_TAG} | cut -f2 -d/ | sort -u >>/tmp/proj_changed_$$.txt
 	 
 	
 	git log --first-parent ${LAST_TAG}..${BUILD_TAG} \
 		| grep '[Bb]ug[^0-9]*[0-9][0-9][0-9][0-9][0-9]*[^0-9]'  \
-		| sed 's/.*[Bb]ug[^0-9]*\([0-9][0-9][0-9][0-9][0-9]*\)[^0-9].*$/\1/g' >>${TMP}bug_list_$$.txt
+		| sed 's/.*[Bb]ug[^0-9]*\([0-9][0-9][0-9][0-9][0-9]*\)[^0-9].*$/\1/g' >>/tmp/bug_list_$$.txt
 done
 
-touch ${TMP}bug_info_$$.txt
+touch /tmp/bug_info_$$.txt
 
-for BUG in $( cat ${TMP}bug_list_$$.txt | sort -n -u ); do
-	BUGT2=${TMP}buginfo_${BUG}_$$.txt
+for BUG in $( cat /tmp/bug_list_$$.txt | sort -n -u ); do
+	BUGT2=/tmp/buginfo_${BUG}_$$.txt
 	curl -k https://bugs.eclipse.org/bugs/show_bug.cgi?id=${BUG}\&ctype=xml >$BUGT2 2>/dev/null
 	TITLE=$( grep short_desc $BUGT2 | sed 's/^.*<short_desc.//g' | sed 's/<\/short_desc.*$//g' )
     STATUS=$( grep bug_status $BUGT2 | sed 's/^.*<bug_status.//g' | sed 's/<\/bug_status.*$//g' )
     if [ RESOLVED = "$STATUS" -o VERIFIED = "$STATUS" ]; then
         STATUS=$( grep '<resolution>' $BUGT2 | sed 's/^.*<resolution.//g' | sed 's/<\/resolution.*$//g' )
     fi
-    echo + Bug $BUG - $TITLE \(${STATUS}\) >>${TMP}bug_info_$$.txt
+    echo + Bug $BUG - $TITLE \(${STATUS}\) >>/tmp/bug_info_$$.txt
 done
 
 echo The build contains the following changes:
-cat ${TMP}bug_info_$$.txt
+cat /tmp/bug_info_$$.txt
 echo ""
 echo The following projects have changed:
-cat ${TMP}proj_changed_$$.txt | sort -u
+cat /tmp/proj_changed_$$.txt | sort -u

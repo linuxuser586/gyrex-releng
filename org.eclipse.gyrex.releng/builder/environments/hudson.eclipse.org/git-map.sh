@@ -73,7 +73,7 @@ update_map () {
 			if ! ( git log -1  --format="%d" "$LAST_COMMIT" | grep "[ (]$NEW_TAG[,)]" >/dev/null); then
 				echo "pushd \"$gitCache/$REPO_DIR\" ; git tag \"$NEW_TAG\" \"$LAST_COMMIT\" ; popd"
 			fi
-			echo sed "'s/$LINE_START=GIT,tag=$CURRENT_TAG/$LINE_START=GIT,tag=$NEW_TAG/g'" \"$MAP\" \>/tmp/t1_$$.txt \; mv /tmp/t1_$$.txt \"$MAP\"
+			echo sed -i "'s/$LINE_START=GIT,tag=$CURRENT_TAG/$LINE_START=GIT,tag=$NEW_TAG/g'" \"$MAP\"
 		else
 			echo OK $LINE_START $CURRENT_TAG 
 		fi
