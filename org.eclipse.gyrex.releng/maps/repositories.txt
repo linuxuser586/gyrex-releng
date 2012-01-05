@@ -1,0 +1,3 @@
+# the list of repositories to be tagged during release builds
+# (format is <repository URL> <branch name>)
+git://git.eclipse.org/gitroot/gyrex/platform.git master
