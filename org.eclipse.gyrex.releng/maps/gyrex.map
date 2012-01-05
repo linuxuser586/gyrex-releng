@@ -25,7 +25,6 @@ feature@org.eclipse.gyrex.features.dependencies.persistence=GIT,tag=v20111112-12
 feature@org.eclipse.gyrex.features.dependencies.admin=GIT,tag=v20111212-1330,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=releng/org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.admin
 
 ### Gyrex Kernel
-#plugin@org.eclipse.gyrex.=GIT,tag=HEAD,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/
 plugin@org.eclipse.gyrex.boot=GIT,tag=v20111212-1330,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.boot
 plugin@org.eclipse.gyrex.common=GIT,tag=v20111212-1330,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.common
 plugin@org.eclipse.gyrex.context=GIT,tag=v20111212-1330,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.context
@@ -33,8 +32,6 @@ plugin@org.eclipse.gyrex.cloud=GIT,tag=v20120103-1019,repo=git://git.eclipse.org
 plugin@org.eclipse.gyrex.monitoring=GIT,tag=v20111112-1245,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.monitoring
 plugin@org.eclipse.gyrex.p2=GIT,tag=v20111112-1245,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.p2
 plugin@org.eclipse.gyrex.preferences=GIT,tag=v20111112-1245,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.preferences
-
-#plugin@org.eclipse.gyrex.=GIT,tag=HEAD,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.
 
 ### Framework Log Hook
 fragment@org.eclipse.gyrex.frameworklogadapter=GIT,tag=v20111112-1245,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.frameworklogadapter

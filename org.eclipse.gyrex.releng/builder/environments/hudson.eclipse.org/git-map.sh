@@ -43,7 +43,7 @@ tag_repo_commit () {
 }
 
 update_map () {
-	echo update_map "$@"
+	#echo update_map "$@"
 	REPO=$1
 	REPO_DIR=$( gitCacheDirName $REPO )
 	MAP=$2
