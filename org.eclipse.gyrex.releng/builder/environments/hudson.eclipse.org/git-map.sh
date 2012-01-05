@@ -43,12 +43,12 @@ tag_repo_commit () {
 }
 
 update_map () {
-	#echo update_map "$@"
+	echo update_map "$@"
 	REPO=$1
 	REPO_DIR=$( gitCacheDirName $REPO )
 	MAP=$2
 	pushd "$gitCache/$REPO_DIR" >/dev/null
-	grep "repo=${REPO}," "$MAP" >/tmp/maplines_$$.txt
+    grep -v '^#' "$MAP" | grep -v '^!' "$MAP" | grep "repo=${REPO}," "$MAP" >/tmp/maplines_$$.txt
 	if [ ! -s /tmp/maplines_$$.txt ]; then
 		return
 	fi
