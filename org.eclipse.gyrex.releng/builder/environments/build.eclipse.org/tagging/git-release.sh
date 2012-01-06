@@ -151,7 +151,7 @@ grep -v ^OK maps.txt | grep -v ^Executed >run.txt
 cd $relengRepo
 git add $( find . -name "*.map" )
 git commit -m "Releng build tagging for $buildTag"
-git tag -f $buildTag   #tag the map file change
+git tag -f -a $buildTag -m "Build Submission Tag"  #tag the map file change
 
 git push
 git push --tags
