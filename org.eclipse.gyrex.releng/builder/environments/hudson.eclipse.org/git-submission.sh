@@ -12,7 +12,7 @@ rm -f /tmp/proj_changed_$$.txt /tmp/bug_list_$$.txt /tmp/bug_info_$$.txt
 # Generate directory name used in gitCache from repo Url
 # Usage: gitCacheDirName repositoryURL
 gitCacheDirName() {
-	echo $(echo $1 | sed 's/[^a-z0-9A-Z]/_/g')
+	echo $(echo $1 | sed 's/ssh:.*@git.eclipse.org/git:\/\/git.eclipse.org/g' | sed 's/ssh:\/\/git.eclipse.org/git:\/\/git.eclipse.org/g' | sed 's/[^a-z0-9A-Z]/_/g')
 }
 
 

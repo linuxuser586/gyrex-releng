@@ -29,10 +29,13 @@ if [ ! -d $buildTagRoot ]; then
 fi
 
 # the git cache
-gitCache=$WORKSPACE/gitCache
+gitCache=/shared/technology/gyrex/gitCache
 if [ ! -d $gitCache ]; then
 	mkdir $gitCache
 fi
+
+# execute all git commands as a user that has git push permissions
+alias git='/shared/technology/gyrex/tagging/gits.sh'
 
 
 generateLocalBuildProperties () {

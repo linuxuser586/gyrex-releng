@@ -87,7 +87,7 @@ fi
 # Generate directory name used in gitCache from repo Url
 # Usage: gitCacheDirName repositoryURL
 gitCacheDirName() {
-	echo $(echo $1 | sed 's/ssh:.*@git.eclipse.org/git:\/\/git.eclipse.org/g' | sed 's/[^a-z0-9A-Z]/_/g')
+	echo $(echo $1 | sed 's/ssh:.*@git.eclipse.org/git:\/\/git.eclipse.org/g' | sed 's/ssh:\/\/git.eclipse.org/git:\/\/git.eclipse.org/g' | sed 's/[^a-z0-9A-Z]/_/g')
 }
 
 #Pull or clone a branch from a repository
@@ -120,7 +120,7 @@ fi
 pushd $buildTagRoot
 
 # the releng repository
-relengRepo=$gitCache/$(gitCacheDirName 'git://git.eclipse.org/gitroot/gyrex/platform.git')/releng/org.eclipse.gyrex.releng
+relengRepo=$gitCache/$(gitCacheDirName 'ssh://git.eclipse.org/gitroot/gyrex/platform.git')/releng/org.eclipse.gyrex.releng
 
 # pull the releng project to get the list of repositories to tag
 pull "git://git.eclipse.org/gitroot/gyrex/platform.git" $relengBranch
@@ -136,7 +136,7 @@ while read line; do
         #each line is of the form <repository> <branch>
         set -- $line
         pull $1 $2
-        echo $1 | sed 's/ssh:.*@git.eclipse.org/git:\/\/git.eclipse.org/g' >> clones.txt
+        echo $1 | sed 's/ssh:.*@git.eclipse.org/git:\/\/git.eclipse.org/g' | sed 's/ssh:\/\/git.eclipse.org/git:\/\/git.eclipse.org/g' >> clones.txt
 done < repos-clean.txt
 
 cat repos-clean.txt | sed "s/ / $oldBuildTag /" >repos-report.txt
