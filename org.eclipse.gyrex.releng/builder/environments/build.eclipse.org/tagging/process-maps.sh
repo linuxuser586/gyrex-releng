@@ -61,7 +61,7 @@ wget -O git-map.sh http://git.eclipse.org/c/gyrex/platform.git/plain/releng/org.
 wget -O git-submission.sh http://git.eclipse.org/c/gyrex/platform.git/plain/releng/org.eclipse.gyrex.releng/builder/environments/build.eclipse.org/tagging/git-submission.sh
 
 # call tag script
-/bin/bash -c git-release.sh \
+/bin/bash git-release.sh \
 	-gitCache "$gitCache" -root "$buildTagRoot" \
 	-committerId "${committerId}" -gitEmail "${gitEmail}" -gitName "${gitName}" \
 	-oldBuildTag "$oldBuildTag" -buildTag "$buildTag"
