@@ -28,6 +28,12 @@ while [ $# -gt 0 ]; do
 		| sed 's/.*[Bb]ug[^0-9]*\([0-9][0-9][0-9][0-9][0-9]*\)[^0-9].*$/\1/g' >>$WORKDIR/bug_list.txt
 done
 
+# abort processing if nothing changed
+if [ ! -d $WORKDIR/proj_changed.txt ]; then
+	echo "No changes found." 1>&2
+	exit 1
+fi
+
 touch $WORKDIR/bug_info.txt
 
 for BUG in $( cat $WORKDIR/bug_list.txt | sort -n -u ); do

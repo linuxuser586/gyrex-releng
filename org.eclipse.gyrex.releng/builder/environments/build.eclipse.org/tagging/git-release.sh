@@ -135,19 +135,19 @@ cat $buildTagRoot/$buildTag/repos-clean.txt | sed "s/ / $oldBuildTag /" >$buildT
 echo "[git-release]" git-submission.sh $gitCache $buildTagRoot/$buildTag $( cat $buildTagRoot/$buildTag/repos-report.txt )
 /bin/bash git-submission.sh $gitCache $buildTagRoot/$buildTag $( cat $buildTagRoot/$buildTag/repos-report.txt ) > $buildTagRoot/$buildTag/report.txt
 
+# abort if nothing changed
+if [ "$?" -ne "0" ]; then
+	echo "[git-release] Nothing to update"
+	popd >/dev/null
+	exit 1
+fi
+
 # generate commands for updating maps and tagging projects
 cat $buildTagRoot/$buildTag/clones.txt| xargs /bin/bash git-map.sh $gitCache $buildTag \
         $relengRepo > $buildTagRoot/$buildTag/maps.txt
 
 # trim out lines that don't require execution
 grep -v ^OK $buildTagRoot/$buildTag/maps.txt | grep -v ^Executed >$buildTagRoot/$buildTag/run.txt
-
-# abort if nothing to tag
-if [ $(wc -l < $buildTagRoot/$buildTag/run.txt ) -le 1 ]; then
-	echo "[git-release] Nothing to update"
-	popd >/dev/null
-	exit 9
-fi
 
 # perform tagging
 echo "[git-release] Tagging projects using $buildTag..."
