@@ -45,12 +45,12 @@ if [ ! -d $gitCache ]; then
 	mkdir $gitCache
 fi
 
-# find the last used tag
+# generate new tag and also find the last used tag
 buildTag=v$(date -u +%Y%m%d)-$(date -u +%H%M)
 oldBuildTag=$( cat $buildTagRoot/lastBuildTag.properties )
 echo "Using build tag: $buildTag"
 echo "Last build tag: $oldBuildTag"
-echo $buildTag >$buildTagRoot/lastBuildTag.properties
+
 
 # switch to root dir	
 pushd $buildTagRoot >/dev/null
@@ -68,6 +68,8 @@ wget -O git-submission.sh http://git.eclipse.org/c/gyrex/platform.git/plain/rele
 
 # additional processing on success	
 if [ "$?" -eq "0" ]; then
+    # remember tag
+	echo $buildTag >$buildTagRoot/lastBuildTag.properties
 	# send mail with change report
 	mailx -s "Gyrex Build Submission: $buildTag" gunnar@eclipse.org <$buildTagRoot/$buildTag/report.txt
 	# trigger build
