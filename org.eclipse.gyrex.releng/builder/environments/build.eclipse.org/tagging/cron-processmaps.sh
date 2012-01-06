@@ -39,10 +39,10 @@ fi
 tagRepo () {
 	# find the last used tag
 	buildTag=v$(date +%Y%m%d)-$(date +%H%M)
-	oldBuildTag=$( cat $buildTagRoot/last-buildTag.properties )
+	oldBuildTag=$( cat $buildTagRoot/lastBuildTag.properties )
 	echo "Using build tag: $buildTag"
 	echo "Last build tag: $oldBuildTag"
-	echo $buildTag >$buildTagRoot/last-${BUILD_TYPE}-buildTag.properties
+	echo $buildTag >$buildTagRoot/lastBuildTag.properties
 
     # switch to root dir	
 	pushd $buildTagRoot

@@ -37,7 +37,7 @@ tag_repo_commit () {
 	pushd "$gitCache/$REPO_DIR" >/dev/null
 	REPO_COMMIT=$( git rev-list -1 HEAD  )
 	if ! ( git log -1  --format="%d" "$REPO_COMMIT" | grep "[ (]$NEW_TAG[,)]" >/dev/null); then
-		echo "pushd \"$gitCache/$REPO_DIR\" ; git tag \"$NEW_TAG\" \"$REPO_COMMIT\" ; popd"
+		echo "pushd \"$gitCache/$REPO_DIR\" ; git tag -m 'Build Submission' -a \"$NEW_TAG\" \"$REPO_COMMIT\" ; popd"
 	fi
 	popd >/dev/null
 }
@@ -71,7 +71,7 @@ update_map () {
 			fi
 			
 			if ! ( git log -1  --format="%d" "$LAST_COMMIT" | grep "[ (]$NEW_TAG[,)]" >/dev/null); then
-				echo "pushd \"$gitCache/$REPO_DIR\" ; git tag \"$NEW_TAG\" \"$LAST_COMMIT\" ; popd"
+				echo "pushd \"$gitCache/$REPO_DIR\" ; git tag -m 'Build Submission' -a \"$NEW_TAG\" \"$LAST_COMMIT\" ; popd"
 			fi
 			echo sed -i "'s/$LINE_START=GIT,tag=$CURRENT_TAG/$LINE_START=GIT,tag=$NEW_TAG/g'" \"$MAP\"
 		else
