@@ -23,7 +23,7 @@ while [ $# -gt 0 ]; do
 done
 
 # abort processing if nothing changed
-if [ ! -d $WORKDIR/proj_changed.txt ]; then
+if [ ! -s $WORKDIR/proj_changed.txt ]; then
 	echo "No changes found." 1>&2
 	exit 1
 fi
