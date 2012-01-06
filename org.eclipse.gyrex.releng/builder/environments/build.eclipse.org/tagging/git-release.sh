@@ -86,7 +86,7 @@ gitCacheDirName() {
 #Pull or clone a branch from a repository
 #Usage: pull repositoryURL branch
 pull() {
-        pushd $gitCache
+        pushd $gitCache >/dev/null
         directory=$(gitCacheDirName "$1")
         if [ ! -d $directory ]; then
                 echo git clone $1 $directory
@@ -95,13 +95,13 @@ pull() {
                 git config --add user.email "$gitEmail"
                 git config --add user.name "$gitName"
         fi
-        popd
-        pushd $gitCache/$directory
+        popd >/dev/null
+        pushd $gitCache/$directory >/dev/null
         echo git checkout $2
         git checkout $2
         echo git pull
         git pull
-        popd
+        popd >/dev/null
 }
 
 #Nothing to do for nightly builds, or if $noTag is specified
@@ -110,7 +110,7 @@ if $noTag || [ "$buildType" == "N" ]; then
         exit
 fi
 
-pushd $buildTagRoot
+pushd $buildTagRoot >/dev/null
 
 # the releng repository
 relengRepo=$gitCache/$(gitCacheDirName 'ssh://git.eclipse.org/gitroot/gyrex/platform.git')/releng/org.eclipse.gyrex.releng
@@ -149,6 +149,7 @@ grep -v ^OK $buildTagRoot/$buildTag/maps.txt | grep -v ^Executed >$buildTagRoot/
 # abort if nothing to tag
 if [ $(wc -l < $buildTagRoot/$buildTag/run.txt ) <= 1 ]; then
 	echo "Nothing to update"
+	popd >/dev/null
 	exit
 fi
 
@@ -165,4 +166,4 @@ git tag -f -a $buildTag -m "Build Submission Tag"  #tag the map file change
 git push
 git push --tags
 
-popd
+popd >/dev/null
