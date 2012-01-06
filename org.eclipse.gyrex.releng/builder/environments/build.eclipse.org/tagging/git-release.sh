@@ -104,12 +104,6 @@ pull() {
         popd >/dev/null
 }
 
-#Nothing to do for nightly builds, or if $noTag is specified
-if $noTag || [ "$buildType" == "N" ]; then
-        echo Skipping build tagging for nightly build or -tag false build
-        exit
-fi
-
 pushd $buildTagRoot >/dev/null
 
 # the releng repository
@@ -118,8 +112,11 @@ relengRepo=$gitCache/$(gitCacheDirName 'ssh://git.eclipse.org/gitroot/gyrex/plat
 # pull the releng project to get the list of repositories to tag
 pull "ssh://git.eclipse.org/gitroot/gyrex/platform.git" $relengBranch
 
-# cleanup temp files (from last build)
-rm -f $buildTagRoot/$buildTag/repos-clean.txt $buildTagRoot/$buildTag/clones.txt $buildTagRoot/$buildTag/repos-report.txt
+# create tag working dir
+if [ -d $buildTagRoot/$buildTag ]; then
+	rm -rf $buildTagRoot/$buildTag
+fi
+mkdir -rf $buildTagRoot/$buildTag
 
 # remove comments from pulled repository list
 cat "$relengRepo/maps/repositories.txt" | grep -v "^#" > $buildTagRoot/$buildTag/repos-clean.txt
