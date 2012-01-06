@@ -116,7 +116,7 @@ pull "ssh://git.eclipse.org/gitroot/gyrex/platform.git" $relengBranch
 if [ -d $buildTagRoot/$buildTag ]; then
 	rm -rf $buildTagRoot/$buildTag
 fi
-mkdir -rf $buildTagRoot/$buildTag
+mkdir $buildTagRoot/$buildTag
 
 # remove comments from pulled repository list
 cat "$relengRepo/maps/repositories.txt" | grep -v "^#" > $buildTagRoot/$buildTag/repos-clean.txt
