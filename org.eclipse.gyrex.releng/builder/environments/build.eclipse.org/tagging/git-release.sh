@@ -17,8 +17,7 @@
 
 #default values, overridden by command line
 relengBranch=master
-buildType=I
-committerId=hudson
+committerId=gyrex
 gitEmail=gyrex-dev@eclipse.org
 gitName="Gyrex Builder"
 tag=true
@@ -31,8 +30,6 @@ do
         case "$1" in
                 "-branch")
                         relengBranch="$2"; shift;;
-                "-buildType")
-                        buildType="$2"; shift;;
                 "-gitCache")
                         gitCache="$2"; shift;;
                 "-root")

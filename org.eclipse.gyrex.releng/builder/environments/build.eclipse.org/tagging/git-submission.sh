@@ -5,7 +5,6 @@
 # USAGE: git-submission.sh repoRoot repoURL last_tag build_tag [repoURL...] >report.txt
 #
 
-
 ROOT=$1; shift
 rm -f /tmp/proj_changed_$$.txt /tmp/bug_list_$$.txt /tmp/bug_info_$$.txt
 
