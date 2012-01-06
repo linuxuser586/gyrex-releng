@@ -73,7 +73,7 @@ if [ "$?" -eq "0" ]; then
 	echo $buildTag >$buildTagRoot/lastBuildTag.properties
 	# send mail with change report
 	echo "[process-maps] Sending mail with submission report..."
-	mailx -s "Gyrex Build Submission: $buildTag" gunnar@eclipse.org <$buildTagRoot/$buildTag/report.txt
+	mailx -s "Gyrex Build Submission: $buildTag" gyrex-dev@eclipse.org <$buildTagRoot/$buildTag/report.txt
 	# trigger build
 	echo "[process-maps] Triggering build..."
 	curl -I "https://hudson.eclipse.org/hudson/view/Technology/job/gyrex-integration/buildWithParameters?token=${hudsonBuildTriggerToken}&cause=Build+Submission+${buildTag}"
