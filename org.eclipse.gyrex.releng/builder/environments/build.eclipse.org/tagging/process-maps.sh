@@ -56,9 +56,9 @@ echo "Last build tag: $oldBuildTag"
 pushd $buildTagRoot >/dev/null
 
 # fetch tag helper scripts
-wget -O git-release.sh http://git.eclipse.org/c/gyrex/platform.git/plain/releng/org.eclipse.gyrex.releng/builder/environments/build.eclipse.org/tagging/git-release.sh
-wget -O git-map.sh http://git.eclipse.org/c/gyrex/platform.git/plain/releng/org.eclipse.gyrex.releng/builder/environments/build.eclipse.org/tagging/git-map.sh
-wget -O git-submission.sh http://git.eclipse.org/c/gyrex/platform.git/plain/releng/org.eclipse.gyrex.releng/builder/environments/build.eclipse.org/tagging/git-submission.sh
+wget -O git-release.sh "http://git.eclipse.org/c/gyrex/platform.git/plain/releng/org.eclipse.gyrex.releng/builder/environments/build.eclipse.org/tagging/git-release.sh?$buildTag"
+wget -O git-map.sh "http://git.eclipse.org/c/gyrex/platform.git/plain/releng/org.eclipse.gyrex.releng/builder/environments/build.eclipse.org/tagging/git-map.sh?$buildTag"
+wget -O git-submission.sh "http://git.eclipse.org/c/gyrex/platform.git/plain/releng/org.eclipse.gyrex.releng/builder/environments/build.eclipse.org/tagging/git-submission.sh?$buildTag"
 
 # call tag script
 /bin/bash git-release.sh \
