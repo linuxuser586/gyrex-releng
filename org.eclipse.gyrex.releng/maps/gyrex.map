@@ -26,7 +26,7 @@ feature@org.eclipse.gyrex.features.dependencies.admin=GIT,tag=v20120106-1330,rep
 
 ### Gyrex Kernel
 plugin@org.eclipse.gyrex.boot=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.boot
-plugin@org.eclipse.gyrex.common=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.common
+plugin@org.eclipse.gyrex.common=GIT,tag=v20120106-1458,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.common
 plugin@org.eclipse.gyrex.context=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.context
 plugin@org.eclipse.gyrex.cloud=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.cloud
 plugin@org.eclipse.gyrex.monitoring=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.monitoring
