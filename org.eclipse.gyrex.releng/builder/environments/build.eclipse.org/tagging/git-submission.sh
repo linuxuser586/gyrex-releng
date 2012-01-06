@@ -19,8 +19,8 @@ while [ $# -gt 0 ]; do
 	# (we try to filter out anything that does not look like a project named "org.eclipse..."
 	git diff --name-only ${LAST_TAG} ${BUILD_TAG} | sed 's/.*org\.eclipse/org.eclipse/g' | grep '^org\.eclipse' | cut -f1 -d/ | sort -u >>$WORKDIR/proj_changed.txt
 	git log --first-parent ${LAST_TAG}..${BUILD_TAG} \
-		| grep '[Bb]ug[^0-9]*[0-9][0-9][0-9][0-9][0-9]*[^0-9]'  \
-		| sed 's/.*[Bb]ug[^0-9]*\([0-9][0-9][0-9][0-9][0-9]*\)[^0-9].*$/\1/g' >>$WORKDIR/bug_list.txt
+		| grep '[Bb]ug[^0-9]\+[0-9]\+'  \
+		| sed 's/.*[Bb]ug[^0-9]*\([0-9]\+\).*$/\1/g' >>$WORKDIR/bug_list.txt
 done
 
 # abort processing if nothing changed
