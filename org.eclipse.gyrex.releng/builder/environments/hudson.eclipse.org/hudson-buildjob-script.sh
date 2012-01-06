@@ -22,12 +22,6 @@ if [ ! -d $builderHome ]; then
 	exit 1
 fi
 
-# the shared git cache
-gitCache=/shared/technology/gyrex/build/gitcache
-if [ ! -d $gitCache ]; then
-	mkdir $gitCache
-fi
-
 # generate local build properties from environment template
 buildLocalProps=$builderHome/build.local.properties
 buildLocalPropsTemplate=$builderHome/environments/hudson.eclipse.org/build.local.properties
@@ -38,9 +32,9 @@ fi
 rm -f $buildLocalProps
 cp $buildLocalPropsTemplate $buildLocalProps
 
-# inject git cache location
+# inject git cache location (for delta cloning between builds)
 echo '' >> $buildLocalProps
-echo "fetchCacheLocation=${gitCache}" >> $buildLocalProps
+echo "fetchCacheLocation=$WORKSPACE/gitcache" >> $buildLocalProps
 
 # set build type specific properties
 echo '' >> $buildLocalProps
