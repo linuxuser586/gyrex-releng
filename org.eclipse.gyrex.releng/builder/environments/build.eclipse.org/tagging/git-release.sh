@@ -132,7 +132,6 @@ done < $buildTagRoot/$buildTag/repos-clean.txt
 cat $buildTagRoot/$buildTag/repos-clean.txt | sed "s/ / $oldBuildTag /" >$buildTagRoot/$buildTag/repos-report.txt
 
 # generate the change report
-mkdir $buildTagRoot/$buildTag
 echo "[git-release]" git-submission.sh $gitCache $buildTagRoot/$buildTag $( cat $buildTagRoot/$buildTag/repos-report.txt )
 /bin/bash git-submission.sh $gitCache $buildTagRoot/$buildTag $( cat $buildTagRoot/$buildTag/repos-report.txt ) > $buildTagRoot/$buildTag/report.txt
 
@@ -144,7 +143,7 @@ cat $buildTagRoot/$buildTag/clones.txt| xargs /bin/bash git-map.sh $gitCache $bu
 grep -v ^OK $buildTagRoot/$buildTag/maps.txt | grep -v ^Executed >$buildTagRoot/$buildTag/run.txt
 
 # abort if nothing to tag
-if [ $(wc -l < $buildTagRoot/$buildTag/run.txt ) <= 1 ]; then
+if [ $(wc -l < "$buildTagRoot/$buildTag/run.txt" ) -le 1 ]; then
 	echo "Nothing to update"
 	popd >/dev/null
 	exit 9
