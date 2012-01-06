@@ -143,23 +143,28 @@ cat $buildTagRoot/$buildTag/clones.txt| xargs /bin/bash git-map.sh $gitCache $bu
 grep -v ^OK $buildTagRoot/$buildTag/maps.txt | grep -v ^Executed >$buildTagRoot/$buildTag/run.txt
 
 # abort if nothing to tag
-if [ $(wc -l < "$buildTagRoot/$buildTag/run.txt" ) -le 1 ]; then
-	echo "Nothing to update"
+if [ $(wc -l < $buildTagRoot/$buildTag/run.txt ) -le 1 ]; then
+	echo "[git-release] Nothing to update"
 	popd >/dev/null
 	exit 9
 fi
 
 # perform tagging
+echo "[git-release] Tagging projects using $buildTag..."
 /bin/bash $buildTagRoot/$buildTag/run.txt
 
 # commit & tag updated maps
 cd $relengRepo
+echo "[git-release] Comitting and tagging map files..."
 git add $( find . -name "*.map" )
 git commit -m "Releng build tagging for $buildTag"
 git tag -f -a $buildTag -m "Build Submission Tag"  #tag the map file change
 
 # push
+echo "[git-release] Push to origin..."
 git push
 git push --tags
+
+echo "[git-release] Finished."
 
 popd >/dev/null

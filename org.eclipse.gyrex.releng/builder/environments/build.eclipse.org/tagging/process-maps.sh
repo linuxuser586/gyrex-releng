@@ -61,19 +61,24 @@ wget -O git-map.sh http://git.eclipse.org/c/gyrex/platform.git/plain/releng/org.
 wget -O git-submission.sh http://git.eclipse.org/c/gyrex/platform.git/plain/releng/org.eclipse.gyrex.releng/builder/environments/build.eclipse.org/tagging/git-submission.sh
 
 # call tag script
-/bin/bash git-release.sh \
+/bin/bash -c git-release.sh \
 	-gitCache "$gitCache" -root "$buildTagRoot" \
 	-committerId "${committerId}" -gitEmail "${gitEmail}" -gitName "${gitName}" \
 	-oldBuildTag "$oldBuildTag" -buildTag "$buildTag"
 
 # additional processing on success	
 if [ "$?" -eq "0" ]; then
-    # remember tag
+	# remember tag
+	echo "[process-maps] Saving tag $buildTag..."
 	echo $buildTag >$buildTagRoot/lastBuildTag.properties
 	# send mail with change report
+	echo "[process-maps] Sending mail with submission report..."
 	mailx -s "Gyrex Build Submission: $buildTag" gunnar@eclipse.org <$buildTagRoot/$buildTag/report.txt
 	# trigger build
-	curl -I "https://hudson.eclipse.org/hudson/view/Technology/job/gyrex-integration/build?token=${hudsonBuildTriggerToken}&cause=Build+Submission+${buildTag}"
+	echo "[process-maps] Triggering build..."
+	curl -I "https://hudson.eclipse.org/hudson/view/Technology/job/gyrex-integration/buildWithParameters?token=${hudsonBuildTriggerToken}&cause=Build+Submission+${buildTag}"
 fi
 
 popd >/dev/null
+
+echo "[process-maps] Done."
