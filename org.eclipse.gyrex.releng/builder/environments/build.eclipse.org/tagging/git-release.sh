@@ -119,40 +119,49 @@ relengRepo=$gitCache/$(gitCacheDirName 'ssh://git.eclipse.org/gitroot/gyrex/plat
 pull "ssh://git.eclipse.org/gitroot/gyrex/platform.git" $relengBranch
 
 # cleanup temp files (from last build)
-rm -f repos-clean.txt clones.txt repos-report.txt
+rm -f $buildTagRoot/$buildTag/repos-clean.txt $buildTagRoot/$buildTag/clones.txt $buildTagRoot/$buildTag/repos-report.txt
 
 # remove comments from pulled repository list
-cat "$relengRepo/maps/repositories.txt" | grep -v "^#" > repos-clean.txt
+cat "$relengRepo/maps/repositories.txt" | grep -v "^#" > $buildTagRoot/$buildTag/repos-clean.txt
 
 # clone or pull each repository and checkout the appropriate branch
 while read line; do
         #each line is of the form <repository> <branch>
         set -- $line
         pull $1 $2
-        echo $1 | sed 's/ssh:.*@git.eclipse.org/git:\/\/git.eclipse.org/g' | sed 's/ssh:\/\/git.eclipse.org/git:\/\/git.eclipse.org/g' >> clones.txt
-done < repos-clean.txt
+        echo $1 | sed 's/ssh:.*@git.eclipse.org/git:\/\/git.eclipse.org/g' | sed 's/ssh:\/\/git.eclipse.org/git:\/\/git.eclipse.org/g' >> $buildTagRoot/$buildTag/clones.txt
+done < $buildTagRoot/$buildTag/repos-clean.txt
 
-cat repos-clean.txt | sed "s/ / $oldBuildTag /" >repos-report.txt
+cat $buildTagRoot/$buildTag/repos-clean.txt | sed "s/ / $oldBuildTag /" >$buildTagRoot/$buildTag/repos-report.txt
 
 # generate the change report
 mkdir $buildTagRoot/$buildTag
-echo "[git-release]" git-submission.sh $gitCache $( cat repos-report.txt )
-/bin/bash git-submission.sh $gitCache $( cat repos-report.txt ) > $buildTagRoot/$buildTag/report.txt
+echo "[git-release]" git-submission.sh $gitCache $buildTagRoot/$buildTag $( cat $buildTagRoot/$buildTag/repos-report.txt )
+/bin/bash git-submission.sh $gitCache $buildTagRoot/$buildTag $( cat $buildTagRoot/$buildTag/repos-report.txt ) > $buildTagRoot/$buildTag/report.txt
 
+# generate commands for updating maps and tagging projects
+cat $buildTagRoot/$buildTag/clones.txt| xargs /bin/bash git-map.sh $gitCache $buildTag \
+        $relengRepo > $buildTagRoot/$buildTag/maps.txt
 
-cat clones.txt| xargs /bin/bash git-map.sh $gitCache $buildTag \
-        $relengRepo > maps.txt
+# trim out lines that don't require execution
+grep -v ^OK $buildTagRoot/$buildTag/maps.txt | grep -v ^Executed >$buildTagRoot/$buildTag/run.txt
 
-#Trim out lines that don't require execution
-grep -v ^OK maps.txt | grep -v ^Executed >run.txt
-/bin/bash run.txt
+# abort if nothing to tag
+if [ $(wc -l < $buildTagRoot/$buildTag/run.txt ) <= 1 ]; then
+	echo "Nothing to update"
+	exit
+fi
 
+# perform tagging
+/bin/bash $buildTagRoot/$buildTag/run.txt
 
+# commit & tag updated maps
 cd $relengRepo
 git add $( find . -name "*.map" )
 git commit -m "Releng build tagging for $buildTag"
 git tag -f -a $buildTag -m "Build Submission Tag"  #tag the map file change
 
+# push
 git push
 git push --tags
 
