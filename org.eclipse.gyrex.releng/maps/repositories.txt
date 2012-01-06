@@ -1,7 +1,9 @@
 # the list of repositories to be tagged during release builds
 # (format is <repository URL> <branch name>)
-# (we must use SSH URLs because of push support)
 #
-
-
+# Note:
+#  - we must use SSH URLs because of push support
+#  - no blank lines please (it will break the script)
+#
+#
 ssh://git.eclipse.org/gitroot/gyrex/platform.git master
