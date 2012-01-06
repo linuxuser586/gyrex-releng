@@ -45,7 +45,7 @@ tagRepo () {
 	echo $buildTag >$buildTagRoot/lastBuildTag.properties
 
     # switch to root dir	
-	pushd $buildTagRoot
+	pushd $buildTagRoot >/dev/null
 
 	# fetch tag helper scripts
 	wget -O git-release.sh http://git.eclipse.org/c/gyrex/platform.git/plain/releng/org.eclipse.gyrex.releng/builder/environments/build.eclipse.org/tagging/git-release.sh
@@ -57,7 +57,7 @@ tagRepo () {
 		-gitCache "$gitCache" -root "$buildTagRoot" \
 		-committerId "${committerId}" -gitEmail "${gitEmail}" -gitName "${gitName}" \
 		-oldBuildTag "$oldBuildTag" -buildTag "$buildTag"
-	popd
+	popd >/dev/null
 	mailx -s "Gyrex Build Submission: $buildTag" gunnar@eclipse.org <$buildTagRoot/$buildTag/report.txt
 	
 	# ensure that the git cache is also writable by the groups so that we can cleanup later
