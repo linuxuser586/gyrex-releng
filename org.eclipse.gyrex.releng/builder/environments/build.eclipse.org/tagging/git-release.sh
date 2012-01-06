@@ -147,7 +147,7 @@ grep -v ^OK $buildTagRoot/$buildTag/maps.txt | grep -v ^Executed >$buildTagRoot/
 if [ $(wc -l < $buildTagRoot/$buildTag/run.txt ) <= 1 ]; then
 	echo "Nothing to update"
 	popd >/dev/null
-	exit
+	exit 9
 fi
 
 # perform tagging
