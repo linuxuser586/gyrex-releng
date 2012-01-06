@@ -29,7 +29,7 @@ if [ ! -d $buildTagRoot ]; then
 fi
 
 # the git cache
-gitCache=/shared/technology/gyrex/gitCache
+gitCache=/shared/technology/gyrex/build/gitcache
 if [ ! -d $gitCache ]; then
 	mkdir $gitCache
 fi
