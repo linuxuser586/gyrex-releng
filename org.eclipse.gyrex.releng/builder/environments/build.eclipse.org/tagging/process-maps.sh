@@ -1,4 +1,10 @@
 #!/bin/bash
+#
+# Check Gyrex Git repos for new commits and update build submissions.
+#
+# Add to your crontab like this:
+#   05 */4 * * * ~/bin/process-maps.sh -gitEmail 'your-comitter-email' -committerId 'your-committer-id' > ~/process-maps.log
+#
 
 #default values, overridden by command line
 relengBranch=master
