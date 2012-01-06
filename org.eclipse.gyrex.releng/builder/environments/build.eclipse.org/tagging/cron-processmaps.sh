@@ -54,7 +54,7 @@ tagRepo () {
 
 	# call tag script
 	/bin/bash git-release.sh \
-		-buildType "${BUILD_TYPE}" -gitCache "$gitCache" -root "$buildTagRoot" \
+		-gitCache "$gitCache" -root "$buildTagRoot" \
 		-committerId "${committerId}" -gitEmail "${gitEmail}" -gitName "${gitName}" \
 		-oldBuildTag "$oldBuildTag" -buildTag "$buildTag"
 	popd
