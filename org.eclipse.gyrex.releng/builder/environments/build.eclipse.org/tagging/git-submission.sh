@@ -9,16 +9,10 @@ ROOT=$1; shift
 WORKDIR=$1; shift
 rm -f $WORKDIR/proj_changed.txt $WORKDIR/bug_list.txt $WORKDIR/bug_info.txt
 
-# Generate directory name used in gitCache from repo Url
-# Usage: gitCacheDirName repositoryURL
-gitCacheDirName() {
-	echo $(echo $1 | sed 's/ssh:.*@git.eclipse.org/git:\/\/git.eclipse.org/g' | sed 's/ssh:\/\/git.eclipse.org/git:\/\/git.eclipse.org/g' | sed 's/[^a-z0-9A-Z]/_/g')
-}
-
 
 while [ $# -gt 0 ]; do
 	REPO="$1"; shift
-	REPO_DIR=$( gitCacheDirName $REPO )
+	REPO_DIR=$(basename $REPO .git)
 	LAST_TAG="$1"; shift
 	BUILD_TAG="$1"; shift
 	cd $ROOT/$REPO_DIR

@@ -24,15 +24,9 @@ PLATFORM=$( uname -s )
 
 ARGS="$@"
 
-# Generate directory name used in gitCache from repo Url
-# Usage: gitCacheDirName repositoryURL
-gitCacheDirName() {
-	echo $(echo $1 | sed 's/ssh:.*@git.eclipse.org/git:\/\/git.eclipse.org/g' | sed 's/ssh:\/\/git.eclipse.org/git:\/\/git.eclipse.org/g' | sed 's/[^a-z0-9A-Z]/_/g')
-}
-
 tag_repo_commit () {
 	REPO=$1
-	REPO_DIR=$( gitCacheDirName $REPO )
+	REPO_DIR=$(basename $REPO .git)
 	NEW_TAG=$2
 	pushd "$gitCache/$REPO_DIR" >/dev/null
 	REPO_COMMIT=$( git rev-list -1 HEAD  )
@@ -45,7 +39,7 @@ tag_repo_commit () {
 update_map () {
 	#echo update_map "$@"
 	REPO=$1
-	REPO_DIR=$( gitCacheDirName $REPO )
+	REPO_DIR=$(basename $REPO .git)
 	MAP=$2
 	pushd "$gitCache/$REPO_DIR" >/dev/null
     grep -v '^#' "$MAP" | grep -v '^!' "$MAP" | grep "repo=${REPO}," "$MAP" >/tmp/maplines_$$.txt
@@ -109,6 +103,6 @@ for REPO in $REPOS; do
 			update_map $REPO $MAP
 		done
 	fi
-	REPO_DIR=$( gitCacheDirName $REPO )
+	REPO_DIR=$(basename $REPO .git)
 	echo  pushd \"$gitCache/$REPO_DIR\" \; git push --tags \; popd 
 done

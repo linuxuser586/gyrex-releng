@@ -77,17 +77,11 @@ if ! $tag; then
 fi
 
 
-# Generate directory name used in gitCache from repo Url
-# Usage: gitCacheDirName repositoryURL
-gitCacheDirName() {
-	echo $(echo $1 | sed 's/ssh:.*@git.eclipse.org/git:\/\/git.eclipse.org/g' | sed 's/ssh:\/\/git.eclipse.org/git:\/\/git.eclipse.org/g' | sed 's/[^a-z0-9A-Z]/_/g')
-}
-
 #Pull or clone a branch from a repository
 #Usage: pull repositoryURL branch
 pull() {
         pushd $gitCache >/dev/null
-        directory=$(gitCacheDirName "$1")
+        directory=$(basename $1 .git)
         if [ ! -d $directory ]; then
                 echo git clone $1 $directory
                 git clone $1 $directory
@@ -107,10 +101,11 @@ pull() {
 pushd $buildTagRoot >/dev/null
 
 # the releng repository
-relengRepo=$gitCache/$(gitCacheDirName 'ssh://git.eclipse.org/gitroot/gyrex/platform.git')/releng/org.eclipse.gyrex.releng
+relengRepoUrl='ssh://git.eclipse.org/gitroot/gyrex/platform.git'
+relengRepo=$gitCache/$(basename $relengRepoUrl .git)/releng/org.eclipse.gyrex.releng
 
 # pull the releng project to get the list of repositories to tag
-pull "ssh://git.eclipse.org/gitroot/gyrex/platform.git" $relengBranch
+pull $relengRepoUrl $relengBranch
 
 # create tag working dir
 if [ -d $buildTagRoot/$buildTag ]; then
