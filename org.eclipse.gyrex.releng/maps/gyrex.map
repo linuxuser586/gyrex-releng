@@ -66,7 +66,7 @@ plugin@org.eclipse.gyrex.gwt.common=GIT,tag=v20120106-1330,repo=git://git.eclips
 plugin@org.eclipse.gyrex.gwt.service=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=toolkit/bundles/org.eclipse.gyrex.gwt.service
 
 ### Gyrex Persistence Component
-plugin@org.eclipse.gyrex.persistence=GIT,tag=v20120106-1546,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.persistence
+plugin@org.eclipse.gyrex.persistence=GIT,tag=v20120106-1651,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.persistence
 plugin@org.eclipse.gyrex.persistence.derby=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.persistence.derby
 plugin@org.eclipse.gyrex.persistence.jdbc=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.persistence.jdbc
 plugin@org.eclipse.gyrex.persistence.nondurable.map=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/platform.git,path=platform/bundles/org.eclipse.gyrex.persistence.nondurable.map
