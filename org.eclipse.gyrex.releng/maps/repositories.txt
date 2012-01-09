@@ -6,4 +6,8 @@
 #  - no blank lines please (it will break the script)
 #
 #
-ssh://git.eclipse.org/gitroot/gyrex/platform.git master
+ssh://git.eclipse.org/gitroot/gyrex/gyrex-platform.git master
+ssh://git.eclipse.org/gitroot/gyrex/gyrex-admin.git master
+ssh://git.eclipse.org/gitroot/gyrex/gyrex-releng.git master
+ssh://git.eclipse.org/gitroot/gyrex/addons/gyrex-mongodb-persistence.git master
+ssh://git.eclipse.org/gitroot/gyrex/addons/gyrex-search.git master
