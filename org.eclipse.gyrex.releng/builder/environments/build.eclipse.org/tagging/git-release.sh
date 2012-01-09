@@ -101,8 +101,8 @@ pull() {
 pushd $buildTagRoot >/dev/null
 
 # the releng repository
-relengRepoUrl='ssh://git.eclipse.org/gitroot/gyrex/platform.git'
-relengRepo=$gitCache/$(basename $relengRepoUrl .git)/releng/org.eclipse.gyrex.releng
+relengRepoUrl='ssh://git.eclipse.org/gitroot/gyrex/gyrex-releng.git'
+relengRepo=$gitCache/$(basename $relengRepoUrl .git)/org.eclipse.gyrex.releng
 
 # pull the releng project to get the list of repositories to tag
 pull $relengRepoUrl $relengBranch
