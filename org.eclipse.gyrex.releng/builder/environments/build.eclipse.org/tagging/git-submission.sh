@@ -42,8 +42,8 @@ for BUG in $( cat $WORKDIR/bug_list.txt | sort -n -u ); do
     echo + Bug $BUG - $TITLE \(${STATUS}\) >>$WORKDIR/bug_info.txt
 done
 
-echo Changes have been found since the last commit. Therefore
-echo map files have been tagged and a build was initiated.
+echo New commits have been found since the last build. Therefore
+echo map files have been tagged and a new build was initiated.
 echo ""
 if [ ! -s $WORKDIR/proj_changed.txt ]; then
 	echo The build contains changes for the following bugs:
