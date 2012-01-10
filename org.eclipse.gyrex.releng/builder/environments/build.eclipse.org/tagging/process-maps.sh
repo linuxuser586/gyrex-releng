@@ -6,6 +6,9 @@
 #   05 */4 * * * ~/bin/process-maps.sh -gitEmail 'your-comitter-email' -committerId 'your-committer-id' -hudsonBuildTriggerToken 'secrettoken' > ~/process-maps.log
 #
 
+# adjust path 
+export PATH="~/bin:/usr/local/bin:/usr/bin:/bin:/usr/lib64/jvm/jre/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin"
+
 #default values, overridden by command line
 relengBranch=master
 committerId=gyrex
