@@ -51,12 +51,19 @@ if [ ! -d $gitCache ]; then
 	mkdir $gitCache
 fi
 
+# the file containing the last use build tag
+lastBuildTagSource="$buildTagRoot/lastBuildTag.properties"
+if [ ! -f $lastBuildTagSource ]; then
+	echo "ERROR: The last build tag cannot be detected."
+	echo "File $lastBuildTagSource does not exist. Please create it manually."
+	exit 1;
+fi
+
 # generate new tag and also find the last used tag
 buildTag=v$(date -u +%Y%m%d)-$(date -u +%H%M)
-oldBuildTag=$( cat $buildTagRoot/lastBuildTag.properties )
+oldBuildTag=$( cat $lastBuildTagSource )
 echo "Using build tag: $buildTag"
 echo "Last build tag: $oldBuildTag"
-
 
 # switch to root dir	
 pushd $buildTagRoot >/dev/null
@@ -76,7 +83,7 @@ wget -O git-submission.sh "http://git.eclipse.org/c/gyrex/gyrex-releng.git/plain
 if ([ "$?" -eq "0" ] && [ -f "$buildTagRoot/$buildTag/report.txt" ]); then
 	# remember tag
 	echo "[process-maps] Saving tag $buildTag..."
-	echo $buildTag >$buildTagRoot/lastBuildTag.properties
+	echo $buildTag >$lastBuildTagSource
 	# send mail with change report
 	echo "[process-maps] Sending mail with submission report..."
 	mailx -s "Gyrex Build Submission: $buildTag" gyrex-dev@eclipse.org <$buildTagRoot/$buildTag/report.txt
