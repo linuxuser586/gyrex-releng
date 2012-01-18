@@ -6,6 +6,9 @@
 #   05 */4 * * * ~/bin/process-maps.sh -gitEmail 'your-comitter-email' -committerId 'your-committer-id' -hudsonBuildTriggerToken 'secrettoken' > ~/process-maps.log
 #
 
+# fail for unset variables
+set -u
+
 # adjust path 
 export PATH="~/bin:/usr/local/bin:/usr/bin:/bin:/usr/lib64/jvm/jre/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin"
 
@@ -59,9 +62,9 @@ echo "Last build tag: $oldBuildTag"
 pushd $buildTagRoot >/dev/null
 
 # fetch tag helper scripts
-wget -O git-release.sh "http://git.eclipse.org/c/gyrex/gyrex-releng.git/plain/org.eclipse.gyrex.releng/builder/environments/build.eclipse.org/tagging/git-release.sh?$buildTag"
-wget -O git-map.sh "http://git.eclipse.org/c/gyrex/gyrex-releng.git/plain/org.eclipse.gyrex.releng/builder/environments/build.eclipse.org/tagging/git-map.sh?$buildTag"
-wget -O git-submission.sh "http://git.eclipse.org/c/gyrex/gyrex-releng.git/plain/org.eclipse.gyrex.releng/builder/environments/build.eclipse.org/tagging/git-submission.sh?$buildTag"
+wget -O git-release.sh "http://git.eclipse.org/c/gyrex/gyrex-releng.git/plain/org.eclipse.gyrex.releng/builder/environments/build.eclipse.org/tagging/git-release.sh?$buildTag" || { echo "Unable to fetch required scripts. Please check output."; exit 1; } 
+wget -O git-map.sh "http://git.eclipse.org/c/gyrex/gyrex-releng.git/plain/org.eclipse.gyrex.releng/builder/environments/build.eclipse.org/tagging/git-map.sh?$buildTag" || { echo "Unable to fetch required scripts. Please check output."; exit 1; } 
+wget -O git-submission.sh "http://git.eclipse.org/c/gyrex/gyrex-releng.git/plain/org.eclipse.gyrex.releng/builder/environments/build.eclipse.org/tagging/git-submission.sh?$buildTag" || { echo "Unable to fetch required scripts. Please check output."; exit 1; } 
 
 # call tag script
 /bin/bash git-release.sh \
@@ -70,7 +73,7 @@ wget -O git-submission.sh "http://git.eclipse.org/c/gyrex/gyrex-releng.git/plain
 	-oldBuildTag "$oldBuildTag" -buildTag "$buildTag"
 
 # additional processing on success	
-if [ "$?" -eq "0" ]; then
+if ([ "$?" -eq "0" ] && [ -f "$buildTagRoot/$buildTag/report.txt" ]); then
 	# remember tag
 	echo "[process-maps] Saving tag $buildTag..."
 	echo $buildTag >$buildTagRoot/lastBuildTag.properties
