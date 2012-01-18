@@ -83,6 +83,8 @@ if ([ "$?" -eq "0" ] && [ -f "$buildTagRoot/$buildTag/report.txt" ]); then
 	# trigger build
 	echo "[process-maps] Triggering build..."
 	curl -I "https://hudson.eclipse.org/hudson/view/Technology/job/gyrex-integration/buildWithParameters?token=${hudsonBuildTriggerToken}&cause=Build+Submission+${buildTag}"
+	# cleanup old tags
+	for i in `find . -maxdepth 1 -type d -mtime +7 -print`; do echo -e "Deleting directory $i";rm -rf $i; done
 fi
 
 popd >/dev/null
