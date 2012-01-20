@@ -1,0 +1,5 @@
+#####################################################
+# Gyrex Gemini JPA fork
+
+### Gemini JPA bundles
+plugin@org.eclipse.gemini.jpa=GIT,tag=v20120112-1121,repo=git://git.eclipse.org/gitroot/gyrex/forks/gyrex-gemini-jpa.git,path=org.eclipse.gemini.jpa
