@@ -8,7 +8,7 @@
 feature@org.eclipse.gyrex.features.master=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.master
 feature@org.eclipse.gyrex.features.sdk=GIT,tag=v20120112-1153,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.sdk
 feature@org.eclipse.gyrex.features.sdk.withoutdeps=GIT,tag=v20120112-1153,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.sdk.withoutdeps
-feature@org.eclipse.gyrex.features.kernel=GIT,tag=v20120120-1222,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.kernel
+feature@org.eclipse.gyrex.features.kernel=GIT,tag=v20120120-1434,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.kernel
 feature@org.eclipse.gyrex.features.http=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.http
 feature@org.eclipse.gyrex.features.admin=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.admin
 feature@org.eclipse.gyrex.features.server=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.server
