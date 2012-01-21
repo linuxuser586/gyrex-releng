@@ -87,22 +87,8 @@
 	<!-- - - - - - - - - - - - - - - - - -
           custom target: buildTargetPlatform
          - - - - - - - - - - - - - - - - - -->
-    <target name="buildTargetPlatformOld" unless="skipTargetDefinition">
-		<!-- generate mirror script -->
-    	<property name="transformTargetDefinitionScript" value="${commonBuildScripts}/transformTargetDefinition.xsl"/>
-        <xslt style="${transformTargetDefinitionScript}"
-              in="${targetDefinition}"
-              out="${buildDirectory}/mirror_target_platform.xml">
-            <param name="destination" expression="${repoBaseLocation}/target"/>
-        </xslt>
-    	<!-- mirror target platform using p2 (will skip already mirrored pieces) -->
-        <ant antfile="${buildDirectory}/mirror_target_platform.xml"/>
-    </target>
-	
-	<!-- - - - - - - - - - - - - - - - - -
-          custom target: buildTargetPlatform
-         - - - - - - - - - - - - - - - - - -->
     <target name="buildTargetPlatform" unless="skipTargetDefinition">
+    	<!-- note: this requires pde.core (from Juno) in the base builder -->
 		<pde.provisionTargetDefinition targetFile="${targetDefinition}" destinationDirectory="${repoBaseLocation}/target" clearDestination="false"/>
     </target>
 
