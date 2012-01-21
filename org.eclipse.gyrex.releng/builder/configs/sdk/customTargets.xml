@@ -114,6 +114,8 @@
 		<!-- generate sdk repo from build repo -->
 		<p2.mirror source="file:${buildDirectory}/buildRepo" log="${buildDirectory}/${archiveNamePrefix}-${buildLabel}-sdkrepo.log" ignoreErrors="true">
 			<destination compressed="true" name="${p2.repo.name.prefix} (Build ${buildLabel})" location="file:${buildDirectory}/${archiveNamePrefix}-${buildLabel}-sdkrepo"/>
+			<!-- mirror only what's defined in features and only the latest version -->
+			<slicingoptions followstrict="true" latestversiononly="true"/>
 		</p2.mirror>
 		<zip destfile="${buildDirectory}/${archiveNamePrefix}-${buildLabel}-sdkrepo.zip" filesonly="false" whenempty="skip" update="true">
 			<zipfileset dir="${buildDirectory}/${archiveNamePrefix}-${buildLabel}-sdkrepo" includes="**/**" excludes="" />
