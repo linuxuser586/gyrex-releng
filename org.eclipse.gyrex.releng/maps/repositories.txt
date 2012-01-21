@@ -12,3 +12,5 @@ ssh://git.eclipse.org/gitroot/gyrex/gyrex-releng.git master
 ssh://git.eclipse.org/gitroot/gyrex/addons/gyrex-mongodb-persistence.git master
 ssh://git.eclipse.org/gitroot/gyrex/addons/gyrex-search.git master
 ssh://git.eclipse.org/gitroot/gyrex/forks/gyrex-gemini-jpa.git master
+ssh://git.eclipse.org/gitroot/gyrex/forks/gyrex-javax.resource.git master
+ssh://git.eclipse.org/gitroot/gyrex/forks/gyrex-org.eclipse.persistence.nosql.git master
