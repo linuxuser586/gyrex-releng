@@ -88,6 +88,14 @@
          version="0.0.0"/>
 
    <includes
+         id="org.eclipse.gyrex.features.dependencies.eclipselink"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gyrex.features.dependencies.eclipselink.source"
+         version="0.0.0"/>
+
+   <includes
          id="org.eclipse.gyrex.features.sdk.withoutdeps"
          version="0.0.0"/>
 
