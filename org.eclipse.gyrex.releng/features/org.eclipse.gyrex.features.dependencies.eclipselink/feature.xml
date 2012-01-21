@@ -91,14 +91,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.persistence.core.jpql"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.persistence.moxy"
          download-size="0"
          install-size="0"
