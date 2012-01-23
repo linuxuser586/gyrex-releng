@@ -2,8 +2,8 @@
 # Gyrex MongoDB AddOn
 
 ### features
-feature@org.eclipse.gyrex.features.addons.mongodb=GIT,tag=v20120112-1125,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-mongodb-persistence.git,path=features/org.eclipse.gyrex.features.addons.mongodb
-feature@org.eclipse.gyrex.features.dependencies.mongodb=GIT,tag=v20120119-1138,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-mongodb-persistence.git,path=features/org.eclipse.gyrex.features.dependencies.mongodb
+feature@org.eclipse.gyrex.features.addons.mongodb=GIT,tag=v20120123-0813,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-mongodb-persistence.git,path=features/org.eclipse.gyrex.features.addons.mongodb
+feature@org.eclipse.gyrex.features.dependencies.mongodb=GIT,tag=v20120123-0813,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-mongodb-persistence.git,path=features/org.eclipse.gyrex.features.dependencies.mongodb
 
 ### Gyrex Persistence bundles
 plugin@org.eclipse.gyrex.persistence.mongodb=GIT,tag=v20120112-1121,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-mongodb-persistence.git,path=bundles/org.eclipse.gyrex.persistence.mongodb
