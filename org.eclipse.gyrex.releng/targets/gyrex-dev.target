@@ -59,8 +59,8 @@
 <unit id="ch.qos.logback.classic.source" version="1.0.0.v20111214-2030"/>
 <unit id="ch.qos.logback.core" version="1.0.0.v20111214-2030"/>
 <unit id="ch.qos.logback.core.source" version="1.0.0.v20111214-2030"/>
-<unit id="ch.qos.logback.slf4j" version="1.0.0.v20111214-2030"/>
-<unit id="ch.qos.logback.slf4j.source" version="1.0.0.v20111214-2030"/>
+<unit id="ch.qos.logback.slf4j" version="1.0.0.v20120123-1500"/>
+<unit id="ch.qos.logback.slf4j.source" version="1.0.0.v20120123-1500"/>
 <unit id="org.slf4j.api" version="1.6.4.v20111214-2030"/>
 <unit id="org.slf4j.ext" version="1.6.4.v20111214-2030"/>
 <unit id="org.slf4j.ext.source" version="1.6.4.v20111214-2030"/>
@@ -71,7 +71,7 @@
 <unit id="org.slf4j.jcl.source" version="1.6.4.v20111214-2030"/>
 <unit id="org.slf4j.log4j" version="1.6.4.v20111214-2030"/>
 <unit id="org.slf4j.log4j.source" version="1.6.4.v20111214-2030"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20120120232307/repository/"/>
+<repository location="http://build.eclipse.org/orbit/committers/orbit-I/20120123151124/I20120123151124/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.quartz" version="1.8.3.v20110329-1420"/>
