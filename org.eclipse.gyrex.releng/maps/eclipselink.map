@@ -3,4 +3,4 @@
 
 ### EclipseLink NoSQL bundles
 bundle@javax.resource=GIT,tag=v20120120-1940,repo=git://git.eclipse.org/gitroot/gyrex/forks/gyrex-javax.resource.git,path=.
-fragment@org.eclipse.persistence.nosql=GIT,tag=v20120123-1324,repo=git://git.eclipse.org/gitroot/gyrex/forks/gyrex-org.eclipse.persistence.nosql.git,path=.
+fragment@org.eclipse.persistence.nosql=GIT,tag=v20120206-1320,repo=git://git.eclipse.org/gitroot/gyrex/forks/gyrex-org.eclipse.persistence.nosql.git,path=.
