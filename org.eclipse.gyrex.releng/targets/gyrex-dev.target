@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Gyrex Development" sequenceNumber="62">
+<target name="Gyrex Development" sequenceNumber="63">
 <locations>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.pool" version="1.4.0.v20081016-1000"/>
@@ -80,10 +80,6 @@
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.rap.incubator.feature.feature.group" version="1.5.0.20111016-1058"/>
 <repository location="http://download.eclipse.org/rt/rap/1.5/incubator"/>
-</location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.persistence.sdk.feature.group" version="2.4.0.v20120204-r10807"/>
-<repository location="http://download.eclipse.org/rt/eclipselink/nightly-updates/2.4.0.v20120204-r10807/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.e4.core.di" version="1.1.0.v20111221-1333"/>
@@ -261,6 +257,12 @@
 <unit id="javax.servlet.jsp.glassfish.source.feature.group" version="2.2.0.201112120252"/>
 <unit id="javax.servlet.jsp.glassfish.feature.group" version="2.2.0.201112120252"/>
 <repository location="http://download.eclipse.org/jetty/updates/jetty-rt-3.8milestones/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.persistence.sdk.feature.group" version="2.4.0.v20120207-r10815"/>
+<unit id="javax.persistence" version="2.0.4.v201112161009"/>
+<unit id="javax.persistence.source" version="2.0.4.v201112161009"/>
+<repository location="http://download.eclipse.org/rt/eclipselink/nightly-updates/2.4.0.v20120207-r10815/"/>
 </location>
 </locations>
 <targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
