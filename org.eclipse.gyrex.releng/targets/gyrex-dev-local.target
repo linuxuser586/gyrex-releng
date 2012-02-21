@@ -4,9 +4,6 @@
 <target includeMode="feature" name="Gyrex Development (local)" sequenceNumber="0">
 <locations>
 <location path="${resource_loc:/org.eclipse.gyrex.releng}/targets/gyrex-dev-exported" type="Profile"/>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="javax.persistence" version="2.1.0.v201201251030"/>
-</location>
 </locations>
 <launcherArgs>
 <vmArgs>-server -XX:+UseParallelGC -XX:MaxPermSize=128m</vmArgs>
