@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Gyrex Development" sequenceNumber="65">
+<target name="Gyrex Development" sequenceNumber="66">
 <locations>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.pool" version="1.4.0.v20081016-1000"/>
 <unit id="org.apache.commons.pool.source" version="1.4.0.v20081016-1000"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/I20120223001551/repository/"/>
-</location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.apache.hadoop.zookeeper" version="3.4.2.v20120222-1245"/>
-<unit id="org.apache.hadoop.zookeeper.source" version="3.4.2.v20120222-1245"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/I20120223001551/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
@@ -263,6 +258,13 @@
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.orbit.mongodb" version="2.7.3.v20120213-1927"/>
 <unit id="org.eclipse.orbit.mongodb.source" version="2.7.3.v20120213-1927"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/I20120223001551/repository/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.apache.hadoop.zookeeper" version="3.4.2.v20120222-1245"/>
+<unit id="org.apache.hadoop.zookeeper.tests.source" version="3.4.2.v20120223-0011"/>
+<unit id="org.apache.hadoop.zookeeper.source" version="3.4.2.v20120222-1245"/>
+<unit id="org.apache.hadoop.zookeeper.tests" version="3.4.2.v20120223-0011"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/I20120223001551/repository/"/>
 </location>
 </locations>
