@@ -90,6 +90,9 @@
 				<filter token="REPO_ARCHIVE_PREFIX" value="${archiveNamePrefix}"/>
 			</filterset>
 		</copy>
+
+		<!-- copy p2.index file -->
+		<copy file="${builder}/template-eclipse.org/p2.index" tofile="${buildDirectory}/${buildLabel}/p2.index"/>
 	</target>
 	
 	<!-- publish bits to download area -->
