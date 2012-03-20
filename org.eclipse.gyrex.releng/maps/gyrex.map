@@ -33,6 +33,7 @@ plugin@org.eclipse.gyrex.context=GIT,tag=v20120116-0918,repo=git://git.eclipse.o
 plugin@org.eclipse.gyrex.context.tests=GIT,tag=v20120109-2032,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.context.tests
 plugin@org.eclipse.gyrex.cloud=GIT,tag=v20120222-0733,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud
 plugin@org.eclipse.gyrex.cloud.tests=GIT,tag=v20120225-2128,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud.tests
+plugin@org.eclipse.gyrex.logback.config=GIT,tag=v20120319-2345,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.logback.config
 plugin@org.eclipse.gyrex.monitoring=GIT,tag=v20120109-2032,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.monitoring
 plugin@org.eclipse.gyrex.p2=GIT,tag=v20120109-2032,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.p2
 plugin@org.eclipse.gyrex.preferences=GIT,tag=v20120124-0732,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.preferences
@@ -49,6 +50,7 @@ plugin@org.eclipse.gyrex.admin.ui=GIT,tag=v20120319-1846,repo=git://git.eclipse.
 plugin@org.eclipse.gyrex.admin.ui.cloud=GIT,tag=v20120124-0733,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.cloud
 plugin@org.eclipse.gyrex.admin.ui.http=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.http
 plugin@org.eclipse.gyrex.admin.ui.http.jetty=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.http.jetty
+plugin@org.eclipse.gyrex.admin.ui.logback=GIT,tag=v20120319-2345,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.logback
 plugin@org.eclipse.gyrex.admin.ui.jobs=GIT,tag=v20120124-0733,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.jobs
 plugin@org.eclipse.gyrex.admin.ui.p2=GIT,tag=v20120319-2232,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.p2
 plugin@org.eclipse.gyrex.admin.ui.context=GIT,tag=v20120201-0757,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.context
@@ -93,3 +95,4 @@ plugin@org.eclipse.gyrex.server.tests=GIT,tag=v20120109-2032,repo=git://git.ecli
 
 ### Master Test Feature
 feature@org.eclipse.gyrex.features.tests=GIT,tag=v20120106-1330,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.tests
+
