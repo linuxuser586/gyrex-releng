@@ -57,18 +57,18 @@ plugin@org.eclipse.gyrex.admin.ui.context=GIT,tag=v20120201-0757,repo=git://git.
 plugin@org.eclipse.gyrex.admin.ui.persistence=GIT,tag=v20120206-1345,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.persistence
 
 ### Gyrex HTTP Component
-plugin@org.eclipse.gyrex.http=GIT,tag=v20120321-1559,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http
+plugin@org.eclipse.gyrex.http=GIT,tag=v20120321-2052,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http
 plugin@org.eclipse.gyrex.http.registry=GIT,tag=v20120109-2032,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.registry
 plugin@org.eclipse.gyrex.http.tests=GIT,tag=v20120109-2032,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.tests
 
 ### Gyrex HTTP Component Jetty Engine
-plugin@org.eclipse.gyrex.http.jetty=GIT,tag=v20120109-2032,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.jetty
+plugin@org.eclipse.gyrex.http.jetty=GIT,tag=v20120321-2024,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.jetty
 
 ### Gyrex HTTP Component Logging
 plugin@org.eclipse.gyrex.http.log=GIT,tag=v20120109-2032,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.log
 
 ### Gyrex HTTP Component Equinox HttpService Integration
-plugin@org.eclipse.gyrex.http.equinoxhttpservice=GIT,tag=v20120109-2032,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.equinoxhttpservice
+plugin@org.eclipse.gyrex.http.equinoxhttpservice=GIT,tag=v20120321-2059,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.equinoxhttpservice
 
 ### Gyrex Persistence Component
 plugin@org.eclipse.gyrex.persistence=GIT,tag=v20120208-1147,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.persistence
