@@ -57,7 +57,7 @@ plugin@org.eclipse.gyrex.admin.ui.context=GIT,tag=v20120201-0757,repo=git://git.
 plugin@org.eclipse.gyrex.admin.ui.persistence=GIT,tag=v20120206-1345,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.persistence
 
 ### Gyrex HTTP Component
-plugin@org.eclipse.gyrex.http=GIT,tag=v20120109-2032,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http
+plugin@org.eclipse.gyrex.http=GIT,tag=v20120321-0803,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http
 plugin@org.eclipse.gyrex.http.registry=GIT,tag=v20120109-2032,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.registry
 plugin@org.eclipse.gyrex.http.tests=GIT,tag=v20120109-2032,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.tests
 
