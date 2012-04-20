@@ -69,13 +69,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.apache.lucene.snowball"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.apache.lucene.spellchecker"
          download-size="0"
          install-size="0"
@@ -90,28 +83,7 @@
          unpack="false"/>
 
    <plugin
-         id="org.apache.solr.client.solrj.embedded"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.solr.common"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.apache.solr.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.solr.servlet"
          download-size="0"
          install-size="0"
          version="0.0.0"
