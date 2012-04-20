@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Gyrex Development" sequenceNumber="66">
+<target name="Gyrex Development" sequenceNumber="67">
 <locations>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.pool" version="1.4.0.v20081016-1000"/>
@@ -147,31 +147,6 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/I20120322113459/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.apache.lucene" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.lucene.analysis" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.lucene.core" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.lucene.highlighter" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.lucene.memory" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.lucene.misc" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.lucene.queries" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.lucene.spellchecker" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.solr.common" version="1.4.0.v20100421-0704"/>
-<unit id="org.apache.solr.core" version="3.5.0.v20120320-2000"/>
-<unit id="org.apache.solr.client.solrj" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.solr.client.solrj.embedded" version="1.4.0.v20100421-0704"/>
-<unit id="org.apache.lucene.source" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.lucene.analysis.source" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.lucene.core.source" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.lucene.highlighter.source" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.lucene.memory.source" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.lucene.misc.source" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.lucene.queries.source" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.lucene.spellchecker.source" version="3.5.0.v20120319-2345"/>
-<unit id="org.apache.solr.core.source" version="3.5.0.v20120320-2000"/>
-<unit id="org.apache.solr.client.solrj.source" version="3.5.0.v20120319-2345"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/I20120322113459/repository/"/>
-</location>
-<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.test.feature.group" version="3.5.0.v20110503-7R7bBjBgLiK1Cs5Q6IW9J5202816"/>
 <repository location="http://download.eclipse.org/eclipse/updates/3.8milestones/"/>
 </location>
@@ -261,6 +236,21 @@
 <unit id="org.apache.hadoop.zookeeper.tests.source" version="3.4.2.v20120225-2125"/>
 <unit id="org.apache.hadoop.zookeeper.source" version="3.4.2.v20120222-1245"/>
 <unit id="org.apache.hadoop.zookeeper.tests" version="3.4.2.v20120225-2125"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/I20120322113459/repository/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.apache.lucene" version="3.5.0.v20120319-2345"/>
+<unit id="org.apache.lucene.analysis" version="3.5.0.v20120319-2345"/>
+<unit id="org.apache.lucene.core" version="3.5.0.v20120319-2345"/>
+<unit id="org.apache.lucene.grouping" version="3.5.0.v20120319-2345"/>
+<unit id="org.apache.lucene.highlighter" version="3.5.0.v20120319-2345"/>
+<unit id="org.apache.lucene.memory" version="3.5.0.v20120319-2345"/>
+<unit id="org.apache.lucene.misc" version="3.5.0.v20120319-2345"/>
+<unit id="org.apache.lucene.queries" version="3.5.0.v20120319-2345"/>
+<unit id="org.apache.lucene.spellchecker" version="3.5.0.v20120319-2345"/>
+<unit id="org.apache.lucene.spatial" version="3.5.0.v20120319-2345"/>
+<unit id="org.apache.solr.core" version="3.5.0.v20120320-2000"/>
+<unit id="org.apache.solr.client.solrj" version="3.5.0.v20120319-2345"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/I20120322113459/repository/"/>
 </location>
 </locations>
