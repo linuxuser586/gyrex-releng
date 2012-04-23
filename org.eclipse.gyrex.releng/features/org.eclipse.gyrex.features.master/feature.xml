@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.eclipse.gyrex.features.master"
-      label="All Gyrex Components (Incubation)"
+      label="All Gyrex Components"
       version="1.0.0.qualifier"
       provider-name="Eclipse Gyrex"
       license-feature="org.eclipse.license"
