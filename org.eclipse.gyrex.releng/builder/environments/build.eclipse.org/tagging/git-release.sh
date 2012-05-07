@@ -96,7 +96,7 @@ pull() {
         echo git pull
         git pull
         if [[ $1 == *git.eclipse.org* ]]; then
-            gerritOriginRepoUrl=$(echo $1 | sed 's|ssh:.*@git.eclipse.org/gitroot|ssh://git.eclipse.org:29418|g' | sed 's|ssh://git.eclipse.org/gitroot|ssh://git.eclipse.org:29418|g')
+            gerritOriginRepoUrl=$(echo $1 | sed 's|ssh:.*@git.eclipse.org/gitroot|ssh://git.eclipse.org:29418|g' | sed 's|ssh://git.eclipse.org/gitroot|ssh://gerrit-local.eclipse.org:29418|g')
 		    echo git remote set-url --push origin $gerritOriginRepoUrl
 			git remote set-url --push origin $gerritOriginRepoUrl
         fi
