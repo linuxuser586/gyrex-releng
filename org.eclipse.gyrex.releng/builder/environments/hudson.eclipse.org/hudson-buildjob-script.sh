@@ -16,7 +16,7 @@ fi
 
 # path to the releng builder within the Hudson workspace
 # (this might vary between Hudson jobs)
-builderHome=$WORKSPACE/platform-source/releng/org.eclipse.gyrex.releng/builder
+builderHome=$WORKSPACE/gyrex-releng/org.eclipse.gyrex.releng/builder
 if [ ! -d $builderHome ]; then
 	echo "Builder could not be found ($builderHome). Please check the Hudson job is setup correctly!"
 	exit 1
@@ -67,4 +67,3 @@ echo '>>>>'
 cat $buildLocalProps
 echo '<<<<'
 echo ''
-
