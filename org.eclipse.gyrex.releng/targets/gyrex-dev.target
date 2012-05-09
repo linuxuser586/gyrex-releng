@@ -214,12 +214,12 @@
 <repository location="http://download.eclipse.org/jetty/updates/jetty-rt-3.8milestones/S-3.8M5-201201300453/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.persistence.sdk.feature.group" version="2.4.0.v20120505-r11282"/>
+<unit id="org.eclipse.persistence.sdk.feature.group" version="2.4.0.v20120509-r11315"/>
 <unit id="javax.persistence" version="2.0.4.v201112161009"/>
 <unit id="javax.persistence.source" version="2.0.4.v201112161009"/>
-<unit id="org.eclipse.persistence.nosql" version="2.4.0.v20120505-r11282"/>
-<unit id="org.eclipse.persistence.nosql.source" version="2.4.0.v20120505-r11282"/>
-<repository location="http://download.eclipse.org/rt/eclipselink/milestone-updates/2.4.0.v20120505-r11282_M19/"/>
+<unit id="org.eclipse.persistence.nosql" version="2.4.0.v20120509-r11315"/>
+<unit id="org.eclipse.persistence.nosql.source" version="2.4.0.v20120509-r11315"/>
+<repository location="http://download.eclipse.org/rt/eclipselink/nightly-updates/2.4.0.v20120509-r11315/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.rap.incubator.supplemental.fileupload.feature.feature.group" version="1.5.0.20120220-1720"/>
