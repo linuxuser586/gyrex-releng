@@ -29,7 +29,7 @@ feature@org.eclipse.gyrex.features.dependencies.eclipselink=GIT,tag=v20120423-09
 plugin@org.eclipse.gyrex.boot=GIT,tag=v20120423-0944,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.boot
 plugin@org.eclipse.gyrex.boot.tests=GIT,tag=v20120109-2032,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.boot.tests
 plugin@org.eclipse.gyrex.common=GIT,tag=v20120426-0810,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.common
-plugin@org.eclipse.gyrex.context=GIT,tag=v20120509-1115,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.context
+plugin@org.eclipse.gyrex.context=GIT,tag=v20120509-1116,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.context
 plugin@org.eclipse.gyrex.context.tests=GIT,tag=v20120322-0702,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.context.tests
 plugin@org.eclipse.gyrex.cloud=GIT,tag=v20120426-0938,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud
 plugin@org.eclipse.gyrex.cloud.tests=GIT,tag=v20120225-2128,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud.tests
