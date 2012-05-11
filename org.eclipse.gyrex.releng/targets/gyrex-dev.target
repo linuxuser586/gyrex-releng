@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Gyrex Development" sequenceNumber="67">
+<target name="Gyrex Development" sequenceNumber="68">
 <locations>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.pool" version="1.4.0.v20081016-1000"/>
@@ -251,6 +251,11 @@
 <unit id="org.apache.lucene.spatial" version="3.5.0.v20120319-2345"/>
 <unit id="org.apache.solr.core" version="3.5.0.v20120320-2000"/>
 <unit id="org.apache.solr.client.solrj" version="3.5.0.v20120319-2345"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20120428190502/repository/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="javax.ws.rs" version="1.1.1.v20101004-1200"/>
+<unit id="javax.ws.rs.source" version="1.1.1.v20101004-1200"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20120428190502/repository/"/>
 </location>
 </locations>
