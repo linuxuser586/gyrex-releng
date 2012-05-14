@@ -112,5 +112,8 @@ for REPO in $REPOS; do
 		done
 	fi
 	REPO_DIR=$(basename $REPO .git)
-	echo  pushd \"$gitCache/$REPO_DIR\" \; git push --tags \; popd 
+	if [ "$REPO" != "$relengRepoUrl" ]; then
+		# Note, we do not push the releng repo here because that happens after all scripts ran.
+		echo  pushd \"$gitCache/$REPO_DIR\" \; git push --tags \; popd 
+	fi
 done
