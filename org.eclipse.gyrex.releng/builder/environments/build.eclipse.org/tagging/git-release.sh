@@ -144,7 +144,7 @@ fi
 
 # generate commands for updating maps and tagging projects
 cat $buildTagRoot/$buildTag/clones.txt| xargs /bin/bash git-map.sh $gitCache $buildTag \
-        $relengRepo > $buildTagRoot/$buildTag/maps.txt
+        $relengRepo $( echo $relengRepoUrl | sed 's/ssh:.*@git.eclipse.org/git:\/\/git.eclipse.org/g' | sed 's/ssh:\/\/git.eclipse.org/git:\/\/git.eclipse.org/g' ) > $buildTagRoot/$buildTag/maps.txt
 
 # trim out lines that don't require execution
 grep -v ^OK $buildTagRoot/$buildTag/maps.txt | grep -v ^Executed >$buildTagRoot/$buildTag/run.txt

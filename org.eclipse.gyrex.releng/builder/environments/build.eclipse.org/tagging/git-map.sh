@@ -5,14 +5,17 @@
 # expect to tag.
 #
 # USAGE: repoRoot buildTag relengRoot repoURL [repoURL]*
-#    repoRoot   - absolute path to a folder containing cloned git repositories
-#    buildTag   - build tag to tag all repositories
-#    relengRoot - asolute path to releng project containing map files
-#    repoURL    - git repository urls to tag, must match entries in the map files
+#    repoRoot      - absolute path to a folder containing cloned git repositories
+#    buildTag      - build tag to tag all repositories
+#    relengRoot    - asolute path to releng project containing map files
+#    relengRepoUrl - url of the releng repo that must not be tagged because its tagged externally (to avoid moving tags)
+#    repoURL       - git repository urls to tag, must match entries in the map files
+#
 # EXAMPLE: git-map.sh  \
 #   /opt/pwebster/git/eclipse \
 #   I20111122-0800 \
 #   /opt/pwebster/workspaces/gitMigration/org.eclipse.releng \
+#   git://git.eclipse.org/gitroot/platform/eclipse.platform.releng.git \
 #   git://git.eclipse.org/gitroot/platform/eclipse.platform.runtime.git \
 #   git://git.eclipse.org/gitroot/platform/eclipse.platform.ui.git >maps.txt
 # examine the file
@@ -91,12 +94,17 @@ fi
 gitCache=$1; shift
 buildTag=$1; shift
 RELENG=$1; shift
+relengRepoUrl=$1; shift
 REPOS="$@"
 
 
 cd $gitCache
 for REPO in $REPOS; do
-	tag_repo_commit $REPO $buildTag
+	if [ "$REPO" != "$relengRepoUrl" ]; then
+		# Note, we do not tag the releng repo here. Otherwise this would cause a non-fast-forward
+		# push because the releng repo is tagged again after all scripts ran.
+		tag_repo_commit $REPO $buildTag
+	fi
 	MAPS=$( find $RELENG -name "*.map" -exec grep -l "repo=${REPO}," {} \; )
 	if [ ! -z "$MAPS" ]; then
 		for MAP in $MAPS; do
