@@ -202,9 +202,9 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.jetty.bundles.f.feature.group" version="8.1.0"/>
-<unit id="org.eclipse.jetty.bundles.f.source.feature.group" version="8.1.0"/>
-<repository location="http://download.eclipse.org/jetty/updates/jetty-bundles-8.x/8.1.3.v20120416/"/>
+<unit id="org.eclipse.jetty.bundles.f.feature.group" version="8.1.4"/>
+<unit id="org.eclipse.jetty.bundles.f.source.feature.group" version="8.1.4"/>
+<repository location="http://download.eclipse.org/jetty/updates/jetty-bundles-8.x/8.1.4.v20120524/"/>
 </location>
 <location includeAllPlatforms="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="javax.servlet.jsp.glassfish.source.feature.group" version="2.2.0.201201300453"/>
