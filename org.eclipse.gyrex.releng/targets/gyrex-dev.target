@@ -210,7 +210,7 @@
 <repository location="http://download.eclipse.org/jetty/updates/jetty-rt-3.8milestones/S-3.8M5-201201300453/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.persistence.sdk.feature.group" version="2.4.0.v20120608-r11652"/>
+<unit id="org.eclipse.persistence.sdk.feature.group" version="2.4.0.v20120613-r11652"/>
 <unit id="javax.persistence" version="2.0.4.v201112161009"/>
 <unit id="javax.persistence.source" version="2.0.4.v201112161009"/>
 <unit id="org.eclipse.persistence.nosql" version="2.4.0.v20120608-r11652"/>
