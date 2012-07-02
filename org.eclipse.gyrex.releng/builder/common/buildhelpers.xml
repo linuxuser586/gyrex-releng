@@ -172,7 +172,7 @@
 			<!-- launch the antrunner -->
 			<eclipse.launch app="antrunner" dir="${org.eclipse.releng.basebuilder}">
 				<args>
-					<jvmarg value="-Xmx500m" />
+					<jvmarg value="-Xmx1024m" />
 					<jvmarg value="-Declipse.p2.mirrors=${eclipse.p2.mirrors}" />
 					<jvmargs />
 					<arg value="-data" />
