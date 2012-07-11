@@ -53,7 +53,7 @@ plugin@org.eclipse.gyrex.admin.ui.http.jetty=GIT,tag=v20120702-0820,repo=git://g
 plugin@org.eclipse.gyrex.admin.ui.logback=GIT,tag=v20120524-0614,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.logback
 plugin@org.eclipse.gyrex.admin.ui.jobs=GIT,tag=v20120523-1512,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.jobs
 plugin@org.eclipse.gyrex.admin.ui.p2=GIT,tag=v20120514-0741,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.p2
-plugin@org.eclipse.gyrex.admin.ui.context=GIT,tag=v20120524-1144,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.context
+plugin@org.eclipse.gyrex.admin.ui.context=GIT,tag=v20120709-0908,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.context
 plugin@org.eclipse.gyrex.admin.ui.persistence=GIT,tag=v20120514-0741,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.persistence
 
 ### Gyrex HTTP Component
