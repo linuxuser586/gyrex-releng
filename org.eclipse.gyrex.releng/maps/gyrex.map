@@ -43,7 +43,7 @@ plugin@org.eclipse.gyrex.preferences.tests=GIT,tag=v20120109-2032,repo=git://git
 fragment@org.eclipse.gyrex.frameworklogadapter=GIT,tag=v20120109-2032,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.frameworklogadapter
 
 ### Gyrex Jobs
-plugin@org.eclipse.gyrex.jobs=GIT,tag=v20120719-0951,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.jobs
+plugin@org.eclipse.gyrex.jobs=GIT,tag=v20120719-1107,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.jobs
 
 ### Gyrex Admin
 plugin@org.eclipse.gyrex.admin.ui=GIT,tag=v20120703-0741,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui
@@ -71,7 +71,7 @@ plugin@org.eclipse.gyrex.http.log=GIT,tag=v20120109-2032,repo=git://git.eclipse.
 plugin@org.eclipse.gyrex.http.equinoxhttpservice=GIT,tag=v20120321-2059,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.equinoxhttpservice
 
 ### Gyrex Persistence Component
-plugin@org.eclipse.gyrex.persistence=GIT,tag=v20120511-0855,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.persistence
+plugin@org.eclipse.gyrex.persistence=GIT,tag=v20120719-1107,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.persistence
 plugin@org.eclipse.gyrex.persistence.tests=GIT,tag=v20120511-0855,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.persistence.tests
 plugin@org.eclipse.gyrex.persistence.derby=GIT,tag=v20120511-0855,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.persistence.derby
 plugin@org.eclipse.gyrex.persistence.derby.tests=GIT,tag=v20120511-0855,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.persistence.derby.tests
