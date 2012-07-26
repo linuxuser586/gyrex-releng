@@ -4,6 +4,7 @@
 # Note:
 #  - we must use SSH URLs because of push support
 #  - no blank lines please (it will break the script)
+#  - make sure the server can push without password (use keys)
 #
 #
 ssh://git.eclipse.org/gitroot/gyrex/gyrex-platform.git master
@@ -14,3 +15,4 @@ ssh://git.eclipse.org/gitroot/gyrex/addons/gyrex-search.git master
 ssh://git.eclipse.org/gitroot/gyrex/forks/gyrex-gemini-jpa.git master
 ssh://git.eclipse.org/gitroot/gyrex/forks/gyrex-javax.resource.git master
 #ssh://git.eclipse.org/gitroot/gyrex/forks/gyrex-org.eclipse.persistence.nosql.git master
+ssh://git.eclipse.org/gitroot/gyrex/addons/gyrex-jersey-jaxrs.git

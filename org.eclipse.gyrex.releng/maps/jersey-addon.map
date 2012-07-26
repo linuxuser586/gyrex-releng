@@ -1,0 +1,9 @@
+#####################################################
+# Gyrex Jersey JAX-RS AddOn
+
+### features
+feature@org.eclipse.gyrex.features.addons.jersey.jaxrs=GIT,tag=v20120726-1155,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-jersey-jaxrs.git,path=features/org.eclipse.gyrex.features.addons.jersey.jaxrs
+feature@org.eclipse.gyrex.features.dependencies.jersey=GIT,tag=v20120726-1155,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-jersey-jaxrs.git,path=features/org.eclipse.gyrex.features.dependencies.jersey
+
+### Gyrex Persistence bundles
+plugin@org.eclipse.gyrex.http.jersey=GIT,tag=v20120726-1155,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-jersey-jaxrs.git,path=bundles/org.eclipse.gyrex.http.jersey

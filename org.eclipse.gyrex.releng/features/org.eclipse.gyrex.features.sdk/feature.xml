@@ -96,7 +96,16 @@
          version="0.0.0"/>
 
    <includes
+         id="org.eclipse.gyrex.features.dependencies.jersey"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gyrex.features.dependencies.jersey.source"
+         version="0.0.0"/>
+
+   <includes
          id="org.eclipse.gyrex.features.sdk.withoutdeps"
          version="0.0.0"/>
+
 
 </feature>
