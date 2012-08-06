@@ -85,8 +85,8 @@ plugin@org.eclipse.gyrex.model.common=GIT,tag=v20120511-0855,repo=git://git.ecli
 plugin@org.eclipse.gyrex.services.common=GIT,tag=v20120511-0855,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.services.common
 
 ### Gyrex Search
-plugin@org.eclipse.gyrex.persistence.solr=GIT,tag=v20120511-0856,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-search.git,path=bundles/org.eclipse.gyrex.persistence.solr
-plugin@org.eclipse.gyrex.search=GIT,tag=v20120511-0856,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-search.git,path=bundles/org.eclipse.gyrex.search
+plugin@org.eclipse.gyrex.persistence.solr=GIT,tag=v20120806-1419,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-search.git,path=bundles/org.eclipse.gyrex.persistence.solr
+plugin@org.eclipse.gyrex.search=GIT,tag=v20120806-1419,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-search.git,path=bundles/org.eclipse.gyrex.search
 plugin@org.eclipse.gyrex.search.tests=GIT,tag=v20120109-1556,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-search.git,path=bundles/org.eclipse.gyrex.search.tests
 
 ### Gyrex Server
