@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="Gyrex Development" sequenceNumber="70">
+<?pde version="3.8"?><target name="Gyrex Development" sequenceNumber="71">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.pool" version="1.6.0.v201204271246"/>
@@ -253,6 +253,11 @@
 <unit id="org.objectweb.asm" version="3.3.1.v201105211655"/>
 <unit id="org.objectweb.asm.source" version="3.3.1.v201105211655"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20120726065500/repository/"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="javax.servlet.jsp.glassfish.feature.group" version="2.2.0.201206060641"/>
+<unit id="javax.servlet.jsp.glassfish.source.feature.group" version="2.2.0.201206060641"/>
+<repository location="http://download.eclipse.org/jetty/updates/jetty-rt-3.8milestones/S-3.8.RC3-201206060641"/>
 </location>
 </locations>
 <targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
