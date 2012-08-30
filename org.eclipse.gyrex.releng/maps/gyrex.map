@@ -34,7 +34,7 @@ plugin@org.eclipse.gyrex.context.tests=GIT,tag=v20120511-0855,repo=git://git.ecl
 plugin@org.eclipse.gyrex.cloud=GIT,tag=v20120823-1617,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud
 plugin@org.eclipse.gyrex.cloud.tests=GIT,tag=v20120511-0855,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud.tests
 plugin@org.eclipse.gyrex.logback.config=GIT,tag=v20120524-0614,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.logback.config
-plugin@org.eclipse.gyrex.monitoring=GIT,tag=v20120830-1331,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.monitoring
+plugin@org.eclipse.gyrex.monitoring=GIT,tag=v20120830-2015,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.monitoring
 plugin@org.eclipse.gyrex.p2=GIT,tag=v20120511-0855,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.p2
 plugin@org.eclipse.gyrex.preferences=GIT,tag=v20120511-0855,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.preferences
 plugin@org.eclipse.gyrex.preferences.tests=GIT,tag=v20120109-2032,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.preferences.tests
@@ -62,7 +62,7 @@ plugin@org.eclipse.gyrex.http.registry=GIT,tag=v20120423-0944,repo=git://git.ecl
 plugin@org.eclipse.gyrex.http.tests=GIT,tag=v20120423-0944,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.tests
 
 ### Gyrex HTTP Component Jetty Engine
-plugin@org.eclipse.gyrex.http.jetty=GIT,tag=v20120829-1243,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.jetty
+plugin@org.eclipse.gyrex.http.jetty=GIT,tag=v20120830-2019,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.jetty
 
 ### Gyrex HTTP Component Logging
 plugin@org.eclipse.gyrex.http.log=GIT,tag=v20120109-2032,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.log
