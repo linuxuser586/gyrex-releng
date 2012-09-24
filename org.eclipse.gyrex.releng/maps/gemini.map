@@ -1,5 +1,7 @@
 #####################################################
 # Gyrex Gemini JPA fork
 
+## !!! this should be obsolete now !!!
+
 ### Gemini JPA bundles
-plugin@org.eclipse.gemini.jpa=GIT,tag=v20120613-0539,repo=git://git.eclipse.org/gitroot/gyrex/forks/gyrex-gemini-jpa.git,path=org.eclipse.gemini.jpa
+#plugin@org.eclipse.gemini.jpa=GIT,tag=v20120613-0539,repo=git://git.eclipse.org/gitroot/gyrex/forks/gyrex-gemini-jpa.git,path=org.eclipse.gemini.jpa
