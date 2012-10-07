@@ -39,6 +39,9 @@ plugin@org.eclipse.gyrex.p2=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gi
 plugin@org.eclipse.gyrex.preferences=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.preferences
 plugin@org.eclipse.gyrex.preferences.tests=GIT,tag=v20121007-0630,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.preferences.tests
 
+### JUnit
+plugin@org.eclipse.gyrex.junit=GIT,tag=v20121007-0630,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.junit
+
 ### Framework Log Hook
 fragment@org.eclipse.gyrex.frameworklogadapter=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.frameworklogadapter
 
