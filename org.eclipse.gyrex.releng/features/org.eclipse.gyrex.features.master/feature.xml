@@ -2,10 +2,10 @@
 <feature
       id="org.eclipse.gyrex.features.master"
       label="All Gyrex Components"
-      version="1.0.0.qualifier"
+      version="1.2.0.qualifier"
       provider-name="Eclipse Gyrex"
       license-feature="org.eclipse.license"
-      license-feature-version="1.0.0.qualifier">
+      license-feature-version="1.2.0.qualifier">
 
    <description>
       A collection of Gyrex components.
