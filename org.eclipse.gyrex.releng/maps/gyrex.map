@@ -5,39 +5,39 @@
 # This files lists all Gyrex components.
 
 ### features
-feature@org.eclipse.gyrex.features.master=GIT,tag=v20120423-0945,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.master
-feature@org.eclipse.gyrex.features.sdk=GIT,tag=v20120726-1202,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.sdk
-feature@org.eclipse.gyrex.features.sdk.withoutdeps=GIT,tag=v20120726-1202,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.sdk.withoutdeps
-feature@org.eclipse.gyrex.features.kernel=GIT,tag=v20120423-0945,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.kernel
-feature@org.eclipse.gyrex.features.http=GIT,tag=v20120423-0945,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.http
-feature@org.eclipse.gyrex.features.admin=GIT,tag=v20120423-0945,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.admin
-feature@org.eclipse.gyrex.features.server=GIT,tag=v20120423-0945,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.server
-feature@org.eclipse.gyrex.features.modelandservices=GIT,tag=v20120423-0945,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.modelandservices
-feature@org.eclipse.gyrex.features.processing=GIT,tag=v20120423-0945,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.processing
+feature@org.eclipse.gyrex.features.master=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.master
+feature@org.eclipse.gyrex.features.sdk=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.sdk
+feature@org.eclipse.gyrex.features.sdk.withoutdeps=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.sdk.withoutdeps
+feature@org.eclipse.gyrex.features.kernel=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.kernel
+feature@org.eclipse.gyrex.features.http=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.http
+feature@org.eclipse.gyrex.features.admin=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.admin
+feature@org.eclipse.gyrex.features.server=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.server
+feature@org.eclipse.gyrex.features.modelandservices=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.modelandservices
+feature@org.eclipse.gyrex.features.processing=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.processing
 
 ### dependency features
-feature@org.eclipse.gyrex.features.dependencies.commons=GIT,tag=v20120829-1058,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.commons
-feature@org.eclipse.gyrex.features.dependencies.provisioning=GIT,tag=v20120423-0945,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.provisioning
-feature@org.eclipse.gyrex.features.dependencies.web=GIT,tag=v20120924-1807,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.web
-feature@org.eclipse.gyrex.features.dependencies.processing=GIT,tag=v20120423-0945,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.processing
-feature@org.eclipse.gyrex.features.dependencies.solr=GIT,tag=v20120423-0945,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.solr
-feature@org.eclipse.gyrex.features.dependencies.persistence=GIT,tag=v20120423-0945,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.persistence
-feature@org.eclipse.gyrex.features.dependencies.admin=GIT,tag=v20120702-1013,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.admin
-feature@org.eclipse.gyrex.features.dependencies.eclipselink=GIT,tag=v20120423-0945,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.eclipselink
+feature@org.eclipse.gyrex.features.dependencies.commons=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.commons
+feature@org.eclipse.gyrex.features.dependencies.provisioning=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.provisioning
+feature@org.eclipse.gyrex.features.dependencies.web=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.web
+feature@org.eclipse.gyrex.features.dependencies.processing=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.processing
+feature@org.eclipse.gyrex.features.dependencies.solr=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.solr
+feature@org.eclipse.gyrex.features.dependencies.persistence=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.persistence
+feature@org.eclipse.gyrex.features.dependencies.admin=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.admin
+feature@org.eclipse.gyrex.features.dependencies.eclipselink=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.eclipselink
 
 ### Gyrex Kernel
-plugin@org.eclipse.gyrex.boot=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.boot
-plugin@org.eclipse.gyrex.boot.tests=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.boot.tests
+plugin@org.eclipse.gyrex.boot=GIT,tag=v20121007-0630,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.boot
+plugin@org.eclipse.gyrex.boot.tests=GIT,tag=v20121007-0630,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.boot.tests
 plugin@org.eclipse.gyrex.common=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.common
 plugin@org.eclipse.gyrex.context=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.context
 plugin@org.eclipse.gyrex.context.tests=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.context.tests
 plugin@org.eclipse.gyrex.cloud=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud
-plugin@org.eclipse.gyrex.cloud.tests=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud.tests
+plugin@org.eclipse.gyrex.cloud.tests=GIT,tag=v20121007-0630,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud.tests
 plugin@org.eclipse.gyrex.logback.config=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.logback.config
 plugin@org.eclipse.gyrex.monitoring=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.monitoring
 plugin@org.eclipse.gyrex.p2=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.p2
 plugin@org.eclipse.gyrex.preferences=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.preferences
-plugin@org.eclipse.gyrex.preferences.tests=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.preferences.tests
+plugin@org.eclipse.gyrex.preferences.tests=GIT,tag=v20121007-0630,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.preferences.tests
 
 ### Framework Log Hook
 fragment@org.eclipse.gyrex.frameworklogadapter=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.frameworklogadapter
@@ -91,8 +91,8 @@ plugin@org.eclipse.gyrex.search.tests=GIT,tag=v20120109-1556,repo=git://git.ecli
 
 ### Gyrex Server
 plugin@org.eclipse.gyrex.server.defaultroles=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.server.defaultroles
-plugin@org.eclipse.gyrex.server.tests=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.server.tests
+plugin@org.eclipse.gyrex.server.tests=GIT,tag=v20121007-0630,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.server.tests
 
 ### Master Test Feature
-feature@org.eclipse.gyrex.features.tests=GIT,tag=v20120423-0945,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.tests
+feature@org.eclipse.gyrex.features.tests=GIT,tag=v20121007-0710,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.tests
 
