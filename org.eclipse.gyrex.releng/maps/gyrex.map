@@ -22,7 +22,7 @@ feature@org.eclipse.gyrex.features.dependencies.web=GIT,tag=v20121113-2049,repo=
 feature@org.eclipse.gyrex.features.dependencies.processing=GIT,tag=v20121007-0820,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.processing
 feature@org.eclipse.gyrex.features.dependencies.solr=GIT,tag=v20121007-0820,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.solr
 feature@org.eclipse.gyrex.features.dependencies.persistence=GIT,tag=v20121007-0820,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.persistence
-feature@org.eclipse.gyrex.features.dependencies.admin=GIT,tag=v20121007-0820,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.admin
+feature@org.eclipse.gyrex.features.dependencies.admin=GIT,tag=v20121114-0702,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.admin
 feature@org.eclipse.gyrex.features.dependencies.eclipselink=GIT,tag=v20121007-0820,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.eclipselink
 
 ### Gyrex Kernel
