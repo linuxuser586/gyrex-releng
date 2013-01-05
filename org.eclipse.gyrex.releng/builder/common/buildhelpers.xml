@@ -78,9 +78,10 @@
 		<mkdir dir="${org.eclipse.releng.basebuilder}"/>
 
 		<!-- perform checkout -->
+		<!-- HACK: :pserver:anonymous@dev.eclipse.org: is no longer available, there we use direct filesystem access -->
 		<echo level="info" message="[BOOTSTRAP] Perform checkout of org.eclipse.releng.basebuilder using tag/branch '${org.eclipse.releng.basebuilder.tag}'"/>
 		<cvs
-			cvsRoot=":pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse"
+			cvsRoot="/cvsroot/eclipse"
 			package="org.eclipse.releng.basebuilder"
 			dest="${org.eclipse.releng.basebuilder}"
 			failonerror="true"
