@@ -158,6 +158,8 @@
 <unit id="javax.management.remote" version="0.0.0"/>
 <unit id="javax.persistence" version="0.0.0"/>
 <unit id="javax.persistence.source" version="0.0.0"/>
+<unit id="javax.resource" version="0.0.0"/>
+<unit id="javax.resource.source" version="0.0.0"/>
 <unit id="javax.servlet" version="3.0.0.v201112011016"/>
 <unit id="javax.servlet.source" version="3.0.0.v201112011016"/>
 <unit id="javax.transaction" version="0.0.0"/>
