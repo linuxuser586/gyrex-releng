@@ -22,7 +22,7 @@ feature@org.eclipse.gyrex.features.dependencies.web=GIT,tag=v20121113-2049,repo=
 feature@org.eclipse.gyrex.features.dependencies.processing=GIT,tag=v20121007-0820,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.processing
 feature@org.eclipse.gyrex.features.dependencies.solr=GIT,tag=v20121007-0820,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.solr
 feature@org.eclipse.gyrex.features.dependencies.persistence=GIT,tag=v20121007-0820,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.persistence
-feature@org.eclipse.gyrex.features.dependencies.admin=GIT,tag=v20121203-1419,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.admin
+feature@org.eclipse.gyrex.features.dependencies.admin=GIT,tag=v20130117-1332,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.admin
 feature@org.eclipse.gyrex.features.dependencies.eclipselink=GIT,tag=v20121007-0820,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.eclipselink
 
 ### Gyrex Kernel
@@ -49,15 +49,15 @@ fragment@org.eclipse.gyrex.frameworklogadapter=GIT,tag=v20120925-0800,repo=git:/
 plugin@org.eclipse.gyrex.jobs=GIT,tag=v20121130-1444,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.jobs
 
 ### Gyrex Admin
-plugin@org.eclipse.gyrex.admin.ui=GIT,tag=v20130117-0930,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui
-plugin@org.eclipse.gyrex.admin.ui.cloud=GIT,tag=v20130116-2114,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.cloud
-plugin@org.eclipse.gyrex.admin.ui.http=GIT,tag=v20130117-0930,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.http
+plugin@org.eclipse.gyrex.admin.ui=GIT,tag=v20130117-1332,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui
+plugin@org.eclipse.gyrex.admin.ui.cloud=GIT,tag=v20130117-1332,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.cloud
+plugin@org.eclipse.gyrex.admin.ui.http=GIT,tag=v20130117-1332,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.http
 plugin@org.eclipse.gyrex.admin.ui.http.jetty=GIT,tag=v20130116-2114,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.http.jetty
-plugin@org.eclipse.gyrex.admin.ui.logback=GIT,tag=v20130116-2114,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.logback
-plugin@org.eclipse.gyrex.admin.ui.jobs=GIT,tag=v20130117-0930,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.jobs
-plugin@org.eclipse.gyrex.admin.ui.p2=GIT,tag=v20130116-2114,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.p2
-plugin@org.eclipse.gyrex.admin.ui.context=GIT,tag=v20130116-2114,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.context
-plugin@org.eclipse.gyrex.admin.ui.persistence=GIT,tag=v20121113-2047,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.persistence
+plugin@org.eclipse.gyrex.admin.ui.logback=GIT,tag=v20130117-1332,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.logback
+plugin@org.eclipse.gyrex.admin.ui.jobs=GIT,tag=v20130117-1332,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.jobs
+plugin@org.eclipse.gyrex.admin.ui.p2=GIT,tag=v20130117-1332,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.p2
+plugin@org.eclipse.gyrex.admin.ui.context=GIT,tag=v20130117-1332,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.context
+plugin@org.eclipse.gyrex.admin.ui.persistence=GIT,tag=v20130117-1332,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.persistence
 
 ### Gyrex HTTP Component
 plugin@org.eclipse.gyrex.http=GIT,tag=v20130108-1321,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http
