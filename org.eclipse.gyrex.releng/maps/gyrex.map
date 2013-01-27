@@ -31,13 +31,13 @@ plugin@org.eclipse.gyrex.boot.tests=GIT,tag=v20121007-0630,repo=git://git.eclips
 plugin@org.eclipse.gyrex.common=GIT,tag=v20130124-1447,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.common
 plugin@org.eclipse.gyrex.context=GIT,tag=v20121015-1302,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.context
 plugin@org.eclipse.gyrex.context.tests=GIT,tag=v20121015-1302,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.context.tests
-plugin@org.eclipse.gyrex.cloud=GIT,tag=v20121130-1446,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud
-plugin@org.eclipse.gyrex.cloud.tests=GIT,tag=v20121007-0630,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud.tests
+plugin@org.eclipse.gyrex.cloud=GIT,tag=v20130127-1931,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud
+plugin@org.eclipse.gyrex.cloud.tests=GIT,tag=v20130127-1949,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud.tests
 plugin@org.eclipse.gyrex.logback.config=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.logback.config
 plugin@org.eclipse.gyrex.monitoring=GIT,tag=v20130116-2135,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.monitoring
 plugin@org.eclipse.gyrex.p2=GIT,tag=v20121019-0851,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.p2
 plugin@org.eclipse.gyrex.preferences=GIT,tag=v20121115-0841,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.preferences
-plugin@org.eclipse.gyrex.preferences.tests=GIT,tag=v20121007-0630,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.preferences.tests
+plugin@org.eclipse.gyrex.preferences.tests=GIT,tag=v20130127-1949,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.preferences.tests
 
 ### JUnit
 plugin@org.eclipse.gyrex.junit=GIT,tag=v20121007-0630,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.junit
@@ -46,7 +46,7 @@ plugin@org.eclipse.gyrex.junit=GIT,tag=v20121007-0630,repo=git://git.eclipse.org
 fragment@org.eclipse.gyrex.frameworklogadapter=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.frameworklogadapter
 
 ### Gyrex Jobs
-plugin@org.eclipse.gyrex.jobs=GIT,tag=v20121130-1444,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.jobs
+plugin@org.eclipse.gyrex.jobs=GIT,tag=v20130127-2029,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.jobs
 
 ### Gyrex Admin
 plugin@org.eclipse.gyrex.admin.ui=GIT,tag=v20130127-0901,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui
@@ -90,7 +90,7 @@ plugin@org.eclipse.gyrex.services.common=GIT,tag=v20120925-0800,repo=git://git.e
 ### Gyrex Search
 plugin@org.eclipse.gyrex.persistence.solr=GIT,tag=v20120806-1419,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-search.git,path=bundles/org.eclipse.gyrex.persistence.solr
 plugin@org.eclipse.gyrex.search=GIT,tag=v20120806-1419,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-search.git,path=bundles/org.eclipse.gyrex.search
-plugin@org.eclipse.gyrex.search.tests=GIT,tag=v20120109-1556,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-search.git,path=bundles/org.eclipse.gyrex.search.tests
+plugin@org.eclipse.gyrex.search.tests=GIT,tag=v20130127-1953,repo=git://git.eclipse.org/gitroot/gyrex/addons/gyrex-search.git,path=bundles/org.eclipse.gyrex.search.tests
 
 ### Gyrex Server
 plugin@org.eclipse.gyrex.server.defaultroles=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.server.defaultroles
