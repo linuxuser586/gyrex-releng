@@ -31,7 +31,7 @@ plugin@org.eclipse.gyrex.boot.tests=GIT,tag=v20130204-1241,repo=git://git.eclips
 plugin@org.eclipse.gyrex.common=GIT,tag=v20130204-1241,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.common
 plugin@org.eclipse.gyrex.context=GIT,tag=v20130204-1241,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.context
 plugin@org.eclipse.gyrex.context.tests=GIT,tag=v20130204-1241,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.context.tests
-plugin@org.eclipse.gyrex.cloud=GIT,tag=v20130207-1351,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud
+plugin@org.eclipse.gyrex.cloud=GIT,tag=v20130207-2000,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud
 plugin@org.eclipse.gyrex.cloud.tests=GIT,tag=v20130207-1351,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud.tests
 plugin@org.eclipse.gyrex.logback.config=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.logback.config
 plugin@org.eclipse.gyrex.monitoring=GIT,tag=v20130204-1241,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.monitoring
@@ -46,7 +46,7 @@ plugin@org.eclipse.gyrex.junit=GIT,tag=v20130204-1241,repo=git://git.eclipse.org
 fragment@org.eclipse.gyrex.frameworklogadapter=GIT,tag=v20130204-1241,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.frameworklogadapter
 
 ### Gyrex Jobs
-plugin@org.eclipse.gyrex.jobs=GIT,tag=v20130206-1603,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.jobs
+plugin@org.eclipse.gyrex.jobs=GIT,tag=v20130207-2031,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.jobs
 plugin@org.eclipse.gyrex.jobs.tests=GIT,tag=v20130204-1241,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.jobs.tests
 
 ### Gyrex Admin
