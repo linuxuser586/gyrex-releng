@@ -18,7 +18,7 @@ feature@org.eclipse.gyrex.features.processing=GIT,tag=v20121007-0946,repo=git://
 ### dependency features
 feature@org.eclipse.gyrex.features.dependencies.commons=GIT,tag=v20121007-0820,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.commons
 feature@org.eclipse.gyrex.features.dependencies.provisioning=GIT,tag=v20121007-0820,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.provisioning
-feature@org.eclipse.gyrex.features.dependencies.web=GIT,tag=v20130123-1615,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.web
+feature@org.eclipse.gyrex.features.dependencies.web=GIT,tag=v20130314-1309,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.web
 feature@org.eclipse.gyrex.features.dependencies.processing=GIT,tag=v20121007-0820,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.processing
 feature@org.eclipse.gyrex.features.dependencies.solr=GIT,tag=v20121007-0820,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.solr
 feature@org.eclipse.gyrex.features.dependencies.persistence=GIT,tag=v20121007-0820,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.persistence
@@ -66,7 +66,7 @@ plugin@org.eclipse.gyrex.http.registry=GIT,tag=v20120925-0800,repo=git://git.ecl
 plugin@org.eclipse.gyrex.http.tests=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.tests
 
 ### Gyrex HTTP Component Jetty Engine
-plugin@org.eclipse.gyrex.http.jetty=GIT,tag=v20130305-1002,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.jetty
+plugin@org.eclipse.gyrex.http.jetty=GIT,tag=v20130314-1329,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.jetty
 
 ### Gyrex HTTP Component Logging
 plugin@org.eclipse.gyrex.http.log=GIT,tag=v20121113-2043,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.log
