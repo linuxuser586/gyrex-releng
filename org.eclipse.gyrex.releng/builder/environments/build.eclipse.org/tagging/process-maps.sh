@@ -40,13 +40,13 @@ do
 done
 
 # where all the build tagging happens
-buildTagRoot=/shared/technology/gyrex/tagging/work
+buildTagRoot=/shared/rt/gyrex/tagging/work
 if [ ! -d $buildTagRoot ]; then
 	mkdir $buildTagRoot
 fi
 
 # the git cache
-gitCache=/shared/technology/gyrex/tagging/gitcache
+gitCache=/shared/rt/gyrex/tagging/gitcache
 if [ ! -d $gitCache ]; then
 	mkdir $gitCache
 fi
