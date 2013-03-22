@@ -50,12 +50,12 @@ plugin@org.eclipse.gyrex.jobs=GIT,tag=v20130319-1158,repo=git://git.eclipse.org/
 plugin@org.eclipse.gyrex.jobs.tests=GIT,tag=v20130204-1241,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.jobs.tests
 
 ### Gyrex Admin
-plugin@org.eclipse.gyrex.admin.ui=GIT,tag=v20130317-2100,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui
+plugin@org.eclipse.gyrex.admin.ui=GIT,tag=v20130322-0225,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui
 plugin@org.eclipse.gyrex.admin.ui.cloud=GIT,tag=v20130317-1624,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.cloud
 plugin@org.eclipse.gyrex.admin.ui.http=GIT,tag=v20130307-1436,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.http
 plugin@org.eclipse.gyrex.admin.ui.http.jetty=GIT,tag=v20130116-2114,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.http.jetty
 plugin@org.eclipse.gyrex.admin.ui.logback=GIT,tag=v20130117-1332,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.logback
-plugin@org.eclipse.gyrex.admin.ui.jobs=GIT,tag=v20130317-2120,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.jobs
+plugin@org.eclipse.gyrex.admin.ui.jobs=GIT,tag=v20130322-0225,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.jobs
 plugin@org.eclipse.gyrex.admin.ui.p2=GIT,tag=v20130117-1332,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.p2
 plugin@org.eclipse.gyrex.admin.ui.context=GIT,tag=v20130307-1436,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.context
 plugin@org.eclipse.gyrex.admin.ui.persistence=GIT,tag=v20130307-1436,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui.persistence
