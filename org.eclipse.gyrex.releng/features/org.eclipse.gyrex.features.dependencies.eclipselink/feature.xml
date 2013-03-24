@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.gyrex.features.dependencies.eclipselink"
       label="%featureName"
-      version="0.10.0.qualifier"
+      version="1.2.0.qualifier"
       provider-name="%providerName"
       license-feature="org.eclipse.license"
       license-feature-version="1.0.0.qualifier">
@@ -132,5 +132,12 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+
+   <plugin
+         id="javax.transaction"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"/>
 
 </feature>
