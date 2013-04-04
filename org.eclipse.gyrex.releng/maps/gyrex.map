@@ -26,7 +26,7 @@ feature@org.eclipse.gyrex.features.dependencies.admin=GIT,tag=v20130117-1332,rep
 feature@org.eclipse.gyrex.features.dependencies.eclipselink=GIT,tag=v20130324-1248,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-releng.git,path=org.eclipse.gyrex.releng/features/org.eclipse.gyrex.features.dependencies.eclipselink
 
 ### Gyrex Kernel
-plugin@org.eclipse.gyrex.boot=GIT,tag=v20130204-1241,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.boot
+plugin@org.eclipse.gyrex.boot=GIT,tag=v20130404-0746,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.boot
 plugin@org.eclipse.gyrex.boot.tests=GIT,tag=v20130204-1241,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.boot.tests
 plugin@org.eclipse.gyrex.common=GIT,tag=v20130320-0246,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.common
 plugin@org.eclipse.gyrex.context=GIT,tag=v20130320-1235,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.context
@@ -46,7 +46,7 @@ plugin@org.eclipse.gyrex.junit=GIT,tag=v20130204-1241,repo=git://git.eclipse.org
 fragment@org.eclipse.gyrex.frameworklogadapter=GIT,tag=v20130204-1241,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.frameworklogadapter
 
 ### Gyrex Jobs
-plugin@org.eclipse.gyrex.jobs=GIT,tag=v20130403-1916,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.jobs
+plugin@org.eclipse.gyrex.jobs=GIT,tag=v20130404-0738,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.jobs
 plugin@org.eclipse.gyrex.jobs.tests=GIT,tag=v20130204-1241,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.jobs.tests
 
 ### Gyrex Admin
