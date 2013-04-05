@@ -32,8 +32,8 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20130308121626/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.equinox.sdk.feature.group" version="3.9.0.v20130314-0217"/>
-<repository location="http://download.eclipse.org/eclipse/updates/4.3milestones/S-4.3M6-201303141330/"/>
+<unit id="org.eclipse.equinox.sdk.feature.group" version="3.9.0.N20130403-2000"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.3-N-builds/N20130403-2000/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.net" version="3.1.0.v201205071737"/>
@@ -80,8 +80,8 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20130308121626/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.equinox.executable.feature.group" version="3.6.0.v20130124-220434-7J7IFkRFFt6ZrOZqtTHsTRYeW"/>
-<repository location="http://download.eclipse.org/eclipse/updates/4.3milestones/S-4.3M5a-201302041400/"/>
+<unit id="org.eclipse.equinox.executable.feature.group" version="3.6.0.N20130403-2000"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.3-N-builds/N20130403-2000/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.core.net.win32.x86" version="1.0.100.v20130225-1712"/>
