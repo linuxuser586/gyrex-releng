@@ -1,7 +1,0 @@
-####################
-# Shared License   #
-####################
-#
-
-### shared license feature
-feature@org.eclipse.license=GIT,tag=v20110208,repo=git://git.eclipse.org/gitroot/platform/eclipse.platform.releng.git,path=features/org.eclipse.license
