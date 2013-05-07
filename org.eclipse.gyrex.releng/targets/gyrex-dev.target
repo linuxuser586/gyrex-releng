@@ -32,8 +32,8 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20130308121626/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.equinox.sdk.feature.group" version="3.9.0.v20130409-1258"/>
-<repository location="http://download.eclipse.org/eclipse/updates/4.3-I-builds/I20130409-0900/"/>
+<unit id="org.eclipse.equinox.sdk.feature.group" version="3.9.0.v20130502-0526"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.3milestones/S-4.3M7-201305020800/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.net" version="3.1.0.v201205071737"/>
@@ -71,8 +71,8 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20130308121626/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.e4.core.di" version="1.3.0.v20130314-1454"/>
-<repository location="http://download.eclipse.org/eclipse/updates/4.3milestones/S-4.3M6-201303141330/"/>
+<unit id="org.eclipse.e4.core.di" version="1.3.0.v20130326-1255"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.3milestones/S-4.3M7-201305020800/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.codec" version="1.4.0.v201209201156"/>
@@ -80,32 +80,32 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20130308121626/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.equinox.executable.feature.group" version="3.6.0.v20130402-1259"/>
-<repository location="http://download.eclipse.org/eclipse/updates/4.3-I-builds/I20130409-0900/"/>
+<unit id="org.eclipse.equinox.executable.feature.group" version="3.6.0.v20130423-2107"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.3milestones/S-4.3M7-201305020800/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.core.net.win32.x86" version="1.0.100.v20130225-1712"/>
-<unit id="org.eclipse.core.net.linux.x86" version="1.1.200.v20130225-1712"/>
-<unit id="org.eclipse.core.net.source" version="1.2.200.v20130225-1712"/>
-<unit id="org.eclipse.core.net" version="1.2.200.v20130225-1712"/>
-<unit id="org.eclipse.core.net.win32.x86_64" version="1.0.100.v20130225-1712"/>
-<unit id="org.eclipse.core.net.linux.x86_64" version="1.1.0.v20130225-1712"/>
-<repository location="http://download.eclipse.org/eclipse/updates/4.3milestones/S-4.3M6-201303141330/"/>
+<unit id="org.eclipse.core.net.win32.x86" version="1.0.100.v20100505-1614"/>
+<unit id="org.eclipse.core.net.linux.x86" version="1.1.300.v20130430-1352"/>
+<unit id="org.eclipse.core.net.source" version="1.2.200.v20130430-1352"/>
+<unit id="org.eclipse.core.net" version="1.2.200.v20130430-1352"/>
+<unit id="org.eclipse.core.net.win32.x86_64" version="1.0.100.v20100505-1614"/>
+<unit id="org.eclipse.core.net.linux.x86_64" version="1.1.100.v20130430-1352"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.3milestones/S-4.3M7-201305020800/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.core.commands" version="3.6.100.v20130220-2151"/>
-<unit id="org.eclipse.core.commands.source" version="3.6.100.v20130220-2151"/>
-<unit id="org.eclipse.core.expressions" version="3.4.500.v20130221-0103"/>
-<unit id="org.eclipse.core.expressions.source" version="3.4.500.v20130221-0103"/>
-<unit id="org.eclipse.core.databinding" version="1.4.1.v20130220-2151"/>
-<unit id="org.eclipse.core.databinding.source" version="1.4.1.v20130220-2151"/>
-<unit id="org.eclipse.core.databinding.beans" version="1.2.200.v20130220-2151"/>
-<unit id="org.eclipse.core.databinding.beans.source" version="1.2.200.v20130220-2151"/>
-<unit id="org.eclipse.core.databinding.observable" version="1.4.1.v20130220-2151"/>
-<unit id="org.eclipse.core.databinding.observable.source" version="1.4.1.v20130220-2151"/>
-<unit id="org.eclipse.core.databinding.property" version="1.4.200.v20130220-2151"/>
-<unit id="org.eclipse.core.databinding.property.source" version="1.4.200.v20130220-2151"/>
-<repository location="http://download.eclipse.org/eclipse/updates/4.3milestones/S-4.3M6-201303141330/"/>
+<unit id="org.eclipse.core.commands" version="3.6.100.v20130326-1250"/>
+<unit id="org.eclipse.core.commands.source" version="3.6.100.v20130326-1250"/>
+<unit id="org.eclipse.core.expressions" version="3.4.500.v20130326-1255"/>
+<unit id="org.eclipse.core.expressions.source" version="3.4.500.v20130326-1255"/>
+<unit id="org.eclipse.core.databinding" version="1.4.1.v20130326-1250"/>
+<unit id="org.eclipse.core.databinding.source" version="1.4.1.v20130326-1250"/>
+<unit id="org.eclipse.core.databinding.beans" version="1.2.200.v20130326-1250"/>
+<unit id="org.eclipse.core.databinding.beans.source" version="1.2.200.v20130326-1250"/>
+<unit id="org.eclipse.core.databinding.observable" version="1.4.1.v20130326-1250"/>
+<unit id="org.eclipse.core.databinding.observable.source" version="1.4.1.v20130326-1250"/>
+<unit id="org.eclipse.core.databinding.property" version="1.4.200.v20130326-1250"/>
+<unit id="org.eclipse.core.databinding.property.source" version="1.4.200.v20130326-1250"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.3milestones/S-4.3M7-201305020800/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="com.jcraft.jsch" version="0.1.46.v201205102330"/>
@@ -133,7 +133,7 @@
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.pde.junit.runtime.addon.feature.group" version="1.0.100.v20130225-2115"/>
-<repository location="http://download.eclipse.org/eclipse/updates/4.3milestones/S-4.3M6-201303141330/"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.3milestones/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.lang.source" version="2.6.0.v201205030909"/>
@@ -146,8 +146,8 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20130308121626/repository/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.test.feature.group" version="3.6.0.v20130225-1217"/>
-<repository location="http://download.eclipse.org/eclipse/updates/4.3milestones/S-4.3M6-201303141330/"/>
+<unit id="org.eclipse.test.feature.group" version="3.6.0.v20130424-0442"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.3milestones/S-4.3M7-201305020800/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.beanutils" version="1.8.0.v201205091237"/>
