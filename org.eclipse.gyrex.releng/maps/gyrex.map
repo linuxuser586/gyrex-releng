@@ -30,7 +30,7 @@ plugin@org.eclipse.gyrex.boot=GIT,tag=v20130404-0746,repo=git://git.eclipse.org/
 plugin@org.eclipse.gyrex.boot.tests=GIT,tag=v20130204-1241,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.boot.tests
 plugin@org.eclipse.gyrex.common=GIT,tag=v20130320-0246,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.common
 plugin@org.eclipse.gyrex.context=GIT,tag=v20130320-1235,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.context
-plugin@org.eclipse.gyrex.context.tests=GIT,tag=v20130317-1624,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.context.tests
+plugin@org.eclipse.gyrex.context.tests=GIT,tag=v20130508-0620,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.context.tests
 plugin@org.eclipse.gyrex.cloud=GIT,tag=v20130407-1329,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud
 plugin@org.eclipse.gyrex.cloud.tests=GIT,tag=v20130317-1624,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.cloud.tests
 plugin@org.eclipse.gyrex.logback.config=GIT,tag=v20130417-1721,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.logback.config
@@ -40,14 +40,14 @@ plugin@org.eclipse.gyrex.preferences=GIT,tag=v20130204-1241,repo=git://git.eclip
 plugin@org.eclipse.gyrex.preferences.tests=GIT,tag=v20130204-1241,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.preferences.tests
 
 ### JUnit
-plugin@org.eclipse.gyrex.junit=GIT,tag=v20130204-1241,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.junit
+plugin@org.eclipse.gyrex.junit=GIT,tag=v20130508-0619,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.junit
 
 ### Framework Log Hook
 fragment@org.eclipse.gyrex.frameworklogadapter=GIT,tag=v20130204-1241,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.frameworklogadapter
 
 ### Gyrex Jobs
 plugin@org.eclipse.gyrex.jobs=GIT,tag=v20130507-0849,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.jobs
-plugin@org.eclipse.gyrex.jobs.tests=GIT,tag=v20130408-1438,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.jobs.tests
+plugin@org.eclipse.gyrex.jobs.tests=GIT,tag=v20130508-0619,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.jobs.tests
 
 ### Gyrex Admin
 plugin@org.eclipse.gyrex.admin.ui=GIT,tag=v20130411-1246,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-admin.git,path=bundles/org.eclipse.gyrex.admin.ui
