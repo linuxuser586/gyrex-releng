@@ -66,7 +66,7 @@ plugin@org.eclipse.gyrex.http.registry=GIT,tag=v20130317-1626,repo=git://git.ecl
 plugin@org.eclipse.gyrex.http.tests=GIT,tag=v20130317-1626,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.tests
 
 ### Gyrex HTTP Component Jetty Engine
-plugin@org.eclipse.gyrex.http.jetty=GIT,tag=v20130321-1824,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.jetty
+plugin@org.eclipse.gyrex.http.jetty=GIT,tag=v20130517-1450,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.jetty
 
 ### Gyrex HTTP Component Logging
 plugin@org.eclipse.gyrex.http.log=GIT,tag=v20130317-1626,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.http.log
