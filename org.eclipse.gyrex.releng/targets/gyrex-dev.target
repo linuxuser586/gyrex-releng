@@ -172,8 +172,6 @@
 <unit id="javax.mail.glassfish.source" version="1.4.1.v201108011116"/>
 <unit id="javax.management" version="1.2.0.v20100427-1100"/>
 <unit id="javax.management.remote" version="1.0.0.v20100427-1100"/>
-<unit id="javax.persistence" version="1.0.0.v200905011740"/>
-<unit id="javax.persistence.source" version="1.0.0.v200905011740"/>
 <unit id="javax.resource" version="1.6.0.v201204270900"/>
 <unit id="javax.resource.source" version="1.6.0.v201204270900"/>
 <unit id="javax.servlet" version="3.0.0.v201112011016"/>
@@ -203,8 +201,8 @@
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.jetty.bundles.f.feature.group" version="9.0.0"/>
 <unit id="org.eclipse.jetty.bundles.f.source.feature.group" version="9.0.0"/>
-<unit id="org.eclipse.jetty.osgi.npn.fragment" version="9.0.2.v20130417"/>
-<repository location="http://download.eclipse.org/jetty/updates/jetty-bundles-9.x/9.0.2.v20130417/"/>
+<unit id="org.eclipse.jetty.osgi.npn.fragment" version="9.0.3.v20130506"/>
+<repository location="http://download.eclipse.org/jetty/updates/jetty-bundles-9.x/9.0.3.v20130506/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.persistence.sdk.feature.group" version="2.5.0.v20130507-3faac2b"/>
