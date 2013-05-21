@@ -82,7 +82,7 @@ plugin@org.eclipse.gyrex.persistence.derby.tests=GIT,tag=v20120925-0800,repo=git
 plugin@org.eclipse.gyrex.persistence.jdbc=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.persistence.jdbc
 plugin@org.eclipse.gyrex.persistence.nondurable.map=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.persistence.nondurable.map
 plugin@org.eclipse.gyrex.persistence.context.preferences=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.persistence.context.preferences
-plugin@org.eclipse.gyrex.persistence.eclipselink=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.persistence.eclipselink
+plugin@org.eclipse.gyrex.persistence.eclipselink=GIT,tag=v20130521-0754,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.persistence.eclipselink
 
 ### Gyrex Model And Services
 plugin@org.eclipse.gyrex.model.common=GIT,tag=v20120925-0800,repo=git://git.eclipse.org/gitroot/gyrex/gyrex-platform.git,path=bundles/org.eclipse.gyrex.model.common
